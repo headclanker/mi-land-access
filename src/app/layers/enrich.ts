@@ -23,6 +23,14 @@ export const P = {
   ownerReason: '_ownerReason',
   ownerRefs: '_ownerRefs',
   ownerKind: '_ownerKind',
+  // Public-land features only: the layer's own grade, kept when the city-limits rule replaces
+  // _grade/_category/_reason (see layers/reconcileLayers.ts).
+  baseGrade: '_baseGrade',
+  baseCategory: '_baseCategory',
+  baseReason: '_baseReason',
+  baseRefs: '_baseRefs',
+  /** City whose limits hold the feature (parcels and public land; set by reconciliation). */
+  city: '_city',
   // Parcels only, set by reconciliation (see layers/reconcileLayers.ts).
   /** 'fill' (own tint) | 'none' (colour comes from the adopted public layer) | 'conflict' (hatched). */
   tint: '_tint',
@@ -114,6 +122,15 @@ export function enrichFeature(source: LayerSource, f: Feature): Feature {
     props[P.conflict] = false;
     props[P.adopted] = '';
   }
+  if (source.group === 'public-land') {
+    props[P.baseGrade] = g.grade;
+    props[P.baseCategory] = g.category;
+    props[P.baseReason] = g.reason;
+    props[P.baseRefs] = props[P.refs];
+    // Same values reconciliation writes outside every city, so it only re-sends layers it changed.
+    props[P.city] = '';
+    props[P.notes] = '[]';
+  }
   return { type: 'Feature', geometry: f.geometry, properties: props };
 }
 
@@ -146,16 +163,21 @@ export function parseRefs(raw: unknown): { label: string; url?: string }[] {
   }
 }
 
-/** Rebuilds a GradeResult from enriched properties (current verdict, or the owner-name one). */
-export function gradeFromProps(props: Record<string, unknown>, which: 'current' | 'owner' = 'current'): GradeResult {
+/**
+ * Rebuilds a GradeResult from enriched properties: the current verdict, the parcel's owner-name
+ * grade, or a public-land feature's own layer grade before the city-limits rule ('base'; falls
+ * back to the current verdict on features without one).
+ */
+export function gradeFromProps(props: Record<string, unknown>, which: 'current' | 'owner' | 'base' = 'current'): GradeResult {
   const o = which === 'owner';
-  const g = props[o ? P.ownerGrade : P.grade];
-  const refs = parseRefs(props[o ? P.ownerRefs : P.refs]);
+  const b = which === 'base' && props[P.baseGrade] !== undefined;
+  const g = props[o ? P.ownerGrade : b ? P.baseGrade : P.grade];
+  const refs = parseRefs(props[o ? P.ownerRefs : b ? P.baseRefs : P.refs]);
   const kind = o ? str(props[P.ownerKind]) : '';
   return {
     grade: isGrade(g) ? g : 'unknown',
-    category: str(props[o ? P.ownerCategory : P.category]),
-    reason: str(props[o ? P.ownerReason : P.reason]),
+    category: str(props[o ? P.ownerCategory : b ? P.baseCategory : P.category]),
+    reason: str(props[o ? P.ownerReason : b ? P.baseReason : P.reason]),
     ...(refs.length ? { references: refs } : {}),
     ...(kind ? { ownerKind: kind as OwnerKind } : {}),
   };

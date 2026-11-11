@@ -6,6 +6,7 @@ import { LAYER_SOURCES } from '../data/sources';
 import { createMap, fitMichigan, setBasemap, currentBasemap } from './map/map';
 import { LayerManager } from './layers/manager';
 import { OVERVIEW_FILL, Overview } from './layers/overview';
+import { CityLimitsLayer } from './layers/cities';
 import { OVERVIEW_HANDOFF_ZOOM } from '../data/sources';
 import { Searcher, type SearchResult } from './ui/search';
 import { GRADE_COLORS, type Grade } from '../contract';
@@ -107,7 +108,10 @@ export async function startApp(): Promise<void> {
   // ----- data layers -----
   const layers = new LayerManager(map, LAYER_SOURCES);
   const overview = new Overview(map, layers);
-  new LayerPanel(pane('layers'), map, layers, overview);
+  // City limits: the grading rule needs them whether or not their outline is drawn.
+  const cityLimits = new CityLimitsLayer(map);
+  void cityLimits.load().then((idx) => layers.setCities(idx));
+  new LayerPanel(pane('layers'), map, layers, overview, cityLimits);
 
   // ----- markups -----
   const store = new MarkupStore();
@@ -439,5 +443,5 @@ export async function startApp(): Promise<void> {
   await importFromHash();
 
   // Exposed for debugging / automated checks only.
-  Object.assign(window, { __mila: { map, layers, overview, store, tracker, compass, loc, draw, setBasemap, applyTheme } });
+  Object.assign(window, { __mila: { map, layers, overview, cityLimits, store, tracker, compass, loc, draw, setBasemap, applyTheme } });
 }

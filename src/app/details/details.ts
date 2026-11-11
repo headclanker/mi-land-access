@@ -10,7 +10,8 @@ import type { LayerManager } from '../layers/manager';
 import { P, acresOf, gradeFromProps, isGrade, listRank, parseRefs } from '../layers/enrich';
 import { parseNotes, parseOverlaps } from '../layers/reconcileLayers';
 import { prepared, contains } from '../layers/coverage';
-import { NO_PARCEL, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
+import { NO_PARCEL, cityOverride, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
+import { CITY_OWNED_CATEGORY } from '../../grading/grade';
 import { BOUNDARY_NOTE } from '../../grading/grade';
 import { boundaryColor } from '../layers/manager';
 import type { GradeResult } from '../../contract';
@@ -30,9 +31,10 @@ export const GRADE_SHORT: Record<Grade, string> = { green: 'Public', yellow: 'Ch
 
 const gradeOrder = (g: Grade): number => ['green', 'yellow', 'red', 'unknown'].indexOf(g);
 
-/** Badge text; a red park hunting zone is closed rather than private. */
-export function shortLabel(g: Grade, sourceId?: string): string {
-  return g === 'red' && sourceId === 'dnr-park-hunting' ? 'Closed' : GRADE_SHORT[g];
+/** Badge text; a red park hunting zone, city-owned land or land closed by the city rule is closed rather than private. */
+export function shortLabel(g: Grade, sourceId?: string, category?: string): string {
+  if (g !== 'red') return GRADE_SHORT[g];
+  return sourceId === 'dnr-park-hunting' || (category && (category === CITY_OWNED_CATEGORY || / city limits$/.test(category))) ? 'Closed' : GRADE_SHORT[g];
 }
 
 interface Hit {
@@ -48,6 +50,8 @@ interface Verdict {
   adoptedFrom?: string;
   /** The parcel the verdict belongs to, if any. */
   parcel?: Hit;
+  /** Bare-point verdicts closed by the city rule: the verdict without it, and where it came from. */
+  beforeCity?: { result: GradeResult; source?: LayerSource; name?: string };
 }
 
 export interface DetailsDeps {
@@ -133,15 +137,18 @@ export class Details {
     // The parcel under the point wins ties between neighbours touched by the tap box.
     const rank = (h: Hit): number => listRank(h.source) * 2 + (h.source.group === 'parcels' && !inside(h) ? 1 : 0);
     hits.sort((a, b) => rank(a) - rank(b) || (a.source.group === 'public-land' && b.source.group === 'public-land' ? gradeOrder(a.grade) - gradeOrder(b.grade) : 0));
-    this.render(hits, this.verdict(hits), lon, lat);
+    this.render(hits, this.verdict(hits, lon, lat), lon, lat);
     return true;
   }
 
-  /** Single verdict for the spot: the parcel's reconciled grade, else the public layers resolved at the point. */
-  private verdict(hits: Hit[]): Verdict | null {
+  /**
+   * Single verdict for the spot: the parcel's reconciled grade, else the public layers resolved at
+   * the point. Both include the city-limits rule (the parcel's city, or the city at the point).
+   */
+  private verdict(hits: Hit[], lon: number, lat: number): Verdict | null {
     const graded: Overlap[] = hits
       .filter((h) => h.source.group === 'public-land' && tierOf(h.source) !== null)
-      .map((h) => ({ source: h.source, grade: gradeFromProps((h.feature.properties ?? {}) as Record<string, unknown>), fraction: 1, name: str(h.feature.properties?.[P.name]) || undefined }));
+      .map((h) => ({ source: h.source, grade: gradeFromProps((h.feature.properties ?? {}) as Record<string, unknown>, 'base'), fraction: 1, name: str(h.feature.properties?.[P.name]) || undefined }));
     const parcel = hits.find((h) => h.source.group === 'parcels');
     if (parcel) {
       const props = (parcel.feature.properties ?? {}) as Record<string, unknown>;
@@ -150,20 +157,43 @@ export class Details {
       // A parcel split between zones (e.g. open and closed park zones): the zone under the finger
       // decides this spot, by the same rules; the parcel-wide strictest grade stays in the notes.
       if (props[P.split] === true && graded.some((o) => o.source.id === adopted)) {
-        const r = reconcileParcel(gradeFromProps(props, 'owner'), graded, str(props[P.owner]));
-        if (r.adoptedFrom === adopted) return { result: r.result, notes: [...notes, `At this spot: ${r.result.category}. Parcel-wide (strictest zone): ${str(props[P.category])}.`], conflict: r.conflict, adoptedFrom: adopted, parcel };
+        const r = cityOverride(reconcileParcel(gradeFromProps(props, 'owner'), graded, str(props[P.owner])), str(props[P.city]) || undefined);
+        if (r.adoptedFrom === adopted) return { result: r.result, notes: [...notes.filter((n) => !r.notes.includes(n)), ...r.notes.filter((n) => !notes.includes(n)), `At this spot: ${r.result.category}. Parcel-wide (strictest zone): ${str(props[P.category])}.`], conflict: r.conflict, adoptedFrom: adopted, parcel };
       }
       return { result: gradeFromProps(props), notes, conflict: props[P.conflict] === true, adoptedFrom: adopted || undefined, parcel };
     }
     if (!graded.length) return null;
-    const r = reconcileParcel(NO_PARCEL, graded);
-    return { result: r.result, notes: r.notes.filter((n) => !n.startsWith('No owner name')), conflict: r.conflict, adoptedFrom: r.adoptedFrom };
+    const r = cityOverride(reconcileParcel(NO_PARCEL, graded), this.deps.layers.cities?.at(lon, lat));
+    const from = r.adoptedFrom ? graded.find((o) => o.source.id === r.adoptedFrom) : undefined;
+    return {
+      result: r.result,
+      notes: r.notes.filter((n) => !n.startsWith('No owner name')),
+      conflict: r.conflict,
+      adoptedFrom: r.adoptedFrom,
+      beforeCity: r.beforeCity ? { result: r.beforeCity, source: from?.source, name: from?.name } : undefined,
+    };
   }
 
   private verdictBlock(v: Verdict): HTMLElement {
     const g = v.result.grade;
     const refs = v.result.references ?? [];
     const parts: (HTMLElement | null)[] = [];
+    if (v.beforeCity) {
+      // Away from parcels: the public-land record the city rule closed, listed like a parcel record.
+      const b = v.beforeCity;
+      parts.push(
+        h(
+          'p.record-line',
+          {},
+          h('span.muted', {}, `${b.source?.title ?? 'Land'} record: `),
+          h('strong', {}, b.name || b.result.category),
+          ' → ',
+          h('span.badge.sm', { style: `--c:${GRADE_COLORS[b.result.grade]}`, 'data-grade': b.result.grade }, GRADE_SHORT[b.result.grade]),
+          ' ',
+          b.result.category,
+        ),
+      );
+    }
     if (v.parcel) {
       const { source, feature } = v.parcel;
       const props = (feature.properties ?? {}) as Record<string, unknown>;
@@ -176,7 +206,7 @@ export class Details {
           h('span.muted', {}, source.parcel?.ownerField ? 'County parcel record: ' : 'Parcel record: '),
           h('strong', {}, ownerName ? tidyOwnerName(ownerName) : source.parcel?.ownerField ? '(no owner name)' : source.title),
           ' → ',
-          h('span.badge.sm', { style: `--c:${GRADE_COLORS[owner.grade]}`, 'data-grade': owner.grade }, GRADE_SHORT[owner.grade]),
+          h('span.badge.sm', { style: `--c:${GRADE_COLORS[owner.grade]}`, 'data-grade': owner.grade }, shortLabel(owner.grade, undefined, owner.category)),
           ' ',
           owner.category,
         ),
@@ -205,7 +235,7 @@ export class Details {
     return h(
       'section.verdict',
       { 'data-grade': g, 'data-conflict': v.conflict ? 'true' : null, style: `--c:${GRADE_COLORS[g]}` },
-      h('div.verdict-head', {}, h('span.badge', { style: `--c:${GRADE_COLORS[g]}`, 'data-grade': g }, v.conflict ? 'Verify' : shortLabel(g, v.adoptedFrom)), h('span', {}, h('strong', {}, v.result.category), h('span.small', {}, GRADE_LABEL[g]))),
+      h('div.verdict-head', {}, h('span.badge', { style: `--c:${GRADE_COLORS[g]}`, 'data-grade': g }, v.conflict ? 'Verify' : shortLabel(g, v.adoptedFrom, v.result.category)), h('span', {}, h('strong', {}, v.result.category), h('span.small', {}, GRADE_LABEL[g]))),
       v.result.reason ? h('p.reason', {}, v.result.reason) : null,
       v.notes.length ? h('ul.verdict-notes', {}, v.notes.map((n) => h('li', {}, n))) : null,
       refs.length ? h('ul.refs', {}, refs.map((r) => h('li', {}, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.label) : r.label))) : null,
@@ -345,7 +375,7 @@ export class Details {
       ? h('span.badge.unit', { style: `--c:${this.deps.layers.colorForUnitLayer(source.id)}` }, 'Unit')
       : isBoundary
         ? h('span.badge.unit', { style: `--c:${boundaryColor(source.id)}` }, 'Boundary')
-        : h('span.badge', { style: `--c:${GRADE_COLORS[hit.grade]}`, 'data-grade': hit.grade }, props[P.conflict] === true ? 'Verify' : shortLabel(hit.grade, str(props[P.adopted]) || source.id));
+        : h('span.badge', { style: `--c:${GRADE_COLORS[hit.grade]}`, 'data-grade': hit.grade }, props[P.conflict] === true ? 'Verify' : shortLabel(hit.grade, str(props[P.adopted]) || source.id, category));
     const showGrade = !isUnit && !isBoundary && !primary;
 
     const el = h(

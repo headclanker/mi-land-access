@@ -1292,6 +1292,10 @@ select {
   background: transparent !important;
   border: 2px dashed #0d5c2e;
 }
+.layer-sw.city {
+  background: transparent;
+  border: 1.5px solid #7b2d8e;
+}
 .legend-chip.hatch {
   background: repeating-linear-gradient(135deg, var(--c) 0 3px, color-mix(in srgb, var(--c) 25%, transparent) 3px 7px);
   border-style: dashed;

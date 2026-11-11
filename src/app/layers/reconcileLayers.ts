@@ -1,11 +1,14 @@
 // Applies src/grading/reconcile.ts to what is loaded on the map: works out which public-land
 // features overlap each loaded parcel (approximate, see coverage.ts), resolves one verdict per
 // parcel and writes it into the parcel's properties. Also decides which low-confidence (PAD-US)
-// fills to hide because parcels with owner names already cover them.
+// fills to hide because parcels with owner names already cover them. Then applies the
+// city-limits rule (cityOverride) to every parcel and to every graded public-land feature on its
+// own, so a PAD-US local park inside a city draws red even where no parcel layer covers it.
 
 import type { Feature } from 'geojson';
 import type { LayerSource } from '../../contract';
-import { reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
+import { cityOverride, cityOverrideFeature, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
+import type { CityIndex } from './cities';
 import { coverage, prepared, type BBox, type Shape } from './coverage';
 import { P, gradeFromProps } from './enrich';
 
@@ -51,7 +54,7 @@ export function loadsForParcels(s: LayerSource): boolean {
   return s.group === 'public-land' && (s.role === 'access-program' || (s.role === 'ownership' && !s.lowConfidence));
 }
 
-export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], opts: { visible: (id: string) => boolean; view: BBox }): ReconcileOutcome {
+export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], opts: { visible: (id: string) => boolean; view: BBox; cities?: CityIndex | null }): ReconcileOutcome {
   const t0 = performance.now();
   const srcOf = new Map<Feature, LayerSource>();
   const pubShapes: Shape<Feature>[] = [];
@@ -76,22 +79,51 @@ export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], 
 
   const cov = pubShapes.length ? coverage(parcelShapes, pubShapes) : new Map<Feature, { key: Feature; fraction: number }[]>();
   const changed = new Set<string>();
+  const cities = opts.cities ?? null;
+
+  // Public-land features on their own: the city rule decides their fill where no parcel does.
+  for (const l of publics) {
+    if (!isReconcilable(l.source)) continue;
+    for (const f of l.features) {
+      const props = f.properties as Record<string, unknown>;
+      const city = cities?.of(f);
+      const r = cityOverrideFeature(l.source, gradeFromProps(props, 'base'), city);
+      const next: Record<string, unknown> = {
+        [P.grade]: r.result.grade,
+        [P.category]: r.result.category,
+        [P.reason]: r.result.reason,
+        [P.refs]: JSON.stringify(r.result.references ?? []),
+        [P.city]: city ?? '',
+        [P.notes]: JSON.stringify(r.notes),
+      };
+      let diff = false;
+      for (const k in next) if (props[k] !== next[k]) diff = true;
+      if (diff) {
+        Object.assign(props, next);
+        changed.add(l.source.id);
+      }
+    }
+  }
+
   for (const { key: f } of parcelShapes) {
     const props = f.properties as Record<string, unknown>;
     const owner = gradeFromProps(props, 'owner');
     const hits = cov.get(f) ?? [];
     const overlaps: Overlap[] = hits.map(({ key, fraction }) => {
       const pp = key.properties as Record<string, unknown>;
-      return { source: srcOf.get(key)!, grade: gradeFromProps(pp), fraction, name: str(pp[P.name]) || undefined };
+      return { source: srcOf.get(key)!, grade: gradeFromProps(pp, 'base'), fraction, name: str(pp[P.name]) || undefined };
     });
-    const r = reconcileParcel(owner, overlaps, str(props[P.owner]));
+    const city = cities?.of(f);
+    const r = cityOverride(reconcileParcel(owner, overlaps, str(props[P.owner])), city);
     const adoptedSrc = r.adoptedFrom ? publics.find((l) => l.source.id === r.adoptedFrom)?.source : undefined;
-    const tint = r.conflict ? 'conflict' : adoptedSrc && !adoptedSrc.lowConfidence && opts.visible(adoptedSrc.id) ? 'none' : 'fill';
+    // A verdict the city rule changed is the parcel's own: it draws its own fill.
+    const tint = r.conflict ? 'conflict' : r.cityRule !== 'closed' && adoptedSrc && !adoptedSrc.lowConfidence && opts.visible(adoptedSrc.id) ? 'none' : 'fill';
     // One line per layer + status + name (a parcel often meets several tracts of the same thing).
     const grouped = new Map<string, OverlapSummary & { f: number }>();
     for (const { key, fraction } of hits) {
       const pp = key.properties as Record<string, unknown>;
-      const o = { src: srcOf.get(key)!.id, fid: str(pp[P.fid]), grade: str(pp[P.grade]), category: str(pp[P.category]), name: str(pp[P.name]), pct: 0, f: 0 };
+      const own = gradeFromProps(pp, 'base');
+      const o = { src: srcOf.get(key)!.id, fid: str(pp[P.fid]), grade: own.grade as string, category: own.category, name: str(pp[P.name]), pct: 0, f: 0 };
       const k = `${o.src}|${o.grade}|${o.category}|${o.name}`;
       const g = grouped.get(k) ?? o;
       g.f = Math.min(1, g.f + fraction);
@@ -110,6 +142,7 @@ export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], 
       [P.conflict]: r.conflict,
       [P.adopted]: r.adoptedFrom ?? '',
       [P.split]: r.split,
+      [P.city]: city ?? '',
       [P.notes]: JSON.stringify(r.notes),
       [P.overlaps]: JSON.stringify(summary),
     };

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { GradeResult, LayerSource } from '../contract.ts';
 import { LAYER_SOURCES } from '../data/sources.ts';
 import { gradeFeature, gradeOwnerName } from './grade.ts';
-import { NO_PARCEL, moreRestrictive, reconcileParcel, tierOf, type Overlap } from './reconcile.ts';
+import { NO_PARCEL, cityNote, cityOverride, cityOverrideFeature, moreRestrictive, reconcileParcel, tierOf, type Overlap } from './reconcile.ts';
 
 // Cases below are taken from the November 2026 audit of 21,601 county parcels against every
 // public-land layer (owner strings and coverage fractions are real).
@@ -344,5 +344,147 @@ describe('two public layers that disagree', () => {
     const r = reconcileParcel(gradeOwnerName('STATE OF MICHIGAN DNR'), [park('Closed', 0.9), dnrLand('FORESTS', 0.9)], 'STATE OF MICHIGAN DNR');
     expect(r.result.grade).toBe('red');
     expect(r.adoptedFrom).toBe('dnr-park-hunting');
+  });
+});
+
+describe('city limits rule', () => {
+  const GR = 'Grand Rapids';
+  const inCity = (owner: string, overlaps: Overlap[], city: string | null = GR) => cityOverride(parcel(owner, overlaps), city ?? undefined);
+
+  it('CITY OF GRAND RAPIDS parcel → red, city-owned, wherever it is', () => {
+    for (const city of [GR, null]) {
+      const r = inCity('CITY OF GRAND RAPIDS', [], city);
+      expect(r.result.grade).toBe('red');
+      expect(r.result.category).toBe('City-owned – closed to hunting');
+      expect(r.result.reason).toMatch(/ordinances/);
+      expect(r.notes).toEqual([]);
+    }
+  });
+
+  it('KENT COUNTY PARKS parcel inside Grand Rapids → red with the city reason; outside any city → yellow', () => {
+    const r = inCity('KENT COUNTY PARKS', []);
+    expect(r.result.grade).toBe('red');
+    expect(r.result.category).toBe('County-owned – inside Grand Rapids city limits');
+    expect(r.result.reason).toMatch(/Inside Grand Rapids city limits/);
+    expect(r.result.reason).toMatch(/not a statewide law/);
+    expect(r.cityRule).toBe('closed');
+    expect(r.beforeCity?.grade).toBe('yellow');
+    expect(r.owner.category).toBe('County-owned');
+    const out = inCity('KENT COUNTY PARKS', [], null);
+    expect(out.result.grade).toBe('yellow');
+    expect(out.result.category).toBe('County-owned');
+    expect(out.city).toBeUndefined();
+  });
+
+  it('townships named after a city stay yellow outside the city', () => {
+    for (const owner of ['GRAND RAPIDS TOWNSHIP', 'CHARTER TOWNSHIP OF GRAND RAPIDS']) {
+      const r = inCity(owner, [], null);
+      expect(r.result.grade, owner).toBe('yellow');
+      expect(r.result.category, owner).toBe('Township-owned');
+    }
+    // …but township land that lies inside a city is closed like any other yellow land.
+    expect(inCity('GRAND RAPIDS TOWNSHIP', []).result.grade).toBe('red');
+  });
+
+  it('private owners with "CITY" in the name stay private (with the city note inside a city)', () => {
+    for (const owner of ['CITY VIEW LLC', 'TRAVERSE CITY STATE BANK', 'BAY CITY ROD AND GUN CLUB']) {
+      const out = inCity(owner, [], null);
+      expect(out.result.grade, owner).toBe('red');
+      expect(out.result.category, owner).toMatch(/^Private/);
+      const r = inCity(owner, [], 'Traverse City');
+      expect(r.result.category, owner).toMatch(/^Private/);
+      expect(r.notes).toContain(cityNote('Traverse City'));
+    }
+  });
+
+  it('village-owned stays yellow outside a city and mentions village ordinances', () => {
+    const r = inCity('VILLAGE OF SPARTA', [], null);
+    expect(r.result.grade).toBe('yellow');
+    expect(r.result.category).toBe('Village-owned');
+    expect(r.result.reason).toMatch(/[Vv]illage ordinances/);
+  });
+
+  it('school, road commission, utility, generic State of Michigan land inside a city → red', () => {
+    for (const owner of ['GRAND RAPIDS PUBLIC SCHOOLS', 'KENT COUNTY ROAD COMMISSION', 'CONSUMERS ENERGY CO', 'STATE OF MICHIGAN', 'KENT COUNTY LAND BANK AUTHORITY']) {
+      const r = inCity(owner, []);
+      expect(r.result.grade, owner).toBe('red');
+      expect(r.result.category, owner).toMatch(/inside Grand Rapids city limits$/);
+    }
+  });
+
+  it('DNR-managed green inside a city stays green with the note', () => {
+    const r = inCity('STATE OF MICHIGAN', [dnrLand('Wildlife Game Areas', 1, 'Grand River')]);
+    expect(r.result.grade).toBe('green');
+    expect(r.adoptedFrom).toBe('dnr-managed-lands');
+    expect(r.notes).toContain(cityNote(GR));
+    expect(r.cityRule).toBe('note');
+  });
+
+  it('a green verdict from the owner name alone (MICH DNR, no DNR layer) keeps green with the note', () => {
+    const r = inCity('MICH DNR', []);
+    expect(r.result.grade).toBe('green');
+    expect(r.notes).toContain(cityNote(GR));
+  });
+
+  it('USFS, open park zone, HAP and Commercial Forest green inside a city are not overridden', () => {
+    for (const o of [usfs(1), park('Open', 1), hap(1), cfa(1)]) {
+      const r = inCity('', [o]);
+      expect(r.result.grade, o.source.id).toBe('green');
+      expect(r.notes, o.source.id).toContain(cityNote(GR));
+    }
+  });
+
+  it('closed park zone inside a city → red, no extra note', () => {
+    const r = inCity('STATE OF MICHIGAN', [park('Closed', 1)]);
+    expect(r.result.grade).toBe('red');
+    expect(r.result.category).toBe('State park – closed to hunting');
+    expect(r.notes).not.toContain(cityNote(GR));
+  });
+
+  it('restricted park zones and restricted HAP stay yellow (a state program opens them) with the note', () => {
+    for (const o of [park('Open-Restricted', 1), hap(1, 'Archery Only')]) {
+      const r = inCity('', [o]);
+      expect(r.result.grade, o.source.id).toBe('yellow');
+      expect(r.notes, o.source.id).toContain(cityNote(GR));
+    }
+  });
+
+  it('yellow DNR land (boat access, trail) inside a city → red', () => {
+    const r = inCity('', [dnrLand('BOATING ACCESS SITE', 1, 'Grand River Access')]);
+    expect(r.result.grade).toBe('red');
+    expect(r.result.category).toBe('Boating / water access site – inside Grand Rapids city limits');
+    expect(r.beforeCity?.grade).toBe('yellow');
+  });
+
+  it('unknown stays unknown with the note', () => {
+    const r = inCity('', []);
+    expect(r.result.grade).toBe('unknown');
+    expect(r.notes).toContain(cityNote(GR));
+  });
+
+  it('bare map point: PAD-US local polygon inside a city → red; outside → yellow', () => {
+    const local = padusLocal(1);
+    const r = cityOverride(reconcileParcel(NO_PARCEL, [local]), GR);
+    expect(r.result.grade).toBe('red');
+    expect(r.result.category).toBe('County land – inside Grand Rapids city limits');
+    expect(cityOverride(reconcileParcel(NO_PARCEL, [local]), undefined).result.grade).toBe('yellow');
+  });
+
+  it('one public-land feature on its own (map fill where no parcels load)', () => {
+    const s = src('padus-local');
+    const g = gradeFeature(s, { Mang_Type: 'LOC', Mang_Name: 'CITY', Unit_Nm: 'Riverside Park' });
+    expect(cityOverrideFeature(s, g, GR).result.grade).toBe('red');
+    expect(cityOverrideFeature(s, g, undefined).result).toEqual(g);
+    const dnr = src('dnr-managed-lands');
+    const green = gradeFeature(dnr, { ProjectUseType: 'FORESTS' });
+    const kept = cityOverrideFeature(dnr, green, 'Gaylord');
+    expect(kept.result.grade).toBe('green');
+    expect(kept.notes).toEqual([cityNote('Gaylord')]);
+  });
+
+  it('records-disagree (private owner vs DNR) inside a city → red, still flagged', () => {
+    const r = inCity('SMITH JOHN', [dnrLand('Forests', 1)]);
+    expect(r.result.grade).toBe('red');
+    expect(r.conflict).toBe(true);
   });
 });

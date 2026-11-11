@@ -20,6 +20,7 @@ import {
 import { P, enrichFeature } from './enrich';
 import { CountyIndex } from './counties';
 import { loadsForParcels, reconcileLoaded } from './reconcileLayers';
+import type { CityIndex } from './cities';
 
 export interface LayerStatus {
   /** User toggle. */
@@ -132,6 +133,8 @@ export class LayerManager {
   private readonly scheduleReconcile: () => void;
   /** Last reconciliation pass duration (ms), for diagnostics. */
   lastReconcileMs = 0;
+  /** City limits for the city-limits grading rule (null until the asset has loaded). */
+  cities: CityIndex | null = null;
 
   private readonly map: MLMap;
 
@@ -549,7 +552,7 @@ export class LayerManager {
       this.sources.filter((s) => s.group === g && this.isLoaded(s.id)).map((source) => ({ source, features: this.drawn.get(source.id)?.values() ? [...this.drawn.get(source.id)!.values()] : [] }));
     const parcels = loaded('parcels');
     const publics = loaded('public-land');
-    const out = reconcileLoaded(parcels, publics, { visible: (id) => this.getStatus(id).active, view: this.viewBBox() });
+    const out = reconcileLoaded(parcels, publics, { visible: (id) => this.getStatus(id).active, view: this.viewBBox(), cities: this.cities });
     this.lastReconcileMs = out.ms;
     for (const id of out.changed) {
       const s = this.sourceById(id);
@@ -567,6 +570,12 @@ export class LayerManager {
       this.masked.set(s.id, want);
     }
     if (out.changed.size) this.emit();
+  }
+
+  /** Supplies the city limits; loaded features are re-graded under the city rule. */
+  setCities(index: CityIndex | null): void {
+    this.cities = index;
+    this.scheduleReconcile();
   }
 
   /** Re-applies visibility (e.g. after a basemap swap). */

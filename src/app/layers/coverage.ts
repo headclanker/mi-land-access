@@ -190,6 +190,16 @@ function measure<S>(target: Prepared, cands: Shape<S>[], samples: number, clip?:
 }
 
 /**
+ * Share of `target` inside each candidate shape (non-zero only). A fraction close to a decision
+ * threshold gets a second, much denser pass so the 10% / 50% calls are not decided by sampling
+ * noise (error drops to well under 1%).
+ */
+export function fractionsIn<S>(target: Prepared, cands: Shape<S>[], samples = 64, clip?: BBox): { key: S; fraction: number }[] {
+  const res = measure(target, cands, samples, clip);
+  return res.some((r) => nearThreshold(r.fraction)) ? measure(target, cands, samples * REFINE_FACTOR, clip) : res;
+}
+
+/**
  * For each target shape, the fraction of its sample points inside each overlapping source
  * shape. Returns only non-zero fractions.
  */
@@ -204,11 +214,7 @@ export function coverage<T, S>(targets: Shape<T>[], sources: Shape<S>[], opts: {
     if (tb[0] > tb[2] || tb[1] > tb[3]) continue;
     const cands = [...grid.query(tb)].filter((s) => bboxOverlap(s.prep.bbox, tb));
     if (!cands.length) continue;
-    const base = opts.samples ?? 64;
-    let res = measure(t.prep, cands, base, opts.clip);
-    // A fraction close to a decision threshold gets a second, much denser pass so the
-    // 10% / 50% calls are not decided by sampling noise (error drops to well under 1%).
-    if (res.some((r) => nearThreshold(r.fraction))) res = measure(t.prep, cands, base * REFINE_FACTOR, opts.clip);
+    const res = fractionsIn(t.prep, cands, opts.samples ?? 64, opts.clip);
     if (res.length) out.set(t.key, res);
   }
   return out;

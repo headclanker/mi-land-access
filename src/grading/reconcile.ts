@@ -136,14 +136,7 @@ function make(grade: Grade, category: string, reason: string, references?: Grade
   return references && references.length ? { grade, category, reason, references } : { grade, category, reason };
 }
 
-/**
- * Resolves the parcel's verdict.
- * @param owner the owner-name GradeResult (with ownerKind) — or, for a map point with no
- *   parcel, a blank-owner result ({ownerKind: 'none'}).
- * @param overlaps every public-land feature overlapping the parcel, with its own grade.
- * @param ownerName the raw owner string, for wording.
- */
-export function reconcileParcel(owner: GradeResult, overlaps: Overlap[], ownerName?: string): Reconciled {
+function resolve(owner: GradeResult, overlaps: Overlap[], ownerName?: string): Reconciled {
   const kind: OwnerKind = owner.ownerKind ?? (owner.grade === 'unknown' ? 'none' : owner.grade === 'red' ? 'private' : 'other');
   const layers = aggregate(overlaps);
   const notes: string[] = [];
@@ -265,6 +258,45 @@ export function reconcileParcel(owner: GradeResult, overlaps: Overlap[], ownerNa
   }
 
   return done(owner);
+}
+
+/**
+ * Two authoritative public layers can cover the same parcel and disagree (e.g. a DNR trail
+ * corridor that is also enrolled Commercial Forest). The higher-precedence layer normally
+ * decides, but it must never hide a stricter authoritative record: if a lower-precedence,
+ * high-confidence covering layer is more restrictive than the verdict, the stricter grade is
+ * shown and the parcel is flagged as a disagreement.
+ */
+function crossCheck(r: Reconciled, overlaps: Overlap[]): Reconciled {
+  if (!r.adoptedFrom) return r;
+  const covering = aggregate(overlaps).filter((a) => a.fraction >= COVER_FRACTION && a.tier <= 4 && a.source.id !== r.adoptedFrom);
+  if (!covering.length) return r;
+  const { layer, feature } = strictest(covering);
+  if (RESTRICTIVENESS[feature.grade.grade] <= RESTRICTIVENESS[r.result.grade]) return r;
+  const adopted = overlaps.find((o) => o.source.id === r.adoptedFrom)?.source.title ?? 'another layer';
+  return {
+    ...r,
+    result: make(
+      feature.grade.grade,
+      'Records disagree',
+      `${adopted} shows this as ${r.result.category} (${GRADE_WORD[r.result.grade]}), but ${layer.source.title} shows ${featureLabel(feature)} (${GRADE_WORD[feature.grade.grade]}). The stricter record is shown — check with the DNR before hunting.`,
+      withRefs(r.result, feature.grade),
+    ),
+    adoptedFrom: undefined,
+    conflict: true,
+    notes: [...r.notes, `Two public-land records cover this parcel and disagree: ${adopted} and ${layer.source.title}.`],
+  };
+}
+
+/**
+ * Resolves the parcel's verdict.
+ * @param owner the owner-name GradeResult (with ownerKind) — or, for a map point with no
+ *   parcel, a blank-owner result ({ownerKind: 'none'}).
+ * @param overlaps every public-land feature overlapping the parcel, with its own grade.
+ * @param ownerName the raw owner string, for wording.
+ */
+export function reconcileParcel(owner: GradeResult, overlaps: Overlap[], ownerName?: string): Reconciled {
+  return crossCheck(resolve(owner, overlaps, ownerName), overlaps);
 }
 
 /** Blank-owner input for resolving a bare map point (no parcel under it). */

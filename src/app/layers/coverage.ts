@@ -10,8 +10,9 @@
 //   * a parcel's coverage by a public feature is estimated from a lattice of sample points
 //     inside the parcel (about 30–60 points): fraction = points inside the feature / points
 //     inside the parcel.
-// Resolution is therefore a few percent of the parcel's area — plenty for the 10% / 50%
-// thresholds used by reconciliation — and lon/lat distortion is negligible at parcel scale.
+// Resolution is a few percent of the parcel's area on the first pass; any fraction within 8
+// points of a decision threshold (10% / 50%) is re-measured with 12× the samples, so threshold
+// calls are accurate to well under 1%. Lon/lat distortion is negligible at parcel scale.
 
 import type { Feature, Polygon, MultiPolygon, Position } from 'geojson';
 
@@ -166,6 +167,28 @@ export function prepared(f: Feature): Prepared | null {
 
 const bboxOverlap = (a: BBox, b: BBox): boolean => a[0] <= b[2] && a[2] >= b[0] && a[1] <= b[3] && a[3] >= b[1];
 
+/** Reconciliation decides at these fractions (PARTIAL_FRACTION, COVER_FRACTION in grading/reconcile.ts). */
+export const DECISION_THRESHOLDS = [0.1, 0.5] as const;
+const REFINE_MARGIN = 0.08;
+const REFINE_FACTOR = 12;
+
+export function nearThreshold(fraction: number): boolean {
+  return DECISION_THRESHOLDS.some((t) => Math.abs(fraction - t) < REFINE_MARGIN);
+}
+
+function measure<S>(target: Prepared, cands: Shape<S>[], samples: number, clip?: BBox): { key: S; fraction: number }[] {
+  const pts = samplePoints(target, samples, clip);
+  const total = pts.length / 2;
+  const res: { key: S; fraction: number }[] = [];
+  if (!total) return res;
+  for (const c of cands) {
+    let hit = 0;
+    for (let i = 0; i < pts.length; i += 2) if (contains(c.prep, pts[i], pts[i + 1])) hit++;
+    if (hit) res.push({ key: c.key, fraction: hit / total });
+  }
+  return res;
+}
+
 /**
  * For each target shape, the fraction of its sample points inside each overlapping source
  * shape. Returns only non-zero fractions.
@@ -181,15 +204,11 @@ export function coverage<T, S>(targets: Shape<T>[], sources: Shape<S>[], opts: {
     if (tb[0] > tb[2] || tb[1] > tb[3]) continue;
     const cands = [...grid.query(tb)].filter((s) => bboxOverlap(s.prep.bbox, tb));
     if (!cands.length) continue;
-    const pts = samplePoints(t.prep, opts.samples ?? 64, opts.clip);
-    const total = pts.length / 2;
-    if (!total) continue;
-    const res: { key: S; fraction: number }[] = [];
-    for (const c of cands) {
-      let hit = 0;
-      for (let i = 0; i < pts.length; i += 2) if (contains(c.prep, pts[i], pts[i + 1])) hit++;
-      if (hit) res.push({ key: c.key, fraction: hit / total });
-    }
+    const base = opts.samples ?? 64;
+    let res = measure(t.prep, cands, base, opts.clip);
+    // A fraction close to a decision threshold gets a second, much denser pass so the
+    // 10% / 50% calls are not decided by sampling noise (error drops to well under 1%).
+    if (res.some((r) => nearThreshold(r.fraction))) res = measure(t.prep, cands, base * REFINE_FACTOR, opts.clip);
     if (res.length) out.set(t.key, res);
   }
   return out;

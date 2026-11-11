@@ -393,6 +393,17 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     extraFields: ['OWNER_NAM2', 'P_ADDRESS', 'CLASS'],
   },
   {
+    county: 'Arenac',
+    url: 'https://services8.arcgis.com/SWvtgOskziun2bFF/arcgis/rest/services/Arenac_Parcels_2026/FeatureServer/34',
+    attribution: 'Arenac County (2026 parcels)',
+    ownerField: 'OWNERNAME',
+    ownerAddressFields: ['OWNER_ADDR'],
+    siteAddressField: 'PROPERTY_A',
+    acresField: 'GIS_ACREAG',
+    parcelIdField: 'PID',
+    extraFields: ['OWNERNAME2', 'PROPCLASS'],
+  },
+  {
     county: 'Barry',
     url: 'https://services.arcgis.com/i0SsdDzLI3mLGmPR/arcgis/rest/services/Parcels_PublicViewer_View/FeatureServer/14',
     attribution: 'Barry County',

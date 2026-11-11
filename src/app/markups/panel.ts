@@ -208,7 +208,7 @@ export class MarkupPanel {
     if (url.length > 8000) toast('Link is long — GPX export may be more reliable for big tracks', 4000);
     if (navigator.share) {
       try {
-        await navigator.share({ title: `MI Land Access: ${title}`, url });
+        await navigator.share({ title: `SketchX: ${title}`, url });
         return;
       } catch (err) {
         if (err instanceof DOMException && err.name === 'AbortError') return;
@@ -223,7 +223,7 @@ export class MarkupPanel {
     const file = new File([gpx], 'markups.gpx', { type: 'application/gpx+xml' });
     if (navigator.canShare?.({ files: [file] })) {
       try {
-        await navigator.share({ files: [file], title: 'MI Land Access markups' });
+        await navigator.share({ files: [file], title: 'SketchX markups' });
         return;
       } catch (err) {
         if (err instanceof DOMException && err.name === 'AbortError') return;
@@ -236,8 +236,8 @@ export class MarkupPanel {
     const ms = this.targets();
     if (!ms.length) return toast('No markups to export');
     const stamp = new Date().toISOString().slice(0, 10);
-    if (fmt === 'gpx') downloadText(`mi-land-access-${stamp}.gpx`, markupsToGPX(ms), 'application/gpx+xml');
-    else downloadText(`mi-land-access-${stamp}.geojson`, JSON.stringify(markupsToGeoJSON(ms), null, 1), 'application/geo+json');
+    if (fmt === 'gpx') downloadText(`sketchx-${stamp}.gpx`, markupsToGPX(ms), 'application/gpx+xml');
+    else downloadText(`sketchx-${stamp}.geojson`, JSON.stringify(markupsToGeoJSON(ms), null, 1), 'application/geo+json');
   }
 
   importText(text: string, filename = ''): number {

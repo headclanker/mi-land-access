@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#14201a"/>
-  <g fill="none" stroke="#2e9e4f" stroke-width="14" stroke-linecap="round" opacity="0.9">
-    <path d="M70 360c60-40 120-20 170-50s70-90 140-100 70 0 70 0"/>
-    <path d="M70 420c80-30 140-10 200-40s90-80 170-80" opacity="0.6"/>
-    <path d="M70 300c50-40 90-50 130-80s50-80 110-100" opacity="0.4"/>
+  <title>SketchX</title>
+  <rect width="512" height="512" rx="120" fill="#f3e3bf"/>
+  <path d="M40 330 L168 456 L480 404" fill="none" stroke="#1c2c4c" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="34 40"/>
+  <g fill="#e0315b" transform="translate(256 248) scale(1.12) translate(-256 -256)">
+    <path d="M142 88 Q302 206 421 381 C440 404 404 436 379 423 Q228 280 94 136 C78 114 120 72 142 88 Z"/>
+    <path d="M375 85 Q220 234 89 383 C74 404 116 446 139 433 Q286 300 417 127 C432 104 396 70 375 85 Z"/>
   </g>
-  <path d="M256 96c-62 0-110 48-110 108 0 82 110 196 110 196s110-114 110-196c0-60-48-108-110-108z" fill="#ff6a13"/>
-  <circle cx="256" cy="204" r="42" fill="#14201a"/>
-  <path d="M256 180v48M232 204h48" stroke="#ff6a13" stroke-width="10" stroke-linecap="round"/>
 </svg>

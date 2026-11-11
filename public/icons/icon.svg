@@ -1,11 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#14201a"/>
-  <g fill="none" stroke="#2e9e4f" stroke-width="14" stroke-linecap="round" opacity="0.9">
-    <path d="M70 360c60-40 120-20 170-50s70-90 140-100 70 0 70 0"/>
-    <path d="M70 420c80-30 140-10 200-40s90-80 170-80" opacity="0.6"/>
-    <path d="M70 300c50-40 90-50 130-80s50-80 110-100" opacity="0.4"/>
+  <title>SketchX</title>
+  <!-- Map paper -->
+  <rect width="512" height="512" rx="112" fill="#f3e3bf"/>
+  <!-- Topo contours, hand-wobbly -->
+  <g fill="none" stroke="#1c2c4c" stroke-linecap="round" opacity="0.14" stroke-width="7">
+    <path d="M-10 150c58-24 104 6 158-10s92-54 150-46 92 40 140 30 64-24 84-30"/>
+    <path d="M-10 228c66-20 112 10 170-6s88-40 146-34 86 34 132 26 60-18 84-22"/>
   </g>
-  <path d="M256 96c-62 0-110 48-110 108 0 82 110 196 110 196s110-114 110-196c0-60-48-108-110-108z" fill="#ff6a13"/>
-  <circle cx="256" cy="204" r="42" fill="#14201a"/>
-  <path d="M256 180v48M232 204h48" stroke="#ff6a13" stroke-width="10" stroke-linecap="round"/>
+  <!-- Dashed property line turning a corner -->
+  <path d="M44 318 L170 448 L478 396" fill="none" stroke="#1c2c4c" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="16 22"/>
+  <!-- Pencil under-sketch that overshoots the marker -->
+  <g fill="none" stroke="#1c2c4c" stroke-linecap="round" stroke-width="7" opacity="0.85">
+    <path d="M146 60 C204 104 252 150 300 204 S 404 318 454 372"/>
+    <path d="M390 54 C334 106 290 152 240 206 S 116 330 60 394"/>
+    <path d="M128 78 C140 84 152 92 162 100" stroke-width="5"/>
+  </g>
+  <!-- Marker X: two rough brush strokes -->
+  <g fill="#e0315b">
+    <path d="M142 88 Q302 206 421 381 C440 404 404 436 379 423 Q228 280 94 136 C78 114 120 72 142 88 Z"/>
+    <path d="M375 85 Q220 234 89 383 C74 404 116 446 139 433 Q286 300 417 127 C432 104 396 70 375 85 Z"/>
+  </g>
 </svg>

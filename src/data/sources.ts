@@ -1,4 +1,4 @@
-// Catalog of verified ArcGIS REST layers for MI Land Access.
+// Catalog of verified ArcGIS REST layers for SketchX.
 //
 // Every URL and field name below was checked live (layer `?f=json` metadata plus a
 // `/query?...&f=geojson` sample) in November 2026. All listed layers advertise

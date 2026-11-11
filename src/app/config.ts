@@ -1,6 +1,6 @@
 import type { LngLatBoundsLike } from 'maplibre-gl';
 
-export const APP_NAME = 'MI Land Access';
+export const APP_NAME = 'SketchX';
 
 /** Michigan (both peninsulas) extent. */
 export const MICHIGAN_BOUNDS: LngLatBoundsLike = [

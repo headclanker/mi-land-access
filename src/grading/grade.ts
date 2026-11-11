@@ -1,4 +1,4 @@
-// Legality grading for MI Land Access.
+// Legality grading for SketchX.
 //
 // gradeFeature() turns one map feature (its layer + attributes) into a GradeResult:
 //   green   – clearly public and open to hunting

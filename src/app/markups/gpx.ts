@@ -36,7 +36,7 @@ function ext(m: Markup, icon?: WaypointIcon): string {
   return `<extensions><mila:kind>${m.kind}</mila:kind><mila:color>${m.color}</mila:color>${icon ? `<mila:icon>${icon}</mila:icon>` : ''}</extensions>`;
 }
 
-export function markupsToGPX(markups: readonly Markup[], creator = 'MI Land Access'): string {
+export function markupsToGPX(markups: readonly Markup[], creator = 'SketchX'): string {
   const parts: string[] = [];
   for (const m of markups) {
     if (m.kind !== 'waypoint') continue;

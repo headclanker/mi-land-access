@@ -1,5 +1,7 @@
 // Minimal key/value persistence: IndexedDB when available, localStorage otherwise.
 
+// Storage names predate the SketchX rename (the app was "MI Land Access"). They stay as they are
+// so existing users keep their markups, tracks and settings — do not rename them.
 const DB_NAME = 'mi-land-access';
 const STORE = 'kv';
 

@@ -1,11 +1,19 @@
-// Tap/click → details sheet listing every feature under the finger, most permissive land first.
+// Tap/click → details sheet: one resolved verdict for the spot first (the parcel's reconciled
+// grade, or the same precedence rules applied to the public layers at the point), then the
+// county record, every overlapping layer with its own status, boundaries, units and reference.
 
 import type { Map as MLMap, GeoJSONSource, MapGeoJSONFeature } from 'maplibre-gl';
 import { bbox as turfBbox } from '@turf/turf';
 import type { Feature } from 'geojson';
 import { GRADE_COLORS, type Grade, type LayerSource } from '../../contract';
 import type { LayerManager } from '../layers/manager';
-import { P, acresOf, isGrade, parseRefs, permissivenessRank } from '../layers/enrich';
+import { P, acresOf, gradeFromProps, isGrade, listRank, parseRefs } from '../layers/enrich';
+import { parseNotes, parseOverlaps } from '../layers/reconcileLayers';
+import { prepared, contains } from '../layers/coverage';
+import { NO_PARCEL, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
+import { BOUNDARY_NOTE } from '../../grading/grade';
+import { boundaryColor } from '../layers/manager';
+import type { GradeResult } from '../../contract';
 import { fill, copyText, h, icon, toast } from '../util/dom';
 import { formatLatLon } from '../util/coords';
 import { openLetterDialog, tidyOwnerName } from './letter';
@@ -20,10 +28,26 @@ export const GRADE_LABEL: Record<Grade, string> = {
 
 export const GRADE_SHORT: Record<Grade, string> = { green: 'Public', yellow: 'Check', red: 'Private', unknown: 'Unknown' };
 
+const gradeOrder = (g: Grade): number => ['green', 'yellow', 'red', 'unknown'].indexOf(g);
+
+/** Badge text; a red park hunting zone is closed rather than private. */
+export function shortLabel(g: Grade, sourceId?: string): string {
+  return g === 'red' && sourceId === 'dnr-park-hunting' ? 'Closed' : GRADE_SHORT[g];
+}
+
 interface Hit {
   source: LayerSource;
   feature: Feature;
   grade: Grade;
+}
+
+interface Verdict {
+  result: GradeResult;
+  notes: string[];
+  conflict: boolean;
+  adoptedFrom?: string;
+  /** The parcel the verdict belongs to, if any. */
+  parcel?: Hit;
 }
 
 export interface DetailsDeps {
@@ -98,20 +122,104 @@ export class Details {
       hits.push({ source, feature, grade: isGrade(g) ? g : 'unknown' });
     }
     if (!hits.length) return false;
-    hits.sort((a, b) => permissivenessRank(a.source, a.grade) - permissivenessRank(b.source, b.grade));
-    this.render(hits, lon, lat);
+    const inside = (h: Hit): boolean => {
+      const p = prepared(h.feature);
+      return p ? contains(p, lon, lat) : false;
+    };
+    // The parcel under the point wins ties between neighbours touched by the tap box.
+    const rank = (h: Hit): number => listRank(h.source) * 2 + (h.source.group === 'parcels' && !inside(h) ? 1 : 0);
+    hits.sort((a, b) => rank(a) - rank(b) || (a.source.group === 'public-land' && b.source.group === 'public-land' ? gradeOrder(a.grade) - gradeOrder(b.grade) : 0));
+    this.render(hits, this.verdict(hits), lon, lat);
     return true;
   }
 
-  private render(hits: Hit[], lon: number, lat: number): void {
-    const cards = hits.map((hit, i) => this.card(hit, lon, lat, i === 0));
+  /** Single verdict for the spot: the parcel's reconciled grade, else the public layers resolved at the point. */
+  private verdict(hits: Hit[]): Verdict | null {
+    const graded: Overlap[] = hits
+      .filter((h) => h.source.group === 'public-land' && tierOf(h.source) !== null)
+      .map((h) => ({ source: h.source, grade: gradeFromProps((h.feature.properties ?? {}) as Record<string, unknown>), fraction: 1, name: str(h.feature.properties?.[P.name]) || undefined }));
+    const parcel = hits.find((h) => h.source.group === 'parcels');
+    if (parcel) {
+      const props = (parcel.feature.properties ?? {}) as Record<string, unknown>;
+      const notes = parseNotes(props[P.notes]);
+      const adopted = str(props[P.adopted]);
+      // A parcel split between zones (e.g. open and closed park zones): the zone under the finger
+      // decides this spot, by the same rules; the parcel-wide strictest grade stays in the notes.
+      if (props[P.split] === true && graded.some((o) => o.source.id === adopted)) {
+        const r = reconcileParcel(gradeFromProps(props, 'owner'), graded, str(props[P.owner]));
+        if (r.adoptedFrom === adopted) return { result: r.result, notes: [...notes, `At this spot: ${r.result.category}. Parcel-wide (strictest zone): ${str(props[P.category])}.`], conflict: r.conflict, adoptedFrom: adopted, parcel };
+      }
+      return { result: gradeFromProps(props), notes, conflict: props[P.conflict] === true, adoptedFrom: adopted || undefined, parcel };
+    }
+    if (!graded.length) return null;
+    const r = reconcileParcel(NO_PARCEL, graded);
+    return { result: r.result, notes: r.notes.filter((n) => !n.startsWith('No owner name')), conflict: r.conflict, adoptedFrom: r.adoptedFrom };
+  }
+
+  private verdictBlock(v: Verdict): HTMLElement {
+    const g = v.result.grade;
+    const refs = v.result.references ?? [];
+    const parts: (HTMLElement | null)[] = [];
+    if (v.parcel) {
+      const { source, feature } = v.parcel;
+      const props = (feature.properties ?? {}) as Record<string, unknown>;
+      const owner = gradeFromProps(props, 'owner');
+      const ownerName = ownerBlock(source, props).owner;
+      parts.push(
+        h(
+          'p.record-line',
+          {},
+          h('span.muted', {}, source.parcel?.ownerField ? 'County parcel record: ' : 'Parcel record: '),
+          h('strong', {}, ownerName ? tidyOwnerName(ownerName) : source.parcel?.ownerField ? '(no owner name)' : source.title),
+          ' → ',
+          h('span.badge.sm', { style: `--c:${GRADE_COLORS[owner.grade]}`, 'data-grade': owner.grade }, GRADE_SHORT[owner.grade]),
+          ' ',
+          owner.category,
+        ),
+      );
+      const overlaps = parseOverlaps(props[P.overlaps]);
+      if (overlaps.length) {
+        parts.push(
+          h(
+            'ul.overlap-list',
+            {},
+            overlaps.map((o) => {
+              const src = this.deps.layers.sourceById(o.src);
+              const grade: Grade = isGrade(o.grade) ? o.grade : 'unknown';
+              const hidden = src && !this.deps.layers.getStatus(src.id).active ? ' (layer hidden on map)' : '';
+              return h(
+                'li',
+                {},
+                h('span.badge.sm', { style: `--c:${GRADE_COLORS[grade]}`, 'data-grade': grade }, shortLabel(grade, o.src)),
+                h('span', {}, h('strong', {}, src?.title ?? o.src), ` — ${o.name ? `${o.name}: ` : ''}${o.category} · about ${o.pct}% of the parcel${hidden}`),
+              );
+            }),
+          ),
+        );
+      }
+    }
+    return h(
+      'section.verdict',
+      { 'data-grade': g, 'data-conflict': v.conflict ? 'true' : null, style: `--c:${GRADE_COLORS[g]}` },
+      h('div.verdict-head', {}, h('span.badge', { style: `--c:${GRADE_COLORS[g]}`, 'data-grade': g }, v.conflict ? 'Verify' : shortLabel(g, v.adoptedFrom)), h('span', {}, h('strong', {}, v.result.category), h('span.small', {}, GRADE_LABEL[g]))),
+      v.result.reason ? h('p.reason', {}, v.result.reason) : null,
+      v.notes.length ? h('ul.verdict-notes', {}, v.notes.map((n) => h('li', {}, n))) : null,
+      refs.length ? h('ul.refs', {}, refs.map((r) => h('li', {}, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.label) : r.label))) : null,
+      ...parts,
+    );
+  }
+
+  private render(hits: Hit[], verdict: Verdict | null, lon: number, lat: number): void {
+    const cards = hits.map((hit, i) => this.card(hit, lon, lat, i === 0 && !verdict?.parcel, hit === verdict?.parcel));
     fill(this.body, 
       h(
         'div.details-head',
         {},
-        h('div', {}, h('h2', {}, hits.length > 1 ? `${hits.length} layers here` : 'Details'), h('span.muted.small.mono', {}, formatLatLon(lat, lon))),
+        h('div', {}, h('h2', {}, verdict ? 'This spot' : hits.length > 1 ? `${hits.length} layers here` : 'Details'), h('span.muted.small.mono', {}, formatLatLon(lat, lon))),
         h('button.icon-btn', { type: 'button', 'aria-label': 'Close details', onclick: () => this.close() }, icon('close')),
       ),
+      verdict ? this.verdictBlock(verdict) : null,
+      hits.length > 1 || verdict ? h('h3.layers-here', {}, `Layers here (${hits.length})`) : null,
       ...cards,
       h('p.fineprint', {}, icon('info'), 'Colours and owner data are informational only, can be outdated or wrong, and are not legal advice. Verify boundaries, ownership and local rules, and get permission before entering private land.'),
     );
@@ -125,9 +233,10 @@ export class Details {
     this.deps.close();
   }
 
-  private card(hit: Hit, lon: number, lat: number, expanded: boolean): HTMLElement {
+  private card(hit: Hit, lon: number, lat: number, expanded: boolean, primary = false): HTMLElement {
     const { source, feature } = hit;
     const props = (feature.properties ?? {}) as Record<string, unknown>;
+    const isBoundary = source.role === 'boundary';
     const category = str(props[P.category]) || source.title;
     const reason = str(props[P.reason]);
     const refs = parseRefs(props[P.refs]);
@@ -135,7 +244,7 @@ export class Details {
     const isUnit = source.group === 'hunting-units';
     const ob = ownerBlock(source, props);
     const name = str(props[P.name]);
-    const title = isParcel ? tidyOwnerName(ob.owner) || 'Parcel' : name || category;
+    const title = isParcel ? tidyOwnerName(ob.owner) || 'Parcel' : isBoundary ? `Inside the boundary of ${name || category}` : name || category;
     const acres = acresOf(source, feature);
     const acresText = acres !== null ? `${acres.toLocaleString('en-US', { maximumFractionDigits: acres < 10 ? 2 : acres < 1000 ? 1 : 0 })} acres` : '';
 
@@ -230,18 +339,23 @@ export class Details {
 
     const badge = isUnit
       ? h('span.badge.unit', { style: `--c:${this.deps.layers.colorForUnitLayer(source.id)}` }, 'Unit')
-      : h('span.badge', { style: `--c:${GRADE_COLORS[hit.grade]}`, 'data-grade': hit.grade }, GRADE_SHORT[hit.grade]);
+      : isBoundary
+        ? h('span.badge.unit', { style: `--c:${boundaryColor(source.id)}` }, 'Boundary')
+        : h('span.badge', { style: `--c:${GRADE_COLORS[hit.grade]}`, 'data-grade': hit.grade }, props[P.conflict] === true ? 'Verify' : shortLabel(hit.grade, str(props[P.adopted]) || source.id));
+    const showGrade = !isUnit && !isBoundary && !primary;
 
     const el = h(
       'details.feature-card',
-      { open: expanded, 'data-grade': hit.grade },
+      { open: expanded, 'data-grade': isBoundary ? 'boundary' : hit.grade },
       h('summary', {}, badge, h('span.fc-title', {}, h('strong', {}, title), h('span.muted.small', {}, source.title)), icon('chevron', 'ic chev')),
       h(
         'div.fc-body',
         {},
-        !isUnit ? h('div.grade-line', { style: `--c:${GRADE_COLORS[hit.grade]}` }, h('strong', {}, category), h('span', {}, GRADE_LABEL[hit.grade])) : null,
-        reason ? h('p.reason', {}, reason) : null,
-        refs.length ? h('ul.refs', {}, refs.map((r) => h('li', {}, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.label) : r.label))) : null,
+        showGrade ? h('div.grade-line', { style: `--c:${GRADE_COLORS[hit.grade]}` }, h('strong', {}, category), h('span', {}, GRADE_LABEL[hit.grade])) : null,
+        isBoundary ? h('p.reason', {}, `Inside the boundary of ${name || category} (${category}) — ${BOUNDARY_NOTE}. It is not an access verdict: the parcel and land-ownership records decide whether you may hunt here.`) : null,
+        primary ? h('p.muted.small', {}, 'The verdict above is this parcel’s resolved grade.') : null,
+        reason && !primary && !isBoundary ? h('p.reason', {}, reason) : null,
+        refs.length && !primary ? h('ul.refs', {}, refs.map((r) => h('li', {}, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.label) : r.label))) : null,
         rows.length ? h('dl.kv', {}, rows.flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, v)])) : null,
         actions,
         attrs.length ? h('details.attrs', {}, h('summary', {}, 'All attributes'), h('table', {}, h('tbody', {}, attrs))) : null,

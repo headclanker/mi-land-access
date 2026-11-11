@@ -71,7 +71,7 @@ function parcelLayer(d: ParcelDef): LayerSource {
 const PUBLIC_LAND: LayerSource[] = [
   {
     id: 'dnr-managed-lands',
-    title: 'DNR-managed state land (forest, game areas, parks)',
+    title: 'DNR-managed state land (forest, game areas)',
     group: 'public-land',
     url: `${DNR}/DNRLOTSParcelsOPENDATA/FeatureServer/2`,
     geometry: 'polygon',
@@ -87,12 +87,15 @@ const PUBLIC_LAND: LayerSource[] = [
       'Acreage',
       'ParID',
     ],
-    where: "ParcelStatus = 'Active'",
+    // Park and recreation-area rows are left to dnr-park-hunting, which carries the DNR's
+    // per-zone open/closed status for the same ground (acreage matches statewide).
+    where: "ParcelStatus = 'Active' AND (ProjectUseType IS NULL OR ProjectUseType NOT IN ('State Park','Recreational Areas'))",
     nameField: 'ProjectName',
+    role: 'ownership',
   },
   {
     id: 'dnr-wildlife-areas',
-    title: 'State game & wildlife areas',
+    title: 'State game & wildlife area boundaries',
     group: 'public-land',
     url: `${DNR}/DNRWILDLandsOPENDATA/FeatureServer/2`,
     geometry: 'polygon',
@@ -101,6 +104,7 @@ const PUBLIC_LAND: LayerSource[] = [
     defaultVisible: true,
     fields: ['OfficialWLDProjectAreaName', 'AreaType', 'Acres'],
     nameField: 'OfficialWLDProjectAreaName',
+    role: 'boundary',
   },
   {
     id: 'dnr-hap',
@@ -122,6 +126,7 @@ const PUBLIC_LAND: LayerSource[] = [
     ],
     where: "ActiveOrInactive = 'Active'",
     nameField: 'HAPID',
+    role: 'access-program',
   },
   {
     id: 'dnr-park-hunting',
@@ -143,6 +148,7 @@ const PUBLIC_LAND: LayerSource[] = [
       'Acres',
     ],
     nameField: 'Facility',
+    role: 'access-program',
   },
   {
     id: 'dnr-state-parks',
@@ -155,6 +161,7 @@ const PUBLIC_LAND: LayerSource[] = [
     defaultVisible: false,
     fields: ['UNIT_NAME', 'Park_Label'],
     nameField: 'Park_Label',
+    role: 'boundary',
   },
   {
     id: 'commercial-forest',
@@ -176,6 +183,7 @@ const PUBLIC_LAND: LayerSource[] = [
       'TaxPin',
     ],
     nameField: 'FullLegalName',
+    role: 'access-program',
   },
   {
     id: 'usfs-surface-ownership',
@@ -189,6 +197,7 @@ const PUBLIC_LAND: LayerSource[] = [
     fields: ['nfslandunitname', 'ownerclassification', 'status', 'gis_acres'],
     where: "ownerclassification = 'USDA FOREST SERVICE' AND region = '09'",
     nameField: 'nfslandunitname',
+    role: 'ownership',
   },
   {
     id: 'padus-federal-other',
@@ -202,6 +211,8 @@ const PUBLIC_LAND: LayerSource[] = [
     fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'GIS_Acres'],
     where: `${PADUS_MI_FEE} AND Mang_Type = 'FED' AND Mang_Name <> 'USFS'`,
     nameField: 'Unit_Nm',
+    role: 'ownership',
+    lowConfidence: true,
   },
   {
     id: 'padus-state-other',
@@ -215,6 +226,8 @@ const PUBLIC_LAND: LayerSource[] = [
     fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'GIS_Acres'],
     where: `${PADUS_MI_FEE} AND Mang_Type = 'STAT' AND Mang_Name IN ('OTHS', 'SDOL')`,
     nameField: 'Unit_Nm',
+    role: 'ownership',
+    lowConfidence: true,
   },
   {
     id: 'padus-local',
@@ -228,6 +241,8 @@ const PUBLIC_LAND: LayerSource[] = [
     fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'Loc_Own', 'GIS_Acres'],
     where: `${PADUS_MI_FEE} AND Mang_Type IN ('LOC', 'DIST', 'JNT')`,
     nameField: 'Unit_Nm',
+    role: 'ownership',
+    lowConfidence: true,
   },
   {
     id: 'padus-ngo',
@@ -241,6 +256,8 @@ const PUBLIC_LAND: LayerSource[] = [
     fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'Loc_Own', 'GIS_Acres'],
     where: `${PADUS_MI_FEE} AND Mang_Type = 'NGO'`,
     nameField: 'Unit_Nm',
+    role: 'ownership',
+    lowConfidence: true,
   },
 ];
 

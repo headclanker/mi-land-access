@@ -19,12 +19,15 @@ import {
 } from './arcgis';
 import { P, enrichFeature } from './enrich';
 import { CountyIndex } from './counties';
+import { loadsForParcels, reconcileLoaded } from './reconcileLayers';
 
 export interface LayerStatus {
   /** User toggle. */
   visible: boolean;
   /** Actually drawn right now. */
   active: boolean;
+  /** Loaded (but not drawn) so parcels can be reconciled against it. */
+  loadedForParcels?: boolean;
   hiddenReason?: 'zoom' | 'species' | 'county';
   loading: boolean;
   error?: string;
@@ -52,6 +55,27 @@ const gradeColor: ExpressionSpecification = [
 ];
 
 const UNIT_COLORS = ['#b15cff', '#00b8d9', '#ff7a1a', '#e2389b', '#5bd16a'];
+/** Outline colours for administrative boundary layers (never grade colours). */
+const BOUNDARY_COLORS: Record<string, string> = { 'dnr-wildlife-areas': '#0d5c2e', 'dnr-state-parks': '#5a3d8a' };
+export const BOUNDARY_DEFAULT_COLOR = '#0d5c2e';
+export function boundaryColor(id: string): string {
+  return BOUNDARY_COLORS[id] ?? BOUNDARY_DEFAULT_COLOR;
+}
+
+/** 12×12 diagonal-stripe pattern in a grade colour, for parcels whose records disagree. */
+function hatchImage(hex: string): { width: number; height: number; data: Uint8Array } {
+  const n = 12;
+  const r = parseInt(hex.slice(1, 3), 16), g = parseInt(hex.slice(3, 5), 16), b = parseInt(hex.slice(5, 7), 16);
+  const data = new Uint8Array(n * n * 4);
+  for (let y = 0; y < n; y++)
+    for (let x = 0; x < n; x++) {
+      const o = (y * n + x) * 4;
+      const stripe = (x + y) % n < 4;
+      data[o] = r; data[o + 1] = g; data[o + 2] = b;
+      data[o + 3] = stripe ? 200 : 40;
+    }
+  return { width: n, height: n, data };
+}
 export const LABEL_FONT = ['Noto Sans Bold', 'sans-serif'];
 
 const EMPTY: FeatureCollection = { type: 'FeatureCollection', features: [] };
@@ -103,6 +127,11 @@ export class LayerManager {
   readonly clickableLayers: string[] = [];
   readonly counties = new CountyIndex();
   private readonly limiter = new Limiter(8);
+  /** Low-confidence features whose fill is hidden under parcels, by source id. */
+  private readonly masked = new Map<string, Set<string>>();
+  private readonly scheduleReconcile: () => void;
+  /** Last reconciliation pass duration (ms), for diagnostics. */
+  lastReconcileMs = 0;
 
   private readonly map: MLMap;
 
@@ -115,7 +144,9 @@ export class LayerManager {
       this.status.set(s.id, { visible: saved[s.id] ?? s.defaultVisible, active: false, loading: false, count: 0, truncated: false });
       if (s.group === 'hunting-units') this.unitColor.set(s.id, UNIT_COLORS[u++ % UNIT_COLORS.length]);
     }
+    for (const g of ['green', 'yellow', 'red', 'unknown'] as const) if (!map.hasImage(`hatch-${g}`)) map.addImage(`hatch-${g}`, hatchImage(GRADE_COLORS[g]));
     for (const s of sources) this.addStyleLayers(s);
+    this.scheduleReconcile = debounce(() => this.reconcile(), 120);
     const refresh = debounce(() => this.refresh(), LOADER.debounceMs);
     map.on('moveend', refresh);
     this.refresh();
@@ -185,7 +216,7 @@ export class LayerManager {
   // ---------- styling ----------
 
   private layerIds(s: LayerSource): string[] {
-    return ['fill', 'casing', 'line', 'circle', 'label'].map((k) => `ds-${s.id}-${k}`).filter((id) => this.map.getLayer(id));
+    return ['fill', 'hatch', 'casing', 'line', 'dash', 'circle', 'label'].map((k) => `ds-${s.id}-${k}`).filter((id) => this.map.getLayer(id));
   }
 
   private addStyleLayers(s: LayerSource): void {
@@ -196,13 +227,21 @@ export class LayerManager {
     const isParcel = s.group === 'parcels';
     const isUnit = s.group === 'hunting-units';
     const isRef = s.group === 'reference';
+    const isBoundary = s.role === 'boundary';
     const id = (k: string): string => `ds-${s.id}-${k}`;
     const polyFilter: FilterSpecification = ['==', ['geometry-type'], 'Polygon'];
     const lineFilter: FilterSpecification = ['==', ['geometry-type'], 'LineString'];
     const pointFilter: FilterSpecification = ['==', ['geometry-type'], 'Point'];
 
     if (s.geometry === 'polygon') {
-      if (isRef) {
+      if (isBoundary) {
+        // Administrative boundaries: labelled outline only, never a grade fill. The near-invisible
+        // fill keeps the inside tappable ("Inside the boundary of …").
+        const c = boundaryColor(s.id);
+        map.addLayer({ id: id('fill'), type: 'fill', source: src, filter: polyFilter, paint: { 'fill-color': '#000', 'fill-opacity': 0.01 } }, 'anchor-fills');
+        map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': 0.75, 'line-width': ['interpolate', ['linear'], ['zoom'], 8, 2.5, 15, 4.5] } }, 'anchor-lines');
+        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': c, 'line-width': ['interpolate', ['linear'], ['zoom'], 8, 1.2, 15, 2.4], 'line-dasharray': [3, 1.5] } }, 'anchor-lines');
+      } else if (isRef) {
         // Reference outlines (counties, PLSS, compartments): neutral, never grade-coloured.
         map.addLayer({ id: id('fill'), type: 'fill', source: src, filter: polyFilter, paint: { 'fill-color': '#000', 'fill-opacity': 0.01 } }, 'anchor-fills');
         map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': 0.6, 'line-width': 3 } }, 'anchor-units');
@@ -221,15 +260,23 @@ export class LayerManager {
             filter: polyFilter,
             paint: {
               'fill-color': gradeColor,
-              'fill-opacity': isParcel ? ['interpolate', ['linear'], ['zoom'], 14, 0.22, 17, 0.14] : ['interpolate', ['linear'], ['zoom'], 7, 0.5, 13, 0.32, 16, 0.22],
+              // Parcels tint only when they own their verdict ('fill'); when it was adopted from a
+              // drawn public layer that layer's fill shows instead, and conflicts are hatched.
+              // Low-confidence public fills are hidden (feature-state) where parcels cover them.
+              'fill-opacity': isParcel
+                ? ['interpolate', ['linear'], ['zoom'], 14, ['case', ['==', ['get', P.tint], 'fill'], 0.24, 0], 17, ['case', ['==', ['get', P.tint], 'fill'], 0.16, 0]]
+                : ['interpolate', ['linear'], ['zoom'], 7, ['case', ['boolean', ['feature-state', 'masked'], false], 0, 0.5], 13, ['case', ['boolean', ['feature-state', 'masked'], false], 0, 0.32], 16, ['case', ['boolean', ['feature-state', 'masked'], false], 0, 0.22]],
             },
           },
           'anchor-fills',
         );
         if (isParcel) {
+          const conflict: FilterSpecification = ['all', polyFilter, ['==', ['get', P.tint], 'conflict']];
+          map.addLayer({ id: id('hatch'), type: 'fill', source: src, filter: conflict, paint: { 'fill-pattern': ['concat', 'hatch-', ['get', P.grade]], 'fill-opacity': 0.8 } }, 'anchor-fills');
           // Property lines: dark casing + bright line reads on both topo and imagery.
           map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#000', 'line-opacity': 0.55, 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 2.2, 18, 4] } }, 'anchor-lines');
           map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': ['case', ['==', ['get', P.grade], 'red'], '#ffd9d4', '#fffbe6'], 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 0.9, 18, 2] } }, 'anchor-lines');
+          map.addLayer({ id: id('dash'), type: 'line', source: src, filter: ['==', ['get', P.tint], 'conflict'], paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 1.8, 18, 3], 'line-dasharray': [2, 1.5] } }, 'anchor-lines');
         } else {
           map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 0.8, 14, 2.4] } }, 'anchor-lines');
         }
@@ -278,7 +325,7 @@ export class LayerManager {
             'text-anchor': s.geometry === 'point' ? 'top' : 'center',
           },
           paint: {
-            'text-color': isUnit ? this.colorForUnitLayer(s.id) : isParcel ? '#ffffff' : isRef ? '#26302a' : '#0f2a17',
+            'text-color': isUnit ? this.colorForUnitLayer(s.id) : isParcel ? '#ffffff' : isRef ? '#26302a' : isBoundary ? boundaryColor(s.id) : '#0f2a17',
             'text-halo-color': isParcel || isUnit ? 'rgba(0,0,0,0.85)' : 'rgba(255,255,255,0.9)',
             'text-halo-width': 1.6,
           },
@@ -307,19 +354,27 @@ export class LayerManager {
     for (const s of this.sources) {
       const st = this.getStatus(s.id);
       st.hiddenReason = !this.speciesAllows(s) ? 'species' : zoom < s.minZoom ? 'zoom' : !this.counties.layerCoversView(s, bbox) ? 'county' : undefined;
-      const active = st.visible && !st.hiddenReason;
-      st.active = active;
+      st.active = st.visible && !st.hiddenReason;
+    }
+    // Parcels shown → the layers that can overrule an owner name must be loaded even when their
+    // own fill is switched off, so a hidden layer cannot make a closed park zone look open.
+    const parcelsShown = this.sources.some((s) => s.group === 'parcels' && this.getStatus(s.id).active);
+    for (const s of this.sources) {
+      const st = this.getStatus(s.id);
+      const active = st.active;
+      st.loadedForParcels = !active && parcelsShown && !st.hiddenReason && loadsForParcels(s);
       this.setLayerVisibility(s, active);
-      if (!active) {
+      if (!active && !st.loadedForParcels) {
         st.loading = false;
         st.error = undefined;
-        if (st.visible && st.hiddenReason) this.setData(s, []); // free memory; refetch from cache later
+        if (this.drawn.get(s.id)?.size) this.setData(s, []); // free memory; refetch from cache later
         continue;
       }
       const tiles = queryTiles(bbox, zoom, s.minZoom);
       for (const t of tiles) wanted.add(tileCacheKey(s.id, t));
       void this.loadLayer(s, tiles, bbox);
     }
+    this.scheduleReconcile();
     // Abort requests for tiles no longer needed by any layer.
     for (const [key, inf] of this.inflight) {
       if (!wanted.has(key)) {
@@ -443,6 +498,39 @@ export class LayerManager {
     src?.setData({ type: 'FeatureCollection', features });
     this.drawn.set(s.id, index ?? new Map());
     this.getStatus(s.id).count = features.length;
+    if (s.group === 'parcels' || s.group === 'public-land') this.scheduleReconcile();
+  }
+
+  /** Loaded = drawn, or fetched only so parcels can be reconciled against it. */
+  isLoaded(id: string): boolean {
+    const st = this.status.get(id);
+    return Boolean(st && (st.active || st.loadedForParcels));
+  }
+
+  /** Resolves one verdict per loaded parcel against loaded public land (see reconcileLayers.ts). */
+  private reconcile(): void {
+    const loaded = (g: string) =>
+      this.sources.filter((s) => s.group === g && this.isLoaded(s.id)).map((source) => ({ source, features: this.drawn.get(source.id)?.values() ? [...this.drawn.get(source.id)!.values()] : [] }));
+    const parcels = loaded('parcels');
+    const publics = loaded('public-land');
+    const out = reconcileLoaded(parcels, publics, { visible: (id) => this.getStatus(id).active, view: this.viewBBox() });
+    this.lastReconcileMs = out.ms;
+    for (const id of out.changed) {
+      const s = this.sourceById(id);
+      const idx = this.drawn.get(id);
+      if (s && idx) this.map.getSource<GeoJSONSource>(`ds-${id}`)?.setData({ type: 'FeatureCollection', features: [...idx.values()] });
+    }
+    // Feature-state masks on low-confidence fills.
+    for (const s of this.sources) {
+      if (!s.lowConfidence) continue;
+      const want = out.masked.get(s.id) ?? new Set<string>();
+      const had = this.masked.get(s.id) ?? new Set<string>();
+      const source = `ds-${s.id}`;
+      for (const fid of had) if (!want.has(fid)) this.map.setFeatureState({ source, id: fid }, { masked: false });
+      for (const fid of want) if (!had.has(fid)) this.map.setFeatureState({ source, id: fid }, { masked: true });
+      this.masked.set(s.id, want);
+    }
+    if (out.changed.size) this.emit();
   }
 
   /** Re-applies visibility (e.g. after a basemap swap). */
@@ -456,7 +544,7 @@ export class LayerManager {
 
   /** Source id for a rendered layer id like ds-<source>-fill. */
   sourceIdForLayer(layerId: string): string | undefined {
-    const m = layerId.match(/^ds-(.+)-(fill|line|circle|casing|label)$/);
+    const m = layerId.match(/^ds-(.+)-(fill|hatch|line|dash|circle|casing|label)$/);
     return m?.[1];
   }
 

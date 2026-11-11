@@ -3,8 +3,9 @@
 
 import { area } from '@turf/turf';
 import type { Feature, Polygon, MultiPolygon } from 'geojson';
-import type { Grade, GradeResult, LayerSource } from '../../contract';
+import type { Grade, GradeResult, LayerSource, OwnerKind } from '../../contract';
 import { gradeFeature } from '../../grading/grade';
+import { tierOf } from '../../grading/reconcile';
 import { SQM_PER_ACRE } from '../util/geo';
 
 export const P = {
@@ -16,6 +17,20 @@ export const P = {
   refs: '_refs',
   name: '_name',
   owner: '_owner',
+  // Parcels only: the owner-name grade, kept when reconciliation replaces _grade/_category/_reason.
+  ownerGrade: '_ownerGrade',
+  ownerCategory: '_ownerCategory',
+  ownerReason: '_ownerReason',
+  ownerRefs: '_ownerRefs',
+  ownerKind: '_ownerKind',
+  // Parcels only, set by reconciliation (see layers/reconcileLayers.ts).
+  /** 'fill' (own tint) | 'none' (colour comes from the adopted public layer) | 'conflict' (hatched). */
+  tint: '_tint',
+  conflict: '_conflict',
+  adopted: '_adopted',
+  split: '_split',
+  notes: '_notes',
+  overlaps: '_overlaps',
 } as const;
 
 const GRADES: readonly Grade[] = ['green', 'yellow', 'red', 'unknown'];
@@ -89,6 +104,16 @@ export function enrichFeature(source: LayerSource, f: Feature): Feature {
   props[P.name] = name;
   const owner = source.parcel?.ownerField ? str(props[source.parcel.ownerField]) : '';
   props[P.owner] = owner;
+  if (source.group === 'parcels') {
+    props[P.ownerGrade] = g.grade;
+    props[P.ownerCategory] = g.category;
+    props[P.ownerReason] = g.reason;
+    props[P.ownerRefs] = props[P.refs];
+    props[P.ownerKind] = g.ownerKind ?? '';
+    props[P.tint] = 'fill';
+    props[P.conflict] = false;
+    props[P.adopted] = '';
+  }
   return { type: 'Feature', geometry: f.geometry, properties: props };
 }
 
@@ -121,12 +146,32 @@ export function parseRefs(raw: unknown): { label: string; url?: string }[] {
   }
 }
 
-/** Sorting rank for the overlapping-features list: most permissive public land first. */
-export function permissivenessRank(source: LayerSource | undefined, grade: Grade): number {
-  const g = GRADES.indexOf(grade);
-  const groupOrder: Record<string, number> = { 'public-land': 0, parcels: 1, 'hunting-units': 2, reference: 3 };
-  const grp = source ? (groupOrder[source.group] ?? 4) : 5;
-  // Graded land layers first, ordered by grade; unit/reference layers after.
-  if (grp <= 1) return g * 10 + grp;
-  return 100 + grp * 10 + g;
+/** Rebuilds a GradeResult from enriched properties (current verdict, or the owner-name one). */
+export function gradeFromProps(props: Record<string, unknown>, which: 'current' | 'owner' = 'current'): GradeResult {
+  const o = which === 'owner';
+  const g = props[o ? P.ownerGrade : P.grade];
+  const refs = parseRefs(props[o ? P.ownerRefs : P.refs]);
+  const kind = o ? str(props[P.ownerKind]) : '';
+  return {
+    grade: isGrade(g) ? g : 'unknown',
+    category: str(props[o ? P.ownerCategory : P.category]),
+    reason: str(props[o ? P.ownerReason : P.reason]),
+    ...(refs.length ? { references: refs } : {}),
+    ...(kind ? { ownerKind: kind as OwnerKind } : {}),
+  };
+}
+
+/**
+ * Sorting rank for the tap list: parcels (which carry the resolved verdict) first, then graded
+ * public land by reconciliation precedence, then boundaries, units and reference layers.
+ */
+export function listRank(source: LayerSource | undefined): number {
+  if (!source) return 999;
+  if (source.group === 'parcels') return source.parcel?.ownerField ? 0 : 1;
+  if (source.group === 'public-land') {
+    if (source.role === 'boundary') return 50;
+    const t = tierOf(source);
+    return t === null ? 40 : 10 + t;
+  }
+  return source.group === 'hunting-units' ? 60 : 70;
 }

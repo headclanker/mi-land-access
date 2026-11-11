@@ -243,6 +243,29 @@ describe('gradeOwnerName', () => {
     expect(r.reason.length).toBeGreaterThan(20);
   });
 
+  it.each([
+    ['STATE OF MICHIGAN DNR', 'dnr'],
+    ['MICHIGAN DEPT OF NATURAL RESOURCES', 'dnr'],
+    ['STATE OF MICHIGAN', 'state'],
+    ['U S GOVT', 'federal'],
+    ['UNITED STATES OF AMERICA', 'federal'],
+    ['USDA FOREST SERVICE', 'usfs'],
+    ['STATE HIGHWAY COMMISSION', 'other'],
+    ['MICHIGAN DEPT OF TRANSPORTATION', 'other'],
+    ['CONSUMERS ENERGY CO', 'other'],
+    ['TOWNSHIP OF ALLEGAN', 'other'],
+    ['BARRY COUNTY ROAD COMMISSION', 'other'],
+    ['SMITH JOHN & MARY', 'private'],
+    ['WEYERHAEUSER COMPANY', 'private'],
+    ['', 'none'],
+  ] as const)('owner kind: %s -> %s', (owner, kind) => {
+    expect(gradeOwnerName(owner).ownerKind).toBe(kind);
+  });
+
+  it('every owner-name result carries an owner kind', () => {
+    for (const [owner] of OWNER_CASES) expect(gradeOwnerName(owner).ownerKind, owner).toBeDefined();
+  });
+
   it('treats null/undefined as unknown', () => {
     expect(gradeOwnerName(null).grade).toBe('unknown');
     expect(gradeOwnerName(undefined).grade).toBe('unknown');
@@ -266,6 +289,23 @@ function src(id: string): LayerSource {
 }
 
 describe('gradeFeature – public land layers', () => {
+  it('catalog roles', () => {
+    const role = (id: string): string | undefined => src(id).role;
+    expect(role('dnr-wildlife-areas')).toBe('boundary');
+    expect(role('dnr-state-parks')).toBe('boundary');
+    for (const id of ['dnr-park-hunting', 'dnr-hap', 'commercial-forest']) expect(role(id)).toBe('access-program');
+    for (const id of ['dnr-managed-lands', 'usfs-surface-ownership']) {
+      expect(role(id)).toBe('ownership');
+      expect(src(id).lowConfidence).toBeFalsy();
+    }
+    for (const s of LAYER_SOURCES.filter((l) => l.id.startsWith('padus-'))) {
+      expect(s.role).toBe('ownership');
+      expect(s.lowConfidence).toBe(true);
+    }
+    for (const s of LAYER_SOURCES.filter((l) => l.group === 'public-land')) expect(s.role, s.id).toBeDefined();
+    expect(src('dnr-managed-lands').where).toContain("NOT IN ('State Park','Recreational Areas')");
+  });
+
   it('DNR managed lands by use type', () => {
     const s = src('dnr-managed-lands');
     expect(gradeFeature(s, { ProjectUseType: 'Forests', ProjectName: 'BARAGA MANAGEMENT UNIT' }).grade).toBe('green');
@@ -281,15 +321,20 @@ describe('gradeFeature – public land layers', () => {
     const s = src('parcels-dnr-state-owned');
     expect(gradeFeature(s, { DivisionDepartment: 'Wildlife Division' }).grade).toBe('green');
     expect(gradeFeature(s, { DivisionDepartment: 'Parks and Recreation Division' }).grade).toBe('yellow');
+    expect(gradeFeature(s, { DivisionDepartment: 'Wildlife Division' }).ownerKind).toBe('dnr');
   });
 
-  it('wildlife areas', () => {
+  it('boundary layers never carry a grade', () => {
     const s = src('dnr-wildlife-areas');
-    expect(gradeFeature(s, { AreaType: 'State Game Area', OfficialWLDProjectAreaName: 'Allegan SGA' }).grade).toBe('green');
-    expect(gradeFeature(s, { AreaType: 'State Wildlife Research Area' }).grade).toBe('yellow');
-    expect(
-      gradeFeature(s, { AreaType: null, OfficialWLDProjectAreaName: '(select pvt-owned lands with State reserved hunting rights)' }).grade,
-    ).toBe('yellow');
+    expect(s.role).toBe('boundary');
+    const sga = gradeFeature(s, { AreaType: 'State Game Area', OfficialWLDProjectAreaName: 'Allegan SGA' });
+    expect(sga.grade).toBe('unknown');
+    expect(sga.category).toBe('State Game Area');
+    expect(sga.reason).toContain('private inholdings');
+    expect(gradeFeature(s, { AreaType: null, OfficialWLDProjectAreaName: '(select pvt-owned lands with State reserved hunting rights)' }).grade).toBe('unknown');
+    const park = gradeFeature(src('dnr-state-parks'), { Park_Label: 'Yankee Springs RA' });
+    expect(park.grade).toBe('unknown');
+    expect(park.reason).toContain('Yankee Springs RA');
   });
 
   it('HAP by status and hunt type', () => {

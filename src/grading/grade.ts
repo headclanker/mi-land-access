@@ -8,7 +8,7 @@
 //
 // This is a screening aid, not legal advice. Every reason tells the user what to verify.
 
-import type { Grade, GradeResult, LayerSource } from '../contract.ts';
+import type { Grade, GradeResult, LayerSource, OwnerKind } from '../contract.ts';
 
 type Ref = { label: string; url?: string };
 
@@ -34,6 +34,11 @@ export const REFS = {
 
 function result(grade: Grade, category: string, reason: string, references?: Ref[]): GradeResult {
   return references && references.length ? { grade, category, reason, references } : { grade, category, reason };
+}
+
+/** Tags an owner-name grade with the owner classification reconciliation relies on. */
+function owned(kind: OwnerKind, r: GradeResult): GradeResult {
+  return { ...r, ownerKind: kind };
 }
 
 function str(v: unknown): string {
@@ -165,192 +170,192 @@ export function gradeOwnerName(rawOwner: unknown): GradeResult {
   const o = normalizeOwner(raw);
 
   if (EMPTY_OWNER.test(o)) {
-    return result(
+    return owned('none', result(
       'unknown',
       'No owner data',
       'This parcel has no owner name in the county data. Look it up with the county equalization/treasurer office before hunting.',
-    );
+    ));
   }
 
   // ---- Phase A: specific entities ----------------------------------------------------
   if (RE_TRIBAL.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'Tribal land',
       'Owned by or held in trust for a tribe. Tribal land has its own hunting rules and permits, and state licenses may not apply; contact the tribe before entering.',
-    );
+    ));
   }
   if (RE_MILITARY.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'Military land',
       'Military property. Access and hunting are controlled by the installation (closures for training are common); check with the installation before entering.',
-    );
+    ));
   }
   if (RE_PUBLIC_UNIVERSITY.test(o) && !RE_UNIVERSITY_PRIVATE.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'Public university / college',
       'Owned by a public university or college. These are generally not open to public hunting unless the institution says so; contact the institution.',
       [REFS.trespass],
-    );
+    ));
   }
   if (RE_CONSERVATION_ORG.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'Conservancy / land trust',
       'Owned by a conservation organization. Many preserves allow foot access but hunting is often prohibited or allowed only by permit; check the organization’s rules for this preserve.',
       [REFS.trespass],
-    );
+    ));
   }
   if (RE_UTILITY.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'Utility-owned',
       'Owned by a utility company. A few utility lands are open to public recreation, but most require permission; check with the utility before hunting.',
       [REFS.trespass],
-    );
+    ));
   }
   if (/\bFARMLAND (& |AND )?OPEN SPACE\b|\bP ?A ?116\b/.test(o)) {
-    return result(
+    return owned('private', result(
       'red',
       'Private – farmland agreement',
       `Private farmland enrolled in the state Farmland & Open Space (PA 116) program. The state holds an agreement, not public access. ${PRIVATE_VERIFY}`,
       [REFS.trespass],
-    );
+    ));
   }
   if (RE_LAND_BANK.test(o)) {
-    return result('yellow', 'Land bank', `Owned by a land bank (usually tax-foreclosed property awaiting resale). ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'Land bank', `Owned by a land bank (usually tax-foreclosed property awaiting resale). ${LOCAL_VERIFY}`));
   }
   if (RE_DNR_ABBR.test(o) && RE_STATE_CONTEXT.test(o) && !RE_STRONG_DNR_BLOCK.test(o)) {
-    return gradeDnrOwner();
+    return owned('dnr', gradeDnrOwner());
   }
   if (RE_RAILROAD.test(o) && !RE_GOV_STRONG.test(o)) {
-    return result(
+    return owned('private', result(
       'red',
       'Railroad (private)',
       'Railroad property is private and active rail corridors are dangerous; do not enter without the railroad’s permission.',
       [REFS.trespass],
-    );
+    ));
   }
 
   // ---- Phase B: private entities ----------------------------------------------------
   const govPrefix = RE_GOV_PREFIX.test(o) && !RE_GOV_PREFIX_BLOCK.test(o);
   if (!govPrefix && RE_TIMBER_COMPANY.test(o)) {
-    return result(
+    return owned('private', result(
       'red',
       'Private timber company',
       `Private forest/timber company land. If this parcel is enrolled in the Commercial Forest program it is open to foot access for hunting — check the Commercial Forest layer. Otherwise: ${PRIVATE_VERIFY}`,
       [REFS.trespass, REFS.cfa],
-    );
+    ));
   }
   if (!govPrefix && RE_RELIGIOUS.test(o)) {
-    return result('red', 'Private – religious organization', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]);
+    return owned('private', result('red', 'Private – religious organization', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]));
   }
   if (!govPrefix && RE_CLUB.test(o)) {
-    return result('red', 'Private – club / organization', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]);
+    return owned('private', result('red', 'Private – club / organization', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]));
   }
   if (!govPrefix && (RE_BUSINESS.test(o) || (RE_TRAILING_CO.test(o) && !RE_GOV_WORDS.test(o)))) {
-    return result('red', 'Private – business', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]);
+    return owned('private', result('red', 'Private – business', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]));
   }
   if (!govPrefix && RE_TRUST_ESTATE.test(o) && !(RE_GOV_STRONG.test(o) && RE_GOV_TRUSTEES.test(o))) {
-    return result('red', 'Private – trust / estate / individuals', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]);
+    return owned('private', result('red', 'Private – trust / estate / individuals', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]));
   }
 
   // ---- Phase C: government ----------------------------------------------------------
   const federal = RE_FEDERAL.test(o);
   if (RE_USFS.test(o) || (federal && RE_FFS_ABBR.test(o))) {
-    return result(
+    return owned('usfs', result(
       'green',
       'National forest (USFS)',
       'Owned by the U.S. Forest Service. National forest land is generally open to hunting under state regulations; check for local closures, developed recreation sites and the national forest ownership layer to confirm the boundary.',
       [REFS.huntingDigest, REFS.safetyZone],
-    );
+    ));
   }
   if (RE_FWS.test(o) && (federal || /\bSERVICE\b|\bREFUGE\b/.test(o))) {
-    return result(
+    return owned('other', result(
       'yellow',
       'U.S. Fish & Wildlife Service',
       'Federal refuge / FWS land. Hunting is allowed only where and when the refuge’s own rules open it; check the refuge’s hunting regulations.',
       [REFS.refuge],
-    );
+    ));
   }
   if (RE_NPS.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'National Park Service',
       'National Park Service land. Hunting is allowed in parts of Michigan’s national lakeshores but prohibited in national parks and developed areas; check the park’s hunting rules.',
-    );
+    ));
   }
   if (federal) {
-    return result(
+    return owned('federal', result(
       'yellow',
       'Federal (agency not stated)',
       'Owned by the federal government, but the owner string does not say which agency. Rules vary widely (forest service, refuge, military, HUD foreclosures…); identify the agency before hunting.',
-    );
+    ));
   }
 
   if (RE_DNR_ABBR.test(o) || (RE_NATRES.test(o) && RE_STATE_CONTEXT.test(o)) || RE_DNR_OTHER.test(o)) {
-    return gradeDnrOwner();
+    return owned('dnr', gradeDnrOwner());
   }
   if (RE_MDOT.test(o) && !(/\bCOUNTY\b/.test(o) && !/\bSTATE\b|\bMICH/.test(o))) {
-    return result(
+    return owned('other', result(
       'yellow',
       'MDOT / state highway',
       'Owned by the Michigan Department of Transportation (usually highway right-of-way or excess land). Hunting along roads is restricted and firearm discharge near highways can be illegal; treat as off-limits unless MDOT confirms.',
-    );
+    ));
   }
   if (RE_STATE_PARK.test(o)) {
-    return result(
+    return owned('dnr', result(
       'yellow',
       'State park / recreation area',
       'State park or recreation area. Hunting is allowed only in designated parts of some parks; check the DNR park hunting map for this unit.',
       [REFS.landUseOrders],
-    );
+    ));
   }
   if (RE_STATE_OTHER_AGENCY.test(o)) {
-    return result(
+    return owned('other', result(
       'yellow',
       'State land (non-DNR agency)',
       'Owned by a State of Michigan agency other than the DNR (or a DNR facility such as a hatchery). These are not open to hunting by default; contact the agency.',
-    );
+    ));
   }
   if (RE_STATE_GENERIC.test(o)) {
-    return result(
+    return owned('state', result(
       'yellow',
       'State of Michigan (agency not stated)',
       'Owned by the State of Michigan, but the record does not say which agency. Most rural state land is DNR-managed and open to hunting — confirm with the DNR-managed lands layer before relying on it.',
       [REFS.landUseOrders],
-    );
+    ));
   }
 
   if (RE_SCHOOL.test(o)) {
-    return result('yellow', 'School district', `School-district land. ${LOCAL_VERIFY} Weapons are prohibited on school property in many cases.`);
+    return owned('other', result('yellow', 'School district', `School-district land. ${LOCAL_VERIFY} Weapons are prohibited on school property in many cases.`));
   }
   if (RE_ROAD_COMMISSION.test(o)) {
-    return result('yellow', 'County road commission', `Road commission land (often right-of-way or gravel pits). ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'County road commission', `Road commission land (often right-of-way or gravel pits). ${LOCAL_VERIFY}`));
   }
   if (RE_DRAIN.test(o)) {
-    return result('yellow', 'Drain commission', `Drain commission land or easement. ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'Drain commission', `Drain commission land or easement. ${LOCAL_VERIFY}`));
   }
   if (RE_COUNTY.test(o) && !(RE_OF_COUNTY_ORG.test(o) && !/\bCOUNTY OF\b/.test(o))) {
-    return result('yellow', 'County-owned', `County-owned land (may include tax-foreclosed parcels). ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'County-owned', `County-owned land (may include tax-foreclosed parcels). ${LOCAL_VERIFY}`));
   }
   if (RE_TOWNSHIP.test(o)) {
-    return result('yellow', 'Township-owned', `Township-owned land. ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'Township-owned', `Township-owned land. ${LOCAL_VERIFY}`));
   }
   if (RE_CITY_VILLAGE.test(o)) {
-    return result('yellow', 'City / village-owned', `Municipal land. ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'City / village-owned', `Municipal land. ${LOCAL_VERIFY}`));
   }
   if (RE_LOCAL_AUTHORITY.test(o)) {
-    return result('yellow', 'Local public authority', `Owned by a local public authority (library, utility board, airport, sewer…). ${LOCAL_VERIFY}`);
+    return owned('other', result('yellow', 'Local public authority', `Owned by a local public authority (library, utility board, airport, sewer…). ${LOCAL_VERIFY}`));
   }
   if (RE_CEMETERY.test(o)) {
-    return result('yellow', 'Cemetery', 'Cemetery property; not a hunting area. Contact the owner (often the township).');
+    return owned('other', result('yellow', 'Cemetery', 'Cemetery property; not a hunting area. Contact the owner (often the township).'));
   }
 
   // ---- Default: private individual(s) --------------------------------------------------
-  return result('red', 'Private', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]);
+  return owned('private', result('red', 'Private', PRIVATE_VERIFY, [REFS.trespass, REFS.safetyZone]));
 }
 
 // ---------------------------------------------------------------------------
@@ -427,21 +432,32 @@ function gradeDnrManagedLands(p: Record<string, unknown>): GradeResult {
   }
 }
 
-function gradeWildlifeArea(p: Record<string, unknown>): GradeResult {
-  const type = str(p.AreaType);
-  const t = type.toUpperCase();
-  const name = str(p.OfficialWLDProjectAreaName);
-  const label = name ? ` (${name})` : '';
-  if (/PVT|PRIVATE/i.test(name)) {
-    return result('yellow', 'Private land – state hunting rights', `Privately owned land where the State reserved hunting rights${label}. Boundaries and rules are specific; confirm with the DNR Wildlife Division before hunting.`);
+/** Wording used everywhere an administrative boundary is shown (details sheet, legend). */
+export const BOUNDARY_NOTE = 'an administrative boundary that can include private inholdings';
+
+/**
+ * Boundary layers (role 'boundary': wildlife project areas, park boundaries) never carry a grade:
+ * they are drawn as outlines and reported as "Inside the boundary of …". The category names the
+ * kind of area; the reason explains why it is not an access verdict.
+ */
+function gradeBoundary(source: LayerSource, p: Record<string, unknown>): GradeResult {
+  if (source.id === 'dnr-wildlife-areas') {
+    const type = str(p.AreaType);
+    const name = str(p.OfficialWLDProjectAreaName);
+    if (/PVT|PRIVATE/i.test(name)) {
+      return result('unknown', 'Private land – state hunting rights (boundary)', `Privately owned land on which the State reserved hunting rights${name ? ` (${name})` : ''}. Boundaries and rules are specific; confirm with the DNR Wildlife Division before hunting.`);
+    }
+    return result(
+      'unknown',
+      type || 'Wildlife area',
+      `${type || 'DNR wildlife area'} project boundary — ${BOUNDARY_NOTE}. Whether a spot inside it is public comes from the parcel and DNR-managed land records; area rules (refuges, managed waterfowl zones, drawings) apply on the state-owned part.`,
+      [REFS.landUseOrders],
+    );
   }
-  if (t.includes('RESEARCH') || t.includes('FIELD TRIAL') || t.includes('RECREATION AREA')) {
-    return result('yellow', type, `${type}${label}. Hunting may be restricted or closed; check the area's rules with DNR.`, [REFS.landUseOrders]);
+  if (source.id === 'dnr-state-parks') {
+    return result('unknown', 'State park boundary', `${str(p.Park_Label) || 'State park'} boundary — ${BOUNDARY_NOTE}. The "State parks & rec areas – hunting status" layer shows which zones are open or closed to hunting.`, [REFS.landUseOrders]);
   }
-  if (t) {
-    return result('green', type, `${type}${label}. Open to hunting under state regulations, but some areas have special rules (refuges, managed waterfowl zones, drawings) and the boundary can include private inholdings — check DNR-managed lands and posted signs.`, [REFS.landUseOrders, REFS.safetyZone]);
-  }
-  return result('yellow', 'Wildlife area', `DNR wildlife property${label}. Area type is not recorded; check the DNR-managed lands layer and area rules.`);
+  return result('unknown', source.title, `Administrative boundary — ${BOUNDARY_NOTE}. Not an access verdict.`);
 }
 
 function gradeHap(p: Record<string, unknown>): GradeResult {
@@ -566,13 +582,10 @@ export function gradeFeature(source: LayerSource, properties: Record<string, unk
   const id = source.id;
 
   if (id === 'dnr-managed-lands') return gradeDnrManagedLands(p);
-  if (id === 'parcels-dnr-state-owned') return gradeDnrDivision(str(p.DivisionDepartment), '');
-  if (id === 'dnr-wildlife-areas') return gradeWildlifeArea(p);
+  if (source.role === 'boundary') return gradeBoundary(source, p);
+  if (id === 'parcels-dnr-state-owned') return owned('dnr', gradeDnrDivision(str(p.DivisionDepartment), ''));
   if (id === 'dnr-hap') return gradeHap(p);
   if (id === 'dnr-park-hunting') return gradeParkHunting(p);
-  if (id === 'dnr-state-parks') {
-    return result('yellow', 'State park', `${str(p.Park_Label) || 'State park'}: hunting is allowed only in designated parts of some parks. Turn on "State parks & rec areas – hunting status" for this unit's open/closed areas.`, [REFS.landUseOrders]);
-  }
   if (id === 'commercial-forest') return gradeCfa(p);
   if (id === 'usfs-surface-ownership') return gradeUsfs(p);
   if (id.startsWith('padus-')) return gradePadus(p);

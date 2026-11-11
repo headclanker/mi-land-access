@@ -48,8 +48,14 @@ export class LayerPanel {
         'ul',
         {},
         LEGEND.map((l) => h('li', {}, h('span.legend-chip', { style: `--c:${GRADE_COLORS[l.grade]}` }), h('span', {}, h('strong', {}, l.title), h('span.muted.small', {}, GRADE_LABEL[l.grade])))),
+        h('li', {}, h('span.legend-chip.hatch', { style: `--c:${GRADE_COLORS.yellow}` }), h('span', {}, h('strong', {}, 'Hatched: records disagree'), h('span.muted.small', {}, 'County owner and state/federal land records conflict — verify before entering'))),
+        h('li', {}, h('span.legend-chip.boundary'), h('span', {}, h('strong', {}, 'Dashed outline: area boundary'), h('span.muted.small', {}, 'Game-area or park boundary — can include private land; not a grade'))),
       ),
-      h('p.muted.small', {}, 'Grades are an automated guess from ownership records — not legal advice. Always verify boundaries and rules, and get permission for private land.'),
+      h(
+        'p.muted.small',
+        {},
+        'Where county parcels are shown, each parcel gets one colour: park hunting zones, HAP and Commercial Forest come first, then DNR and national-forest ownership, then the county owner name. Grades are an automated guess from these records — not legal advice. Always verify boundaries and rules, and get permission for private land.',
+      ),
     );
     const groups = GROUPS.map((g) => {
       const srcs = this.layers.sources.filter((s) => s.group === g.id);
@@ -116,7 +122,14 @@ export class LayerPanel {
     input.addEventListener('change', () => this.layers.setVisible(s.id, input.checked));
     const status = h('span.layer-status');
     const swatchColor = s.group === 'hunting-units' ? this.layers.colorForUnitLayer(s.id) : s.fixedGrade ? GRADE_COLORS[s.fixedGrade.grade] : '';
-    const sw = s.group === 'hunting-units' ? h('span.layer-sw.unit', { style: `--c:${swatchColor}` }) : s.fixedGrade ? h('span.layer-sw', { style: `--c:${swatchColor}` }) : h('span.layer-sw.multi');
+    const sw =
+      s.group === 'hunting-units'
+        ? h('span.layer-sw.unit', { style: `--c:${swatchColor}` })
+        : s.role === 'boundary'
+          ? h('span.layer-sw.boundary', { title: 'Outline only — not a grade' })
+          : s.fixedGrade
+            ? h('span.layer-sw', { style: `--c:${swatchColor}` })
+            : h('span.layer-sw.multi');
     const row = h('li.layer-row', {}, h('label.layer-label', {}, input, h('span.switch', { 'aria-hidden': 'true' }), sw, h('span.layer-text', {}, h('span.layer-title', {}, s.title), status)));
     this.rows.set(s.id, { status, input, row });
     return row;

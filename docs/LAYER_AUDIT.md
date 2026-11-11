@@ -31,3 +31,12 @@ Audit of every public-land layer against county parcel records, run 2026-11-11.
 
 - Reconciliation only happens where a county publishes parcels. Elsewhere the public-land layers stand alone.
 - "Records disagree" parcels cannot be settled from data; they need the county register of deeds or DNR.
+
+## Follow-up checks (same day)
+
+- **Hunting Access Program, live.** All 114 active HAP polygons were pulled; 27 fall in counties with owner-name parcels. Of the 72 parcels at least half inside one, 67 resolve to green and 5 to yellow (restricted hunt types); every one was red or yellow by owner name alone. 12 partly-overlapping parcels keep their own grade.
+- **Two public layers disagreeing.** A covering authoritative layer that is stricter than the adopted verdict now wins and the parcel is hatched (previously unflagged).
+- **Overlap accuracy.** Any overlap within 8 points of the 10% or 50% decision line is re-measured with 12 times the sample points; tested to within 1 point of the exact area.
+- **PAD-US load shedding.** "Too many requests"-style responses are retried with back-off (up to three times) instead of failing the tile.
+- **Arenac County added** (18,348 parcels with owner names), bringing coverage to 33 counties. Iron County's service needs a login.
+- **Responsiveness.** With CPU throttled 4x in headless Chromium, the longest single stall while panning at parcel zoom was 0.15–0.32 s. That browser draws the map in software, so this is not a real-phone measurement.

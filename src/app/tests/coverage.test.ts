@@ -63,3 +63,37 @@ describe('coverage', () => {
     expect(ms).toBeLessThan(1500);
   });
 });
+
+describe('threshold refinement', () => {
+  it('flags fractions near the 10% and 50% decision points', async () => {
+    const { nearThreshold } = await import('../layers/coverage');
+    expect(nearThreshold(0.5)).toBe(true);
+    expect(nearThreshold(0.44)).toBe(true);
+    expect(nearThreshold(0.12)).toBe(true);
+    expect(nearThreshold(0.3)).toBe(false);
+    expect(nearThreshold(0.95)).toBe(false);
+  });
+
+  it('measures a near-half overlap to within one point of the exact area', () => {
+    const sq = (w: number, s: number, e: number, n: number): Polygon => ({ type: 'Polygon', coordinates: [[[w, s], [e, s], [e, n], [w, n], [w, s]]] });
+    for (const cut of [0.47, 0.49, 0.505, 0.52, 0.095, 0.105]) {
+      const target = prepare(sq(-85, 44, -84.99, 44.01))!;
+      const source = prepare(sq(-85.1, 43.9, -85 + 0.01 * cut, 44.1))!;
+      const res = coverage([{ key: 't', prep: target }], [{ key: 's', prep: source }]);
+      const f = res.get('t')?.[0]?.fraction ?? 0;
+      expect(Math.abs(f - cut)).toBeLessThan(0.01);
+    }
+  });
+});
+
+describe('transient ArcGIS errors', () => {
+  it('recognises load-shedding responses', async () => {
+    const { isTransientError, isTransientStatus } = await import('../layers/arcgis');
+    expect(isTransientError(400, 'Too many large geometry non-cacheable requests')).toBe(true);
+    expect(isTransientError(503, '')).toBe(true);
+    expect(isTransientError(400, 'Invalid URL')).toBe(false);
+    expect(isTransientError(499, 'Token Required')).toBe(false);
+    expect(isTransientStatus(429)).toBe(true);
+    expect(isTransientStatus(404)).toBe(false);
+  });
+});

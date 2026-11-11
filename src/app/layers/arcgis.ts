@@ -242,7 +242,33 @@ export interface FetchResult {
 /** Remembers layers whose server rejected f=geojson so we go straight to f=json next time. */
 const esriJsonOnly = new Set<string>();
 
-async function fetchPage(opts: FetchOptions, offset: number): Promise<{ features: Feature[]; more: boolean }> {
+export const RETRY_DELAYS_MS = [800, 2500, 6000];
+
+export function isTransientStatus(status: number): boolean {
+  return status === 429 || status === 502 || status === 503 || status === 504;
+}
+
+export function isTransientError(code: unknown, message: string): boolean {
+  if (code === 429 || code === 503 || code === 504) return true;
+  return /too many|busy|overload|throttl|rate limit|timed? ?out|try again|temporar/i.test(message);
+}
+
+function wait(ms: number, signal?: AbortSignal): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (signal?.aborted) return reject(signal.reason ?? new DOMException('Aborted', 'AbortError'));
+    const t = setTimeout(() => {
+      signal?.removeEventListener('abort', onAbort);
+      resolve();
+    }, ms * (0.75 + Math.random() * 0.5));
+    const onAbort = (): void => {
+      clearTimeout(t);
+      reject(signal?.reason ?? new DOMException('Aborted', 'AbortError'));
+    };
+    signal?.addEventListener('abort', onAbort, { once: true });
+  });
+}
+
+async function fetchPage(opts: FetchOptions, offset: number, attempt = 0): Promise<{ features: Feature[]; more: boolean }> {
   const f = opts.fetchFn ?? fetch;
   const useJson = esriJsonOnly.has(opts.layerUrl);
   const url = buildQueryUrl(opts.layerUrl, {
@@ -255,14 +281,26 @@ async function fetchPage(opts: FetchOptions, offset: number): Promise<{ features
     format: useJson ? 'json' : 'geojson',
   });
   const res = await f(url, { signal: opts.signal });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.ok) {
+    if (isTransientStatus(res.status) && attempt < RETRY_DELAYS_MS.length) {
+      await wait(RETRY_DELAYS_MS[attempt], opts.signal);
+      return fetchPage(opts, offset, attempt + 1);
+    }
+    throw new Error(`HTTP ${res.status}`);
+  }
   const body: unknown = await res.json();
   if (!isObject(body)) throw new Error('Bad response');
   if (isObject(body.error)) {
     const msg = String(body.error.message ?? 'ArcGIS error');
+    // Shared public services (PAD-US especially) shed load with a 200 + error body such as
+    // "Too many large geometry non-cacheable requests": back off and try again.
+    if (isTransientError(body.error.code, msg) && attempt < RETRY_DELAYS_MS.length) {
+      await wait(RETRY_DELAYS_MS[attempt], opts.signal);
+      return fetchPage(opts, offset, attempt + 1);
+    }
     if (!useJson && /geojson|format|invalid/i.test(msg)) {
       esriJsonOnly.add(opts.layerUrl);
-      return fetchPage(opts, offset);
+      return fetchPage(opts, offset, attempt);
     }
     throw new Error(msg);
   }

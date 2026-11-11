@@ -116,9 +116,7 @@ Sources that were found but not used:
   Macomb, Newaygo and Allegan publish parcels on their own servers. Those hosts are blocked
   from the build sandbox, so they could not be verified. A browser can probably reach them,
   but CORS was not checked.
-- **`services8.arcgis.com`.** Iron and Arenac county services live there, and that host is
-  blocked from the sandbox.
-- **Login required.** The Missaukee and Menominee services need a token.
+- **Login required.** The Iron, Missaukee and Menominee services need a token.
 - **No owner names.** Mackinac, Delta, Clinton and Kalamazoo have parcel layers without
   owner names.
 - **Wrong state.** Several search hits were for other states' counties with the same name:
@@ -296,7 +294,7 @@ from the build environment (403 bot check and proxy block), so no link was verif
 ## 6. Known gaps and caveats
 
 - **Parcels**: 51 of 83 counties have no owner-name parcel layer. That includes most of the
-  northern Lower Peninsula and the Upper Peninsula: Alcona, Alger, Alpena, Arenac, Baraga,
+  northern Lower Peninsula and the Upper Peninsula: Alcona, Alger, Alpena, Baraga,
   Chippewa, Crawford, Delta, Dickinson, Gogebic, Iron, Kalkaska, Keweenaw, Lake, Luce,
   Mackinac, Manistee, Mason, Menominee, Missaukee, Montmorency, Oceana, Ogemaw, Ontonagon,
   Osceola, Oscoda, Otsego, Presque Isle, Wexford and others. In those counties the app can
@@ -304,9 +302,10 @@ from the build environment (403 bot check and proxy block), so no link was verif
 - **Third-party copies** (Kent, Ottawa, Muskegon, Wayne, Houghton, Marquette, Shiawassee) can
   lag the assessor roll. Treat owner names as a hint and confirm with the county
   equalization office.
-- **MDOT owned land**: the MDOT real-estate service (`mdotgis.state.mi.us`) and
-  `gisagomdot.state.mi.us` are blocked from the sandbox, so MDOT land is graded only through
-  parcel owner names.
+- **MDOT owned land**: MDOT's public server (`gisagomdot.state.mi.us`) publishes right-of-way
+  and alignment *lines* but no owned-land polygons, and its real-estate service
+  (`mdotgis.state.mi.us`) was not reachable, so MDOT land is graded only through parcel owner
+  names.
 - **Local government land**: only what PAD-US contains, plus parcel owner names. There is no
   authoritative statewide township or county land layer.
 - **Federal**: PAD-US covers FWS and NPS, but military installations appear in Michigan PAD-US

@@ -102,8 +102,6 @@ const RAW: [name: string, code: string, peninsula: 'LP' | 'UP'][] = [
 
 const OWN_SERVER =
   'County publishes parcels on its own GIS server; not added because it could not be verified from the build environment.';
-const UNVERIFIED_HOST =
-  'A county parcel service is listed on ArcGIS Online (services8.arcgis.com) but could not be verified from the build environment.';
 
 const NOTES: Record<string, string> = {
   Charlevoix:
@@ -118,8 +116,7 @@ const NOTES: Record<string, string> = {
   Emmet: OWN_SERVER,
   Oakland: OWN_SERVER,
   Jackson: OWN_SERVER,
-  Iron: UNVERIFIED_HOST,
-  Arenac: UNVERIFIED_HOST,
+  Iron: 'County parcel service requires a login (not public).',
   Missaukee: 'County parcel service requires a login (not public).',
   Menominee: 'County parcel service requires a login (not public).',
   Mackinac: 'Public county layer has parcel boundaries but no owner names.',

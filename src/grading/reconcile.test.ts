@@ -313,3 +313,36 @@ describe('robustness', () => {
     expect(JSON.stringify(owner)).toBe(before);
   });
 });
+
+describe('two public layers that disagree', () => {
+  const owner = gradeOwnerName('LYME GREAT LAKES TIMBERLANDS LLC');
+
+  it('shows the stricter authoritative record and flags the parcel', () => {
+    // Audit case: Commercial Forest (green) and a DNR trail corridor (yellow) cover the same parcel.
+    const r = reconcileParcel(owner, [cfa(0.95), dnrLand('RAIL TRAILS', 0.9, 'TRAIL')], 'LYME GREAT LAKES TIMBERLANDS LLC');
+    expect(r.result.grade).toBe('yellow');
+    expect(r.result.category).toBe('Records disagree');
+    expect(r.conflict).toBe(true);
+    expect(r.adoptedFrom).toBeUndefined();
+    expect(r.notes.join(' ')).toMatch(/disagree/);
+  });
+
+  it('leaves the verdict alone when the other layer is no stricter', () => {
+    const r = reconcileParcel(owner, [cfa(0.95), dnrLand('FORESTS', 0.9)], 'LYME GREAT LAKES TIMBERLANDS LLC');
+    expect(r.result.grade).toBe('green');
+    expect(r.conflict).toBe(false);
+    expect(r.adoptedFrom).toBe('commercial-forest');
+  });
+
+  it('ignores a stricter layer that only partly overlaps', () => {
+    const r = reconcileParcel(owner, [cfa(0.95), dnrLand('RAIL TRAILS', 0.3, 'TRAIL')], 'LYME GREAT LAKES TIMBERLANDS LLC');
+    expect(r.result.grade).toBe('green');
+    expect(r.conflict).toBe(false);
+  });
+
+  it('never loosens a closed park zone', () => {
+    const r = reconcileParcel(gradeOwnerName('STATE OF MICHIGAN DNR'), [park('Closed', 0.9), dnrLand('FORESTS', 0.9)], 'STATE OF MICHIGAN DNR');
+    expect(r.result.grade).toBe('red');
+    expect(r.adoptedFrom).toBe('dnr-park-hunting');
+  });
+});

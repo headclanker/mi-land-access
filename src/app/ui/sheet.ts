@@ -34,8 +34,12 @@ export class Sheet {
     return (this.el.dataset.state as SheetState) ?? 'closed';
   }
 
+  /** Optional guard: return false to refuse a state change (e.g. while drawing on a phone). */
+  canChange: ((next: SheetState) => boolean) | null = null;
+
   set(state: SheetState): void {
     if (this.state === state) return;
+    if (this.canChange && !this.canChange(state)) return;
     this.el.dataset.state = state;
     this.el.style.removeProperty('--drag-h');
     for (const fn of this.listeners) fn(state);
@@ -58,6 +62,7 @@ export class Sheet {
 
   private onDown(e: PointerEvent): void {
     if (desktopQuery.matches) return;
+    if (this.canChange && !this.canChange('full')) return;
     this.dragging = true;
     this.moved = 0;
     this.startY = e.clientY;

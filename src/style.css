@@ -257,14 +257,21 @@ textarea {
   box-shadow: var(--shadow);
   cursor: pointer;
 }
+.brand {
+  color: var(--text);
+}
 .brand img {
   display: block;
-  border-radius: 8px;
+  border-radius: 9px;
 }
 .brand-text {
   display: none;
-  font-weight: 800;
-  letter-spacing: 0.01em;
+  align-items: center;
+  padding-right: 2px;
+}
+.wordmark {
+  display: block;
+  overflow: visible;
 }
 
 #search {
@@ -292,11 +299,24 @@ textarea {
   color: var(--muted);
 }
 
-#coord-readout {
+/* Top-left column under the search bar: coordinate readout, recording pill, compass. */
+#hud-stack {
   position: absolute;
-  z-index: 4;
+  z-index: 6;
   top: calc(var(--safe-t) + 66px);
   left: calc(var(--safe-l) + 10px);
+  max-width: calc(100% - var(--safe-l) - var(--safe-r) - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  pointer-events: none;
+}
+#hud-stack > * {
+  pointer-events: auto;
+}
+
+#coord-readout {
   padding: 5px 10px;
   border-radius: 999px;
   background: var(--glass);
@@ -471,7 +491,7 @@ textarea {
 
 #draw-hud {
   position: absolute;
-  z-index: 6;
+  z-index: 11;
   left: 50%;
   transform: translateX(-50%);
   bottom: calc(var(--peek-h) + 14px);
@@ -503,10 +523,6 @@ textarea {
 }
 
 #record-pill {
-  position: absolute;
-  z-index: 6;
-  left: calc(var(--safe-l) + 10px);
-  top: calc(var(--safe-t) + 100px);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -569,30 +585,61 @@ textarea {
   display: block;
 }
 
-/* compass HUD */
+/* compass HUD: a compact chip (small dial + heading); tap to expand */
 #compass-hud {
-  position: absolute;
-  z-index: 6;
-  top: calc(var(--safe-t) + 100px);
-  left: calc(var(--safe-l) + 10px);
-  right: calc(var(--safe-r) + 68px);
-  max-width: 420px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 280px;
   border-radius: var(--radius);
   background: var(--glass);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   backdrop-filter: blur(8px);
 }
-.compass-main {
+.compass-chip {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  padding: 4px 12px 4px 4px;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  touch-action: manipulation;
+}
+.chip-read {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.deg-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+.compass-chip .deg {
+  font: 800 1.15rem/1.1 var(--font);
+  font-variant-numeric: tabular-nums;
+}
+.compass-chip .card {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+.chip-dist {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .dial {
   position: relative;
-  width: 76px;
-  height: 76px;
+  width: 42px;
+  height: 42px;
   flex: none;
   border-radius: 50%;
   background: var(--surface-2);
@@ -609,14 +656,17 @@ textarea {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 16px;
-  margin-left: -8px;
+  width: 12px;
+  margin: -6px 0 0 -6px;
   text-align: center;
   font-weight: 800;
-  font-size: 12px;
-  transform: rotate(var(--a)) translateY(-31px) rotate(calc(-1 * var(--a)));
-  margin-top: -8px;
-  line-height: 16px;
+  font-size: 9px;
+  line-height: 12px;
+  transform: rotate(var(--a)) translateY(-14px) rotate(calc(-1 * var(--a)));
+}
+.rose-e,
+.rose-w {
+  opacity: 0.6;
 }
 .rose-n {
   color: #e5484d;
@@ -625,86 +675,59 @@ textarea {
   content: '';
   position: absolute;
   left: 50%;
-  top: -2px;
-  width: 14px;
-  height: 14px;
-  margin-left: -7px;
+  top: -3px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid #fff;
-  transform-origin: 7px 40px;
+  transform-origin: 5px 22px;
   transform: rotate(var(--t, 0deg));
-}
-.dial-target {
-  transform: rotate(var(--rot, 0deg));
-}
-.dial .dial-target {
-  inset: 0;
 }
 .dial-needle {
   position: absolute;
   left: 50%;
-  top: 9px;
+  top: 6px;
   bottom: 50%;
   width: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 28px solid var(--text);
-  margin-left: -7px;
+  margin-left: -4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 14px solid var(--text);
 }
-.compass-read {
+.compass-more {
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  flex: 1;
-}
-.deg-row {
-  display: flex;
-  align-items: baseline;
   gap: 8px;
+  padding: 2px 10px 10px;
+  border-top: 1px solid var(--line);
 }
-.compass-read .deg {
-  font: 800 1.9rem/1 var(--font);
-  font-variant-numeric: tabular-nums;
-}
-.compass-read .card {
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--accent);
-}
-.compass-read .btn {
-  align-self: flex-start;
-  margin-top: 6px;
-}
-.compass-main {
-  align-items: flex-start;
-}
-.compass-close {
-  margin: -4px -4px 0 0;
-}
-.compass-read .src {
+.compass-more .src {
+  padding-top: 6px;
   font-size: 0.75rem;
   color: var(--muted);
 }
 .compass-target {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--line);
+  gap: 6px;
+}
+.ct-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
 }
 .compass-target strong {
-  margin-left: auto;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 .ct-name {
-  flex: 1;
-  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 0.85rem;
 }
 
 /* ---------- sheets ---------- */
@@ -807,6 +830,27 @@ textarea {
 
 #details {
   z-index: 12;
+}
+/* Phones: the details sheet stops at the tools tab bar, which stays reachable underneath it. */
+@media (max-width: 899.98px) {
+  #details.sheet {
+    bottom: var(--peek-h);
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.35), 0 4px 0 var(--surface);
+  }
+  #details.sheet[data-state='half'] {
+    --state-h: calc(54dvh - var(--peek-h));
+  }
+  #details.sheet[data-state='full'] {
+    --state-h: calc(100dvh - var(--safe-t) - 64px - var(--peek-h));
+  }
+  .details-open #panel .tabs button[aria-selected='true'] {
+    color: var(--muted);
+  }
+  .details-open #panel .tabs button[aria-selected='true'] .ic {
+    color: inherit;
+  }
 }
 
 .pane-title {
@@ -1513,6 +1557,42 @@ dialog.modal form {
   gap: 10px;
   padding: 14px 16px 16px;
 }
+/* Long notices: the head stays, the body scrolls, the acknowledgement + button stay reachable. */
+dialog.modal.disclaimer {
+  overflow: hidden;
+}
+dialog.modal.disclaimer form {
+  max-height: calc(100dvh - 20px);
+  padding: 0;
+  gap: 0;
+}
+dialog.modal.disclaimer .modal-head {
+  padding: 14px 16px 6px;
+}
+dialog.modal.disclaimer .modal-head h2:focus {
+  outline: none;
+}
+.disclaimer-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 16px 8px;
+}
+.disclaimer-body > p:first-child {
+  margin-top: 4px;
+}
+.disclaimer-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 16px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.disclaimer-foot .modal-foot {
+  margin: 0;
+}
 .modal-head {
   display: flex;
   align-items: center;
@@ -1633,7 +1713,7 @@ textarea.letter {
   position: fixed;
   z-index: 100;
   left: 50%;
-  bottom: calc(var(--sheet-h) + 70px);
+  bottom: calc(min(var(--sheet-h), 40dvh) + 18px);
   transform: translate(-50%, 20px);
   max-width: calc(100vw - 32px);
   padding: 12px 16px;
@@ -1664,7 +1744,8 @@ textarea.letter {
 
 /* While drawing on phones, keep the map clear. */
 .drawing #coord-readout,
-.drawing #legal-link {
+.drawing #legal-link,
+.sheet-up #legal-link {
   display: none;
 }
 
@@ -1689,8 +1770,7 @@ textarea.letter {
     left: var(--sidebar-w);
   }
   #topbar,
-  #coord-readout,
-  #compass-hud {
+  #hud-stack {
     left: calc(var(--sidebar-w) + 12px);
   }
   #legal-link {
@@ -1748,9 +1828,6 @@ textarea.letter {
     left: calc(50% + var(--sidebar-w) / 2);
     bottom: 40px;
   }
-  #record-pill {
-    left: calc(var(--sidebar-w) + 12px);
-  }
   #toast {
     left: calc(50% + var(--sidebar-w) / 2);
     bottom: 40px;
@@ -1787,6 +1864,105 @@ textarea.letter {
   margin: 0 0 10px;
 }
 
-.recording #compass-hud {
-  top: calc(var(--safe-t) + 146px);
+/* ---------- search results ---------- */
+
+#search-results {
+  position: absolute;
+  z-index: 30;
+  top: calc(var(--safe-t) + 62px);
+  left: calc(var(--safe-l) + 10px);
+  right: calc(var(--safe-r) + 68px);
+  max-height: min(60dvh, 420px);
+  overflow-y: auto;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.sr-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.sr-item:hover,
+.sr-item[aria-selected='true'] {
+  background: var(--surface-2);
+}
+.sr-kind {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 9px;
+  background: var(--surface-2);
+  color: var(--accent);
+}
+.sr-kind .ic {
+  width: 18px;
+  height: 18px;
+}
+.sr-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+.sr-text strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sr-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 8px;
+}
+@media (min-width: 640px) {
+  #search-results {
+    right: auto;
+    width: min(560px, calc(100% - 90px));
+  }
+}
+@media (min-width: 900px) {
+  #search-results {
+    left: calc(var(--sidebar-w) + 12px);
+    width: min(560px, calc(100% - var(--sidebar-w) - 90px));
+  }
+}
+
+/* ---------- permission request: letter / text ---------- */
+
+.mode-switch {
+  margin: 0;
+}
+.mode-switch .ic {
+  width: 19px;
+  height: 19px;
+}
+.sms-block,
+.letter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+textarea.letter.sms {
+  min-height: 150px;
+}
+.modal-foot .spacer {
+  flex: 1;
+}
+.modal-foot > .muted.small {
+  align-self: center;
+}
+a.btn {
+  text-decoration: none;
 }

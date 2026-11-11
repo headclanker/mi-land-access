@@ -3,7 +3,7 @@
 
 import type { Map as MLMap } from 'maplibre-gl';
 import { bearing, cardinal, formatDistance, haversine, normalizeDeg } from '../util/geo';
-import { fill, h, icon, toast } from '../util/dom';
+import { fill, h, icon } from '../util/dom';
 import type { LocationService } from '../tracker/location';
 
 interface IOSOrientationEvent extends DeviceOrientationEvent {
@@ -82,7 +82,8 @@ export class Compass {
     if (ctor?.requestPermission) {
       try {
         const res = await ctor.requestPermission();
-        if (res === 'denied' && window.matchMedia('(pointer: coarse)').matches) toast('Compass access was denied — showing map bearing instead', 3500);
+        // Shown inside the compass itself (a toast would land on top of it).
+        this.denied = res === 'denied';
       } catch {
         /* fall through to fallback */
       }
@@ -129,6 +130,7 @@ export class Compass {
     this.target = t;
     if (t) {
       this.show(true);
+      this.setExpanded(true);
       if (!this.loc.running) this.loc.acquire('compass');
     } else this.loc.release('compass');
     this.render();
@@ -146,6 +148,7 @@ export class Compass {
     else {
       this.disable();
       this.setTarget(null);
+      this.setExpanded(false);
     }
     this.render();
   }
@@ -158,10 +161,13 @@ export class Compass {
   }
 
   private els: {
+    chip: HTMLButtonElement;
     dial: HTMLElement;
     target: HTMLElement;
     deg: HTMLElement;
     card: HTMLElement;
+    chipDist: HTMLElement;
+    more: HTMLElement;
     src: HTMLElement;
     headingBtn: HTMLButtonElement;
     info: HTMLElement;
@@ -169,19 +175,38 @@ export class Compass {
     infoVal: HTMLElement;
   } | null = null;
 
+  private expanded = false;
+  private denied = false;
+
+  /** Compact chip by default; tapping it expands the details (heading-up, bearing to a waypoint). */
+  setExpanded(on: boolean): void {
+    this.expanded = on;
+    this.hud.classList.toggle('expanded', on);
+    this.els?.chip.setAttribute('aria-expanded', String(on));
+    if (this.els) this.els.more.hidden = !on;
+    this.render();
+  }
+
   /** Builds the HUD once; render() only updates text and transforms (safe at 60 fps). */
   private build(): NonNullable<Compass['els']> {
     if (this.els) return this.els;
     const target = h('div.dial-target', { hidden: true });
     const dial = h(
       'div.dial',
-      {},
+      { 'aria-hidden': 'true' },
       h('div.dial-rose', {}, ...['N', 'E', 'S', 'W'].map((c, i) => h(`span.rose-${c.toLowerCase()}`, { style: `--a:${i * 90}deg` }, c))),
       target,
       h('div.dial-needle'),
     );
     const deg = h('strong.deg');
     const card = h('span.card');
+    const chipDist = h('span.chip-dist', { hidden: true });
+    const chip = h(
+      'button.compass-chip',
+      { type: 'button', 'aria-expanded': 'false', 'aria-controls': 'compass-more', title: 'Compass — tap for more', onclick: () => this.setExpanded(!this.expanded) },
+      dial,
+      h('span.chip-read', {}, h('span.deg-row', {}, deg, card), chipDist),
+    );
     const src = h('span.src');
     const headingBtn = h(
       'button.btn.sm',
@@ -194,21 +219,18 @@ export class Compass {
     const info = h(
       'div.compass-target',
       { hidden: true },
-      infoName,
-      infoVal,
-      h('button.icon-btn.sm', { type: 'button', 'aria-label': 'Stop navigating', onclick: () => this.setTarget(null) }, icon('close')),
+      h('span.ct-text', {}, infoName, infoVal),
+      h('button.icon-btn.sm', { type: 'button', 'aria-label': 'Stop navigating', title: 'Stop navigating', onclick: () => this.setTarget(null) }, icon('close')),
     );
-    fill(this.hud, 
-      h(
-        'div.compass-main',
-        {},
-        dial,
-        h('div.compass-read', {}, h('div.deg-row', {}, deg, card), src, headingBtn),
-        h('button.icon-btn.sm.compass-close', { type: 'button', 'aria-label': 'Close compass', onclick: () => this.show(false) }, icon('close')),
-      ),
+    const more = h(
+      'div#compass-more.compass-more',
+      { hidden: true },
+      src,
       info,
+      h('div.row', {}, headingBtn, h('button.btn.sm.ghost', { type: 'button', onclick: () => this.show(false) }, icon('close'), 'Close')),
     );
-    this.els = { dial, target, deg, card, src, headingBtn, info, infoName, infoVal };
+    fill(this.hud, chip, more);
+    this.els = { chip, dial, target, deg, card, chipDist, more, src, headingBtn, info, infoName, infoVal };
     return this.els;
   }
 
@@ -220,12 +242,20 @@ export class Compass {
     e.dial.style.setProperty('--rot', `${-hd}deg`);
     e.deg.textContent = `${Math.round(hd) % 360}°`;
     e.card.textContent = cardinal(hd);
-    e.src.textContent = sensor ? 'Compass heading' : this.listening && !this.gotSensor ? 'No compass sensor · map bearing' : 'Map bearing';
+    e.src.textContent = sensor
+      ? 'Compass heading'
+      : this.denied
+        ? 'Compass access denied · showing map bearing'
+        : this.listening && !this.gotSensor
+          ? 'No compass sensor · showing map bearing'
+          : 'Map bearing';
     e.headingBtn.disabled = !sensor;
     e.headingBtn.setAttribute('aria-pressed', String(this.rotateMap));
+    e.chip.setAttribute('aria-label', `Compass ${Math.round(hd) % 360}° ${cardinal(hd)}${sensor ? '' : ' (map bearing)'} — ${this.expanded ? 'hide' : 'show'} details`);
     const here = this.loc.last;
     e.info.hidden = !this.target;
     e.target.hidden = true;
+    e.chipDist.hidden = !this.target;
     if (this.target) {
       e.infoName.textContent = `To ${this.target.name || 'waypoint'}`;
       if (here) {
@@ -234,7 +264,11 @@ export class Compass {
         e.target.hidden = false;
         e.target.style.setProperty('--t', `${brg}deg`);
         e.infoVal.textContent = `${formatDistance(dist)} · ${Math.round(brg) % 360}° ${cardinal(brg)}`;
-      } else e.infoVal.textContent = 'Waiting for GPS…';
+        e.chipDist.textContent = `${formatDistance(dist)} ${cardinal(brg)}`;
+      } else {
+        e.infoVal.textContent = 'Waiting for GPS…';
+        e.chipDist.textContent = 'GPS…';
+      }
     }
   }
 }

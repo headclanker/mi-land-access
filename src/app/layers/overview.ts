@@ -6,7 +6,7 @@
 import type { Map as MLMap, GeoJSONSource, ExpressionSpecification } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { GRADE_COLORS } from '../../contract';
-import { OVERVIEW_HANDOFF_ZOOM, OVERVIEW_LAYER_IDS } from '../../data/sources';
+import { OVERVIEW_HANDOFF_ZOOM, OVERVIEW_LAYER_IDS, PARCEL_MIN_ZOOM } from '../../data/sources';
 import type { LayerManager } from './manager';
 import { prefGet, prefSet } from '../util/store';
 
@@ -24,13 +24,32 @@ interface OverviewFile extends FeatureCollection {
   layers?: Record<string, number>;
 }
 
-/** Whether the overview should be drawn: below the hand-off, or above it until live data arrives. Pure. */
-export function overviewWanted(zoom: number, live: readonly { active: boolean; loading: boolean; count: number }[], handoff = OVERVIEW_HANDOFF_ZOOM): boolean {
+/** Zoom from which the overview never shows (county parcels draw and reconcile against live data). */
+export const OVERVIEW_MAX_ZOOM = PARCEL_MIN_ZOOM;
+
+export interface LiveState {
+  visible: boolean;
+  active: boolean;
+  loading: boolean;
+  count: number;
+  truncated: boolean;
+}
+
+/**
+ * Whether the overview should be drawn instead of the live layers it summarises. Pure.
+ *  - below the hand-off zoom: always;
+ *  - from the hand-off up to parcel zoom: while the live layers have not drawn anything yet
+ *    (being switched on / loading), or while any of them hit its feature limit in this view
+ *    (dense state forest at zoom 9–11) — a complete coarse picture beats a partial live one;
+ *  - from parcel zoom up: never.
+ */
+export function overviewWanted(zoom: number, live: readonly LiveState[], handoff = OVERVIEW_HANDOFF_ZOOM, maxZoom = OVERVIEW_MAX_ZOOM): boolean {
   if (zoom < handoff) return true;
-  const active = live.filter((l) => l.active);
-  if (!active.length) return false;
-  // Keep it while every active live layer is still loading and nothing has been drawn yet.
-  return active.some((l) => l.loading) && active.every((l) => l.count === 0);
+  if (zoom >= maxZoom) return false;
+  const on = live.filter((l) => l.visible);
+  if (!on.length) return false;
+  if (on.some((l) => l.active && l.truncated)) return true;
+  return on.every((l) => l.count === 0) && on.some((l) => !l.active || l.loading);
 }
 
 export class Overview {
@@ -90,9 +109,19 @@ export class Overview {
     return this.shown;
   }
 
+  /** True when the overview is standing in for live layers above the hand-off zoom. */
+  standingIn = false;
+
   private update(force = false): void {
     const live = OVERVIEW_LAYER_IDS.map((id) => this.layers.getStatus(id));
-    const want = this.enabled && this.status === 'ready' && overviewWanted(this.map.getZoom(), live);
+    const zoom = this.map.getZoom();
+    const want = this.enabled && this.status === 'ready' && overviewWanted(zoom, live);
+    // Above the hand-off the live layers it covers are hidden meanwhile: never both at once.
+    const standIn = want && zoom >= OVERVIEW_HANDOFF_ZOOM;
+    if (standIn !== this.standingIn) {
+      this.standingIn = standIn;
+      this.layers.suppress(OVERVIEW_LAYER_IDS, standIn);
+    }
     if (want === this.shown && !force) return;
     this.shown = want;
     this.map.setPaintProperty(OVERVIEW_FILL, 'fill-opacity', want ? FILL_OPACITY : 0);

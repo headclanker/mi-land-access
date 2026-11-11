@@ -48,7 +48,13 @@
         </form>
       </header>
 
-      <div id="coord-readout" title="Tap to copy · switch format" role="button" tabindex="0"></div>
+      <!-- Top-left stack: one column, so the readout, recording pill and compass never overlap. -->
+      <div id="hud-stack">
+        <div id="coord-readout" title="Tap to copy · switch format" role="button" tabindex="0"></div>
+        <div id="record-pill" hidden role="button" tabindex="0" aria-label="Track recording — open Track"></div>
+        <div id="compass-hud" hidden></div>
+      </div>
+      <ul id="search-results" role="listbox" aria-label="Search results" hidden></ul>
 
       <div id="fabs" class="fab-col">
         <button class="fab" id="btn-basemap" type="button" aria-label="Basemap" title="Basemap"><svg class="ic"><use href="#i-map" /></svg></button>
@@ -57,10 +63,8 @@
       </div>
 
       <div id="north" aria-hidden="false" title="Reset north"></div>
-      <div id="compass-hud" hidden></div>
       <div id="draw-hud" hidden></div>
       <div id="crosshair" hidden aria-hidden="true"></div>
-      <div id="record-pill" hidden></div>
 
       <aside id="panel" class="sheet" data-state="peek" aria-label="Tools">
         <div class="sheet-grip" aria-hidden="true"><span></span></div>

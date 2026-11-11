@@ -80,6 +80,12 @@ export class CountyIndex {
     return out;
   }
 
+  /** Bounding box of a county outline, once outlines have loaded. */
+  bboxOf(name: string): BBox | undefined {
+    const key = normCounty(name);
+    return this.outlines.find((o) => o.key === key)?.bbox;
+  }
+
   info(name: string): MichiganCounty | undefined {
     return this.byKey.get(normCounty(name));
   }

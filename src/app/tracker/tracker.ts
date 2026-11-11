@@ -37,7 +37,6 @@ export class Tracker {
   private tick: number | undefined;
   private saveTimer: number | undefined;
   private lastFix: Fix | null = null;
-  private gpsMsg = '';
 
   private readonly map: MLMap;
   private readonly loc: LocationService;
@@ -59,10 +58,9 @@ export class Tracker {
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible' && this.s.status === 'recording') void this.requestWakeLock();
     });
-    loc.onError((msg) => {
-      // Transient errors are normal under canopy; only complain when fixes have actually stopped.
-      if (this.lastFix && Date.now() - this.lastFix.t < 20_000) return;
-      this.gpsMsg = msg;
+    // GPS problems show as a banner while recording; LocationService clears its error the
+    // moment a fix arrives, so the banner never sits over a working recording.
+    loc.onStatus(() => {
       if (this.s.status !== 'idle') this.render();
     });
     pill.addEventListener('click', () => this.openPanel());
@@ -93,7 +91,6 @@ export class Tracker {
   start(): void {
     if (!this.loc.available) return toast('GPS is not available in this browser');
     this.s = { status: 'recording', points: [], segments: [{ start: Date.now() }], startedAt: Date.now() };
-    this.gpsMsg = '';
     this.listen();
     this.persist(true);
     this.render();
@@ -183,7 +180,6 @@ export class Tracker {
 
   private onFix(f: Fix): void {
     this.lastFix = f;
-    this.gpsMsg = '';
     if (this.s.status !== 'recording') return;
     const pt: TrackPoint = { lon: f.lon, lat: f.lat, ele: f.alt, t: f.t, acc: f.acc };
     if (shouldAcceptPoint(this.s.points[this.s.points.length - 1], pt)) {
@@ -272,7 +268,7 @@ export class Tracker {
     fill(this.root, 
       h('h2.pane-title', {}, st === 'idle' ? 'Record a track' : st === 'recording' ? 'Recording…' : 'Paused'),
       h('div.stats', {}, stat('dist', 'Distance'), stat('time', 'Moving time'), stat('pace', 'Pace'), stat('ele', 'Elevation'), stat('gain', 'Climb'), stat('n', 'Points')),
-      this.gpsMsg && st !== 'idle' ? h('p.hint.warn', {}, icon('warn'), this.gpsMsg) : null,
+      this.loc.error && st === 'recording' ? h('p.hint.warn', { role: 'status' }, icon('warn'), this.loc.error) : null,
       h('div.row.wrap.track-controls', {}, ...controls),
       h(
         'p.muted.small',

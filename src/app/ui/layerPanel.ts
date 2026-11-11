@@ -1,6 +1,8 @@
 import type { Map as MLMap } from 'maplibre-gl';
 import { GRADE_COLORS, type Grade, type LayerGroup, type LayerSource } from '../../contract';
 import type { LayerManager } from '../layers/manager';
+import type { Overview } from '../layers/overview';
+import { OVERVIEW_HANDOFF_ZOOM } from '../../data/sources';
 import { countyHasParcels, parcelCounties } from '../layers/counties';
 import { GRADE_LABEL } from '../details/details';
 import { fill, h, icon } from '../util/dom';
@@ -29,14 +31,53 @@ export class LayerPanel {
   private readonly root: HTMLElement;
   private readonly map: MLMap;
   private readonly layers: LayerManager;
+  private readonly overview: Overview | null;
+  private overviewRow: { input: HTMLInputElement; status: HTMLElement; row: HTMLElement } | null = null;
 
-  constructor(root: HTMLElement, map: MLMap, layers: LayerManager) {
+  constructor(root: HTMLElement, map: MLMap, layers: LayerManager, overview: Overview | null = null) {
     this.root = root;
     this.map = map;
     this.layers = layers;
+    this.overview = overview;
     this.build();
     layers.onChange(() => this.update());
+    overview?.onChange(() => this.update());
+    map.on('zoomend', () => this.update());
     this.update();
+  }
+
+  /** The zoomed-out overview stands in for several live layers; it gets its own row and note. */
+  private overviewItem(): HTMLElement | null {
+    const ov = this.overview;
+    if (!ov) return null;
+    const input = h('input', { type: 'checkbox', role: 'switch', 'aria-label': 'Statewide public-land overview' });
+    input.addEventListener('change', () => ov.setEnabled(input.checked));
+    const status = h('span.layer-status');
+    const row = h(
+      'li.layer-row',
+      {},
+      h('label.layer-label', {}, input, h('span.switch', { 'aria-hidden': 'true' }), h('span.layer-sw.multi'), h('span.layer-text', {}, h('span.layer-title', {}, 'Statewide overview (zoomed out)'), status)),
+    );
+    this.overviewRow = { input, status, row };
+    return row;
+  }
+
+  private updateOverview(zoom: number): void {
+    const ov = this.overview;
+    const r = this.overviewRow;
+    if (!ov || !r) return;
+    r.input.checked = ov.enabled;
+    r.row.classList.toggle('dim', ov.enabled && !ov.isShown);
+    const built = ov.builtLabel();
+    const what = `Generalised overview of DNR land, state park hunting zones, national forest and other federal land${built ? `, built ${built}` : ''}.`;
+    let state: string;
+    if (ov.status === 'loading') state = 'Loading…';
+    else if (ov.status === 'error') state = 'Couldn’t load the overview.';
+    else if (!ov.enabled) state = '';
+    else if (zoom < OVERVIEW_HANDOFF_ZOOM) state = `Shown now; the live layers take over from zoom ${OVERVIEW_HANDOFF_ZOOM}.`;
+    else if (ov.isShown) state = 'Shown here: the live layers are too dense to draw in full at this zoom — zoom in for them.';
+    else state = 'Live layers shown at this zoom.';
+    fill(r.status, h('span', {}, `${state} ${what}`.trim()));
   }
 
   private build(): void {
@@ -62,7 +103,8 @@ export class LayerPanel {
       if (!srcs.length) return null;
       const extra = g.id === 'hunting-units' ? this.speciesSelect() : null;
       if (g.id === 'parcels') return this.parcelGroup(g.title, srcs);
-      return h('section.layer-group', {}, h('h3.group-title', {}, g.title), extra, h('ul.layer-list', {}, srcs.map((s) => this.row(s))));
+      const lead = g.id === 'public-land' ? this.overviewItem() : null;
+      return h('section.layer-group', {}, h('h3.group-title', {}, g.title), extra, h('ul.layer-list', {}, lead, srcs.map((s) => this.row(s))));
     });
     fill(this.root, legend, this.hint, ...groups.filter((x): x is HTMLElement => x !== null));
     if (!this.layers.sources.length) this.root.append(h('p.muted', {}, 'No data layers are configured.'));
@@ -149,11 +191,14 @@ export class LayerPanel {
       if (!st.visible) text = [];
       else if (st.hiddenReason === 'species') text = [`Hidden: not a ${cap(this.layers.getSpecies())} unit`];
       else if (st.hiddenReason === 'county') text = ['Not in view'];
+      else if (st.hiddenReason === 'zoom' && this.overview?.isShown && s.minZoom === OVERVIEW_HANDOFF_ZOOM)
+        text = [`In the overview below zoom ${s.minZoom}; live from ${s.minZoom}`, h('button.link-btn', { type: 'button', onclick: () => this.map.easeTo({ zoom: s.minZoom + 0.2 }) }, 'Zoom in')];
       else if (st.hiddenReason === 'zoom')
         text = [
           `Zoom in to see (now ${zoom.toFixed(0)}, needs ${s.minZoom})`,
           h('button.link-btn', { type: 'button', onclick: () => this.map.easeTo({ zoom: s.minZoom + 0.2 }) }, 'Zoom in'),
         ];
+      else if (this.layers.isSuppressed(s.id)) text = [st.truncated ? 'Too dense to draw in full here — overview shown; zoom in for live detail' : 'Loading — overview shown meanwhile'];
       else if (st.loading) text = [h('span.spinner', { 'aria-hidden': 'true' }), `Loading… ${st.count ? `${st.count} so far` : ''}`];
       else if (st.error) text = [h('span.err', {}, st.error)];
       else text = [`${st.count.toLocaleString()} in view${st.truncated ? ' (limit reached — zoom in for all)' : ''}`];
@@ -161,6 +206,7 @@ export class LayerPanel {
     }
     this.updateCountyMaster(zoom);
     this.updateHint(zoom);
+    this.updateOverview(zoom);
   }
 
   private updateCountyMaster(zoom: number): void {

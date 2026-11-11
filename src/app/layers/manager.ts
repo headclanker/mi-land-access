@@ -139,6 +139,13 @@ export class LayerManager {
     this.map = map;
     this.sources = sources;
     const saved = prefGet<Record<string, boolean>>('layers', {});
+    // v2 defaults: deer management units start off. Saved toggles store every layer, so a DMU
+    // "on" saved under v1 was the old default, not a choice; forget it once.
+    if (prefGet('layerDefaults', 1) < 2) {
+      delete saved['unit-deer-dmu'];
+      prefSet('layers', saved);
+      prefSet('layerDefaults', 2);
+    }
     let u = 0;
     for (const s of sources) {
       this.status.set(s.id, { visible: saved[s.id] ?? s.defaultVisible, active: false, loading: false, count: 0, truncated: false });
@@ -244,8 +251,9 @@ export class LayerManager {
       } else if (isRef) {
         // Reference outlines (counties, PLSS, compartments): neutral, never grade-coloured.
         map.addLayer({ id: id('fill'), type: 'fill', source: src, filter: polyFilter, paint: { 'fill-color': '#000', 'fill-opacity': 0.01 } }, 'anchor-fills');
-        map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': 0.6, 'line-width': 3 } }, 'anchor-units');
-        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': '#26302a', 'line-width': 1.2, 'line-dasharray': [4, 2] } }, 'anchor-units');
+        // Light at statewide zooms so the opening map is about land, not a grid of outlines.
+        map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.35, 10, 0.6], 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 1.5, 10, 3] } }, 'anchor-units');
+        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': '#26302a', 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.45, 10, 0.9], 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.6, 10, 1.2], 'line-dasharray': [4, 2] } }, 'anchor-units');
       } else if (isUnit) {
         // Hunting units set season/licence rules, not access: a thin labelled outline only, never a
         // tint (a wash would shift every grade colour underneath). The invisible fill keeps the
@@ -339,8 +347,30 @@ export class LayerManager {
     for (const lid of [id('fill'), id('line'), id('circle')]) if (map.getLayer(lid)) this.clickableLayers.push(lid);
   }
 
+  /** Layers loaded but not drawn because the statewide overview stands in for them. */
+  private readonly suppressed = new Set<string>();
+
+  isSuppressed(id: string): boolean {
+    return this.suppressed.has(id);
+  }
+
+  /** Hides (or shows again) the drawing of loaded layers without unloading them. */
+  suppress(ids: readonly string[], on: boolean): void {
+    let changed = false;
+    for (const id of ids) {
+      if (on === this.suppressed.has(id)) continue;
+      changed = true;
+      if (on) this.suppressed.add(id);
+      else this.suppressed.delete(id);
+      const s = this.sourceById(id);
+      if (s) this.setLayerVisibility(s, this.getStatus(id).active);
+    }
+    if (changed) queueMicrotask(() => this.emit());
+  }
+
   private setLayerVisibility(s: LayerSource, on: boolean): void {
-    for (const lid of this.layerIds(s)) this.map.setLayoutProperty(lid, 'visibility', on ? 'visible' : 'none');
+    const show = on && !this.suppressed.has(s.id);
+    for (const lid of this.layerIds(s)) this.map.setLayoutProperty(lid, 'visibility', show ? 'visible' : 'none');
   }
 
   // ---------- loading ----------

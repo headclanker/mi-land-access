@@ -5,8 +5,9 @@ import { APP_NAME, BASEMAPS } from '../config';
 import type { LayerSource } from '../../contract';
 import { currentBasemap, setBasemap } from '../map/map';
 import { lonToTileX, latToTileY } from '../layers/arcgis';
-import { fill, copyText, h, icon, showDialog, toast } from '../util/dom';
-import { formatLatLon, parseLatLon, toDMS } from '../util/coords';
+import { fill, copyText, debounce, h, icon, showDialog, toast } from '../util/dom';
+import type { SearchResult } from './search';
+import { formatLatLon, toDMS } from '../util/coords';
 import { prefGet, prefSet } from '../util/store';
 
 // ---------- theme ----------
@@ -38,7 +39,9 @@ export function disclaimerDialog(first: boolean): HTMLDialogElement {
     h(
       'form',
       { method: 'dialog' },
-      h('header.modal-head', {}, icon('legal'), h('h2', {}, first ? 'Before you head out' : 'Not legal advice'), first ? null : h('button.icon-btn', { value: 'close', 'aria-label': 'Close' }, icon('close'))),
+      // The heading takes initial focus (not the checkbox at the bottom), so a short phone screen
+      // opens at the top of the notice; the acknowledgement sits in a footer that is always visible.
+      h('header.modal-head', {}, icon('legal'), h('h2', { tabindex: -1, autofocus: true }, first ? 'Before you head out' : 'Not legal advice'), first ? null : h('button.icon-btn', { value: 'close', 'aria-label': 'Close' }, icon('close'))),
       h(
         'div.disclaimer-body',
         {},
@@ -53,8 +56,12 @@ export function disclaimerDialog(first: boolean): HTMLDialogElement {
         ),
         h('p.muted.small', {}, 'Your markups and tracks are stored only on this device unless you share or export them. Map tiles come from USGS and OpenStreetMap; land data comes from the public GIS services credited on the map.'),
       ),
-      first ? h('label.check', {}, agree, h('span', {}, 'I understand the map is informational and I will verify before I hunt.')) : null,
-      h('footer.modal-foot', {}, h('button.btn.primary', { value: 'ok' }, first ? 'Continue to map' : 'OK')),
+      h(
+        'div.disclaimer-foot',
+        {},
+        first ? h('label.check', {}, agree, h('span', {}, 'I understand the map is informational and I will verify before I hunt.')) : null,
+        h('footer.modal-foot', {}, h('button.btn.primary', { value: 'ok' }, first ? 'Continue to map' : 'OK')),
+      ),
     ),
   );
 }
@@ -121,18 +128,115 @@ export function setupBasemapPicker(map: MLMap, button: HTMLElement): void {
 
 // ---------- search + readout ----------
 
-export function setupSearch(map: MLMap, form: HTMLFormElement, input: HTMLInputElement, onFound: (lon: number, lat: number) => void): void {
+export interface SearchUi {
+  /** Instant local matches (coordinates, counties, markups). */
+  local: (q: string) => SearchResult[];
+  /** Park / game-area names from the DNR layers. */
+  remote: (q: string, signal: AbortSignal) => Promise<SearchResult[]>;
+  onPick: (r: SearchResult) => void;
+}
+
+const PLACEHOLDER_WIDE = 'Parks, game areas, counties, markups, lat,lon';
+const PLACEHOLDER_NARROW = 'Park, county, lat,lon';
+
+export function setupSearch(form: HTMLFormElement, input: HTMLInputElement, list: HTMLUListElement, ui: SearchUi): void {
+  const narrow = window.matchMedia('(max-width: 520px)');
+  const setPlaceholder = (): void => {
+    input.placeholder = narrow.matches ? PLACEHOLDER_NARROW : PLACEHOLDER_WIDE;
+  };
+  setPlaceholder();
+  narrow.addEventListener('change', setPlaceholder);
+
+  let results: SearchResult[] = [];
+  let active = -1;
+  let ctrl: AbortController | null = null;
+  let remoteState: 'idle' | 'loading' | 'error' = 'idle';
+  let seq = 0;
+
+  const close = (): void => {
+    list.hidden = true;
+    input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+    active = -1;
+  };
+  const pick = (r: SearchResult | undefined): void => {
+    if (!r) return;
+    close();
+    input.blur();
+    ui.onPick(r);
+  };
+  const render = (): void => {
+    const q = input.value.trim();
+    if (!q) return close();
+    const rows: HTMLElement[] = results.map((r, i) =>
+      h(
+        'li.sr-item',
+        { id: `sr-${i}`, role: 'option', 'aria-selected': String(i === active), onpointerdown: (e: Event) => e.preventDefault(), onclick: () => pick(r) },
+        h('span.sr-kind', { 'data-kind': r.kind }, icon(r.kind === 'markup' ? 'waypoint' : r.kind === 'coord' ? 'crosshair' : r.kind === 'county' ? 'map' : 'polygon')),
+        h('span.sr-text', {}, h('strong', {}, r.label), h('span.muted.small', {}, r.sub)),
+      ),
+    );
+    if (remoteState === 'loading') rows.push(h('li.sr-note.muted.small', { role: 'presentation' }, h('span.spinner', { 'aria-hidden': 'true' }), 'Searching DNR parks & game areas…'));
+    else if (remoteState === 'error') rows.push(h('li.sr-note.muted.small', { role: 'presentation' }, 'Park & game-area names need a connection — counties, markups and coordinates still work.'));
+    else if (!results.length) rows.push(h('li.sr-note.muted.small', { role: 'presentation' }, 'No matches. Try a park, game area or county name, one of your markups, or coordinates like 44.66, -84.71.'));
+    fill(list, ...rows);
+    list.hidden = false;
+    input.setAttribute('aria-expanded', 'true');
+    if (active >= 0) input.setAttribute('aria-activedescendant', `sr-${active}`);
+    else input.removeAttribute('aria-activedescendant');
+  };
+  const run = debounce(async (q: string, id: number) => {
+    ctrl?.abort();
+    ctrl = new AbortController();
+    try {
+      const more = await ui.remote(q, ctrl.signal);
+      if (id !== seq) return;
+      const seen = new Set(results.map((r) => `${r.kind}:${r.label}`));
+      results = [...results, ...more.filter((r) => !seen.has(`${r.kind}:${r.label}`))];
+      remoteState = 'idle';
+    } catch (err) {
+      if (id !== seq || (err instanceof DOMException && err.name === 'AbortError')) return;
+      remoteState = 'error';
+    }
+    render();
+  }, 280);
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    seq++;
+    ctrl?.abort();
+    active = -1;
+    results = q ? ui.local(q) : [];
+    remoteState = q.length >= 3 && !results.some((r) => r.kind === 'coord') ? 'loading' : 'idle';
+    render();
+    if (remoteState === 'loading') void run(q, seq);
+  });
+  input.addEventListener('keydown', (e) => {
+    if (list.hidden) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!results.length) return;
+      active = (active + (e.key === 'ArrowDown' ? 1 : -1) + results.length) % results.length;
+      render();
+      list.querySelector(`#sr-${active}`)?.scrollIntoView({ block: 'nearest' });
+    } else if (e.key === 'Escape') {
+      close();
+    }
+  });
+  input.addEventListener('focus', () => {
+    if (input.value.trim() && results.length) render();
+  });
+  input.addEventListener('blur', () => window.setTimeout(close, 150));
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const p = parseLatLon(input.value);
-    if (!p) {
-      toast('Enter coordinates like 44.66, -84.71 or 44°39′N 84°43′W');
-      input.select();
-      return;
-    }
-    input.blur();
-    map.flyTo({ center: [p.lon, p.lat], zoom: Math.max(map.getZoom(), 15) });
-    onFound(p.lon, p.lat);
+    const q = input.value.trim();
+    if (!q) return;
+    if (active < 0) results = results.length ? results : ui.local(q);
+    const r = results[active >= 0 ? active : 0];
+    if (r) return pick(r);
+    if (remoteState === 'loading') return; // the list updates when names arrive
+    toast('Nothing found — try a park, game area or county name, a markup, or coordinates like 44.66, -84.71', 4000);
+    input.select();
   });
 }
 

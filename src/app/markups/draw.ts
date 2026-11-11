@@ -48,6 +48,21 @@ export class DrawController {
     map.addLayer({ id: 'draw-line', type: 'line', source: SRC, paint: { 'line-color': '#ff6a13', 'line-width': 3 } }, 'anchor-top');
   }
 
+  /** Points placed so far. */
+  get pointCount(): number {
+    return this.coords.length;
+  }
+
+  /** Whether Done would succeed now. */
+  get canFinish(): boolean {
+    const kind = this.active;
+    return Boolean(kind) && this.coords.length >= (kind === 'waypoint' ? 1 : kind === 'line' ? 2 : 3);
+  }
+
+  get currentTitle(): string {
+    return this.title;
+  }
+
   /** Starts drawing; resolves with the geometry, or null if cancelled. */
   start(kind: DrawKind, initial: LngLat[] = [], title?: string): Promise<DrawResult | null> {
     this.cancel();

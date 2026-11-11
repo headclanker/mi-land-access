@@ -35,6 +35,8 @@ export const UI_ICONS: Record<string, string> = {
   nav: 'M12 2.5l7 18.5-7-4-7 4z',
   waypoint: 'M12 21.5s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z',
   mail: 'M3 5h18v14H3z M3 6.5l9 6.5 9-6.5',
+  chat: 'M4 4.5h16v11.5H10l-5 4v-4H4z M8 9h8 M8 12.5h5',
+  send: 'M3.5 11 20.5 3.5 13 20.5l-2-7.5z M11 13 20.5 3.5',
   zoomto: 'M4 9V4h5 M20 9V4h-5 M4 15v5h5 M20 15v5h-5 M12 12h.01',
   scale: 'M3 17h18 M3 13v4 M12 15v2 M21 13v4',
   gps: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z M12 2v3 M12 19v3 M2 12h3 M19 12h3',

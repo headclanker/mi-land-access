@@ -5,6 +5,11 @@ import { Marker, type MapGeoJSONFeature, type MapMouseEvent } from 'maplibre-gl'
 import { LAYER_SOURCES } from '../data/sources';
 import { createMap, fitMichigan, setBasemap, currentBasemap } from './map/map';
 import { LayerManager } from './layers/manager';
+import { OVERVIEW_FILL, Overview } from './layers/overview';
+import { OVERVIEW_HANDOFF_ZOOM } from '../data/sources';
+import { Searcher, type SearchResult } from './ui/search';
+import { GRADE_COLORS, type Grade } from '../contract';
+import { GRADE_LABEL, GRADE_SHORT } from './details/details';
 import { LayerPanel } from './ui/layerPanel';
 import { Details } from './details/details';
 import { Sheet, desktopQuery } from './ui/sheet';
@@ -19,9 +24,12 @@ import { defaultColor, kindLabel, newId, type Markup } from './markups/model';
 import { LocationService } from './tracker/location';
 import { Tracker } from './tracker/tracker';
 import { Compass } from './compass/compass';
-import { fill, $, h, icon, toast } from './util/dom';
+import { fill, $, h, icon, showDialog, toast } from './util/dom';
 
 type Tab = 'layers' | 'markups' | 'track' | 'more';
+
+let drawAllows: (tab: Tab) => boolean = () => true;
+let leaveDrawing: (tab: Tab) => Promise<boolean> = async () => true;
 
 /** Wait for the debounced layer refresh to start before checking whether data has loaded. */
 const LOADER_SETTLE_MS = 700;
@@ -43,6 +51,7 @@ export async function startApp(): Promise<void> {
   const tabs = Array.from(panelEl.querySelectorAll<HTMLButtonElement>('[role=tab]'));
   const panes = Array.from(panelEl.querySelectorAll<HTMLElement>('[data-pane]'));
   const selectTab = (tab: Tab, reveal = true): void => {
+    if (reveal && !drawAllows(tab)) return;
     for (const t of tabs) t.setAttribute('aria-selected', String(t.dataset.tab === tab));
     for (const p of panes) p.hidden = p.dataset.pane !== tab;
     panelEl.dataset.tab = tab;
@@ -52,10 +61,11 @@ export async function startApp(): Promise<void> {
     }
   };
   for (const t of tabs)
-    t.addEventListener('click', () => {
+    t.addEventListener('click', async () => {
       const tab = t.dataset.tab as Tab;
-      if (t.getAttribute('aria-selected') === 'true' && panel.state !== 'peek' && !desktopQuery.matches) panel.set('peek');
-      else selectTab(tab);
+      if (t.getAttribute('aria-selected') === 'true' && panel.state !== 'peek' && !desktopQuery.matches) return panel.set('peek');
+      if (!drawAllows(tab) && !(await leaveDrawing(tab))) return;
+      selectTab(tab);
     });
   const pane = (name: Tab): HTMLElement => $(`[data-pane="${name}"]`, panelEl);
 
@@ -66,18 +76,26 @@ export async function startApp(): Promise<void> {
       root.style.setProperty('--sheet-h', '0px');
       return;
     }
-    const visible = detailsSheet.state !== 'closed' ? $('#details') : panelEl;
-    const hgt = Math.min(visible.getBoundingClientRect().height, window.innerHeight * 0.5);
+    // On phones the details sheet sits on top of the panel's tab bar (which stays visible).
+    const hgt = Math.min(detailsSheet.state !== 'closed' ? $('#details').getBoundingClientRect().height + panelEl.getBoundingClientRect().height : panelEl.getBoundingClientRect().height, window.innerHeight * 0.5);
     root.style.setProperty('--sheet-h', `${Math.round(hgt)}px`);
   };
   const syncSoon = (): void => {
+    // Phones: with a sheet raised, the map strip is short; the legal pill steps aside (the
+    // panes and details carry the same notice) so it never lands on the top-left stack.
+    document.documentElement.classList.toggle('sheet-up', !desktopQuery.matches && (panel.state !== 'peek' || detailsSheet.state !== 'closed'));
     requestAnimationFrame(syncInsets);
     window.setTimeout(syncInsets, 300); // after the height transition
   };
-  panel.onState(syncSoon);
+  panel.onState((s) => {
+    // Phones: opening the tools panel replaces the details sheet (its tab bar is the way back).
+    if (s !== 'peek' && !desktopQuery.matches && detailsSheet.state !== 'closed') detailsSheet.set('closed');
+    syncSoon();
+  });
   detailsSheet.onState((s) => {
     document.documentElement.classList.toggle('details-open', s !== 'closed');
     if (s === 'closed') details.clearSelection();
+    else if (!desktopQuery.matches) panel.set('peek');
     syncSoon();
   });
   window.addEventListener('resize', syncInsets);
@@ -88,7 +106,8 @@ export async function startApp(): Promise<void> {
 
   // ----- data layers -----
   const layers = new LayerManager(map, LAYER_SOURCES);
-  new LayerPanel(pane('layers'), map, layers);
+  const overview = new Overview(map, layers);
+  new LayerPanel(pane('layers'), map, layers, overview);
 
   // ----- markups -----
   const store = new MarkupStore();
@@ -96,10 +115,54 @@ export async function startApp(): Promise<void> {
   const draw = new DrawController(map);
   store.onChange(() => renderMarkups(map, store.all()));
 
+  // ----- drawing vs. the rest of the UI -----
+  // Drawing keeps going only while the map stays in view: on desktop the sidebar sits beside the
+  // map, so Layers / Markups / More are fine, but Track (recording is its own mode) and every tab
+  // on a phone (the panel would cover the map and the draw bar) ask to finish or discard first.
+  drawAllows = (tab: Tab): boolean => !draw.active || (desktopQuery.matches && tab !== 'track');
+  leaveDrawing = async (tab: Tab): Promise<boolean> => {
+    if (!draw.active) return true;
+    if (draw.pointCount === 0 || draw.active === 'waypoint') {
+      draw.cancel();
+      return true;
+    }
+    const what = draw.active === 'line' ? 'line' : 'shape';
+    const editing = draw.currentTitle.startsWith('Editing');
+    const choice = await showDialog(
+      h(
+        'dialog.modal',
+        { 'aria-label': `Finish the ${what}?` },
+        h(
+          'form',
+          { method: 'dialog' },
+          h('header.modal-head', {}, icon('pencil'), h('h2', { tabindex: -1, autofocus: true }, editing ? 'Finish editing first?' : `Finish this ${what} first?`)),
+          h('p', {}, `You are still drawing (${draw.pointCount} point${draw.pointCount === 1 ? '' : 's'}). ${tab === 'track' ? 'Recording a track' : 'Opening that tab'} will end drawing.`),
+          h(
+            'footer.modal-foot',
+            {},
+            h('button.btn.ghost', { value: 'keep' }, 'Keep drawing'),
+            h('button.btn.danger', { value: 'discard' }, icon('trash'), editing ? 'Discard changes' : 'Discard'),
+            h('button.btn.primary', { value: 'save', disabled: !draw.canFinish }, icon('check'), editing ? 'Save points' : 'Save'),
+          ),
+        ),
+      ),
+    );
+    if (choice === 'save' && draw.canFinish) draw.finish();
+    else if (choice === 'discard') draw.cancel();
+    return !draw.active;
+  };
+  // Phones: while drawing, the panel stays at peek so the draw bar is never covered.
+  panel.canChange = (next) => !(draw.active && !desktopQuery.matches && next !== 'peek');
+
   // ----- location / compass / tracker -----
   const loc = new LocationService(map);
   const compass = new Compass(map, loc, $('#compass-hud'), $('#north'));
-  const tracker = new Tracker(map, loc, store, pane('track'), $('#record-pill'), () => selectTab('track'));
+  const tracker = new Tracker(map, loc, store, pane('track'), $('#record-pill'), () => {
+    void (async () => {
+      if (!drawAllows('track') && !(await leaveDrawing('track'))) return;
+      selectTab('track');
+    })();
+  });
 
   const markupPanel = new MarkupPanel(pane('markups'), {
     map,
@@ -170,6 +233,23 @@ export async function startApp(): Promise<void> {
     detailsSheet.set(desktopQuery.matches ? 'full' : 'half');
   };
 
+  const overviewCard = (g: Grade, lon: number, lat: number): void => {
+    const grade: Grade = g in GRADE_COLORS ? g : 'unknown';
+    fill(
+      $('#details-body'),
+      h('div.details-head', {}, h('div', {}, h('h2', {}, 'Public land (overview)'), h('span.muted.small.mono', {}, `${lat.toFixed(4)}, ${lon.toFixed(4)}`)), h('button.icon-btn', { type: 'button', 'aria-label': 'Close details', onclick: () => detailsSheet.set('closed') }, icon('close'))),
+      h(
+        'section.verdict',
+        { 'data-grade': grade, style: `--c:${GRADE_COLORS[grade]}` },
+        h('div.verdict-head', {}, h('span.badge', { style: `--c:${GRADE_COLORS[grade]}`, 'data-grade': grade }, GRADE_SHORT[grade]), h('span', {}, h('strong', {}, 'Statewide overview'), h('span.small', {}, GRADE_LABEL[grade]))),
+        h('p.reason', {}, `This is a generalised statewide picture (built ${overview.builtLabel() || 'from DNR, USFS and PAD-US data'}) of DNR land, state park hunting zones, national forest and other federal land. Edges are approximate to a few hundred feet and small parcels are left out. Zoom in for the live, parcel-level layers before relying on it.`),
+      ),
+      h('div.row.wrap.detail-actions', {}, h('button.btn.sm.primary', { type: 'button', onclick: () => map.flyTo({ center: [lon, lat], zoom: Math.max(OVERVIEW_HANDOFF_ZOOM + 2, map.getZoom()) }) }, icon('zoomto'), 'Zoom in here')),
+    );
+    details.clearSelection();
+    detailsSheet.set(desktopQuery.matches ? 'full' : 'half');
+  };
+
   /** Opens the details sheet for whatever land/unit features are drawn at a screen point. */
   const inspect = (x: number, y: number, lon: number, lat: number): boolean => {
     const visibleLayers = layers.clickableLayers.filter((l) => map.getLayoutProperty(l, 'visibility') !== 'none');
@@ -192,6 +272,9 @@ export async function startApp(): Promise<void> {
       if (m) return markupCard(m);
     }
     if (!inspect(e.point.x, e.point.y, e.lngLat.lng, e.lngLat.lat)) {
+      // Zoomed out: the statewide overview explains itself and offers to zoom in.
+      const ov = overview.isShown ? map.queryRenderedFeatures(box, { layers: [OVERVIEW_FILL] }) : [];
+      if (ov.length) return overviewCard(String(ov[0].properties?.g) as Grade, e.lngLat.lng, e.lngLat.lat);
       if (detailsSheet.state !== 'closed') detailsSheet.set('closed');
       else if (!desktopQuery.matches && panel.state !== 'peek') panel.set('peek');
     }
@@ -211,7 +294,8 @@ export async function startApp(): Promise<void> {
   setupBasemapPicker(map, $('#btn-basemap'));
   setupReadout(map, $('#coord-readout'));
   let searchPin: Marker | null = null;
-  setupSearch(map, $('#search') as HTMLFormElement, $('#search-input') as HTMLInputElement, (lon, lat) => {
+  /** Coordinates search: pin the spot, and once the map has arrived and loaded, show what is there. */
+  const goToCoord = (lon: number, lat: number): void => {
     searchPin?.remove();
     searchPin = new Marker({ element: h('div.search-pin', { 'aria-label': 'Search result' }) }).setLngLat([lon, lat]).addTo(map);
     // Once the map has arrived and the land layers have loaded, show what is there.
@@ -256,6 +340,34 @@ export async function startApp(): Promise<void> {
       };
       window.setTimeout(settle, LOADER_SETTLE_MS);
     });
+  };
+  const searcher = new Searcher({ sources: LAYER_SOURCES, markups: () => store.all(), countyBBox: (n) => layers.counties.bboxOf(n) });
+  const flyToBBox = (b: [number, number, number, number]): void => {
+    map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: desktopQuery.matches ? 80 : { top: 110, bottom: 140, left: 30, right: 70 }, maxZoom: 14, duration: 900 });
+  };
+  setupSearch($('#search') as HTMLFormElement, $('#search-input') as HTMLInputElement, $('#search-results') as HTMLUListElement, {
+    local: (q) => searcher.local(q),
+    remote: (q, signal) => searcher.remote(q, signal),
+    onPick: (r: SearchResult) => {
+      if (r.kind === 'markup' && r.markupId) {
+        const m = store.get(r.markupId);
+        if (!m) return;
+        zoomToMarkups(map, [m]);
+        if (!draw.active) markupCard(m);
+        return;
+      }
+      if (r.point) {
+        map.flyTo({ center: r.point, zoom: Math.max(map.getZoom(), 15) });
+        if (!draw.active) goToCoord(r.point[0], r.point[1]);
+        return;
+      }
+      if (r.bbox) {
+        flyToBBox(r.bbox);
+        toast(`${r.label} · ${r.sub}`);
+        return;
+      }
+      if (r.kind === 'county') toast('County outlines are still loading — try again in a moment');
+    },
   });
   map.on('click', () => {
     searchPin?.remove();
@@ -326,5 +438,5 @@ export async function startApp(): Promise<void> {
   await importFromHash();
 
   // Exposed for debugging / automated checks only.
-  Object.assign(window, { __mila: { map, layers, store, tracker, compass, loc, setBasemap, applyTheme } });
+  Object.assign(window, { __mila: { map, layers, overview, store, tracker, compass, loc, draw, setBasemap, applyTheme } });
 }

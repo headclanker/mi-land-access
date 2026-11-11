@@ -3,6 +3,7 @@
 import { Marker, type Map as MLMap, type GeoJSONSource } from 'maplibre-gl';
 import { circle } from '@turf/turf';
 import { h, toast } from '../util/dom';
+import { describeGpsError } from './gpsError';
 
 export interface Fix {
   lon: number;
@@ -25,7 +26,11 @@ export class LocationService {
   private marker: Marker | null = null;
   private readonly dot: HTMLElement;
   follow = false;
-  private errorListeners: ((msg: string) => void)[] = [];
+  /** Current problem with the GPS (null while fixes are flowing). */
+  error: string | null = null;
+  /** Date.now() when the last fix arrived (device timestamps can be in another clock). */
+  lastFixAt = 0;
+  private statusListeners: (() => void)[] = [];
 
   private readonly map: MLMap;
 
@@ -57,8 +62,15 @@ export class LocationService {
     return () => this.listeners.delete(fn);
   }
 
-  onError(fn: (msg: string) => void): void {
-    this.errorListeners.push(fn);
+  /** Called whenever `error` changes (set by a real failure, cleared as soon as a fix arrives). */
+  onStatus(fn: () => void): void {
+    this.statusListeners.push(fn);
+  }
+
+  private setError(msg: string | null): void {
+    if (msg === this.error) return;
+    this.error = msg;
+    for (const fn of this.statusListeners) fn();
   }
 
   /** Reference-counted start: the locate button and the tracker each hold the watcher. */
@@ -71,13 +83,13 @@ export class LocationService {
     this.watchId = navigator.geolocation.watchPosition(
       (p) => this.handle(p),
       (err) => {
-        const msg = err.code === err.PERMISSION_DENIED ? 'Location permission denied. Enable it in your browser settings.' : err.code === err.TIMEOUT ? 'Still waiting for a GPS fix…' : 'Location unavailable';
-        for (const fn of this.errorListeners) fn(msg);
-        if (err.code === err.PERMISSION_DENIED) {
+        const msg = describeGpsError(err.code, this.lastFixAt ? Date.now() - this.lastFixAt : Infinity);
+        if (err.code === err.PERMISSION_DENIED && msg) {
           toast(msg, 4000);
           this.holders.clear();
           this.stopWatch();
         }
+        if (msg) this.setError(msg);
       },
       { enableHighAccuracy: true, maximumAge: 2000, timeout: 30000 },
     );
@@ -95,6 +107,7 @@ export class LocationService {
   private stopWatch(): void {
     if (this.watchId !== null) navigator.geolocation.clearWatch(this.watchId);
     this.watchId = null;
+    this.setError(null);
     this.marker?.remove();
     this.marker = null;
     this.map.getSource<GeoJSONSource>('me-acc')?.setData({ type: 'FeatureCollection', features: [] });
@@ -114,6 +127,8 @@ export class LocationService {
     };
     const first = !this.last;
     this.last = fix;
+    this.lastFixAt = Date.now();
+    this.setError(null);
     this.draw(fix);
     if (this.follow || first) {
       if (first && this.follow) this.map.flyTo({ center: [fix.lon, fix.lat], zoom: Math.max(this.map.getZoom(), 15) });

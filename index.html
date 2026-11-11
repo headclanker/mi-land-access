@@ -2,12 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>MI Land Access</title>
+    <meta name="description" content="Michigan hunting land access map: public land, parcel owners, hunting units, waypoints and GPS tracks. Informational only — not legal advice." />
+    <meta name="theme-color" content="#14201a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3f1ea" media="(prefers-color-scheme: light)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MI Land" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mi-land-access</title>
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div id="map" role="application" aria-label="Map"></div>
+
+      <header id="topbar">
+        <button class="brand" id="btn-home" type="button" title="Fit Michigan" aria-label="MI Land Access — fit Michigan">
+          <img src="/icons/icon.svg" alt="" width="30" height="30" />
+          <span class="brand-text">MI&nbsp;Land&nbsp;Access</span>
+        </button>
+        <form id="search" role="search" autocomplete="off">
+          <input id="search-input" type="search" inputmode="text" placeholder="Lat, lon  e.g. 44.66, -84.71" aria-label="Go to latitude, longitude" />
+          <button type="submit" class="icon-btn" aria-label="Go"><svg class="ic"><use href="#i-search" /></svg></button>
+        </form>
+      </header>
+
+      <div id="coord-readout" title="Tap to copy · switch format" role="button" tabindex="0"></div>
+
+      <div id="fabs" class="fab-col">
+        <button class="fab" id="btn-basemap" type="button" aria-label="Basemap" title="Basemap"><svg class="ic"><use href="#i-map" /></svg></button>
+        <button class="fab" id="btn-compass" type="button" aria-label="Compass" title="Compass"><svg class="ic"><use href="#i-compass" /></svg></button>
+        <button class="fab" id="btn-locate" type="button" aria-label="Show my location" title="My location"><svg class="ic"><use href="#i-locate" /></svg></button>
+      </div>
+
+      <div id="north" aria-hidden="false" title="Reset north"></div>
+      <div id="compass-hud" hidden></div>
+      <div id="draw-hud" hidden></div>
+      <div id="crosshair" hidden aria-hidden="true"></div>
+      <div id="record-pill" hidden></div>
+
+      <aside id="panel" class="sheet" data-state="peek" aria-label="Tools">
+        <div class="sheet-grip" aria-hidden="true"><span></span></div>
+        <nav class="tabs" role="tablist">
+          <button role="tab" data-tab="layers" aria-selected="true"><svg class="ic"><use href="#i-layers" /></svg><span>Layers</span></button>
+          <button role="tab" data-tab="markups" aria-selected="false"><svg class="ic"><use href="#i-pencil" /></svg><span>Markups</span></button>
+          <button role="tab" data-tab="track" aria-selected="false"><svg class="ic"><use href="#i-route" /></svg><span>Track</span></button>
+          <button role="tab" data-tab="more" aria-selected="false"><svg class="ic"><use href="#i-more" /></svg><span>More</span></button>
+        </nav>
+        <div class="sheet-body">
+          <section data-pane="layers" role="tabpanel"></section>
+          <section data-pane="markups" role="tabpanel" hidden></section>
+          <section data-pane="track" role="tabpanel" hidden></section>
+          <section data-pane="more" role="tabpanel" hidden></section>
+        </div>
+      </aside>
+
+      <section id="details" class="sheet card-sheet" data-state="closed" aria-label="Details" aria-live="polite">
+        <div class="sheet-grip" aria-hidden="true"><span></span></div>
+        <div class="sheet-body" id="details-body"></div>
+      </section>
+
+      <button id="legal-link" type="button">Not legal advice</button>
+    </div>
+    <noscript>MI Land Access needs JavaScript to show the map.</noscript>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

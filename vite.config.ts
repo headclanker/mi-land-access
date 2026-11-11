@@ -2,6 +2,8 @@ import { defineConfig } from 'vitest/config';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  // Relative base so the site works at a domain root or a sub-path (e.g. GitHub Pages).
+  base: './',
   build: {
     target: 'es2022',
     chunkSizeWarningLimit: 1500,

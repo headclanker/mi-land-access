@@ -261,7 +261,7 @@ export class LayerManager {
         const c = this.colorForUnitLayer(s.id);
         map.addLayer({ id: id('fill'), type: 'fill', source: src, filter: polyFilter, paint: { 'fill-color': '#000', 'fill-opacity': 0 } }, 'anchor-fills');
         map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': 0.5, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 2, 12, 3.2] } }, 'anchor-units');
-        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': c, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.8, 12, 1.5], 'line-dasharray': [4, 2] } }, 'anchor-units');
+        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': c, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 1.1, 12, 1.6], 'line-dasharray': [4, 2] } }, 'anchor-units');
       } else {
         map.addLayer(
           {

@@ -1,6 +1,10 @@
-# MI Land Access
+# SketchX
 
-A Michigan-only hunting land-access map for phones and desktops. It shows public land, county
+![SketchX](public/icons/icon-192.png)
+
+The name is a joke about "sketchy" land: X marks the spot, but check before you go.
+
+SketchX is a Michigan-only hunting land-access map for phones and desktops. It shows public land, county
 parcel owners and hunting units on USGS or OpenStreetMap basemaps, colour-coded by how likely you
 are to be allowed to hunt there. It also does waypoints, lines, shapes, GPS tracks, a compass and
 offline use. It is an installable PWA built with Vite, TypeScript and MapLibre GL, with no UI
@@ -38,11 +42,13 @@ localhost).
 | `src/grading/reconcile.ts` | One verdict per parcel: owner-name grade vs. overlapping public-land layers (precedence rules in `docs/DATA_SOURCES.md` §5a) |
 | `src/app/layers/coverage.ts`, `reconcileLayers.ts` | Fast approximate parcel/public-land overlap (sample points + banded point-in-polygon) and applying the reconciled verdict to loaded parcels |
 | `src/app/layers/counties.ts` | County outlines (from the county reference layer) + coverage flags from `data/counties.ts` |
-| `src/app/details/` | Tap → details sheet, owner info, permission-letter generator, address tidying |
+| `src/app/details/` | Tap → details sheet, owner info, permission letter / text-message generator, address tidying |
 | `src/app/markups/` | Waypoints / lines / shapes / tracks: model, IndexedDB store, drawing, GeoJSON + GPX, share links |
 | `src/app/tracker/` | Shared GPS watcher, my-location dot + accuracy circle, track recorder (Wake Lock, survives reloads) |
 | `src/app/compass/` | DeviceOrientation compass (iOS permission + `webkitCompassHeading`, Android absolute), heading-up, bearing/distance to a waypoint |
-| `src/app/ui/` | Bottom sheet / sidebar, layer panel + legend + species filter, basemap picker, search, theme, disclaimer, icons |
+| `src/app/ui/` | Bottom sheet / sidebar, layer panel + legend + species filter, map-style picker + topo/satellite toggle, name search, theme, disclaimer, icons |
+| `src/app/layers/overview.ts`, `scripts/build-overview.mjs` | Zoomed-out statewide public-land overview and its build script |
+| `public/icons/` | Logo / app icons (SVG sources `icon.svg`, `maskable.svg`, `../favicon.svg`; PNGs rendered from them) |
 | `src/app/util/` | Geodesy and formatting, coordinate parsing, DOM helpers, persistence |
 | `src/app/tests/` | Unit tests for the pure modules |
 
@@ -63,6 +69,21 @@ ground shows one colour: park hunting zones, HAP and Commercial Forest first, th
 national-forest ownership, then the county owner name, then PAD-US. Game-area and park
 boundaries are outlines only. See `docs/DATA_SOURCES.md` §5a.
 
+## Statewide overview
+
+Zoomed out (below zoom 9) the map shows a prebuilt, generalised overview of DNR land, state
+park hunting zones, national forest and other federal land
+(`public/overview/public-land.json`). Rebuild it with `node scripts/build-overview.mjs`; see
+`docs/DATA_SOURCES.md` §7.
+
+## Search and permission requests
+
+The search box finds state parks and recreation areas, state game and wildlife areas (live
+`LIKE` queries on the DNR layers the map already uses), counties, your own markups, and
+coordinates. The permission dialog drafts a mailed letter or a short text message; county
+records have no phone numbers, so the text opens your messaging app via an `sms:` link with the
+message filled in and the number you type (remembered per owner on this device only).
+
 ## Offline
 
 The app shell is precached. Basemap tiles you have viewed are cached cache-first, up to 2,500
@@ -80,3 +101,7 @@ More → Offline.
 
 All markups and the in-progress track are stored on the device in IndexedDB, with localStorage as
 a fallback.
+
+Storage keys (`mila:` in localStorage, the `mi-land-access` IndexedDB) predate the SketchX
+rename and are kept so existing markups, tracks and settings survive. The repository and the
+GitHub Pages path stay `mi-land-access`.

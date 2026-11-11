@@ -80,6 +80,7 @@ export function setBasemap(map: MLMap, b: Basemap): void {
   map.addSource(BASEMAP_SOURCE, { type: 'raster', tiles: b.tiles, tileSize: 256, maxzoom: b.maxzoom, attribution: b.attribution });
   map.addLayer({ id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: { 'raster-fade-duration': 150 } }, ANCHORS[0]);
   document.documentElement.dataset.basemap = b.dark ? 'dark' : 'light';
+  window.dispatchEvent(new CustomEvent('basemapchange', { detail: b.id }));
 }
 
 export function fitMichigan(map: MLMap): void {

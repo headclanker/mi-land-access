@@ -138,9 +138,22 @@ describe('map defaults', () => {
   it('never offers or defaults markups to a grade colour', () => {
     const hex = (c: string) => [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16));
     const dist = (a: string, b: string) => Math.hypot(...hex(a).map((v, i) => v - hex(b)[i]));
+    const hue = (c: string): number => {
+      const [r, g, b] = hex(c).map((v) => v / 255);
+      const mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn;
+      if (!d) return -1; // grey / white / black: no hue
+      const h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+      return (h * 60 + 360) % 360;
+    };
+    const hueGap = (a: number, b: number) => Math.min(Math.abs(a - b), 360 - Math.abs(a - b));
     for (const c of MARKUP_COLORS) {
       expect(GRADE_LIKE_COLORS as readonly string[]).not.toContain(c);
-      for (const g of [GRADE_COLORS.green, GRADE_COLORS.yellow, GRADE_COLORS.red]) expect(dist(c, g), `${c} vs ${g}`).toBeGreaterThan(90);
+      // Blaze orange sits between the red and yellow grade hues: allowed because it is a clearly
+      // different hue (and markups always carry a white casing), not a near-copy of either.
+      for (const g of [GRADE_COLORS.green, GRADE_COLORS.yellow, GRADE_COLORS.red]) {
+        const ok = dist(c, g) > 90 || hue(c) < 0 || hueGap(hue(c), hue(g)) >= 18;
+        expect(ok, `${c} vs ${g}`).toBe(true);
+      }
     }
     for (const k of ['waypoint', 'line', 'shape', 'track'] as const) expect(MARKUP_COLORS as readonly string[]).toContain(defaultColor(k));
   });

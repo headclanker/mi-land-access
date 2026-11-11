@@ -1,4 +1,4 @@
-# MI Land Access – data sources and grading rules
+# SketchX – data sources and grading rules
 
 All layers live in `src/data/sources.ts` (`LAYER_SOURCES`, 67 layers). Every URL and every
 field name in that file was checked live in November 2026: layer metadata (`?f=json`) plus a
@@ -68,7 +68,8 @@ it was left out. The CWD layers are from 2023 and may not match the current CWD 
 `parcels-dnr-state-owned` is DNR LOTS `FeatureServer/0`, statewide, with no owner name. It is
 graded by `DivisionDepartment` and is off by default.
 
-Each county layer maps `ownerField`, `ownerAddressFields`, `siteAddressField`, `acresField` and
+Each county layer maps `ownerField`, `ownerAddressFields`, `siteAddressField` (or, where the
+assessor splits it, `siteAddressFields` joined in order plus `siteCityField`), `acresField` and
 `parcelIdField` to that county's real field names (see `sources.ts`). There are **32
 counties**, all with owner names:
 
@@ -81,20 +82,20 @@ counties**, all with owner names:
 | Berrien | services5 `v2WhhBBaFU3T6oWm/Berrien_County_Parcels_2024/1` | `ownername1` | 2024 roll |
 | Branch | services9 `TwBMgIvGpeiBjKXc/Branch_County_Parcels/0` | `OWNERNAME` | |
 | Cass | services6 `o5a9nldztUcivksS/CassCountyParcels/0` | `Owner` | No site address |
-| Charlevoix | services9 `1lVQrZMRGwmkesR4/Charlevoix_Parcels_for_viewing/0` | `owner` | **Partial**: about 9k parcels around Charlevoix and Bay Shore only |
+| Charlevoix | services9 `1lVQrZMRGwmkesR4/Charlevoix_Parcels_for_viewing/0` | `owner` | **Partial**: about 9k parcels around Charlevoix and Bay Shore only. `propstreet` is the street only; site address = `propadd propstreet` + `propcity` |
 | Cheboygan | services6 `j6ueqNZduqQcCpQQ/Relationship_class/0` | `ownername1` | No acreage |
 | Eaton | services2 `c9l1e4fKpsCnqD7H/Parcels_AGO/0` (county) | `OWNERNME1` | No owner mailing address |
 | Genesee | services2 `PrYwGqAi1wKjoFb1/Parcels2025County/0` | `OwnName` | 2025 |
 | Gladwin | services `edGXqVKidagzAIPB/Gladwin_County_Parcels/0` | `OwnerName` | No acreage |
 | Houghton | services9 `6EuFgO4fLTqfNOhu/MTU_Map_WFL1/1` | `owner` | Regrid data republished in a Michigan Tech web map; check licence and freshness |
-| Huron | services `edGXqVKidagzAIPB/Huron_Parcels_2025/0` | `OWNER1` | Site address is street name only |
-| Ingham | services3 `ySzhFSJfYeginRjx/Ingham_Parcels_2026/0` (county) | `OWNERNAME` | 2026 |
+| Huron | services `edGXqVKidagzAIPB/Huron_Parcels_2025/0` | `OWNER1` | `STNAME` is the street name only, so the site address is joined from `STNUM STDIR STNAME STSUFFIX` + `CITY` |
+| Ingham | services3 `ySzhFSJfYeginRjx/Ingham_Parcels_2026/0` (county) | `OWNERNAME` | 2026. `PropAddress` drops the direction and is just the street when the number is 0 (most vacant land, e.g. "GREEN"), so the site address is joined from `PROPADDRNU PROPADDRDI PROPSTREET UNITORAPT` + `PROPCITY` |
 | Ionia | services9 `i2awudUyJK8gxxEe/Ionia_County_Tax_Parcels_Public/0` | `Parcel_Data_OWNERNAME` | No acreage; maxRecordCount is 1000 |
-| Kent | services5 `X42k956XlfnIoN3d/Kent_Parcels/0` | `OWNERNAME` | Third-party copy; no owner mailing address |
+| Kent | services5 `X42k956XlfnIoN3d/Kent_Parcels/0` | `OWNERNAME` | Third-party copy; no owner mailing address. Site address = `SITESTREET` (house number, despite the name) + `SITESTRE_1` (street) |
 | Leelanau | services `F7SeTaZ2Nijdg6lG/Tax_Parcels/0` | `OWNER_1` | |
 | Lenawee | services6 `mjEvhc9AE3ceAXtG/Lenawee_Parcels_Public/2` (county) | `OWNNM1` | No owner mailing address |
 | Macomb | services6 `K0qS4r8AEJxrE8em/Macomb_County_Parcel_Data/10` | `ownername1` | No owner mailing address or acreage |
-| Marquette | services `oOYhhFJlpjePln8M/Marquette_Landowner_Classification/41` | `Owner_Merg` | Study layer that merges county and city owner fields; also has a `Category` (Private/Public/Timber/…) |
+| Marquette | services `oOYhhFJlpjePln8M/Marquette_Landowner_Classification/41` | `Owner_Merg` | Study layer that merges county and city owner fields; also has a `Category` (Private/Public/Timber/…). Site address = `PROP_ADD` or, on the ~6k rows without it, `PSSNUMBER PSSSTREET` (never both, checked) + `PROP_CITY` |
 | Midland | services6 `9ALftzD3ElQ7KAgT/Land_Information/0` (county) | `OwnerName` | |
 | Montcalm | services6 `GJ2uZAPsEvtmqpe1/Tax_Parcels/0` | `BSAEXPORT_ONERNAME1` | Misspelled field names are real |
 | Muskegon | services5 `X42k956XlfnIoN3d/Kent_Ottawa_Muskegon_Parcels/1` | `Owner` | Third-party copy |
@@ -318,3 +319,34 @@ from the build environment (403 bot check and proxy block), so no link was verif
 - **Owner-name heuristics** will still misgrade some strings: private developments named
   "X VILLAGE", municipal names without "CITY OF" or "VILLAGE OF", and private schools. Every
   yellow or red reason tells the user to verify.
+
+## 7. Statewide public-land overview (zoomed out) and map defaults
+
+The live public-land layers are too heavy to load statewide, so below zoom 9
+(`OVERVIEW_HANDOFF_ZOOM` in `sources.ts`) the map draws a prebuilt overview instead:
+`public/overview/public-land.json`, made by `scripts/build-overview.mjs` and committed.
+
+- **What it contains**: every feature of `dnr-managed-lands` (same `where` clause as the
+  catalog: active, not State Park / Recreational Areas rows), `dnr-park-hunting`,
+  `usfs-surface-ownership` (inside Michigan) and `padus-federal-other`, each graded with the
+  app's own `gradeFeature()`. Not included: HAP, Commercial Forest, local/NGO/other-state
+  PAD-US, parcels. Build of 2026-11-11: 124,470 DNR + 183 park-zone + 7,139 USFS + 38 PAD-US
+  features → green 7.42 M acres, yellow 0.29 M, red 0.18 M.
+- **How it is generalised**: server-side `maxAllowableOffset` (~50 m), then the grades are
+  painted onto a ~100 m grid clipped to the county outlines in reconcile precedence order
+  (PAD-US < USFS / DNR ownership < park hunting zones), so overlaps and neighbours dissolve;
+  each grade's regions are traced back to polygons, specks and holes under ~4 ha dropped,
+  Douglas–Peucker simplified, coordinates rounded to 3 decimals. One MultiPolygon per grade.
+  Size: ~1.6 MB raw, ~260 KB gzipped. Edges are approximate to a few hundred feet.
+- **Hand-off**: those four live layers now have `minZoom` 9. From zoom 9 up to parcel zoom (13)
+  the overview stays only until the live layers have drawn something, or while one of them
+  hits its per-view feature limit (dense state forest at zoom 9–11); while it stands in, the
+  live layers are loaded but not drawn, so the two never double up. The layer panel lists it
+  as "Statewide overview (zoomed out)" with its build date.
+- **Rebuild**: `node scripts/build-overview.mjs` (Node 22.18+, which loads the `.ts` catalog and
+  grading modules directly; behind a proxy also `NODE_USE_ENV_PROXY=1`). Takes about 30 s.
+
+Map defaults changed with the SketchX release: deer management units are **off** by default
+(a one-time migration also drops the old saved default), and every hunting-unit layer is a thin
+labelled outline with no fill tint, so it never shifts the grade colours underneath.
+

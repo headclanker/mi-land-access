@@ -31,7 +31,7 @@ const USGS_ATTR = '<a href="https://www.usgs.gov/programs/national-geospatial-pr
 export const BASEMAPS: Basemap[] = [
   {
     id: 'usgs-topo',
-    title: 'USGS Topo',
+    title: 'Topo map',
     short: 'Topo',
     tiles: [`${USGS}/USGSTopo/MapServer/tile/{z}/{y}/{x}`],
     maxzoom: 16,
@@ -40,8 +40,8 @@ export const BASEMAPS: Basemap[] = [
   },
   {
     id: 'usgs-imagery-topo',
-    title: 'Imagery + labels',
-    short: 'Hybrid',
+    title: 'Satellite + labels',
+    short: 'Sat + labels',
     tiles: [`${USGS}/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}`],
     maxzoom: 16,
     attribution: `${USGS_ATTR} imagery`,
@@ -49,8 +49,8 @@ export const BASEMAPS: Basemap[] = [
   },
   {
     id: 'usgs-imagery',
-    title: 'Imagery',
-    short: 'Aerial',
+    title: 'Satellite',
+    short: 'Satellite',
     tiles: [`${USGS}/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}`],
     maxzoom: 16,
     attribution: `${USGS_ATTR} imagery`,

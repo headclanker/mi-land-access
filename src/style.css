@@ -373,7 +373,7 @@ textarea {
 #north {
   position: absolute;
   z-index: 5;
-  top: calc(var(--safe-t) + 184px);
+  top: calc(var(--safe-t) + 250px);
   right: calc(var(--safe-r) + 10px);
   width: 48px;
   height: 48px;
@@ -1778,7 +1778,7 @@ textarea.letter {
     bottom: 36px;
   }
   #topbar {
-    width: min(560px, calc(100% - var(--sidebar-w) - 90px));
+    width: min(640px, calc(100% - var(--sidebar-w) - 90px));
   }
   #panel.sheet {
     top: 0;
@@ -1929,13 +1929,14 @@ textarea.letter {
 @media (min-width: 640px) {
   #search-results {
     right: auto;
-    width: min(560px, calc(100% - 90px));
+    width: min(620px, calc(100% - 90px));
   }
 }
 @media (min-width: 900px) {
   #search-results {
     left: calc(var(--sidebar-w) + 12px);
-    width: min(560px, calc(100% - var(--sidebar-w) - 90px));
+    left: calc(var(--sidebar-w) + 12px);
+    width: min(640px, calc(100% - var(--sidebar-w) - 90px));
   }
 }
 
@@ -1965,4 +1966,61 @@ textarea.letter.sms {
 }
 a.btn {
   text-decoration: none;
+}
+
+/* Map-style switcher and the one-tap topo / satellite thumbnail */
+.fab-labelled,
+.fab-thumb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.fab-labelled .ic {
+  width: 21px;
+  height: 21px;
+}
+.fab-labelled span {
+  font-size: 0.6rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+.fab-thumb {
+  border: 2px solid #fff;
+}
+.fab-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--surface-2);
+}
+.fab-thumb span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px 0 3px;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1;
+}
+.popover-title {
+  grid-column: 1 / -1;
+  margin: 2px 4px 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }

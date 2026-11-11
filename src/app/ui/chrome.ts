@@ -1,7 +1,7 @@
 // Small UI pieces: theme, disclaimer, basemap picker, search + coordinate readout, "More" pane.
 
 import type { Map as MLMap } from 'maplibre-gl';
-import { APP_NAME, BASEMAPS } from '../config';
+import { APP_NAME, BASEMAPS, type Basemap } from '../config';
 import type { LayerSource } from '../../contract';
 import { currentBasemap, setBasemap } from '../map/map';
 import { lonToTileX, latToTileY } from '../layers/arcgis';
@@ -97,7 +97,8 @@ export function setupBasemapPicker(map: MLMap, button: HTMLElement): void {
     const cur = currentBasemap().id;
     pop = h(
       'div.popover.basemaps',
-      { role: 'menu', 'aria-label': 'Basemap' },
+      { role: 'menu', 'aria-label': 'Map style' },
+      h('p.popover-title', {}, 'Map style'),
       BASEMAPS.map((b) =>
         h(
           'button.bm',
@@ -124,6 +125,40 @@ export function setupBasemapPicker(map: MLMap, button: HTMLElement): void {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
   });
+}
+
+/** Tile thumbnail URL of a basemap over central Michigan (same spot as the picker). */
+function thumb(b: Basemap): string {
+  const z = 11;
+  return b.tiles[0].replace('{z}', String(z)).replace('{x}', String(lonToTileX(-84.72, z))).replace('{y}', String(latToTileY(44.66, z)));
+}
+
+/**
+ * One-tap topo ⇄ satellite: a thumbnail of the other style, like a phone maps app. It remembers
+ * which satellite variant (with or without labels) and which map variant you used last.
+ */
+export function setupSatelliteToggle(map: MLMap, button: HTMLButtonElement): void {
+  const isSat = (b: Basemap): boolean => b.id.startsWith('usgs-imagery');
+  const img = button.querySelector('img') as HTMLImageElement;
+  const label = button.querySelector('span') as HTMLElement;
+  const target = (): Basemap => {
+    const cur = currentBasemap();
+    const want = isSat(cur) ? prefGet('lastMapBasemap', 'usgs-topo') : prefGet('lastSatBasemap', 'usgs-imagery-topo');
+    return BASEMAPS.find((b) => b.id === want && isSat(b) !== isSat(cur)) ?? BASEMAPS.find((b) => isSat(b) !== isSat(cur)) ?? BASEMAPS[0];
+  };
+  const render = (): void => {
+    const cur = currentBasemap();
+    prefSet(isSat(cur) ? 'lastSatBasemap' : 'lastMapBasemap', cur.id);
+    const t = target();
+    img.src = thumb(t);
+    const name = isSat(t) ? 'Satellite' : 'Topo';
+    label.textContent = name;
+    button.setAttribute('aria-label', `Switch to ${isSat(t) ? 'satellite' : 'the topo map'}`);
+    button.title = `Switch to ${t.title}`;
+  };
+  button.addEventListener('click', () => setBasemap(map, target()));
+  window.addEventListener('basemapchange', render);
+  render();
 }
 
 // ---------- search + readout ----------

@@ -14,7 +14,7 @@ import { LayerPanel } from './ui/layerPanel';
 import { Details } from './details/details';
 import { Sheet, desktopQuery } from './ui/sheet';
 import { injectSprite } from './ui/icons';
-import { applyTheme, maybeShowDisclaimer, renderMorePane, setupBasemapPicker, setupReadout, setupSearch, showLegal, watchTheme } from './ui/chrome';
+import { applyTheme, maybeShowDisclaimer, renderMorePane, setupBasemapPicker, setupReadout, setupSatelliteToggle, setupSearch, showLegal, watchTheme } from './ui/chrome';
 import { MarkupStore } from './markups/store';
 import { MARKUP_LAYERS, installMarkupLayers, renderMarkups } from './markups/render';
 import { DrawController } from './markups/draw';
@@ -292,6 +292,7 @@ export async function startApp(): Promise<void> {
   $('#btn-compass').addEventListener('click', () => compass.toggle());
   $('#legal-link').addEventListener('click', () => void showLegal());
   setupBasemapPicker(map, $('#btn-basemap'));
+  setupSatelliteToggle(map, $('#btn-sat') as HTMLButtonElement);
   setupReadout(map, $('#coord-readout'));
   let searchPin: Marker | null = null;
   /** Coordinates search: pin the spot, and once the map has arrived and loaded, show what is there. */

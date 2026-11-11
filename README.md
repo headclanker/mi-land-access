@@ -34,7 +34,9 @@ localhost).
 | `src/app/map/` | MapLibre setup, basemaps, layer-order anchors, worker URL |
 | `src/app/layers/arcgis.ts` | Generic ArcGIS REST loader: tile-snapped bbox queries, pagination, generalisation, LRU cache, Esri-JSON fallback |
 | `src/app/layers/manager.ts` | Per-layer loading (debounce, abort, global request limiter, county filtering) and grade styling |
-| `src/app/layers/enrich.ts` | Grading glue (`gradeFeature` → `_grade/_category/_reason/_refs`), stable feature ids, acreage |
+| `src/app/layers/enrich.ts` | Grading glue (`gradeFeature` → `_grade/_category/_reason/_refs`, parcels also `_ownerGrade/_ownerCategory`), stable feature ids, acreage |
+| `src/grading/reconcile.ts` | One verdict per parcel: owner-name grade vs. overlapping public-land layers (precedence rules in `docs/DATA_SOURCES.md` §5a) |
+| `src/app/layers/coverage.ts`, `reconcileLayers.ts` | Fast approximate parcel/public-land overlap (sample points + banded point-in-polygon) and applying the reconciled verdict to loaded parcels |
 | `src/app/layers/counties.ts` | County outlines (from the county reference layer) + coverage flags from `data/counties.ts` |
 | `src/app/details/` | Tap → details sheet, owner info, permission-letter generator, address tidying |
 | `src/app/markups/` | Waypoints / lines / shapes / tracks: model, IndexedDB store, drawing, GeoJSON + GPX, share links |
@@ -55,7 +57,11 @@ one zoom level coarser than the map, with at most about 12 tiles. Each tile is f
 of 8 requests in flight, and the refresh after a pan is debounced by 350 ms. County parcel layers
 are only queried when their county is in view, using generalised county outlines that are
 fetched once. Every feature goes through `gradeFeature`, and the result is stored on the feature
-for styling and the details sheet.
+for styling and the details sheet. Where county parcels are loaded, each parcel is then
+reconciled with the public-land layers overlapping it (debounced, client-side), so a piece of
+ground shows one colour: park hunting zones, HAP and Commercial Forest first, then DNR /
+national-forest ownership, then the county owner name, then PAD-US. Game-area and park
+boundaries are outlines only. See `docs/DATA_SOURCES.md` §5a.
 
 ## Offline
 

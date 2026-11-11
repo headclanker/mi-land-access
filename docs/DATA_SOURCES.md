@@ -5,7 +5,8 @@ field name in that file was checked live in November 2026: layer metadata (`?f=j
 `/query?where=…&outFields=<the catalog's fields>&resultRecordCount=1&f=geojson` request. All
 67 returned features with every requested field present. Every layer advertises
 `supportedQueryFormats: JSON, geoJSON, PBF`, so `f=geojson` works everywhere and no format
-hint was needed. The contract was not changed.
+hint was needed. The contract has since gained `LayerSource.role`, `LayerSource.lowConfidence`
+and `GradeResult.ownerKind` for reconciliation (section 5a).
 
 Bounding-box queries (`geometry=<xmin,ymin,xmax,ymax>&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326`)
 were spot-checked on the USFS and parcel services. Most services cap a response at 1,000 or
@@ -20,17 +21,17 @@ advice. Every result includes a reason that says what to verify.
 
 | id | What | URL | Key fields / grading | Caveats |
 |---|---|---|---|---|
-| `dnr-managed-lands` | All active DNR-managed state land (state forest, game areas, parks, rec areas, trails, access sites) from the Land Ownership Tracking System (LOTS) | `services3.arcgis.com/Jdnp1TjADvSDxMAX/…/DNRLOTSParcelsOPENDATA/FeatureServer/2` | `ProjectUseType` (Forests, Wildlife Game Areas, State Park, Recreational Areas, RAIL TRAILS, …), `DivisionDepartment`, `ProjectName`. Forests / Wildlife Game Areas → green; parks, rec areas, trails, access sites, hatcheries → yellow | About 136k polygons, so `minZoom` is 9. Mineral-only state parcels are **not** in this layer (checked), so the polygons are surface ownership. |
-| `dnr-wildlife-areas` | State game areas, wildlife management areas, GEMS, research areas | `…/DNRWILDLandsOPENDATA/FeatureServer/2` | `AreaType`, `OfficialWLDProjectAreaName`. Game/wildlife areas → green; research areas, field trial areas, rec areas → yellow; "pvt-owned lands with State reserved hunting rights" → yellow | These are project boundaries and can include private inholdings. Cross-check with `dnr-managed-lands`. |
-| `dnr-hap` | Hunting Access Program leased private land | `…/DNRWILDLandsOPENDATA/FeatureServer/0` (where `ActiveOrInactive='Active'`) | `HuntType`, `HAPInfo`, `SpecialComment`. "Open to All Hunt Types." → green; restricted types (youth only, deer only, archery only…) → yellow, with the restriction in the reason; inactive → red | 114 of 378 records are active. The layer also contains inactive properties, which the `where` clause filters out. |
-| `dnr-park-hunting` | State park and rec area hunting/trapping zones | `…/DNRBoundariesParksHuntableLandsOPENDATA/FeatureServer/2` | `HuntTrap` = Open / Open-Restricted / Closed → green / yellow / red; `HuntTrapRestrictions`, `EarlyGoose*`, `Comments` go into the reason | DNR's own comment notes that 450-ft safety zones around buildings are not shown. |
-| `dnr-state-parks` | State park boundaries (off by default) | `…/State_Parks/FeatureServer/2` | Always yellow ("check the park hunting layer") | Use `dnr-park-hunting` for the actual open or closed status. |
-| `commercial-forest` | Commercial Forest Act (CFA) enrolled parcels, with owner | `…/CommercialForestParcels_View/FeatureServer/0` | `ParcelStatusText` Active → green; under listing / withdrawal / split → yellow. `FullLegalName`, `OwnerTypeText` | Public access is foot access for hunting, fishing and trapping only. |
-| `usfs-surface-ownership` | National forest land the USFS actually owns (Huron-Manistee, Hiawatha, Ottawa); private inholdings are excluded | `apps.fs.usda.gov/arcx/rest/services/EDW/EDW_SurfaceOwnership_01/MapServer/0` (where `ownerclassification='USDA FOREST SERVICE' AND region='09'`) | Green | Tract-level polygons from the Land Status Record System. `EDW_BasicOwnership_01` was rejected because it returns one huge multipolygon per forest. |
-| `padus-federal-other` | Federal fee land other than USFS (FWS refuges and WPAs, NPS lakeshores and parks, BLM, …) | `services.arcgis.com/v01gqwM5QqNysAAi/…/Fee_Managers_PADUS/FeatureServer/0` (MI, Fee, `Mang_Type='FED'`, not USFS) | `Mang_Name`, `Des_Tp`, `Pub_Access`. FWS → yellow; NPS lakeshore (`NLS`) → yellow; national park (`NP`, i.e. Isle Royale) → red; `Pub_Access='XA'` → red | PAD-US 4.1 is a national compilation, so boundaries can lag. |
-| `padus-state-other` | State land not managed by the DNR (`OTHS`, `SDOL`) | same, `Mang_Type='STAT' AND Mang_Name IN ('OTHS','SDOL')` | Yellow | Off by default. |
-| `padus-local` | County, city, township and regional parks and open space | same, `Mang_Type IN ('LOC','DIST','JNT')` | Yellow (red if `Pub_Access='XA'`) | PAD-US codes townships as `CITY`. This is the only statewide local-government land layer that could be found. |
-| `padus-ngo` | Conservancy and land-trust preserves | same, `Mang_Type='NGO'` | Yellow (red if closed) | Off by default. |
+| `dnr-managed-lands` | **Role: ownership.** Active DNR-managed state land (state forest, game areas, trails, access sites) from the Land Ownership Tracking System (LOTS). State park and recreation-area rows are excluded (`ProjectUseType NOT IN ('State Park','Recreational Areas')`) because `dnr-park-hunting` covers the same ground with the DNR's per-zone status (307,155 vs 307,217 acres statewide) | `services3.arcgis.com/Jdnp1TjADvSDxMAX/…/DNRLOTSParcelsOPENDATA/FeatureServer/2` | `ProjectUseType` (Forests, Wildlife Game Areas, RAIL TRAILS, …), `DivisionDepartment`, `ProjectName`. Forests / Wildlife Game Areas → green; trails, access sites, hatcheries → yellow | About 124k polygons after the park filter (136k before), so `minZoom` is 9. Mineral-only state parcels are **not** in this layer (checked), so the polygons are surface ownership. Checked live in Nov 2026: the new `where` returns features, and park land at 42.618,-85.499 (Yankee Springs) and 42.94,-85.13 (Ionia RA) is still covered by `dnr-park-hunting`. |
+| `dnr-wildlife-areas` | **Role: boundary.** State game areas, wildlife management areas, GEMS, research areas | `…/DNRWILDLandsOPENDATA/FeatureServer/2` | `AreaType`, `OfficialWLDProjectAreaName`. Never graded: drawn as a dashed, labelled outline and reported as "Inside the boundary of …" | These are administrative project boundaries, not ownership: the Nov 2026 audit found 192 private parcels fully inside its former green fill and 71 inside its yellow fill (Allegan SGA, Barry SGA…). |
+| `dnr-hap` | **Role: access-program.** Hunting Access Program leased private land | `…/DNRWILDLandsOPENDATA/FeatureServer/0` (where `ActiveOrInactive='Active'`) | `HuntType`, `HAPInfo`, `SpecialComment`. "Open to All Hunt Types." → green; restricted types (youth only, deer only, archery only…) → yellow, with the restriction in the reason; inactive → red | 114 of 378 records are active. The layer also contains inactive properties, which the `where` clause filters out. |
+| `dnr-park-hunting` | **Role: access-program (highest precedence).** State park and rec area hunting/trapping zones | `…/DNRBoundariesParksHuntableLandsOPENDATA/FeatureServer/2` | `HuntTrap` = Open / Open-Restricted / Closed → green / yellow / red; `HuntTrapRestrictions`, `EarlyGoose*`, `Comments` go into the reason | DNR's own comment notes that 450-ft safety zones around buildings are not shown. |
+| `dnr-state-parks` | **Role: boundary.** State park boundaries (off by default) | `…/State_Parks/FeatureServer/2` | Never graded: dashed, labelled outline | Use `dnr-park-hunting` for the actual open or closed status. |
+| `commercial-forest` | **Role: access-program.** Commercial Forest Act (CFA) enrolled parcels, with owner | `…/CommercialForestParcels_View/FeatureServer/0` | `ParcelStatusText` Active → green; under listing / withdrawal / split → yellow. `FullLegalName`, `OwnerTypeText` | Public access is foot access for hunting, fishing and trapping only. |
+| `usfs-surface-ownership` | **Role: ownership.** National forest land the USFS actually owns (Huron-Manistee, Hiawatha, Ottawa); private inholdings are excluded | `apps.fs.usda.gov/arcx/rest/services/EDW/EDW_SurfaceOwnership_01/MapServer/0` (where `ownerclassification='USDA FOREST SERVICE' AND region='09'`) | Green | Tract-level polygons from the Land Status Record System. `EDW_BasicOwnership_01` was rejected because it returns one huge multipolygon per forest. |
+| `padus-federal-other` | **Role: ownership, low confidence.** Federal fee land other than USFS (FWS refuges and WPAs, NPS lakeshores and parks, BLM, …) | `services.arcgis.com/v01gqwM5QqNysAAi/…/Fee_Managers_PADUS/FeatureServer/0` (MI, Fee, `Mang_Type='FED'`, not USFS) | `Mang_Name`, `Des_Tp`, `Pub_Access`. FWS → yellow; NPS lakeshore (`NLS`) → yellow; national park (`NP`, i.e. Isle Royale) → red; `Pub_Access='XA'` → red | PAD-US 4.1 is a national compilation, so boundaries can lag. |
+| `padus-state-other` | **Role: ownership, low confidence.** State land not managed by the DNR (`OTHS`, `SDOL`) | same, `Mang_Type='STAT' AND Mang_Name IN ('OTHS','SDOL')` | Yellow | Off by default. |
+| `padus-local` | **Role: ownership, low confidence.** County, city, township and regional parks and open space | same, `Mang_Type IN ('LOC','DIST','JNT')` | Yellow (red if `Pub_Access='XA'`) | PAD-US codes townships as `CITY`. This is the only statewide local-government land layer that could be found. |
+| `padus-ngo` | **Role: ownership, low confidence.** Conservancy and land-trust preserves | same, `Mang_Type='NGO'` | Yellow (red if closed) | Off by default. |
 
 ## 2. Hunting units (18 layers; all have `species`)
 
@@ -139,8 +140,8 @@ Sources that were found but not used:
 ## 5. Grading rules (plain language)
 
 **Green**: clearly public and open to hunting.
-- State forest and state game or wildlife area land (DNR LOTS use type, or the DNR wildlife
-  property type).
+- State forest and state game or wildlife area land (DNR LOTS use type). The wildlife
+  property *boundary* layer is not graded (section 5a).
 - Hunting Access Program properties that are open to all hunt types.
 - State park or rec area zones that the DNR marks as "Open".
 - Active Commercial Forest parcels. These are open by statute for foot access to hunt, fish
@@ -178,6 +179,79 @@ Sources that were found but not used:
 
 **Unknown**: no owner data, and hunting-unit or reference layers, which are not ownership.
 
+## 5a. One verdict per piece of ground (layer roles and precedence)
+
+Each layer is graded on its own (above), but the map must not show a red parcel under a green
+fill. Wherever county parcels are loaded, `src/grading/reconcile.ts` merges the parcel's
+owner-name grade with every public-land layer overlapping it into **one** verdict. The parcel
+keeps its own owner-name grade (`_ownerGrade`, `_ownerCategory`) so the details sheet can show
+both records.
+
+**Layer roles** (`LayerSource.role`):
+- **Boundary** – `dnr-wildlife-areas`, `dnr-state-parks`. Administrative project or park
+  boundaries that can include private inholdings. They are drawn as a dashed, labelled outline
+  only, never as a colour, and the details sheet says "Inside the boundary of … — an
+  administrative boundary that can include private inholdings".
+- **Access program** – `dnr-park-hunting`, `dnr-hap`, `commercial-forest`. They decide hunting
+  access whoever owns the land (CFA and HAP land is private by definition).
+- **Ownership** – `dnr-managed-lands`, `usfs-surface-ownership` (authoritative), and the PAD-US
+  layers (`padus-*`, marked `lowConfidence`: a coarse national compilation).
+
+**Precedence.** A layer "covers" a parcel when its polygons cover at least half of it. The
+highest covering tier decides; within a tier the strictest grade wins:
+1. **State park hunting zones.** The zone's Open / Restricted / Closed status is adopted
+   whatever the owner name says, so a closed zone makes a DNR-owned parcel red. If the county
+   record names a private owner and the zone is open or restricted, the verdict is yellow
+   **"Records disagree"** (a closed zone stays red).
+2. **HAP.** The HAP grade is adopted (green, or yellow when hunt types are restricted); the
+   category says it is private land enrolled in HAP and the owner is kept.
+3. **Commercial Forest.** Green, "Commercial Forest (private, public foot access)": foot access
+   for hunting, fishing and trapping only; the owner's name is still shown.
+4. **DNR-managed land and USFS ownership.**
+   - Owner is the DNR, the Forest Service, a generic "State of Michigan" or "U S Govt", or blank
+     → the layer's grade and category are adopted.
+   - Owner is a different specific public body or utility (MDOT / State Highway Commission,
+     township, county, city, road commission, Consumers Energy, FWS…) → the stricter of the two
+     records is kept and a note names both.
+   - Owner is private → yellow **"Records disagree"**: the county says privately owned by X, the
+     state/federal layer says public land; it may be a recent sale, an inholding or a mapping
+     error — verify before entering.
+5. **The parcel's own owner-name grade.**
+6. **PAD-US.** A parcel with an owner name keeps its own grade (a note mentions the PAD-US
+   record); a parcel with a blank owner adopts the PAD-US grade.
+
+A layer covering only 10–50% of a parcel never changes its grade; the details sheet notes
+"about N% of this parcel overlaps … — boundary data may be misaligned". A parcel split between
+park zones (or other same-tier features) with different grades gets the strictest one, with a
+note; tapping it shows the zone under your finger.
+
+**Which layers load.** Whenever parcels are on screen, the park-hunting, HAP, CFA,
+DNR-managed and USFS layers are loaded for reconciliation even if their own fill is switched
+off, so a hidden layer cannot make a closed park zone look open. PAD-US layers take part only
+when switched on.
+
+**Rendering.** A parcel whose verdict was adopted from a public layer that is drawn has no fill
+of its own (property line and label only), so the colour comes from one source. A parcel that
+owns its verdict draws its own fill. "Records disagree" and other conflicting records are drawn
+hatched with a dashed outline in the verdict colour. PAD-US fills are hidden where at least half
+of their visible area lies under loaded parcels. Public-land fills where no parcel layer is
+loaded look as before. The tap-anywhere details sheet leads with the same resolved verdict; away
+from parcels it applies the same precedence to the layers under the finger.
+
+**Approximation.** Coverage is computed in the browser (`src/app/layers/coverage.ts`): each
+parcel is sampled with 64+ low-discrepancy points that are tested against the public polygons
+(bbox grid + banded point-in-polygon), not by exact polygon intersection. Accuracy is a few
+percent of a parcel's area, and it uses the generalised geometry the map already loaded. A pass
+over about 900 parcels and a few hundred public polygons takes roughly 5–70 ms.
+
+**Audit result.** Against the November 2026 audit (21,601 county parcels in 18 areas):
+723 parcels sat under a public fill of a different colour (≥ 50% cover) before; after
+reconciliation 42 are flagged as hatched "records disagree" / conflicting records and 5 still
+show two covering public layers that disagree with each other (e.g. a DNR trail corridor
+overlapping CFA land; two of the five are artefacts of the audit's per-layer aggregation of
+park and non-park LOTS rows). The 17 DNR-owned parcels that showed green under closed or
+restricted park zones now follow the zone.
+
 ### How owner-name matching works
 
 1. **Normalize** the string: upper-case it, drop periods and apostrophes, turn punctuation
@@ -201,7 +275,9 @@ The rules were tuned against about 21,100 distinct real owner strings pulled fro
 county layers (queries for STATE, COUNTY, TWP, CITY, VILLAGE, US, SCHOOL, DNR, CONSERV,
 ENERGY, FOREST and MICHIGAN). Results: 109 green, 3,753 yellow and 17,241 red, with the
 misclassifications found during review fixed and locked in as tests.
-`src/grading/grade.test.ts` has 229 tests, including 212 owner-name cases.
+`src/grading/grade.test.ts` covers the owner-name cases (each also checked for an `ownerKind`),
+layer rules and catalog roles; `src/grading/reconcile.test.ts` covers the precedence rules with
+owner strings and coverage fractions taken from the audit.
 
 ### References cited in results (only ones we are confident of)
 - Recreational trespass: Part 731 of NREPA, MCL 324.73102. Hunting private land requires the

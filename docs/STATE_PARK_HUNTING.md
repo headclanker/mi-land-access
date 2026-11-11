@@ -138,3 +138,33 @@ This is DNR's zone map, not a legal ruling. Wildlife Conservation Orders, Land U
 | Warren Woods State Park | – | – | 311 |  |
 | Wilson State Park | – | – | 34 |  |
 | Young State Park | – | – | 567 |  |
+
+## Per-zone check of the app (2026-11-11)
+
+Every one of the 183 zones in all 108 units was checked against what the app shows.
+
+- **Status → colour:** all 183 match (Open green, Open-Restricted yellow, Closed red).
+- **DNR notes:** every zone's note now appears in the app text. Previously the note was dropped on closed zones.
+- **Zoomed-out overview:** for zones of 40 acres or more, the overview agrees with the zone's status over a median 93% of its area. One zone is under 60%: Highland Recreation Area's 47-acre waterfowl-only zone. Closed zones are kept in the overview however small, and where zones overlap the stricter status is drawn.
+
+### Entries where DNR's own record is ambiguous
+
+These are marked as DNR marks them; the note is shown so you can see the tension. Call the park before relying on any of them.
+
+| Unit | DNR status | DNR note | How the app shows it |
+|---|---|---|---|
+| Sterling State Park (80 ac zone) | Closed | Open to Trapping Only | Red, "closed to hunting (trapping only)" |
+| P.J. Hoffmaster State Park | Closed | Special Hunt Only as designated by DNR-PRD Chief | Red, note shown |
+| Maybury State Park | Closed | Local Controls: no firearms except shotguns with shot no larger than No. 6, and no firearms 3/1–10/19 | Red, note shown |
+| Grand Mere State Park (345 ac zone) | Closed | Closed As Posted. No Rifles or Handguns (Director's Order 5.11) | Red, note shown |
+| Petoskey State Park | Closed | Local Controls: No Rifles | Red, note shown |
+| Holland State Park (3 ac zone) | Closed | Local Controls: no firearms, air guns or bows | Red, note shown |
+| Waterloo Recreation Area (194 ac zone) | Open | No waterfowl hunting September 1–15 | Green, note shown |
+| Lake Hudson Recreation Area | Closed zone drawn 77% inside an Open zone | – | Closed drawn on top |
+
+### Park land with no zone
+
+- **Tawas Point State Park:** DNR owns about 184 acres but its hunting zones cover 134. Roughly 50 acres have no status and show no colour; treat them as closed.
+- **Lake Gogebic, North Higgins Lake and Grand Haven:** the park boundary is larger than the zones, but DNR-owned acreage matches the zoned acreage, so the difference is land or water the DNR does not own.
+
+Not checked: DNR's published park hunting maps and the Wildlife Conservation Order text, because michigan.gov refuses automated requests. This check confirms the app matches DNR's GIS record, not that the GIS record matches the printed rules.

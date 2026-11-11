@@ -218,7 +218,7 @@ function signedArea(ring) {
 }
 
 /** Traces the boundary of every kept component of `code` into GeoJSON polygon coordinates. */
-function vectorise(grid, code, labels) {
+function vectorise(grid, code, labels, minCells = MIN_CELLS) {
   const sizes = label(grid, code, labels);
   // Directed boundary edges, interior on the right (screen coords, y down), grouped by component.
   const edgesBy = new Map();
@@ -231,7 +231,7 @@ function vectorise(grid, code, labels) {
     for (let c = 0; c < W; c++) {
       const i = r * W + c;
       const comp = labels[i];
-      if (!comp || sizes[comp] < MIN_CELLS) continue;
+      if (!comp || sizes[comp] < minCells) continue;
       if (r === 0 || labels[i - W] !== comp) add(comp, c, r, c + 1, r);
       if (c === W - 1 || labels[i + 1] !== comp) add(comp, c + 1, r, c + 1, r + 1);
       if (r === H - 1 || labels[i + W] !== comp) add(comp, c + 1, r + 1, c, r + 1);
@@ -280,8 +280,9 @@ function vectorise(grid, code, labels) {
     const withArea = rings.map((r) => ({ r, a: Math.abs(signedArea(r)) })).sort((x, y) => y.a - x.a);
     const kept = [withArea[0], ...withArea.slice(1).filter((x) => x.a >= MIN_CELLS)];
     const coords = [];
-    kept.forEach(({ r }, i) => {
-      const simp = simplifyRing(r, SIMPLIFY_CELLS);
+    kept.forEach(({ r, a: ringArea }, i) => {
+      // Tiny regions (a closed campground) would collapse under simplification: keep them exact.
+      const simp = ringArea < 16 ? r : simplifyRing(r, SIMPLIFY_CELLS);
       if (simp.length < 3) return;
       let ll = simp.map(toLonLat);
       ll = ll.filter((p, j) => j === 0 || p[0] !== ll[j - 1][0] || p[1] !== ll[j - 1][1]);
@@ -324,12 +325,18 @@ async function main() {
     const src = byId(l.id);
     const { features, count } = await fetchAll(src, { envelope: l.envelope });
     const g = { green: 0, yellow: 0, red: 0, unknown: 0 };
-    for (const f of features) {
-      const grade = gradeFeature(src, f.properties ?? {}).grade;
+    // Within a layer the strictest grade paints last, so where zones overlap (a closed zone drawn
+    // inside an open one) the overview never shows the looser status.
+    const STRICT = { green: 0, unknown: 1, yellow: 2, red: 3 };
+    const graded = features.map((f) => ({ f, grade: gradeFeature(src, f.properties ?? {}).grade })).sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
+    // The county mask only exists to clip federal data from other states; Michigan DNR layers
+    // are in-state by definition, and the generalised mask would clip shoreline parks.
+    const useMask = !l.id.startsWith('dnr-');
+    for (const { f, grade } of graded) {
       g[grade]++;
       const code = GRADE_CODE[grade];
       if (!code) continue;
-      for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => { if (mask[i]) grid[i] = code; });
+      for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => { if (!useMask || mask[i]) grid[i] = code; });
     }
     stats[l.id] = { features: features.length, serverCount: count, grades: g };
     console.error(`${l.id}: ${features.length}/${count} features`, g);
@@ -338,7 +345,9 @@ async function main() {
   const labels = new Int32Array(W * H);
   const features = [];
   for (const code of [1, 2, 3]) {
-    const polys = vectorise(grid, code, labels);
+    // Closed (red) regions are kept however small; dropping one would let the surrounding open
+    // land read as huntable. Restricted (yellow) keeps anything of two cells or more.
+    const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'red' ? 1 : CODE_GRADE[code] === 'yellow' ? 2 : MIN_CELLS);
     let cells = 0;
     for (let i = 0; i < grid.length; i++) if (grid[i] === code) cells++;
     console.error(`${CODE_GRADE[code]}: ${polys.length} polygons, ${(cells * CELL_M * CELL_M / 4046.86 / 1e6).toFixed(2)} M acres`);

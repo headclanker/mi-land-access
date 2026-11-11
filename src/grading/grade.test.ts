@@ -351,6 +351,14 @@ describe('gradeFeature – public land layers', () => {
     expect(gradeFeature(s, { Facility: 'Silver Lake State Park', HuntTrap: 'Open' }).grade).toBe('green');
     expect(gradeFeature(s, { Facility: 'X', HuntTrap: 'Open-Restricted', HuntTrapRestrictions: 'Archery only' }).reason).toContain('Archery only');
     expect(gradeFeature(s, { Facility: 'Saugatuck Dunes State Park', HuntTrap: 'Closed' }).grade).toBe('red');
+    // Closed zones that carry a DNR note keep the note (audit of all 183 zones, Nov 2026).
+    const sterling = gradeFeature(s, { Facility: 'Sterling State Park', HuntTrap: 'Closed', HuntTrapRestrictions: 'Open to Trapping Only' });
+    expect(sterling.grade).toBe('red');
+    expect(sterling.category).toContain('trapping only');
+    expect(sterling.reason).not.toMatch(/closed to hunting and trapping/);
+    const hoff = gradeFeature(s, { Facility: 'P.J. Hoffmaster State Park', HuntTrap: 'Closed', Comments: 'Special Hunt Only as designated by DNR-PRD Chief' });
+    expect(hoff.grade).toBe('red');
+    expect(hoff.reason).toContain('Special Hunt Only');
   });
 
   it('commercial forest', () => {

@@ -488,6 +488,16 @@ function gradeParkHunting(p: Record<string, unknown>): GradeResult {
     return result('yellow', 'State park – restricted hunting', `${facility}: hunting is allowed with restrictions.${notes ? ` ${notes}` : ''}${goose} Check the park's hunting map before going.`, [REFS.landUseOrders, REFS.safetyZone]);
   }
   if (status === 'CLOSED') {
+    // DNR marks some zones Closed yet attaches a note (trapping only, special hunts by
+    // designation, local firearm controls). The zone stays closed for general hunting, but the
+    // note must be shown rather than dropped — and "closed to trapping" must not be claimed
+    // where the note says trapping is open.
+    if (/trapping only/i.test(notes)) {
+      return result('red', 'State park – closed to hunting (trapping only)', `${facility}: this area is closed to hunting; the DNR lists it as open to trapping only. DNR note: ${notes}${goose}`, [REFS.landUseOrders]);
+    }
+    if (notes) {
+      return result('red', 'State park – closed to hunting', `${facility}: the DNR lists this area as closed to general hunting and trapping. DNR note: ${notes} Treat it as closed unless the park confirms a special hunt.${goose}`, [REFS.landUseOrders]);
+    }
     return result('red', 'State park – closed to hunting', `${facility}: this area is closed to hunting and trapping.${goose}`, [REFS.landUseOrders]);
   }
   return result('yellow', 'State park', `${facility}: hunting status not recorded; check with the park.`, [REFS.landUseOrders]);

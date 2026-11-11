@@ -269,6 +269,9 @@ export class LayerManager {
             type: 'fill',
             source: src,
             filter: polyFilter,
+            // Where features of one layer overlap (a closed park zone inside an open one), the
+            // stricter grade draws on top.
+            layout: { 'fill-sort-key': ['match', ['get', P.grade], 'red', 3, 'yellow', 2, 'unknown', 1, 0] },
             paint: {
               'fill-color': gradeColor,
               // Parcels tint only when they own their verdict ('fill'); when it was adopted from a

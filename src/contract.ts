@@ -80,6 +80,13 @@ export interface LayerSource {
     ownerField?: string;
     ownerAddressFields?: string[];
     siteAddressField?: string;
+    /**
+     * Site address split over several fields (house number, direction, street, unit), joined in
+     * order with spaces; blank and 0 parts are skipped. Takes precedence over siteAddressField.
+     */
+    siteAddressFields?: string[];
+    /** Site city (or "CITY, ST ZIP") field, shown after the street: "921 GREEN, LANSING". */
+    siteCityField?: string;
     acresField?: string;
     parcelIdField?: string;
   };

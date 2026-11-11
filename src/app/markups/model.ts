@@ -18,7 +18,16 @@ export const ICON_LABELS: Record<WaypointIcon, string> = {
   flag: 'Flag',
 };
 
-export const MARKUP_COLORS = ['#ff6a13', '#ffd23f', '#e63946', '#3a86ff', '#8338ec', '#06d6a0', '#ffffff', '#111111'] as const;
+/**
+ * Markup palette. It deliberately leaves out the land-grade hues (green / yellow / red, see
+ * GRADE_COLORS) so a drawn shape never reads as "public" or "check first" land; markups are also
+ * drawn with a white casing (render.ts) that grade layers never use. Older markups saved in a
+ * colour that is no longer offered keep it.
+ */
+export const MARKUP_COLORS = ['#ff6a13', '#ff2fb3', '#a855f7', '#3a86ff', '#00c2d1', '#8d5a3b', '#ffffff', '#111111'] as const;
+
+/** Hues markups must not default to: the three grade colours and their old near-matches. */
+export const GRADE_LIKE_COLORS = ['#2e9e4f', '#e0b000', '#c8372d', '#ffd23f', '#e63946', '#06d6a0'] as const;
 
 /** [lon, lat] or [lon, lat, ele]. */
 export type Coord = [number, number] | [number, number, number];
@@ -74,7 +83,7 @@ export function isColor(v: unknown): v is string {
 }
 
 export function defaultColor(kind: MarkupKind): string {
-  return kind === 'track' ? '#ff2fb3' : kind === 'shape' ? '#ffd23f' : kind === 'line' ? '#3a86ff' : '#ff6a13';
+  return kind === 'track' ? '#ff2fb3' : kind === 'shape' ? '#a855f7' : kind === 'line' ? '#3a86ff' : '#ff6a13';
 }
 
 export function kindLabel(kind: MarkupKind): string {

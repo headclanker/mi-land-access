@@ -17,7 +17,7 @@ import type { GradeResult } from '../../contract';
 import { fill, copyText, h, icon, toast } from '../util/dom';
 import { formatLatLon } from '../util/coords';
 import { openLetterDialog, tidyOwnerName } from './letter';
-import { formatMailing, tidyStreet } from './format';
+import { formatMailing, formatSiteAddress } from './format';
 
 export const GRADE_LABEL: Record<Grade, string> = {
   green: 'Likely open to public hunting',
@@ -75,7 +75,11 @@ export function ownerBlock(source: LayerSource, props: Record<string, unknown>):
   const p = source.parcel;
   const owner = p?.ownerField ? str(props[p.ownerField]) : '';
   const mailing = formatMailing((p?.ownerAddressFields ?? []).map((f) => str(props[f])));
-  const site = p?.siteAddressField ? tidyStreet(str(props[p.siteAddressField])) : '';
+  const site = p?.siteAddressFields?.length
+    ? formatSiteAddress(p.siteAddressFields.map((f) => props[f]), p.siteCityField ? props[p.siteCityField] : undefined)
+    : p?.siteAddressField
+      ? formatSiteAddress([props[p.siteAddressField]], p.siteCityField ? props[p.siteCityField] : undefined)
+      : '';
   const parcelId = p?.parcelIdField ? str(props[p.parcelIdField]) : '';
   return { owner, mailing, site, parcelId };
 }

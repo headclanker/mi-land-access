@@ -21,8 +21,11 @@ function toFeature(m: Markup): Feature {
 export function installMarkupLayers(map: MLMap): void {
   map.addSource(MARKUP_SOURCE, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   const before = 'anchor-markups';
-  map.addLayer({ id: 'mk-fill', type: 'fill', source: MARKUP_SOURCE, filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': ['get', 'color'], 'fill-opacity': 0.22 } }, before);
-  map.addLayer({ id: 'mk-casing', type: 'line', source: MARKUP_SOURCE, filter: ['!=', ['geometry-type'], 'Point'], paint: { 'line-color': '#000', 'line-opacity': 0.45, 'line-width': 6 }, layout: { 'line-cap': 'round', 'line-join': 'round' } }, before);
+  // Markups must never read as a land grade: a light tint only, and every outline gets a dark
+  // outer edge plus a white casing — a "drawn on top" look no grade layer uses.
+  map.addLayer({ id: 'mk-fill', type: 'fill', source: MARKUP_SOURCE, filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': ['get', 'color'], 'fill-opacity': 0.14 } }, before);
+  map.addLayer({ id: 'mk-edge', type: 'line', source: MARKUP_SOURCE, filter: ['!=', ['geometry-type'], 'Point'], paint: { 'line-color': '#000', 'line-opacity': 0.5, 'line-width': 9.5 }, layout: { 'line-cap': 'round', 'line-join': 'round' } }, before);
+  map.addLayer({ id: 'mk-casing', type: 'line', source: MARKUP_SOURCE, filter: ['!=', ['geometry-type'], 'Point'], paint: { 'line-color': '#ffffff', 'line-opacity': 0.95, 'line-width': 7.5 }, layout: { 'line-cap': 'round', 'line-join': 'round' } }, before);
   map.addLayer(
     {
       id: 'mk-line',

@@ -247,10 +247,13 @@ export class LayerManager {
         map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': 0.6, 'line-width': 3 } }, 'anchor-units');
         map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': '#26302a', 'line-width': 1.2, 'line-dasharray': [4, 2] } }, 'anchor-units');
       } else if (isUnit) {
+        // Hunting units set season/licence rules, not access: a thin labelled outline only, never a
+        // tint (a wash would shift every grade colour underneath). The invisible fill keeps the
+        // inside tappable ("which unit am I in?").
         const c = this.colorForUnitLayer(s.id);
-        map.addLayer({ id: id('fill'), type: 'fill', source: src, filter: polyFilter, paint: { 'fill-color': c, 'fill-opacity': 0.04 } }, 'anchor-fills');
-        map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#000', 'line-opacity': 0.35, 'line-width': 5 } }, 'anchor-units');
-        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': c, 'line-width': 2.5, 'line-dasharray': [3, 1.5] } }, 'anchor-units');
+        map.addLayer({ id: id('fill'), type: 'fill', source: src, filter: polyFilter, paint: { 'fill-color': '#000', 'fill-opacity': 0 } }, 'anchor-fills');
+        map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#ffffff', 'line-opacity': 0.5, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 2, 12, 3.2] } }, 'anchor-units');
+        map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': c, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.8, 12, 1.5], 'line-dasharray': [4, 2] } }, 'anchor-units');
       } else {
         map.addLayer(
           {
@@ -283,8 +286,8 @@ export class LayerManager {
       }
     } else if (s.geometry === 'line') {
       const color: ExpressionSpecification | string = isUnit ? this.colorForUnitLayer(s.id) : gradeColor;
-      map.addLayer({ id: id('casing'), type: 'line', source: src, filter: lineFilter, paint: { 'line-color': '#000', 'line-opacity': 0.4, 'line-width': 5 } }, 'anchor-lines');
-      map.addLayer({ id: id('line'), type: 'line', source: src, filter: lineFilter, paint: { 'line-color': color, 'line-width': 2.5 } }, 'anchor-lines');
+      map.addLayer({ id: id('casing'), type: 'line', source: src, filter: lineFilter, paint: isUnit ? { 'line-color': '#ffffff', 'line-opacity': 0.5, 'line-width': 3.2 } : { 'line-color': '#000', 'line-opacity': 0.4, 'line-width': 5 } }, isUnit ? 'anchor-units' : 'anchor-lines');
+      map.addLayer({ id: id('line'), type: 'line', source: src, filter: lineFilter, paint: { 'line-color': color, 'line-width': isUnit ? 1.6 : 2.5 } }, isUnit ? 'anchor-units' : 'anchor-lines');
     } else {
       map.addLayer(
         {

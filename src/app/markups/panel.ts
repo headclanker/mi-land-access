@@ -120,7 +120,8 @@ export class MarkupPanel {
     const colors = h(
       'div.swatches',
       { role: 'radiogroup', 'aria-label': 'Colour' },
-      MARKUP_COLORS.map((c) => {
+      // An older markup may use a colour no longer offered (e.g. the old grade-like yellow): keep it selectable.
+      [...MARKUP_COLORS, ...((MARKUP_COLORS as readonly string[]).includes(m.color) ? [] : [m.color])].map((c) => {
         const b = h('button.swatch', { type: 'button', role: 'radio', style: `--c:${c}`, 'aria-label': c, 'aria-checked': String(c === color) });
         b.addEventListener('click', () => {
           color = c;

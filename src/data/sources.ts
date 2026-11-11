@@ -19,6 +19,15 @@ const ATTR_PADUS = 'USGS Protected Areas Database of the United States (PAD-US 4
 /** Zoom at which county parcel layers start loading (they are heavy). */
 export const PARCEL_MIN_ZOOM = 13;
 
+/**
+ * Below this zoom the map shows the prebuilt statewide overview (public/overview/public-land.json,
+ * built by scripts/build-overview.mjs) instead of the live layers it summarises; from this zoom
+ * up those live layers take over. Their minZoom is set to this value so the two never overlap.
+ */
+export const OVERVIEW_HANDOFF_ZOOM = 9;
+/** Live layers the statewide overview stands in for below OVERVIEW_HANDOFF_ZOOM. */
+export const OVERVIEW_LAYER_IDS = ['dnr-managed-lands', 'dnr-park-hunting', 'usfs-surface-ownership', 'padus-federal-other'] as const;
+
 interface ParcelDef {
   county: string;
   url: string;
@@ -26,6 +35,10 @@ interface ParcelDef {
   ownerField: string;
   ownerAddressFields?: string[];
   siteAddressField?: string;
+  /** Site address split over several fields (number, direction, street, unit); joined in order. */
+  siteAddressFields?: string[];
+  /** Site city / "CITY, ST ZIP" field shown after the street. */
+  siteCityField?: string;
   acresField?: string;
   parcelIdField?: string;
   /** Extra fields to request (in addition to the mapped ones). */
@@ -38,6 +51,8 @@ function parcelLayer(d: ParcelDef): LayerSource {
     d.ownerField,
     ...(d.ownerAddressFields ?? []),
     ...(d.siteAddressField ? [d.siteAddressField] : []),
+    ...(d.siteAddressFields ?? []),
+    ...(d.siteCityField ? [d.siteCityField] : []),
     ...(d.acresField ? [d.acresField] : []),
     ...(d.parcelIdField ? [d.parcelIdField] : []),
     ...(d.extraFields ?? []),
@@ -51,13 +66,15 @@ function parcelLayer(d: ParcelDef): LayerSource {
     attribution: d.attribution,
     minZoom: PARCEL_MIN_ZOOM,
     defaultVisible: true,
-    fields,
+    fields: [...new Set(fields)],
     nameField: d.ownerField,
     parcel: {
       county: d.county,
       ownerField: d.ownerField,
       ownerAddressFields: d.ownerAddressFields,
       siteAddressField: d.siteAddressField,
+      siteAddressFields: d.siteAddressFields,
+      siteCityField: d.siteCityField,
       acresField: d.acresField,
       parcelIdField: d.parcelIdField,
     },
@@ -76,7 +93,7 @@ const PUBLIC_LAND: LayerSource[] = [
     url: `${DNR}/DNRLOTSParcelsOPENDATA/FeatureServer/2`,
     geometry: 'polygon',
     attribution: `${ATTR_DNR} – Land Ownership Tracking System (Managed Lands)`,
-    minZoom: 9,
+    minZoom: OVERVIEW_HANDOFF_ZOOM, // the statewide overview covers lower zooms
     defaultVisible: true,
     fields: [
       'ProjectName',
@@ -135,7 +152,7 @@ const PUBLIC_LAND: LayerSource[] = [
     url: `${DNR}/DNRBoundariesParksHuntableLandsOPENDATA/FeatureServer/2`,
     geometry: 'polygon',
     attribution: `${ATTR_DNR} Parks & Recreation Division`,
-    minZoom: 7,
+    minZoom: OVERVIEW_HANDOFF_ZOOM, // the statewide overview covers lower zooms
     defaultVisible: true,
     fields: [
       'Facility',
@@ -192,7 +209,7 @@ const PUBLIC_LAND: LayerSource[] = [
     url: 'https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_SurfaceOwnership_01/MapServer/0',
     geometry: 'polygon',
     attribution: 'USDA Forest Service – Land Status Record System (surface ownership)',
-    minZoom: 8,
+    minZoom: OVERVIEW_HANDOFF_ZOOM, // the statewide overview covers lower zooms
     defaultVisible: true,
     fields: ['nfslandunitname', 'ownerclassification', 'status', 'gis_acres'],
     where: "ownerclassification = 'USDA FOREST SERVICE' AND region = '09'",
@@ -206,7 +223,7 @@ const PUBLIC_LAND: LayerSource[] = [
     url: PADUS_FEE,
     geometry: 'polygon',
     attribution: ATTR_PADUS,
-    minZoom: 6,
+    minZoom: OVERVIEW_HANDOFF_ZOOM, // the statewide overview covers lower zooms
     defaultVisible: true,
     fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'GIS_Acres'],
     where: `${PADUS_MI_FEE} AND Mang_Type = 'FED' AND Mang_Name <> 'USFS'`,
@@ -291,7 +308,7 @@ function unitLayer(
 }
 
 const HUNTING_UNITS: LayerSource[] = [
-  unitLayer(3, 'unit-deer-dmu', 'Deer management units (DMU)', ['deer'], ['DeerManagementUnit', 'MangementUnitName', 'Year'], 'MangementUnitName', 'polygon', true),
+  unitLayer(3, 'unit-deer-dmu', 'Deer management units (DMU)', ['deer'], ['DeerManagementUnit', 'MangementUnitName', 'Year'], 'MangementUnitName', 'polygon'),
   unitLayer(0, 'zone-deer-123', 'Deer zones 1/2/3 boundary lines', ['deer'], ['LineTitle'], 'LineTitle', 'line'),
   unitLayer(1, 'zone-limited-firearm', 'Limited firearm zone line', ['deer', 'small game'], ['LineTitle'], 'LineTitle', 'line'),
   unitLayer(2, 'unit-bear', 'Bear management units', ['bear'], ['ManagementUnitName', 'Year'], 'ManagementUnitName'),
@@ -368,7 +385,9 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     attribution: 'Antrim County',
     ownerField: 'OWNER_NAME',
     ownerAddressFields: ['O_ADDRESS', 'O_CITY', 'O_STATE', 'O_ZIP'],
-    siteAddressField: 'P_STREET',
+    // P_STREET is the street name only; the house number is P_ADDRESS (0 = none).
+    siteAddressFields: ['P_ADDRESS', 'P_STREET'],
+    siteCityField: 'P_CITY',
     acresField: 'SHAPE_ACRE',
     parcelIdField: 'PARCEL_NO',
     extraFields: ['OWNER_NAM2', 'P_ADDRESS', 'CLASS'],
@@ -430,7 +449,9 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     attribution: 'Charlevoix County (partial coverage)',
     ownerField: 'owner',
     ownerAddressFields: ['address', 'city', 'state', 'zip'],
-    siteAddressField: 'propstreet',
+    // propstreet is the street name only; the house number is propadd.
+    siteAddressFields: ['propadd', 'propstreet'],
+    siteCityField: 'propcity',
     acresField: 'calcacre',
     parcelIdField: 'pin',
     extraFields: ['owner2', 'propadd', 'class'],
@@ -492,9 +513,11 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     attribution: 'Huron County (2025 parcels)',
     ownerField: 'OWNER1',
     ownerAddressFields: ['OWNADDR', 'OWNCITY', 'OWNZIP'],
-    siteAddressField: 'STNAME',
+    // STNAME is the street name only.
+    siteAddressFields: ['STNUM', 'STDIR', 'STNAME', 'STSUFFIX'],
+    siteCityField: 'CITY',
     parcelIdField: 'PIN',
-    extraFields: ['OWNER2', 'STNUM', 'PropertyCl'],
+    extraFields: ['OWNER2', 'PropertyCl'],
   },
   {
     county: 'Ingham',
@@ -502,7 +525,10 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     attribution: 'Ingham County (2026 parcels)',
     ownerField: 'OWNERNAME',
     ownerAddressFields: ['OWNERSTREE', 'OWNERCITY', 'OWNERSTATE', 'OWNERZIP'],
-    siteAddressField: 'PropAddress',
+    // PropAddress is "<number>   <street>" with no direction, and just the street when the
+    // number is 0 (most vacant land); the split fields carry the direction, unit and city.
+    siteAddressFields: ['PROPADDRNU', 'PROPADDRDI', 'PROPSTREET', 'UNITORAPT'],
+    siteCityField: 'PROPCITY',
     acresField: 'TOTALACRES',
     parcelIdField: 'PARCELNUM',
     extraFields: ['PROPCLASS'],
@@ -526,9 +552,9 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     url: 'https://services5.arcgis.com/X42k956XlfnIoN3d/arcgis/rest/services/Kent_Parcels/FeatureServer/0',
     attribution: 'Kent County parcels (third-party republication)',
     ownerField: 'OWNERNAME',
-    siteAddressField: 'SITESTRE_1',
+    // SITESTRE_1 is the street name; SITESTREET is (despite its name) the house number.
+    siteAddressFields: ['SITESTREET', 'SITESTRE_1'],
     parcelIdField: 'PPN',
-    extraFields: ['SITESTREET'],
   },
   {
     county: 'Leelanau',
@@ -566,7 +592,10 @@ const COUNTY_PARCEL_DEFS: ParcelDef[] = [
     attribution: 'Marquette County parcels (landowner classification study layer)',
     ownerField: 'Owner_Merg',
     ownerAddressFields: ['MAILING_AD', 'MAILING_CI', 'MAILING_ST', 'MAILING_ZI'],
-    siteAddressField: 'PROP_ADD',
+    // About 60% of rows fill PROP_ADD; most others carry the address as PSSNUMBER + PSSSTREET
+    // (never both, checked live), so joining all three gives the address either way.
+    siteAddressFields: ['PROP_ADD', 'PSSNUMBER', 'PSSSTREET'],
+    siteCityField: 'PROP_CITY',
     acresField: 'ACRES',
     parcelIdField: 'PARCEL_ID',
     extraFields: ['Category', 'PROP_CLASS'],

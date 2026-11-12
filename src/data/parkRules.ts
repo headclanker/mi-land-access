@@ -63,7 +63,7 @@ const BAY = ['County of Bay']; // not "City of Bay City"
 const GOGEBIC = ['County of Gogebic', 'Gogebic County']; // not the road commission
 
 /** County land that is not a park: a "parks are closed" finding does not cover it. */
-const NOT_A_PARK: Record<string, FieldTest> = { Des_Tp: ['LRMA', 'LOTH'], Unit_Nm: /fairground|^local forest$|^land$|gravel pit/i };
+const NOT_A_PARK: Record<string, FieldTest> = { Des_Tp: ['LRMA', 'LOTH'], Unit_Nm: /fairground|^local forest$|^land$|gravel pit|soil cons|conservation district/i };
 
 const WCO7: Source = {
   label: 'Wildlife Conservation Order, Chapter VII – State Parks and Recreation Areas (amended through Sept. 9, 2026)',
@@ -715,6 +715,48 @@ export const PARK_RULES: readonly ParkRule[] = [
     text: 'Eaton County’s parks ordinance (amended April 2021) bans hunting and trapping on park property. The one exception is archery hunting by county permit at Crandell Park, which is not mapped here.',
     confidence: 'high',
     sources: [{ label: 'Eaton County Parks – Rules, Regulations & Policy', url: 'https://www.eatoncounty.org/1552/Rules-Regulations-Policy' }],
+  }),
+  // Third research round: county parks whose own ordinance or park rules ban hunting.
+  ...(
+    [
+      ['huron', 'Huron', ['County of Huron'], "Huron County park rules: 'No hunting on any County Park Property'; firearms, air guns and bows are prohibited except where designated.", 'high', 'Huron County Parks – Park Rules', 'https://huroncountyparks.com/park-rules'],
+      ['isabella', 'Isabella', ['County of Isabella'], "Isabella County park ordinance (revised October 2024): 'No person shall hunt, trap, catch, wound, kill … any bird or animal … in or upon Commission property.'", 'high', 'Isabella County Park Rules & Ordinance', 'https://www.isabellacounty.org/wp-content/uploads/2025/02/2025-Ordinance-New-Template-for-Website-12.17.24-approved-ordinance.pdf'],
+      ['jackson', 'Jackson', ['County of Jackson', 'Jackson County', 'Jackson County Parks'], 'Jackson County parks ordinance (2018): no hunting or trapping on commission property without the Director’s permission; no designated hunting areas were found.', 'medium', 'Jackson County Parks and Recreation Commission Ordinance', 'https://mijackson.org/DocumentCenter/View/23663/Jackson-County-Park-Ordinance-2018878'],
+      ['kalamazoo', 'Kalamazoo', ['County of Kalamazoo', 'Kalamazoo County Parks'], "Kalamazoo County park rules: 'It is unlawful to kill, trap, hunt, pursue, or disturb any bird or animal, except fish, on park grounds.'", 'medium', 'Kalamazoo County park rules', 'https://www.kalcounty.gov/DocumentCenter/View/1093/Dog-Parks-PDF'],
+      ['mecosta', 'Mecosta', ['County of Mecosta'], 'Mecosta County Park Commission rules (March 2025) ban hunting on park property. The one exception is the 200-acre White Pine Valley Recreation Area, which is not mapped here.', 'high', 'Mecosta County Park Commission Rules and Regulations', 'https://www.mecostacountyparks.com/uploads/9/2/6/3/92633552/2025_rules_and_regs_-_approved.pdf'],
+      ['monroe', 'Monroe', ['County of Monroe'], "Monroe County park rules: 'No fishing or hunting allowed except where clearly designated'; no weapons except by special permit. No designated hunting areas were found.", 'medium', 'Monroe County – Park Rules', 'https://www.co.monroe.mi.us/327/Park-Rules'],
+      ['montcalm', 'Montcalm', ['County of Montcalm'], "Montcalm County Parks Ordinance of 2026: 'Hunting and trapping are prohibited unless posted otherwise.' (The copy read was marked draft.)", 'medium', 'Montcalm County Parks Ordinance of 2026', 'https://www.montcalm.us/DocumentCenter/View/5735/Final-BOC---Montcalm-Co-Parks-Ordinance-22326'],
+      ['osceola', 'Osceola', ['County of Osceola'], 'Osceola County Parks 2026 rules ban hunting, trapping and any discharge of a firearm or bow in the parks.', 'high', 'Osceola County Parks 2026 Rules and Regulations', 'https://www.osceola-county.org/document_center/Parks/Policy%20-%20Parks%202026%20Rules%20and%20Regs%20(BOC%20approved%205-5-26).pdf'],
+      ['oscoda', 'Oscoda', ['Oscoda County'], "Oscoda County Park rules: 'NO HUNTING OR USE OF FIREARMS OR FIREWORKS ARE PERMITTED.'", 'high', 'Oscoda County Park Rules & Regulations 2024', 'https://www.oscodacountymi.com/wp-content/uploads/OCP-RULES-REGULATIONS-2024.pdf'],
+      ['otsego', 'Otsego', ['County of Otsego'], 'Otsego County park rules ban the discharge of firearms, bows, air guns and slingshots (campground rules; the other county sites are small day-use facilities).', 'medium', 'Otsego County – Campground Policies/Rules', 'https://www.otsegocountymi.gov/453/Campground-PolicesRules'],
+      ['saginaw', 'Saginaw', ['County of Saginaw'], 'Saginaw County park rules ban hunting and trapping on commission property; hunters may only cross the Saginaw Valley Rail Trail unarmed to reach other land.', 'high', 'Saginaw County Park Rules (2025)', 'https://www.saginawcountymi.gov/media/ex2lj5qo/park-rules-draft-2025.pdf'],
+      ['shiawassee', 'Shiawassee', ['County of Shiawassee'], "Shiawassee County park rules: 'No person shall hunt, trap, catch, wound, or kill any bird or other animals upon any land or water owned by the County.'", 'high', 'Shiawassee County Park Rules (2023)', 'https://shiawassee.net/wp-content/uploads/2023/10/2023-Park-Rules.pdf'],
+    ] as const
+  ).map(([id, county, managers, text, confidence, label, url]) =>
+    r({
+      id: `${id}-parks-closed`,
+      name: `${county} County parks`,
+      layers: PADUS_LOCAL,
+      where: { Loc_Mang: managers },
+      not: NOT_A_PARK,
+      grade: 'red',
+      category: 'County park – closed to hunting',
+      text,
+      confidence,
+      sources: [{ label, url }],
+    }),
+  ),
+  r({
+    id: 'newaygo-parks-authorisation',
+    name: 'Newaygo County parks',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: ['County of Newaygo', 'County of Newaygo Parks and Recreation D'] },
+    not: NOT_A_PARK,
+    grade: 'yellow',
+    category: 'County park – hunting only if the commission authorises it',
+    text: "Newaygo County parks ordinance #01/2020 (amended 2024): 'No Person shall hunt any animal in or upon any Commission property unless authorized by the Commission.' No authorised areas were found — ask the parks commission first.",
+    confidence: 'high',
+    sources: [{ label: 'Newaygo County Parks Ordinance #01/2020, amended 2024', url: 'https://www.newaygocountymi.gov/wp-content/uploads/2026/08/Final-Newaygo-County-Parks-Ordinance-2024200502290.2.pdf' }],
   }),
 ];
 

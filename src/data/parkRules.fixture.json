@@ -455,6 +455,102 @@
  },
  {
   "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Bird Creek Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "County of Huron Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "County Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Lighthouse Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Oak Beach County Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Oak Beach Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Philip County Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Stafford County Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Thompson County Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "huron-parks-closed",
+  "Unit_Nm": "Wagner Park",
+  "Loc_Mang": "County of Huron",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "isabella-parks-closed",
+  "Unit_Nm": "Gilmore County Park",
+  "Loc_Mang": "County of Isabella",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "isabella-parks-closed",
+  "Unit_Nm": "Meridian Park",
+  "Loc_Mang": "County of Isabella",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "kent-parks-closed",
   "Unit_Nm": "Lowell Regional Park",
   "Loc_Mang": "County of Kent",
@@ -463,9 +559,73 @@
  },
  {
   "layer": "padus-local",
+  "rule": "mecosta-parks-closed",
+  "Unit_Nm": "Merrill Lake Park",
+  "Loc_Mang": "County of Mecosta",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "mecosta-parks-closed",
+  "Unit_Nm": "Paris Park",
+  "Loc_Mang": "County of Mecosta",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "mecosta-parks-closed",
+  "Unit_Nm": "School Section Lake Park",
+  "Loc_Mang": "County of Mecosta",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "midland-pine-haven",
   "Unit_Nm": "Pine Haven Recreational Area",
   "Loc_Mang": "County of Midland",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montcalm-parks-closed",
+  "Unit_Nm": "County Park",
+  "Loc_Mang": "County of Montcalm",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montcalm-parks-closed",
+  "Unit_Nm": "Ford Lincoln County Park",
+  "Loc_Mang": "County of Montcalm",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montcalm-parks-closed",
+  "Unit_Nm": "Kramer County Park",
+  "Loc_Mang": "County of Montcalm",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montcalm-parks-closed",
+  "Unit_Nm": "Schmied County Park",
+  "Loc_Mang": "County of Montcalm",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montcalm-parks-closed",
+  "Unit_Nm": "William McCarthy County Park",
+  "Loc_Mang": "County of Montcalm",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -484,6 +644,22 @@
   "Loc_Mang": "County of Oakland",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "osceola-parks-closed",
+  "Unit_Nm": "Crittenden County Park",
+  "Loc_Mang": "County of Osceola",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "osceola-parks-closed",
+  "Unit_Nm": "Osceola 4-H FFA Fair",
+  "Loc_Mang": "County of Osceola",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LREC"
  },
  {
   "layer": "padus-local",
@@ -551,11 +727,171 @@
  },
  {
   "layer": "padus-local",
+  "rule": "saginaw-parks-closed",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "County of Saginaw",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saginaw-parks-closed",
+  "Unit_Nm": "Price Nature Center",
+  "Loc_Mang": "County of Saginaw",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "shiawassee-parks-closed",
+  "Unit_Nm": "Henderson Park",
+  "Loc_Mang": "County of Shiawassee",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "shiawassee-parks-closed",
+  "Unit_Nm": "Kerby Road County Park",
+  "Loc_Mang": "County of Shiawassee",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "shiawassee-parks-closed",
+  "Unit_Nm": "Pine Grove Park",
+  "Loc_Mang": "County of Shiawassee",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "gogebic-county-forest",
   "Unit_Nm": "Forest Management",
   "Loc_Mang": "Gogebic County",
   "Mang_Name": "CNTY",
   "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Clark Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Clear Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Grass Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Horton Mill Pond Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Lime Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Little Wolf Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Minard Mills Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Pleasant Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Portage Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Round Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Swains Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Vineyard Lake Park",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Cascades Golf Course",
+  "Loc_Mang": "Jackson County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "Cold Brook County Park",
+  "Loc_Mang": "Kalamazoo County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "Scotts Mill County Park",
+  "Loc_Mang": "Kalamazoo County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
  },
  {
   "layer": "padus-local",
@@ -799,6 +1135,14 @@
  },
  {
   "layer": "padus-local",
+  "rule": "newaygo-parks-authorisation",
+  "Unit_Nm": "Pettibone Lake Park",
+  "Loc_Mang": "County of Newaygo Parks and Recreation D",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "kent-parks-closed",
   "Unit_Nm": "Pickerel Lake Fred Meijer Nature Preserve",
   "Loc_Mang": "Kent County Parks",
@@ -818,6 +1162,14 @@
   "rule": "kent-parks-closed",
   "Unit_Nm": "Townsend Park",
   "Loc_Mang": "Kent County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "oscoda-parks-closed",
+  "Unit_Nm": "Oscoda County Park",
+  "Loc_Mang": "Oscoda County",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -951,9 +1303,113 @@
  },
  {
   "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "The Cascades Park",
+  "Loc_Mang": "County of Jackson",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "County of Jackson",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "Markin Glen Park",
+  "Loc_Mang": "County of Kalamazoo",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "Oshmtemo Rest Area",
+  "Loc_Mang": "County of Kalamazoo",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "Prairie View County Park",
+  "Loc_Mang": "County of Kalamazoo",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "River Oaks County Park",
+  "Loc_Mang": "County of Kalamazoo",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kalamazoo-parks-closed",
+  "Unit_Nm": "Maple Glen Park",
+  "Loc_Mang": "County of Kalamazoo",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "monroe-parks-closed",
+  "Unit_Nm": "Nike Park",
+  "Loc_Mang": "County of Monroe",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "monroe-parks-closed",
+  "Unit_Nm": "Vienna Park",
+  "Loc_Mang": "County of Monroe",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-parks-authorisation",
+  "Unit_Nm": "Ed Henning County Park",
+  "Loc_Mang": "County of Newaygo",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "oakland-parks-closed",
   "Unit_Nm": "Catalpa Oaks County Park",
   "Loc_Mang": "County of Oakland",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "otsego-parks-closed",
+  "Unit_Nm": "Otsego County Dog Park",
+  "Loc_Mang": "County of Otsego",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "otsego-parks-closed",
+  "Unit_Nm": "Otsego Lake County Park",
+  "Loc_Mang": "County of Otsego",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "otsego-parks-closed",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "County of Otsego",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -1095,11 +1551,35 @@
  },
  {
   "layer": "padus-local",
+  "rule": "saginaw-parks-closed",
+  "Unit_Nm": "Imerman Memorial Park",
+  "Loc_Mang": "County of Saginaw",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saginaw-parks-closed",
+  "Unit_Nm": "William H Haithco Recreation Area",
+  "Loc_Mang": "County of Saginaw",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "ionia-parks-closed",
   "Unit_Nm": "Bertha Brock Park",
   "Loc_Mang": "Ionia County",
   "Mang_Name": "CNTY",
   "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "jackson-parks-closed",
+  "Unit_Nm": "Sparks Park",
+  "Loc_Mang": "Jackson County",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
  },
  {
   "layer": "padus-local",

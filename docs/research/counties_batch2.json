@@ -1,0 +1,496 @@
+[
+ {
+  "county": "Huron",
+  "system": "Huron County Parks (Park Trustees)",
+  "hunting": "closed",
+  "what": "County park rules ban hunting on all county park property and prohibit firearms, air guns and bow-and-arrow use except where designated or during special events.",
+  "quote": "Firearms, air guns, firecrackers, fireworks, and bow and arrow usage is prohibited within the park, except where designated or during special events. No hunting on any County Park Property.",
+  "open_units": [],
+  "closed_units": [
+   "All Huron County parks (Bird Creek, Lighthouse Park, etc.)"
+  ],
+  "county_forest": "unknown",
+  "county_forest_what": "No county forest found in county rules or PAD list (PAD 'Local Forest' entries are not documented).",
+  "sources": [
+   {
+    "url": "https://huroncountyparks.com/park-rules",
+    "title": "Huron County Parks - Park Rules",
+    "date": "undated (current page, fetched 2026-11-12)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Page only reachable via curl with a browser User-Agent (Cloudflare)."
+ },
+ {
+  "county": "Iosco",
+  "system": "none found",
+  "hunting": "no-county-parks",
+  "what": "County PAD land is a fairgrounds and a conservation district only; searches found no county parks department or county park rules (beaches are township-run).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None found.",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched; county site not located/opened."
+ },
+ {
+  "county": "Iron",
+  "system": "Iron County Parks & Recreation Commission",
+  "hunting": "unknown",
+  "what": "County parks are Pentoga Park (60 ac campground), Camp Batawagama (96 ac), fairgrounds; Pentoga campground rules (ironmi.com) say nothing about hunting or firearms. PAD lists 'Local Forest' units but no county forest plan or rules found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://ironmi.com/pentoga-park",
+    "title": "Pentoga Park rules",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://ironmi.com/wp-content/uploads/2024/05/Recreation-Paln-2022-2026.pdf",
+    "title": "Iron County Recreation Plan 2022-2026",
+    "date": "2022-01-13",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Read ironmi.com/pentoga-park and 2022-2026 recreation plan (no hunting rules). County forest status not determined."
+ },
+ {
+  "county": "Isabella",
+  "system": "Isabella County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "Park Rules & Ordinance (revised Oct 15, 2024) prohibits hunting and trapping on all Commission property; firearms only in compliance with state law and only in areas designated for that purpose. Meridian Park brochure (2026) says no hunting.",
+  "quote": "No person shall hunt, trap, catch, wound, kill or treat cruelly, attempt to trap, catch, wound or kill any bird or animal ... in or upon Commission property.",
+  "open_units": [],
+  "closed_units": [
+   "Gilmore Park",
+   "Meridian Park (153 ac)",
+   "all Commission property"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://www.isabellacounty.org/wp-content/uploads/2025/02/2025-Ordinance-New-Template-for-Website-12.17.24-approved-ordinance.pdf",
+    "title": "Isabella County Park Rules & Ordinance",
+    "date": "revised 2024-10-15",
+    "read": "full"
+   },
+   {
+    "url": "https://www.isabellacounty.org/wp-content/uploads/2026/07/Meridian-Park-Brochure-2026.pdf",
+    "title": "Meridian Park Brochure 2026",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Jackson",
+  "system": "Jackson County Parks and Recreation Commission",
+  "hunting": "closed",
+  "what": "Commission ordinance (amended Apr 17, 2018) prohibits hunting/trapping on Commission property without Director permission; Director/Commission may designate limited waterfowl-hunting areas and areas for hunting/target practice. No designated areas identified in published materials.",
+  "quote": "Upon the property of the commission, no person shall hunt, trap, catch, wound, kill, pursue, molest, or poison ... any bird or animal ... without the permission of the Director.",
+  "open_units": [],
+  "closed_units": [
+   "County parks generally (Clark Lake, Swains Lake, Pleasant Lake, Vandercook Lake, Cascades etc.)"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://mijackson.org/DocumentCenter/View/23663/Jackson-County-Park-Ordinance-2018878",
+    "title": "Jackson County Parks and Recreation Commission Ordinance (amended 2018)",
+    "date": "2018-04-17",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Weapons section exempts persons hunting in Director-designated areas; I did not find any designation list."
+ },
+ {
+  "county": "Kalamazoo",
+  "system": "Kalamazoo County Parks (Parks & Expo Center)",
+  "hunting": "closed",
+  "what": "County parks rules sheet states it is unlawful to kill, trap, hunt, pursue or disturb any bird or animal except fish on park grounds. County site (kalcounty.com/.gov) returns 403 to automated requests, so the full Parks Rules and Ordinance PDF was not opened.",
+  "quote": "It is unlawful to kill, trap, hunt, pursue, or disturb any bird or animal, except fish, on park grounds.",
+  "open_units": [],
+  "closed_units": [
+   "Cold Brook",
+   "Scotts Mill",
+   "Markin Glen",
+   "Prairie View",
+   "River Oaks"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://www.kalcounty.gov/DocumentCenter/View/1093/Dog-Parks-PDF",
+    "title": "Kalamazoo County Dog Parks rules (general park rules)",
+    "date": "undated",
+    "read": "snippet"
+   },
+   {
+    "url": "https://www.kalcounty.gov/420/Park-Rules-Fees-Hours",
+    "title": "Park Rules, Fees & Hours",
+    "date": "undated",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Direct fetch blocked (Cloudflare 403); not circumvented. Quote is from search snippet."
+ },
+ {
+  "county": "Kalkaska",
+  "system": "Kalkaska County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "Only county parks are Log Lake Campground and Rugg Pond Natural Area. The Log Lake Park Information and Rules (Mar 2025) have no hunting/firearm provision (only a game-call quiet-hours exemption).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None found.",
+  "sources": [
+   {
+    "url": "https://www.kalkaskacounty.net/departments/parks_and_recreation/log_lake_campground.php",
+    "title": "Log Lake Campground / Park Information and Rules",
+    "date": "2025-03",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Rules silent; Rugg Pond rules not found."
+ },
+ {
+  "county": "Keweenaw",
+  "system": "Keweenaw County (Board of Commissioners)",
+  "hunting": "unknown",
+  "what": "County parks: Gratiot River Park (camping banned by Ord. 18-001), Keweenaw Mountain Lodge; no hunting rule found. A new Keweenaw Heartlands public forest authority (June 2026) will manage ~20,000+ ac of former TNC land used for hunting, but this is not county-owned land.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "New forest authority (not county land) is used for hunting; county's own forest land not documented.",
+  "sources": [
+   {
+    "url": "https://wdet.org/2026/06/23/michigans-first-public-forest-authority-emerges-in-keweenaw-county/",
+    "title": "Michigan's first public forest authority emerges in Keweenaw County",
+    "date": "2026-06-23",
+    "read": "full"
+   },
+   {
+    "url": "https://www.keweenawcountyonline.org/minutes/minutes_1047.pdf",
+    "title": "Keweenaw Board minutes (Ord. 18-001 Gratiot River Park camping)",
+    "date": "2018",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Parks ordinance text not opened."
+ },
+ {
+  "county": "Lake",
+  "system": "none found",
+  "hunting": "no-county-parks",
+  "what": "County has no entries in the protected-areas county-land list; no county park system found in searches.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None found.",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched; no county site opened."
+ },
+ {
+  "county": "Lapeer",
+  "system": "none found",
+  "hunting": "unknown",
+  "what": "PAD lists only a fair association and one 'Local Forest' unit; no county parks department or rules found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD 'Local Forest' unit undocumented.",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched; county site not opened."
+ },
+ {
+  "county": "Leelanau",
+  "system": "Leelanau County Parks and Recreation Commission",
+  "hunting": "partly-open",
+  "what": "Veronica Valley Park (county park) rules allow hunting (listed as hunting with dog under PA 451 Part 401); county counsel's 2021 opinion notes the 2010 management plan expressly allowed hunting. The 1971 county Park Regulation Ordinance for Myles Kimmerly and Old Settlers is silent on hunting; those are small developed parks.",
+  "quote": "Hunting with dog is permitted in compliance with the State of Michigan statute, P.A. 451 of 1994, Part 401 (Sec. 2.2.7.)",
+  "open_units": [
+   "Veronica Valley Park"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://cms3.revize.com/revize/leelanaucounty/Documents/Leelanau%20County/Boards%20Commissions%20And%20Committees/Parks%20And%20Recreation%20Commission/Veronica%20Valley%20Park/park_rules_veronica_valley_1.pdf",
+    "title": "Veronica Valley Park rules",
+    "date": "adopted 2010-09-15",
+    "read": "full"
+   },
+   {
+    "url": "https://www.leelanau.gov/Documents/Department/Clerk/Ordinances%20And%20Resolutions/Ordinances/ord_park.pdf",
+    "title": "Leelanau County Park Regulation Ordinance",
+    "date": "1971",
+    "read": "full"
+   },
+   {
+    "url": "https://www.leelanau.gov/downloads/hunting_in_vvp_opn_03172021.pdf",
+    "title": "County counsel opinion on hunting in Veronica Valley Park",
+    "date": "2021-03-17",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Veronica Valley rules are 2010; 2021 opinion only seen via search snippet (file now 404); current status after 2021 commission action not verified. Myles Kimmerly/Old Settlers specific rules not located."
+ },
+ {
+  "county": "Lenawee",
+  "system": "Lenawee County Parks Department",
+  "hunting": "unknown",
+  "what": "County parks (Ramsdell, Gerber Hill, Iron Lake, Medina, Bicentennial) published in 2020-2024 plan; no hunting/firearm rule found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://www.lenawee.mi.us/DocumentCenter/View/83",
+    "title": "Lenawee County Parks & Recreation Plan 2020-2024",
+    "date": "2020",
+    "read": "full"
+   },
+   {
+    "url": "https://www.lenawee.mi.us/162/Lenawee-County-Parks",
+    "title": "Lenawee County Parks page",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Brochure PDF (DocumentCenter/View/82) connection reset; no rules/ordinance page found."
+ },
+ {
+  "county": "Livingston",
+  "system": "Livingston County Planning (parks)",
+  "hunting": "unknown",
+  "what": "County parks are Lutz County Park (300 ac, Deerfield Twp, adjacent to Oak Grove State Game Area) and Fillmore County Park (198 ac, Genoa Twp). The 2023-2027 Parks and Open Space Plan mentions coordination with DNR on 'access and hunting issues' near Lutz but states no hunting rule for county parks; no ordinance opened.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://milivcounty.gov/wp-content/uploads/Complete-Adopted-Plan-2023-2027-Livingston-County-Parks-Open-Space-Plan.pdf",
+    "title": "Livingston County Parks & Open Space Plan 2023-2027",
+    "date": "2023",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Plan read in full via grep; park rules page not reached (user interrupted further fetch)."
+ },
+ {
+  "county": "Luce",
+  "system": "Luce County",
+  "hunting": "unknown",
+  "what": "Luce County Park (102 ac) per PAD; no rules found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not reached; luce-county.org tunnel 502, search empty."
+ },
+ {
+  "county": "Mackinac",
+  "system": "Mackinac County",
+  "hunting": "unknown",
+  "what": "County campgrounds (Foley Creek, Carp River) per 2005 fact book; no county park rules found. No county land in PAD list.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [],
+  "confidence": "low",
+  "notes": "mackinaccounty.net searched; no rules page found; mackinac county site CONNECT failed."
+ },
+ {
+  "county": "Macomb",
+  "system": "Macomb County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "County parks are Freedom Hill County Park and Amphitheater, the Macomb Orchard Trail and Nicholson Nature Center (2024 master plan); parks dept closed 2010 and restarted. The plan contains no hunting provision; these are developed urban/trail sites, but no explicit rule was found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None.",
+  "sources": [
+   {
+    "url": "https://www.macombgov.org/sites/default/files/files/2024-12/MCParksandNR_MasterPlan2024.pdf",
+    "title": "Macomb County Parks & Natural Resources Master Plan 2024",
+    "date": "2024-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "macombgov.org rules page not found; master plan grepped for hunting/firearms (none for county parks)."
+ },
+ {
+  "county": "Manistee",
+  "system": "Manistee County (planning)",
+  "hunting": "unknown",
+  "what": "2016 County-Wide Recreation Plan downloaded; no county park hunting rule or county forest found in it.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None found.",
+  "sources": [
+   {
+    "url": "https://manisteecountymi.gov/DocumentCenter/View/526/2016-County-Wide-Recreation-Plan-Print-Reduced-PDF",
+    "title": "Manistee County Wide Recreation Plan",
+    "date": "2016",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Plan text only grep'd for hunting (public lands map). No county parks in PAD list."
+ },
+ {
+  "county": "Marquette",
+  "system": "Marquette County Forestry Commission (county forest); Resource Management Dept",
+  "hunting": "open",
+  "what": "Marquette County Forest (~9,300 acres in Sands and Forsyth Twps near Sawyer) is managed by the county Forestry Commission, and its 2017 plan states hunting opportunities (deer, bear, small game) are prevalent on it. County park rules not examined.",
+  "quote": "Hunting opportunities are prevalent in the Forest. Big game includes deer and bear and small game includes rabbits, squirrels, ruffed grouse, woodcock, and ducks.",
+  "open_units": [
+   "Marquette County Forest (9,297 ac)"
+  ],
+  "closed_units": [],
+  "county_forest": "open",
+  "county_forest_what": "Approx. 9,300-acre county forest; hunting listed among recreation uses in the Forest Management Plan.",
+  "sources": [
+   {
+    "url": "https://cms4files.revize.com/marquettemi/departments/planning/docs/FMP%20adopted%204.5.17.pdf",
+    "title": "Marquette County Forest Management Plan",
+    "date": "2017-04-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Management plan describes use, not a rule; no county ordinance restricting hunting found (DNR local-controls list none). County parks (non-forest) not checked."
+ },
+ {
+  "county": "Mason",
+  "system": "Mason County Parks and Recreation Commission",
+  "hunting": "unknown",
+  "what": "Mason County campground (56 sites) and picnic area under the Parks and Recreation Commission; campground rules are linked via municode, which could not be read. No hunting/firearm text found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None found.",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Rules hosted on library.municode.com (dynamic); not read."
+ },
+ {
+  "county": "Mecosta",
+  "system": "Mecosta County Park Commission",
+  "hunting": "partly-open",
+  "what": "Rules (amended Feb/Mar 2025) ban hunting/trapping on Commission property except hunting is permitted in the White Pine Valley Recreation Area under Commission guidelines and DNR law; firearm discharge prohibited elsewhere.",
+  "quote": "Hunting is permitted within the White Pine Valley Recreation Area in accordance with Commission guidelines and the laws of the Department of Natural Resources of the State of Michigan.",
+  "open_units": [
+   "White Pine Valley Recreation Area (200 ac)"
+  ],
+  "closed_units": [
+   "Brower Park",
+   "Davis Bridge",
+   "Merrill-Gorrel",
+   "Paris Park",
+   "School Section Lake Veterans Park"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://www.mecostacountyparks.com/uploads/9/2/6/3/92633552/2025_rules_and_regs_-_approved.pdf",
+    "title": "Mecosta County Park Commission Rules and Regulations",
+    "date": "amended 2025-03-20",
+    "read": "full"
+   },
+   {
+    "url": "https://www.mecostacountyparks.com/white-pine-valley.html",
+    "title": "White Pine Valley Recreation Area",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Campgrounds in State Game Areas (Haymarsh, Tubbs) are state land operated by county."
+ },
+ {
+  "county": "Menominee",
+  "system": "Menominee County Parks (Park and Recreation Committee)",
+  "hunting": "unknown",
+  "what": "County adopted a County Parks Use Ordinance on 2021-02-24 (parks: Mason, River, Chappee Rapids, Airport, Stoney Point, Bailey, Kleinke, Shakey Lakes). The ordinance text could not be opened (forms pages returned 403/404 to curl), so hunting status is unknown. No county forest found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "None found.",
+  "sources": [
+   {
+    "url": "https://www.menomineecounty.com/forms_and_documents/mnop/",
+    "title": "Menominee County forms listing: COUNTY PARKS USE ORDINANCE (approved 2021-02-24)",
+    "date": "2021-02-24",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "menomineecounty.com forms/documents page and menomineecountyparks.com returned 403 on some paths; not circumvented. DNR lists no local hunting ordinances."
+ },
+ {
+  "county": "Missaukee",
+  "system": "Missaukee County Park Department",
+  "hunting": "unknown",
+  "what": "County Park Rules (approved 9/9/2025) list prohibitions but say nothing on hunting or firearms. Parks are developed campgrounds (Missaukee Lake Park, Crooked Lake Campground).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://missaukee.org/Park%20Rules%209-9-2025.pdf",
+    "title": "Missaukee County Park Rules",
+    "date": "2025-09-09",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "No hunting policy exists in published rules; treat as no explicit hunting provision."
+ }
+]

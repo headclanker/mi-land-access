@@ -1,0 +1,547 @@
+[
+ {
+  "county": "Monroe",
+  "system": "Monroe County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "County park rules (Heck, Nike, Vienna, Waterloo, West County) bar hunting and weapons except by designation/special permit. No designated hunting area was found in the rules or the 2025 master plan.",
+  "quote": "No fishing or hunting allowed except where clearly designated. ... No weapons or fireworks shall be allowed in the parks except by \"special permit\".",
+  "open_units": [],
+  "closed_units": [
+   "Heck Park",
+   "Nike Park",
+   "Vienna Park",
+   "Waterloo Park",
+   "West County Park"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified; the plan lists only state game areas.",
+  "sources": [
+   {
+    "url": "https://www.co.monroe.mi.us/327/Park-Rules",
+    "title": "Park Rules - Monroe County, MI",
+    "date": "undated (current site, read 2026-11-12)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.co.monroe.mi.us/DocumentCenter/View/4255/2025MonroeCtyPRMP_Adopted1-21-25_Online-Version",
+    "title": "Monroe County Parks, Trails and Recreation Master Plan",
+    "date": "2025-01-21",
+    "read": "full (searched for hunting)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Rule leaves an 'except where clearly designated' door but none found; effectively closed. Page undated."
+ },
+ {
+  "county": "Montcalm",
+  "system": "Montcalm County Parks (County Controller; Board of Commissioners)",
+  "hunting": "closed",
+  "what": "The Board's County Parks Ordinance of 2026 prohibits hunting and trapping in county parks unless posted otherwise; firearm possession is left to state law. Document read is marked DRAFT and its adoption status is unclear (an earlier ordinance was repealed Nov 2025; county site lists a new ordinance posted 2026-02-13).",
+  "quote": "Hunting and trapping are prohibited unless posted otherwise.",
+  "open_units": [],
+  "closed_units": [
+   "Ford Lincoln County Park",
+   "Kramer County Park",
+   "Schmied County Park",
+   "other county parks"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; PAD-US lists only county parks and a soil conservation district parcel.",
+  "sources": [
+   {
+    "url": "https://www.montcalm.us/DocumentCenter/View/5735/Final-BOC---Montcalm-Co-Parks-Ordinance-22326",
+    "title": "Montcalm County Parks Ordinance of 2026 (draft/final BOC)",
+    "date": "2026 (file 22326, marked DRAFT)",
+    "read": "full"
+   },
+   {
+    "url": "https://montcalmcountymi.gov/CivicAlerts.asp?AID=122",
+    "title": "County news: Parks Ordinance",
+    "date": "2026-02-13",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Section 10.2(A). No posted-open sites identified. Section 7.2: nothing prohibits lawful possession of firearms."
+ },
+ {
+  "county": "Montmorency",
+  "system": "unknown (county fairgrounds only in PAD-US)",
+  "hunting": "unknown",
+  "what": "Could not find the county's official site or any parks rules. Only county land in the national database is the Montmorency Fairgrounds (19 ac).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "None in PAD-US; nothing found.",
+  "sources": [
+   {
+    "url": "https://www.montmorencycounty.us/",
+    "title": "montmorencycounty.us (parked domain, not the county site)",
+    "date": "2026-11-12",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/montmorency/hunting",
+    "title": "MDNR local hunting controls: Montmorency (none listed)",
+    "date": "current",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Tried montmorencycounty.us/.org, montmorency.org, co.montmorency.mi.us and several variants: parked/landing pages or no connection. Web searches found no parks plan."
+ },
+ {
+  "county": "Newaygo",
+  "system": "Newaygo County Parks and Recreation Commission",
+  "hunting": "restricted",
+  "what": "Ordinance #01/2020 (amended 2024) bans hunting on Commission property unless the Commission authorizes it; authorized hunting follows state law and extra Commission rules. Game-camera rule refers to 'areas open to hunting', but no open parks/areas were found. Firearms follow federal/state/local law.",
+  "quote": "No Person shall hunt any animal in or upon any Commission property unless authorized by the Commission. All hunting will be in accordance with the laws of the State of Michigan...",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; PAD-US lists Ed Henning Park and a small prairie parcel.",
+  "sources": [
+   {
+    "url": "https://www.newaygocountymi.gov/wp-content/uploads/2026/08/Final-Newaygo-County-Parks-Ordinance-2024200502290.2.pdf",
+    "title": "Newaygo County Ordinance #01/2020, amended 2024",
+    "date": "2020-02-26, amended 2024",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Section 21(a). Effectively permission-only; no designated hunt published. Note: newaygo.gov resolution 2024-18 is the CITY of Newaygo (bans hunting) - not the county."
+ },
+ {
+  "county": "Ogemaw",
+  "system": "Ogemaw County Parks & Recreation Commission",
+  "hunting": "unknown",
+  "what": "County parks are West Branch Secret Campground & RV Park, Pointer Hill roadside park and Ogemaw Nature Park (animal park). No hunting or firearms rule was found in the county's published rec plan or RV park rules; none of the three sites is a hunting-type property. The county's 2019-2023 plan says hunting happens on state/federal forest.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US lists a 396-acre county 'Local Forest' with open access, but no county page, plan or policy mentions a county forest or hunting on it.",
+  "sources": [
+   {
+    "url": "https://www.ocmi.us/wp-content/uploads/Ogemaw_County_Recreation_Plan_2019_2023.pdf",
+    "title": "Ogemaw County Recreation Plan 2019-2023",
+    "date": "2019",
+    "read": "full (searched)"
+   },
+   {
+    "url": "https://www.ocmi.us/wp-content/uploads/Parks-RV-Park.pdf",
+    "title": "West Branch RV Park rules/info",
+    "date": "undated",
+    "read": "full (no hunting text)"
+   },
+   {
+    "url": "https://www.ocmi.us/parks-and-recreation/",
+    "title": "Ogemaw County Parks & Recreation",
+    "date": "2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Plan is older than 2020 (2019). Master plan update RFP issued 2026. Site is ocmi.us."
+ },
+ {
+  "county": "Ontonagon",
+  "system": "Ontonagon County Park (Board of Commissioners)",
+  "hunting": "closed",
+  "what": "The county park rules bar firearms discharge and hunting/trapping within the park (a campground). PAD-US lists a 3,646-acre county 'Local Forest' but no county forest page, forestry committee or hunting rule was found on the county site.",
+  "quote": "Persons shall not discharge or operate firearms, air guns, slingshots or bow/arrows within park boundaries. There shall be no hunting, trapping, killing or intentionally disturbing wild life within park boundaries.",
+  "open_units": [],
+  "closed_units": [
+   "Ontonagon County Park"
+  ],
+  "county_forest": "unknown",
+  "county_forest_what": "3,646 ac 'Local Forest' (PAD-US, public access OA) not documented on ontonagoncounty.org; likely tax-reverted/county-owned timberland. Hunting status unconfirmed.",
+  "sources": [
+   {
+    "url": "https://ontonagoncounty.org/wp-content/uploads/2026/04/Park-Rules.pdf",
+    "title": "Ontonagon County Park Rules",
+    "date": "2024-11-01 (reviewed)",
+    "read": "full"
+   },
+   {
+    "url": "https://ontonagoncounty.org/county-offices/county-park/",
+    "title": "County Park - Ontonagon County",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Search for county forest returned nothing; county site has no forest office listed."
+ },
+ {
+  "county": "Osceola",
+  "system": "Osceola County Parks Commission (Crittenden Park, Rose Lake Park)",
+  "hunting": "closed",
+  "what": "2026 park rules prohibit hunting/trapping and discharge of any firearm or bow on county park land.",
+  "quote": "Hunt, trap, catch, wound, kill, or treat cruelly any bird or animal. ... Discharge or set off a pistol, rifle, shotgun, slingshot, bow, or any other instrument which discharges a projectile",
+  "open_units": [],
+  "closed_units": [
+   "Crittenden Park",
+   "Rose Lake Park"
+  ],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US lists a 96-acre 'Local Forest' (county); no county forest or its rules found on the parks pages or 2021-2025 recreation plan.",
+  "sources": [
+   {
+    "url": "https://www.osceola-county.org/document_center/Parks/Policy%20-%20Parks%202026%20Rules%20and%20Regs%20(BOC%20approved%205-5-26).pdf",
+    "title": "Osceola County Parks 2026 Rules and Regs",
+    "date": "2026-05-05 (BOC approved)",
+    "read": "full"
+   },
+   {
+    "url": "https://cms4files.revize.com/osceolami/document_center/Parks/2021-2025%20Osceola%20County%20Recreation%20Plan%20FINAL.pdf",
+    "title": "2021-2025 Osceola County Recreation Plan",
+    "date": "2021",
+    "read": "full (searched)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Sections 21.b and 22.b. The 'Sec.21.b exceptions' are cited but none are listed in the text."
+ },
+ {
+  "county": "Oscoda",
+  "system": "Oscoda County Park (Mio), county-run campground",
+  "hunting": "closed",
+  "what": "Oscoda County Park's posted rules ban hunting and firearms. It is the only county park.",
+  "quote": "NO HUNTING OR USE OF FIREARMS OR FIREWORKS ARE PERMITTED.",
+  "open_units": [],
+  "closed_units": [
+   "Oscoda County Park"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest found; PAD-US lists only the county park.",
+  "sources": [
+   {
+    "url": "https://www.oscodacountymi.com/wp-content/uploads/OCP-RULES-REGULATIONS-2024.pdf",
+    "title": "Oscoda County Park Rules & Regulations 2024",
+    "date": "2024",
+    "read": "full"
+   },
+   {
+    "url": "https://oscodacountymi.com/?p=213",
+    "title": "Oscoda County Park",
+    "date": "2026-11-12 read",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Otsego",
+  "system": "Otsego County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "County parks are developed sites (Otsego Lake County Park campground, dog park, ball fields, trailhead, beach). Otsego Lake County Park bans discharge of firearms and bows; no site-level hunting rule found for the others and none are huntable-type land.",
+  "quote": "NO discharge of firearms, bow and arrows, rifles, air guns or sling shots.",
+  "open_units": [],
+  "closed_units": [
+   "Otsego Lake County Park",
+   "Community Dog Park & Pontresina Park",
+   "Libke Fields",
+   "Iron Belle Trail Trailhead",
+   "Wah Wah Soo Beach"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest found on parks department pages.",
+  "sources": [
+   {
+    "url": "https://www.otsegocountymi.gov/453/Campground-PolicesRules",
+    "title": "Campground Policies/Rules - Otsego County",
+    "date": "current (2026)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.otsegocountymi.gov/207/Parks-Recreation",
+    "title": "Parks & Recreation - Otsego County",
+    "date": "current (2026)",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No ordinance with an explicit 'no hunting' clause found; classification rests on developed-park nature plus discharge ban."
+ },
+ {
+  "county": "Presque Isle",
+  "system": "Presque Isle County Parks (county-run; no parks page on county site)",
+  "hunting": "unknown",
+  "what": "County has Fletcher-Gilcrest Park and 40 Mile Point Lighthouse Park (149 ac total in PAD-US). presqueislecounty.org has no parks department page or rules; the recreation plans (hosted at nemcog.org) were not retrievable (404/unresolvable redirects).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest found; the county site lists only a state district forester.",
+  "sources": [
+   {
+    "url": "https://presqueislecounty.org/about-us/",
+    "title": "Presque Isle County About Us",
+    "date": "2026-11-12",
+    "read": "full"
+   },
+   {
+    "url": "https://presqueislecounty.org/presque-isle-county-boards-committees-commissions/",
+    "title": "County boards, committees, commissions",
+    "date": "2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Recreation plan PDFs at discovernortheastmichigan.org/nemcog.org returned 404 or redirect to unresolvable host. Parks appear to be a lighthouse park and a small park."
+ },
+ {
+  "county": "Roscommon",
+  "system": "none",
+  "hunting": "no-county-parks",
+  "what": "Roscommon County's department directory lists no parks or forest department; local parks belong to villages/townships and the Roscommon Metropolitan Recreation Authority.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US shows a 34-acre county 'Local Forest'; no county document found describing it.",
+  "sources": [
+   {
+    "url": "https://www.roscommoncounty.net/Directory.aspx",
+    "title": "Staff Directory - Roscommon County",
+    "date": "2026-11-12 read",
+    "read": "full"
+   },
+   {
+    "url": "https://cms9files.revize.com/roscommonmi/Document_Center/Departments_Boards/Building%20&%20Zoning/recreationplan.pdf",
+    "title": "Village of Roscommon Park Rec Plan 2013-2017 draft",
+    "date": "2013",
+    "read": "full (searched)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Absence inferred from directory; no county rules to quote."
+ },
+ {
+  "county": "Saginaw",
+  "system": "Saginaw County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "Park Rules bar hunting and trapping on Commission property, with an exception letting licensed hunters/trappers cross the Saginaw Valley Rail Trail unarmed to reach other property. Rail trail is not itself a hunting area. Document read is the 2025 draft rules; the older rules PDF (with Section H 'Hunting and Trapping Access from the Saginaw Valley Rail Trail') was not retrievable (404 on old URLs).",
+  "quote": "No person shall, upon Commission Property: Hunt, trap, wound or kill ... any bird or animal... Hunters and trappers will be allowed to cross the Saginaw Valley Rail Trail property ... Guns, bows or other weapons must be unarmed.",
+  "open_units": [],
+  "closed_units": [
+   "Veterans Memorial Park",
+   "Price Nature Center",
+   "Saginaw Valley Rail Trail",
+   "Headwaters Recreation Area"
+  ],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US lists a 21-acre county 'Local Forest'; not described in the rules.",
+  "sources": [
+   {
+    "url": "https://www.saginawcountymi.gov/media/ex2lj5qo/park-rules-draft-2025.pdf",
+    "title": "Saginaw County Park Rules (draft 2025)",
+    "date": "2025",
+    "read": "full"
+   },
+   {
+    "url": "https://saginawcounty.com/media/rgbp3r0b/saginaw-county-parks-and-recreation-commission-park-rules.pdf",
+    "title": "Park Rules (prior version with Section H)",
+    "date": "undated",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Chapter VI Section A; Section B3 same exception. Site moved from saginawcounty.com to saginawcountymi.gov."
+ },
+ {
+  "county": "Sanilac",
+  "system": "Sanilac County Parks Commission/Board (Evergreen, Forester, Lexington, Delaware parks)",
+  "hunting": "unknown",
+  "what": "Published rules for the four county parks (campgrounds and day-use beach parks) say nothing about hunting, firearms or trapping; Delaware Park is day-use only. They are small developed parks and no hunting program exists in the rules or the 2026-2030 recreation plan.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; PAD-US lists only parks, a fairground and gravel pits.",
+  "sources": [
+   {
+    "url": "https://sanilaccountyparks.com/evergreen-park/evergreen-park-rules/",
+    "title": "Evergreen Park Rules & Policies",
+    "date": "2026 (current)",
+    "read": "full"
+   },
+   {
+    "url": "https://sanilaccountyparks.com/wp-content/uploads/sanilac_county_5yr_rec_plan_parks_2026-2030.pdf",
+    "title": "Sanilac County Parks 5-Year Recreation Plan 2026-2030",
+    "date": "2026",
+    "read": "full (searched for hunting, no matches)"
+   },
+   {
+    "url": "https://sanilaccountyparks.com/delaware-park/",
+    "title": "Delaware Park",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Forester and Lexington rules pages also have no hunting/firearm text. County main site sanilaccounty.net had an infinite redirect loop (not readable). Silence is not a prohibition; treat as effectively closed developed parks."
+ },
+ {
+  "county": "Schoolcraft",
+  "system": "none",
+  "hunting": "no-county-parks",
+  "what": "County site lists no parks or forest department; PAD-US shows only a 3-acre Historical Park & Water Tower. No county hunting land.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "None found.",
+  "sources": [
+   {
+    "url": "https://www.schoolcraftcounty.net/",
+    "title": "Schoolcraft County home/department list",
+    "date": "2026-11-12 read",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Absence inferred from department list; no recreation plan or ordinance found."
+ },
+ {
+  "county": "Shiawassee",
+  "system": "Shiawassee County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "County park rules ban hunting/trapping on any county-owned land or water and the discharge of firearms, bows, crossbows or slingshots on county property.",
+  "quote": "No person shall hunt, trap, catch, wound, or kill any bird or other animals upon any land or water owned by the County.",
+  "open_units": [],
+  "closed_units": [
+   "Henderson Park",
+   "Kerby Road Park",
+   "Pine Grove Park",
+   "Geeck Road Park",
+   "Lytle Road Park",
+   "Shiatown East Park"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; PAD-US shows only parks and a trail.",
+  "sources": [
+   {
+    "url": "https://shiawassee.net/wp-content/uploads/2023/10/2023-Park-Rules.pdf",
+    "title": "Shiawassee County Park Rules (scanned; read from image)",
+    "date": "2023-10",
+    "read": "full"
+   },
+   {
+    "url": "https://shiawassee.net/?p=2349",
+    "title": "Parks & Recreation Commission",
+    "date": "2026-11-12 read",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Rules items 5 and 9. Possession of firearms allowed per state law."
+ },
+ {
+  "county": "St. Joseph",
+  "system": "St. Joseph County Parks & Recreation (Parks Commission)",
+  "hunting": "closed",
+  "what": "County Parks Ordinance bans hunting/trapping except nuisance-wildlife control by county employees or licensed contractors.",
+  "quote": "It is unlawful to hunt, trap or kill any animal or bird, except fish on park grounds.",
+  "open_units": [],
+  "closed_units": [
+   "all county parks"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; county owns parks and a fairground.",
+  "sources": [
+   {
+    "url": "https://media.stjosephcountymi.gov/2026/05/446_637975477865600000.pdf",
+    "title": "St. Joseph County Parks Ordinance (Chapter II Park Rules item 4)",
+    "date": "ordinance text from c.2007, file posted 2026-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Text layer garbled; read from rendered page image."
+ },
+ {
+  "county": "Tuscola",
+  "system": "Tuscola County Parks and Recreation Commission (Vanderbilt County Park & Campground)",
+  "hunting": "unknown",
+  "what": "County Ordinance 2015-08 governs all county parks but has no hunting, trapping or firearms clause (it defers to posted rules). The only county park is Vanderbilt Park (~50 ac campground). No hunting provision found in the 2017-2021 master plan; the 2023-2027 plan link returned 404.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; PAD-US lists only Vanderbilt Park and road commission gravel pits.",
+  "sources": [
+   {
+    "url": "https://www.tuscolacounty.org/parks/doc/6%20-%20Tuscola%20County%20Ordinance%20No.%202015-08.pdf",
+    "title": "Tuscola County Ordinance No. 2015-08, Activities at All County Parks",
+    "date": "2015",
+    "read": "full"
+   },
+   {
+    "url": "https://www.tuscolacounty.org/parks/doc/Tuscola%20County%20Park%20and%20Rec%20Master%20Plan%202017%20-%202021.pdf",
+    "title": "Park and Rec Master Plan 2017-2021",
+    "date": "2017",
+    "read": "full (searched, no hunting text)"
+   },
+   {
+    "url": "https://www.tuscolacounty.org/parks",
+    "title": "Tuscola County Parks and Recreation",
+    "date": "2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Section 3.9 allows exceptions by Commission; Section 2.7 incorporates posted rules (not seen). Silence is not a prohibition; practically a small campground."
+ },
+ {
+  "county": "Van Buren",
+  "system": "Van Buren County Parks & Recreation Commission (new; staffed by Community Services)",
+  "hunting": "unknown",
+  "what": "County-owned properties are tiny/non-huntable types: North Point Conservation Area (17 ac, leased to DNR as part of Van Buren State Park), Courtyard Park, the fairgrounds, and Syndicate Park Dunes. No county hunting rules found; the 2021 plan mentions hunting only as a survey response and a DNR program for private land.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest.",
+  "sources": [
+   {
+    "url": "https://media.vanburencountymi.gov/2026/04/18662-Van_buren_co_rec_plan_2021.pdf",
+    "title": "Van Buren County Community Park, Recreation, Open Space and Greenway Plan 2021-2026",
+    "date": "2021",
+    "read": "full"
+   },
+   {
+    "url": "https://vanburencountymi.gov/departments/departments-offices/community-services/van-buren-county-parks-recreation-commission/",
+    "title": "Van Buren County Parks & Recreation Commission",
+    "date": "2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Effectively no huntable county land; no rule to quote. Road Commission acts as park trustees but manages no park land."
+ },
+ {
+  "county": "Wexford",
+  "system": "none (Board of Commissioners Recreation & Building Committee; Wexford Civic Center and Northern District Fairgrounds)",
+  "hunting": "no-county-parks",
+  "what": "The county has no formal parks department; its only county-owned recreation sites are the Civic Center (The Wex) and the Northern District Fairgrounds (38 ac). No hunting program.",
+  "quote": "While there is not a formal Parks and Recreation Department, the County Administration Department assists the Board of Commissioners and Recreation and Building Committee...",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; public forest land is National/State Forest.",
+  "sources": [
+   {
+    "url": "https://wexfordcounty.org/wp-content/uploads/2025/03/Wexford-County-Parks-and-Rec-Plan-Approved.pdf",
+    "title": "Wexford County Parks & Rec Plan (approved)",
+    "date": "2025-03",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ }
+]

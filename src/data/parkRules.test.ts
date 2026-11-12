@@ -188,10 +188,20 @@ describe('park rules – county and regional land', () => {
       local('Land', 'Huron Clinton Metropark Authority', { Mang_Name: 'CITY' }),
       local('Township Park', 'Township of Oakland', { Mang_Name: 'CITY' }),
       local('Lamoreaux Park', 'Village of Sparta', { Mang_Name: 'CITY' }),
-      local('Crittenden Park', 'Osceola County Parks'), // unresearched county
+      local('Pentoga Park', 'County of Iron'), // unresearched county
     ];
     for (const p of traps) expect(gl(p).researched, `${p.Unit_Nm} / ${p.Loc_Mang}`).toBeUndefined();
-    expect(gl(local('Crittenden Park', 'Osceola County Parks')).grade).toBe('yellow');
+    expect(gl(local('Pentoga Park', 'County of Iron')).grade).toBe('yellow');
+    // Third research round: county ordinances that ban hunting in county parks.
+    expect(gl(local('Crittenden County Park', 'County of Osceola')).grade).toBe('red');
+    expect(gl(local('Wagner Park', 'County of Huron')).grade).toBe('red');
+    expect(gl(local('Local Forest', 'County of Huron', { Des_Tp: 'LRMA' })).researched).toBeUndefined();
+    expect(gl(local('Montcalm Soil Cons District', 'County of Montcalm', { Des_Tp: 'UNK' })).researched).toBeUndefined();
+    expect(gl(local('Lime Lake Park', 'Jackson County Parks')).grade).toBe('red');
+    const newaygo = gl(local('Ed Henning County Park', 'County of Newaygo'));
+    expect(newaygo.grade).toBe('yellow');
+    expect(newaygo.reason).toContain('unless authorized by the Commission');
+    expect(gl(local('Veterans Park', 'City of Jackson', { Mang_Name: 'CITY' })).researched).toBeUndefined();
     // Alpena's Long Lake Park shares a name with a Kent bow-permit park: it gets Alpena's own rule.
     const alpena = gl(local('Long Lake Park', 'Alpena County Parks'));
     expect(alpena.grade).toBe('red');

@@ -269,6 +269,15 @@ describe('park rules – reconciliation', () => {
     expect(cityOverrideFeature(src('padus-local'), gl(local('Some Park', 'Osceola County Parks')), 'Reed City').result.grade).toBe('red');
   });
 
+  it('a researched park zone is not overridden by a generic yellow DNR land record, only by a closed one', () => {
+    const gete = hit('dnr-park-hunting', { Facility: 'Gete Mino Mshkiigan State Park', HuntTrap: 'Closed' }, 1);
+    const trail = hit('dnr-managed-lands', { ProjectUseType: 'RAIL TRAILS', ProjectName: 'North Central State Trail' }, 1);
+    const r = parcel('MICHIGAN DEPT OF NATURAL RESOURCES', [gete, trail]);
+    expect(r.result.grade).toBe('green');
+    expect(r.conflict).toBe(false);
+    expect(r.notes.join(' ')).toContain('more specific');
+  });
+
   it('PAD-US layers with researched rules load for parcels even with their fill off', () => {
     for (const id of ['padus-local', 'padus-federal-other', 'padus-state-researched', 'padus-ngo']) expect(loadsForParcels(src(id)), id).toBe(true);
     expect(loadsForParcels(src('padus-state-other'))).toBe(false);

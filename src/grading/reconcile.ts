@@ -329,6 +329,12 @@ function crossCheck(r: Reconciled, overlaps: Overlap[]): Reconciled {
   if (!covering.length) return r;
   const { layer, feature } = strictest(covering);
   if (RESTRICTIVENESS[feature.grade.grade] <= RESTRICTIVENESS[r.result.grade]) return r;
+  // A researched rule for this unit is more specific than a generic "check first" land record
+  // (e.g. Gete Mino Mshkiigan, opened by WCO 7.74, is LOTS-coded as a state trail corridor);
+  // only a closed record overrides it.
+  if (r.result.researched && feature.grade.grade !== 'red') {
+    return { ...r, notes: [...r.notes, `${layer.source.title} lists this as ${featureLabel(feature)}; the researched rule for this unit is more specific and is shown.`] };
+  }
   const adopted = overlaps.find((o) => o.source.id === r.adoptedFrom)?.source.title ?? 'another layer';
   return {
     ...r,

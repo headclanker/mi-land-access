@@ -17,7 +17,7 @@ advice. Every result includes a reason that says what to verify.
 
 ---
 
-## 1. Public land (11 layers)
+## 1. Public land (12 layers)
 
 | id | What | URL | Key fields / grading | Caveats |
 |---|---|---|---|---|
@@ -31,6 +31,7 @@ advice. Every result includes a reason that says what to verify.
 | `padus-federal-other` | **Role: ownership, low confidence.** Federal fee land other than USFS (FWS refuges and WPAs, NPS lakeshores and parks, BLM, …) | `services.arcgis.com/v01gqwM5QqNysAAi/…/Fee_Managers_PADUS/FeatureServer/0` (MI, Fee, `Mang_Type='FED'`, not USFS) | `Mang_Name`, `Des_Tp`, `Pub_Access`. FWS → yellow; NPS lakeshore (`NLS`) → yellow; national park (`NP`, i.e. Isle Royale) → red; `Pub_Access='XA'` → red | PAD-US 4.1 is a national compilation, so boundaries can lag. |
 | `padus-state-other` | **Role: ownership, low confidence.** State land not managed by the DNR (`OTHS`, `SDOL`) | same, `Mang_Type='STAT' AND Mang_Name IN ('OTHS','SDOL')` | Yellow | Off by default. |
 | `padus-local` | **Role: ownership, low confidence.** County, city, township and regional parks and open space | same, `Mang_Type IN ('LOC','DIST','JNT')` | Yellow (red if `Pub_Access='XA'`) | PAD-US codes townships as `CITY`. This is the only statewide local-government land layer that could be found. |
+| `padus-state-researched` | **Role: ownership, low confidence.** The two state units with a researched rule that no default layer shows: Mackinac State Park and Fort Michilimackinac State Park | same, `Mang_Type='STAT' AND Unit_Nm IN (…)` (`PADUS_STATE_RESEARCHED_UNITS`); `padus-state-other` excludes them | Red (researched rule) | On by default, minZoom 8. Chosen over switching all of `padus-state-other` on, which is mostly unresearched and duplicates DNR park land. |
 | `padus-ngo` | **Role: ownership, low confidence.** Conservancy and land-trust preserves | same, `Mang_Type='NGO'` | Yellow (red if closed) | Off by default. |
 
 ## 2. Hunting units (18 layers; all have `species`)
@@ -306,6 +307,32 @@ overlapping CFA land; two of the five are artefacts of the audit's per-layer agg
 park and non-park LOTS rows). The 17 DNR-owned parcels that showed green under closed or
 restricted park zones now follow the zone.
 
+### Researched unit rules (src/data/parkRules.ts)
+
+The layers' attributes cannot say whether a particular county park, refuge or state park allows
+hunting. `src/data/parkRules.ts` holds the findings from `docs/PARK_HUNTING_RESEARCH.md` that the
+owner approved for the map: each rule names the layer(s) and the exact field values it matches
+(`Facility` for `dnr-park-hunting`; `Unit_Nm`, `Loc_Mang`, `Mang_Name`, `Des_Tp` for PAD-US), the
+grade, a plain-language rule, a confidence (high / medium / low), the research date
+(`researched: '2026-11-12'`) and linked sources. `gradeFeature()` grades the feature from its
+layer as usual, then a matching rule replaces the grade; the result carries
+`researched: { confidence, date, rule }` (contract) and the details sheet shows "Researched rule
+(Nov 2026, … confidence)" with clickable sources. Precedence: a rule only changes the grade of its
+own feature, so reconciliation precedence is unchanged, with two exceptions: (1) a PAD-US feature
+with a researched rule covering ≥ 50% of a parcel decides the verdict when the parcel's owner is a
+public body or blank (owner kinds other / state / federal / dnr / usfs / none) instead of yielding
+to the owner name, and a private owner under it is a "records disagree" conflict; higher-tier
+layers (park zones, HAP, CFA, DNR / USFS ownership) still win, and a researched verdict is not
+overridden by a lower-precedence yellow record in the cross-check (only by a closed one: Gete Mino
+Mshkiigan is LOTS-coded as a state trail corridor); (2) a researched yellow (open with
+a stated permit / archery rule) is exempt from the city-limits rule like the state access
+programs, while researched red stays red. PAD-US layers carrying rules (`padus-local`,
+`padus-federal-other`, `padus-state-researched`, `padus-ngo`) load for reconciliation whenever
+parcels are shown, even with their fill off. **This is a snapshot**: rules change and PAD-US names
+can change on refresh. Re-check the sources, update the rules and the date, and run
+`node scripts/check-park-rules.mjs --fixture` (counts live matches per rule, fails on a rule with
+none; its output refreshes `src/data/parkRules.fixture.json` used by the tests).
+
 ### How owner-name matching works
 
 1. **Normalize** the string: upper-case it, drop periods and apostrophes, turn punctuation
@@ -385,8 +412,11 @@ The live public-land layers are too heavy to load statewide, so below zoom 9
 
 - **What it contains**: every feature of `dnr-managed-lands` (same `where` clause as the
   catalog: active, not State Park / Recreational Areas rows), `dnr-park-hunting`,
-  `usfs-surface-ownership` (inside Michigan) and `padus-federal-other`, each graded with the
-  app's own `gradeFeature()`. Not included: HAP, Commercial Forest, local/NGO/other-state
+  `usfs-surface-ownership` (inside Michigan) and `padus-federal-other`, plus the `padus-local` and `padus-state-researched` features that
+  carry a researched green or red rule (e.g. the ~48,000-acre Gogebic County Forest, Kent / Wayne /
+  Oakland county parks, Huron-Clinton Metroparks, Mackinac Island), each graded with the
+  app's own `gradeFeature()` (researched yellow cells are exempt from the city rule). The rules
+  added on 2026-11-12 moved about +147,000 acres to green, −97,000 from yellow and +30,000 to red. Not included: HAP, Commercial Forest, unresearched local/NGO/other-state
   PAD-US, parcels. Build of 2026-11-12: 124,470 DNR + 183 park-zone + 7,139 USFS + 38 PAD-US
   features → green 7.433 M acres, yellow 0.285 M, red 0.182 M.
 - **City-limits rule** (same rule as the app, section 5a step 7, cell by cell): yellow cells

@@ -173,3 +173,53 @@ Closed: 12, Restricted: 1, Unknown: 1
 **No finding (63 counties):** Alcona, Alger, Alpena, Arenac, Baraga, Barry, Benzie, Berrien, Branch, Calhoun, Charlevoix, Cheboygan, Chippewa, Clare, Crawford, Dickinson, Eaton, Emmet, Gladwin, Gratiot, Hillsdale, Houghton, Huron, Iosco, Iron, Isabella, Jackson, Kalamazoo, Kalkaska, Keweenaw, Lake, Lapeer, Leelanau, Lenawee, Livingston, Luce, Mackinac, Macomb, Manistee, Marquette, Mason, Mecosta, Menominee, Missaukee, Monroe, Montcalm, Montmorency, Newaygo, Ogemaw, Ontonagon, Osceola, Oscoda, Otsego, Presque Isle, Roscommon, Saginaw, Sanilac, Schoolcraft, Shiawassee, St. Joseph, Tuscola, Van Buren, Wexford.
 
 Most of these are small campground or beach systems, but no source was found either way. County forests in Ontonagon, Iron, Houghton, Keweenaw, Marquette, Dickinson and Menominee are unverified.
+
+## Applied to the map
+
+On 2026-11-12 the owner approved applying these findings to the map colours. Each approved finding is a rule in `src/data/parkRules.ts` (layer + exact PAD-US / DNR names, grade, rule text, confidence, sources). `gradeFeature()` applies it after the layer's own grading, and the details sheet shows "Researched rule (Nov 2026, … confidence)" with the source links. `node scripts/check-park-rules.mjs` counts live matches per rule (and fails on a rule with none); the counts below are from 2026-11-12.
+
+| Rule | Map colour | Live features | Matched names |
+|---|---|---|---|
+| Gete Mino Mshkiigan State Park | Open | 1 | Gete Mino Mshkiigan State Park |
+| P.J. Hoffmaster State Park | Closed | 1 | P.J. Hoffmaster State Park |
+| Metamora-Hadley Recreation Area | Open | 2 | Metamora-Hadley Recreation Area |
+| Old Mission Peninsula State Park | Open | 2 | Old Mission Peninsula State Park |
+| Mackinac Island State Park | Closed | 1 | Mackinac State Park |
+| Colonial Michilimackinac (Michilimackinac State Park) | Closed | 2 | Fort Michilimackinac State Park |
+| Isle Royale National Park | Closed | 1 | Isle Royale National Park |
+| Sleeping Bear Dunes National Lakeshore | Open | 1 | Sleeping Bear Dunes National Lakeshore |
+| Pictured Rocks National Lakeshore | Open | 1 | Pictured Rocks National Lakeshore |
+| Waterfowl Production Areas (Barry, Jackson, Van Buren) | Open | 6 | Barry County Waterfowl Production Area; Jackson County Waterfowl Production Area; Jackson County Waterfowl Production Area Of Mi; Van Buren County Waterfowl Production Area |
+| Harbor Island National Wildlife Refuge | Open | 2 | Harbor Island National Wildlife Refuge |
+| Kirtland's Warbler Wildlife Management Area | Open | 2 | Kirtlands Warbler Wildlife Management Area |
+| Seney National Wildlife Refuge | Check first | 2 | Seney National Wildlife Refuge |
+| Shiawassee National Wildlife Refuge | Check first | 2 | Shiawassee National Wildlife Refuge |
+| Detroit River International Wildlife Refuge | Check first | 2 | Detroit River International Wildlife Refuge |
+| Jordan River and Pendills Creek National Fish Hatcheries | Check first | 4 | Jordan River National Fish Hatchery; Pendills Creek National Fish Hatchery |
+| Camp Grayling | Check first | 1 | Camp Grayling Military Reservation |
+| Michigan Islands National Wildlife Refuge | Closed | 2 | Michigan Islands National Wildlife Refuge |
+| Huron National Wildlife Refuge | Closed | 2 | Huron National Wildlife Refuge |
+| Green Bay National Wildlife Refuge (Michigan land) | Closed | 2 | Green Bay National Wildlife Refuge |
+| River Raisin National Battlefield Park | Closed | 1 | River Raisin National Battlefield Park |
+| Lake Erie Metropark | Check first | 1 | Lake Erie Metropark |
+| Huron-Clinton Metroparks (12 parks) | Closed | 16 | Delhi Metropark; Dexter-Huron Metropark; Hudson Mills Metropark; Huron Meadows Golf Course; Huron Meadows Metropark; Indian Springs Metropark; Indian Springs Metropark Golf Course; Kensington Metropark; … (15 names) |
+| Gogebic County Forest | Open | 3 | Forest Management; Local Forest |
+| Antrim County natural areas | Open | 2 | Grass River Natural Area; Mohrmann Park |
+| Ottawa County hunting properties (no special permit) | Open | 9 | Bur Oak Landing; Eastmanville Bayou; Hiawatha Forest; Johnson Street Wildlife Management Area; Kuits Bayou; Port Sheldon Natural Area; Ripps Bayou Site; Robinson Forest; … (9 names) |
+| Ottawa County lottery hunting properties | Check first | 4 | Crockery Creek Site; Ottawa Sands County Park; Upper Macatawa Natural Area - East; Upper Macatawa Natural Area - West |
+| Oakland County archery parks (Addison Oaks, Independence Oaks) | Check first | 2 | Addison Oaks County Park; Independence Oaks County Park |
+| Oakland County archery parks (Orion Oaks, Rose Oaks) | Check first | 2 | Orion Oaks County Park; Rose Oaks County Park |
+| Kent County bow-permit parks | Check first | 4 | Cooper Creek Park; Donald Lamoreaux Park; Long Lake Park; Spencer Forest |
+| Fred Russ Forest Park (Cass County) | Check first | 1 | Russ Forest Park |
+| Pine Haven Recreation Area (Midland County) | Check first | 1 | Pine Haven Recreational Area |
+| Genesee Recreation Area (E.A. Cummings Center managed hunt) | Check first | 1 | Genessee Recreation Area |
+| Sharon Mills Preserve (Washtenaw County) | Check first | 1 | Sharon Mills Preserve |
+| Kent County parks not on the bow-hunting list | Closed | 32 | Caledonia Lakeside County Park; Chief Hazy Cloud County Park; Chief Hazy-Cloud County Park; Coldwater River Park; Creekside County Park; Douglas Walker County Park; Dutton Shadyside County Park; Earle Brewer County Park; … (31 names) |
+| Oakland County parks not on the archery list | Closed | 10 | Catalpa Oaks County Park; Glen Oaks Golf Course; Groveland Oaks County Park; Lyon Oaks Golf Course; Proposed Park and Rose Civic Center; Red Oaks; Springfield Oaks County Park; Springfield Oaks Golf Course; … (10 names) |
+| Wayne County parks | Closed | 8 | Crosswinds Marsh County Park; Ford Field Park; Hines Parkway; Inkster Valley Golf Course; Lower Rouge County Parkway; Lower Rouge Parkway; Warren Valley Golf Course; William P Holliday Forest & Wildlife Preserve |
+| Ionia County parks | Closed | 1 | Bertha Brock Park |
+| Bay County parks | Closed | 2 | Keit Wetland Preserve; Pinconning County Park |
+
+**Approved but not applied (no matching map feature):** Delta County forest (no PAD-US unit), Antrim's Glacial Hills and Antrim Creek natural areas, Grand Traverse's Power and Bassett islands, St. Clair's Columbus County Park, Clinton Lakes County Park and Oceana County parks (only the fairgrounds is mapped). Muskegon's wastewater hunting area is mapped as DNR-managed state land and keeps that grade. Keweenaw National Historical Park stays yellow (unknown).
+
+**Matching notes.** County systems match on exact PAD-US manager strings ("Kent County", "Kent County Parks", "County of Kent" — not "City of Kentwood" or village parks; "County of Ottowa" is PAD-US's misspelling of Ottawa; "County of Bay", not "City of Bay City"; Wayne County's five manager spellings, not "City of Wayne"). Four Metroparks are filed under "CITY OF DETROIT-RECREATION DEPT", so Metroparks match on the park name. "Closed park system" rules skip county land that is not a park (Des_Tp `LRMA`/`LOTH`, fairgrounds, "Local Forest", "Land", gravel pits). Ottawa's open / lottery split follows the county hunting page (miottawa.org/parks/hunting, read 2026-11-12). Oakland's Addison Oaks and Independence Oaks are each one PAD-US polygon, so the whole park shows yellow with the text saying only the East / North section is open. The Genesee rule is attached to the Genesee Recreation Area polygon; where in it the Cummings Center hunt runs is not confirmed (low confidence).

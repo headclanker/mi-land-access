@@ -17,15 +17,20 @@
 //   3. Paints the grades onto a ~100 m grid clipped to Michigan's county outlines, in reconcile
 //      precedence order (PAD-US federal, then USFS, then DNR ownership, then park hunting zones
 //      on top), which dissolves overlaps and neighbours of the same grade for free.
-//   4. Traces each grade's connected regions back into polygons (with holes), drops specks,
+//   4. Applies the city-limits rule (src/grading/reconcile.ts cityOverride) cell by cell, using
+//      the committed city limits (public/cities/city-limits.json, scripts/build-city-limits.mjs):
+//      a yellow cell inside a city turns red, except cells whose grade came from a state park
+//      hunting zone (a restricted zone is the state's own decision). Green stays green.
+//   5. Traces each grade's connected regions back into polygons (with holes), drops specks,
 //      simplifies, and writes one MultiPolygon per grade with 3-decimal coordinates.
 
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 import { LAYER_SOURCES } from '../src/data/sources.ts';
 import { gradeFeature } from '../src/grading/grade.ts';
 
 const OUT = new URL('../public/overview/public-land.json', import.meta.url);
+const CITY_LIMITS = new URL('../public/cities/city-limits.json', import.meta.url);
 const W_LON = -90.45, E_LON = -82.1, S_LAT = 41.68, N_LAT = 48.32;
 const CELL_M = Number(process.env.OVERVIEW_CELL_M ?? 100); // grid cell size, metres
 const MIN_CELLS = 4; // regions (and holes) smaller than this are dropped (~9 ha)
@@ -311,7 +316,18 @@ async function main() {
   for (const f of countyFs) for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => (mask[i] = 1));
   console.error(`Michigan mask: ${countyFs.length} counties`);
 
+  // City limits mask (index + 1 into the city list) for the city-limits rule.
+  const cityFile = JSON.parse(await readFile(CITY_LIMITS, 'utf8'));
+  const cityNames = cityFile.features.map((f) => f.properties.n);
+  const cityMask = new Uint16Array(W * H);
+  cityFile.features.forEach((f, k) => {
+    for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => (cityMask[i] = k + 1));
+  });
+  console.error(`City limits: ${cityNames.length} cities (built ${cityFile.built})`);
+
   const grid = new Uint8Array(W * H);
+  /** Cells whose grade was painted by a state access program (park hunting zones): exempt from the city rule. */
+  const program = new Uint8Array(W * H);
   const stats = {};
   // Paint order = reconcile precedence, lowest first: PAD-US (low confidence) < USFS / DNR
   // ownership < park hunting zones (an access program decides access regardless of owner).
@@ -332,14 +348,49 @@ async function main() {
     // The county mask only exists to clip federal data from other states; Michigan DNR layers
     // are in-state by definition, and the generalised mask would clip shoreline parks.
     const useMask = !l.id.startsWith('dnr-');
+    const isProgram = l.id === 'dnr-park-hunting';
     for (const { f, grade } of graded) {
       g[grade]++;
       const code = GRADE_CODE[grade];
       if (!code) continue;
-      for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => { if (!useMask || mask[i]) grid[i] = code; });
+      for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => {
+        if (useMask && !mask[i]) return;
+        grid[i] = code;
+        program[i] = isProgram ? 1 : 0;
+      });
     }
     stats[l.id] = { features: features.length, serverCount: count, grades: g };
     console.error(`${l.id}: ${features.length}/${count} features`, g);
+  }
+
+  // City-limits rule: yellow inside a city → red (not park-zone cells); green and red unchanged.
+  const acres = (cells) => (cells * CELL_M * CELL_M) / 4046.86;
+  const cityStats = { yellowToRed: 0, yellowKeptProgram: 0, greenInCity: 0, redInCity: 0 };
+  const greenByCity = new Map();
+  for (let i = 0; i < grid.length; i++) {
+    const c = cityMask[i];
+    if (!c) continue;
+    if (grid[i] === GRADE_CODE.yellow) {
+      if (program[i]) cityStats.yellowKeptProgram++;
+      else {
+        grid[i] = GRADE_CODE.red;
+        cityStats.yellowToRed++;
+      }
+    } else if (grid[i] === GRADE_CODE.green) {
+      cityStats.greenInCity++;
+      const e = greenByCity.get(c) ?? { cells: 0, i };
+      e.cells++;
+      greenByCity.set(c, e);
+    } else if (grid[i] === GRADE_CODE.red) cityStats.redInCity++;
+  }
+  console.error(
+    `City rule: ${acres(cityStats.yellowToRed).toFixed(0)} acres yellow → red; ${acres(cityStats.yellowKeptProgram).toFixed(0)} acres of restricted park zones kept yellow; ` +
+      `${acres(cityStats.greenInCity).toFixed(0)} acres green inside cities kept green; ${acres(cityStats.redInCity).toFixed(0)} acres already red inside cities`,
+  );
+  const topGreen = [...greenByCity].sort((a, b) => b[1].cells - a[1].cells).slice(0, 8);
+  for (const [c, e] of topGreen) {
+    const r = (e.i / W) | 0, col = e.i - r * W;
+    console.error(`  green inside ${cityNames[c - 1]}: ${acres(e.cells).toFixed(0)} acres (e.g. ${(N_LAT - (r + 0.5) * DY).toFixed(4)}, ${(W_LON + (col + 0.5) * DX).toFixed(4)})`);
   }
 
   const labels = new Int32Array(W * H);
@@ -350,7 +401,7 @@ async function main() {
     const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'red' ? 1 : CODE_GRADE[code] === 'yellow' ? 2 : MIN_CELLS);
     let cells = 0;
     for (let i = 0; i < grid.length; i++) if (grid[i] === code) cells++;
-    console.error(`${CODE_GRADE[code]}: ${polys.length} polygons, ${(cells * CELL_M * CELL_M / 4046.86 / 1e6).toFixed(2)} M acres`);
+    console.error(`${CODE_GRADE[code]}: ${polys.length} polygons, ${(cells * CELL_M * CELL_M / 4046.86 / 1e6).toFixed(3)} M acres`);
     if (polys.length) features.push({ type: 'Feature', properties: { g: CODE_GRADE[code] }, geometry: { type: 'MultiPolygon', coordinates: polys } });
   }
 
@@ -359,6 +410,8 @@ async function main() {
     type: 'FeatureCollection',
     built,
     cellMeters: CELL_M,
+    cityLimitsBuilt: cityFile.built,
+    cityRule: { yellowToRedAcres: Math.round(acres(cityStats.yellowToRed)), greenInCityAcres: Math.round(acres(cityStats.greenInCity)) },
     layers: Object.fromEntries(Object.entries(stats).map(([id, s]) => [id, s.features])),
     features,
   };

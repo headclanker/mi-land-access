@@ -7,8 +7,8 @@ export type Grade = 'green' | 'yellow' | 'red' | 'unknown';
 
 export const GRADE_COLORS: Record<Grade, string> = {
   green: '#2e9e4f', // clearly public / legally open to hunting (state forest, SGA, HAP, national forest, CFA...)
-  yellow: '#e0b000', // possibly legal but uncertain: MDOT, township/county/city owned, road commission, etc.
-  red: '#c8372d', // private or closed: permission required
+  yellow: '#e0b000', // possibly legal but uncertain: MDOT, township/county/village owned, road commission, etc.
+  red: '#c8372d', // private or closed: permission required; also city-owned land and non-program land inside city limits
   unknown: '#8a8f98',
 };
 
@@ -20,8 +20,9 @@ export const GRADE_COLORS: Record<Grade, string> = {
  *   state   – State of Michigan, agency not stated
  *   federal – federal government, agency not stated
  *   other   – a specific other public body, tribe, university, utility or conservancy
- *             (MDOT / State Highway Commission, township, county, city, road commission,
- *             Consumers Energy, FWS, NPS…)
+ *             (MDOT / State Highway Commission, township, county, city, village, road commission,
+ *             Consumers Energy, FWS, NPS…). City-owned is graded red ("City-owned – closed to
+ *             hunting"), village-owned yellow; both keep kind 'other'.
  *   private – private individual, business, trust, club, church, railroad…
  *   none    – blank / missing owner name
  */

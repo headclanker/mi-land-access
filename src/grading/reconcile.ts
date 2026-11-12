@@ -15,9 +15,15 @@
 // Within one tier the most restrictive grade wins. Boundary layers never take part.
 // Partial overlaps (PARTIAL_FRACTION ≤ f < COVER_FRACTION) never change the grade; they add a note.
 //
+// Last, cityOverride() applies the city-limits rule: inside an incorporated city, ground that
+// would otherwise be yellow is treated as closed (red), because city ordinances generally
+// prohibit hunting and firearm discharge; green verdicts from state/federal records and yellow
+// state access programs (restricted park zones, restricted HAP) keep their status with a note.
+//
 // Pure module: no DOM, no map. Tested in reconcile.test.ts.
 
 import type { Grade, GradeResult, LayerSource, OwnerKind } from '../contract.ts';
+import { CITY_OWNED_CATEGORY, CITY_RULE_CAVEAT } from './grade.ts';
 
 export const COVER_FRACTION = 0.5;
 export const PARTIAL_FRACTION = 0.1;
@@ -48,6 +54,12 @@ export interface Reconciled {
   split: boolean;
   /** Short plain-language notes for the details sheet. */
   notes: string[];
+  /** Set by cityOverride(): the city whose limits hold this ground. */
+  city?: string;
+  /** Set by cityOverride(): 'closed' when the city rule changed the grade, 'note' when it only added a note. */
+  cityRule?: 'closed' | 'note';
+  /** Set when cityOverride() changed the grade: the verdict without the city rule. */
+  beforeCity?: GradeResult;
 }
 
 const RESTRICTIVENESS: Record<Grade, number> = { green: 0, unknown: 1, yellow: 2, red: 3 };
@@ -306,3 +318,61 @@ export const NO_PARCEL: GradeResult = {
   reason: 'No parcel or land-ownership layer covers this spot. Verify ownership before entering.',
   ownerKind: 'none',
 };
+
+// ---------------------------------------------------------------------------
+// City limits
+// ---------------------------------------------------------------------------
+
+/**
+ * State access programs that open land to hunting whoever owns it. A yellow verdict adopted from
+ * one of these (a restricted park zone, a restricted HAP lease) is the state's own decision and
+ * is not closed by the city rule; it gets the city note instead.
+ */
+export const CITY_EXEMPT_PROGRAMS: ReadonlySet<string> = new Set(['dnr-park-hunting', 'dnr-hap']);
+
+export function cityNote(city: string): string {
+  return `Inside ${city} city limits — local firearm-discharge ordinances may still apply; check before hunting.`;
+}
+
+export function cityCategory(category: string, city: string): string {
+  return `${category} – inside ${city} city limits`;
+}
+
+/**
+ * The city-limits rule, applied after reconcileParcel() (or to a bare map point, or to one
+ * public-land feature on its own). `city` is the city whose limits hold the parcel (≥ half its
+ * area) or the point; undefined outside every city leaves the verdict untouched.
+ *   yellow → red, "<category> – inside <City> city limits" (except yellow adopted from a state
+ *            access program, see CITY_EXEMPT_PROGRAMS, which keeps its grade with a note);
+ *   green / unknown → unchanged, with a note (the state or federal record decides);
+ *   red → unchanged; a note only for private land (permission does not lift a city ordinance).
+ */
+export function cityOverride(r: Reconciled, city: string | undefined): Reconciled {
+  const name = city?.trim();
+  if (!name) return r;
+  const g = r.result;
+  const note = cityNote(name);
+  if (g.grade === 'yellow' && !(r.adoptedFrom && CITY_EXEMPT_PROGRAMS.has(r.adoptedFrom))) {
+    return {
+      ...r,
+      result: make(
+        'red',
+        cityCategory(g.category, name),
+        `Inside ${name} city limits: city ordinances in Michigan generally prohibit hunting and discharging firearms or bows inside city limits, so this land is treated as closed — verify with the City of ${name}. ${CITY_RULE_CAVEAT} Without the city rule: ${g.reason}`,
+        g.references,
+      ),
+      city: name,
+      cityRule: 'closed',
+      beforeCity: g,
+    };
+  }
+  const isPrivate = (r.owner.ownerKind ?? (r.owner.grade === 'red' ? 'private' : undefined)) === 'private';
+  const wantNote = g.grade !== 'red' || (isPrivate && g.category !== CITY_OWNED_CATEGORY);
+  return { ...r, notes: wantNote ? [...r.notes, note] : r.notes, city: name, cityRule: 'note' };
+}
+
+/** cityOverride() for one public-land feature graded on its own (no parcel layer under it). */
+export function cityOverrideFeature(source: LayerSource, grade: GradeResult, city: string | undefined): Reconciled {
+  const base: Reconciled = { result: grade, owner: NO_PARCEL, adoptedFrom: source.id, conflict: false, split: false, notes: [] };
+  return cityOverride(base, city);
+}

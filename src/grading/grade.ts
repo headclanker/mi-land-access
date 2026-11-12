@@ -140,8 +140,14 @@ const RE_COUNTY =
 /** "FAMILY PROMISE OF TUSCOLA COUNTY", "ARC OF WAYNE COUNTY": organisations named after a county. */
 const RE_OF_COUNTY_ORG = /^(?!(COUNTY|BOARD|CHARTER COUNTY|BUILDING AUTHORITY|TREASURER)\b).*\b(OF|AND)\b.*\bCOUNTY$/;
 const RE_TOWNSHIP = /\bTWPS?\b|\bTOWNSHIPS?\b/;
-const RE_CITY_VILLAGE =
-  /\bCITY OF\b|\bVILLAGE OF\b|^(\w+ ){1,2}CITY$|^(\w+ ){1,2}CITY (HALL|PARK|AIRPORT|DDA|DUMP|DISPOSAL|CEMETERY|LIBRARY|BUILDING AUTH\w*|HOUSING COMM\w*|HSG COMM)\b|^(\w+ ){1,2}VILLAGE (HALL|PARK|DUMP|GARAGE|FIRE|HOUSING COMM\w*)\b|^CITY (HALL|DUMP|FAIR GROUNDS)\b|^VILLAGE (HALL|FIRE HALL)\b/;
+/** City-owned: "CITY OF X", "X CITY OF", "GLADWIN CITY", "SOUTH HAVEN CITY PARK"… */
+const RE_CITY =
+  /\bCITY OF\b|^(\w+ ){1,2}CITY$|^(\w+ ){1,2}CITY (HALL|PARK|AIRPORT|DDA|DUMP|DISPOSAL|CEMETERY|LIBRARY|BUILDING AUTH\w*|HOUSING COMM\w*|HSG COMM)\b|^CITY (HALL|DUMP|FAIR GROUNDS)\b/;
+/**
+ * Village-owned. Checked before RE_CITY so "VILLAGE OF COPPER CITY" and "MACKINAW CITY, VILLAGE OF"
+ * stay villages; a string that also says "CITY OF" ("CITY OF THE VILLAGE OF CLARKSTON") is a city.
+ */
+const RE_VILLAGE = /\bVILLAGE OF\b|^(\w+ ){1,2}VILLAGE (HALL|PARK|DUMP|GARAGE|FIRE|HOUSING COMM\w*)\b|^VILLAGE (HALL|FIRE HALL)\b/;
 const RE_LOCAL_AUTHORITY =
   /\bAUTHORITY\b|\bAUTH\b|\bPUBLIC WORKS\b|\bB ?P ?W\b|\bLIBRARY\b|\bFIRE (DEPT|DEPARTMENT|DIST|DISTRICT|AUTH|HALL|STATION)\b|\bSEWER\b|\bWATER (AUTHORITY|DEPT|DEPARTMENT|DIST)\b|\bSANIT|\bDOWNTOWN DEV|\bHOUSING COMM\w*|\bAIRPORT\b/;
 const RE_CEMETERY = /\bCEMETE?A?RY\b/;
@@ -151,6 +157,13 @@ const PRIVATE_VERIFY =
 
 const LOCAL_VERIFY =
   'Hunting on local-government land depends on local ordinances (many prohibit hunting or firearm discharge); contact the owner unit before hunting.';
+
+/** Category of a city-owned parcel (red wherever it is: cities own land outside their limits too). */
+export const CITY_OWNED_CATEGORY = 'City-owned – closed to hunting';
+
+/** Shared caveat for the city rule (owner name and city limits). */
+export const CITY_RULE_CAVEAT =
+  'A conservative default, not a statewide law: each city’s ordinances decide (a few run managed archery deer hunts), and state land inside a city follows state rules.';
 
 function gradeDnrOwner(): GradeResult {
   return result(
@@ -344,8 +357,19 @@ export function gradeOwnerName(rawOwner: unknown): GradeResult {
   if (RE_TOWNSHIP.test(o)) {
     return owned('other', result('yellow', 'Township-owned', `Township-owned land. ${LOCAL_VERIFY}`));
   }
-  if (RE_CITY_VILLAGE.test(o)) {
-    return owned('other', result('yellow', 'City / village-owned', `Municipal land. ${LOCAL_VERIFY}`));
+  if (RE_VILLAGE.test(o) && !/\bCITY OF\b/.test(o)) {
+    return owned('other', result(
+      'yellow',
+      'Village-owned',
+      'Village-owned land. Village ordinances often prohibit hunting or discharging firearms or bows on village property and within the village; contact the village before hunting.',
+    ));
+  }
+  if (RE_CITY.test(o)) {
+    return owned('other', result(
+      'red',
+      CITY_OWNED_CATEGORY,
+      `City-owned land. City ordinances in Michigan generally prohibit hunting and discharging firearms or bows in city parks and on city property, so treat it as closed unless the city confirms otherwise. A conservative default, not a statewide law: each city’s ordinances decide (a few run managed archery deer hunts).`,
+    ));
   }
   if (RE_LOCAL_AUTHORITY.test(o)) {
     return owned('other', result('yellow', 'Local public authority', `Owned by a local public authority (library, utility board, airport, sewer…). ${LOCAL_VERIFY}`));

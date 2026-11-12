@@ -2,6 +2,7 @@ import type { Map as MLMap } from 'maplibre-gl';
 import { GRADE_COLORS, type Grade, type LayerGroup, type LayerSource } from '../../contract';
 import type { LayerManager } from '../layers/manager';
 import type { Overview } from '../layers/overview';
+import type { CityLimitsLayer } from '../layers/cities';
 import { OVERVIEW_HANDOFF_ZOOM } from '../../data/sources';
 import { countyHasParcels, parcelCounties } from '../layers/counties';
 import { GRADE_LABEL } from '../details/details';
@@ -33,15 +34,19 @@ export class LayerPanel {
   private readonly layers: LayerManager;
   private readonly overview: Overview | null;
   private overviewRow: { input: HTMLInputElement; status: HTMLElement; row: HTMLElement } | null = null;
+  private readonly cities: CityLimitsLayer | null;
+  private cityRow: { input: HTMLInputElement; status: HTMLElement } | null = null;
 
-  constructor(root: HTMLElement, map: MLMap, layers: LayerManager, overview: Overview | null = null) {
+  constructor(root: HTMLElement, map: MLMap, layers: LayerManager, overview: Overview | null = null, cities: CityLimitsLayer | null = null) {
     this.root = root;
     this.map = map;
     this.layers = layers;
     this.overview = overview;
+    this.cities = cities;
     this.build();
     layers.onChange(() => this.update());
     overview?.onChange(() => this.update());
+    cities?.onChange(() => this.update());
     map.on('zoomend', () => this.update());
     this.update();
   }
@@ -60,6 +65,32 @@ export class LayerPanel {
     );
     this.overviewRow = { input, status, row };
     return row;
+  }
+
+  /** "City limits": a reference outline drawn from the bundled city-limits file (not an ArcGIS layer). */
+  private cityItem(): HTMLElement | null {
+    const c = this.cities;
+    if (!c) return null;
+    const input = h('input', { type: 'checkbox', role: 'switch', 'aria-label': 'City limits' });
+    input.addEventListener('change', () => c.setVisible(input.checked));
+    const status = h('span.layer-status');
+    this.cityRow = { input, status };
+    return h('li.layer-row', {}, h('label.layer-label', {}, input, h('span.switch', { 'aria-hidden': 'true' }), h('span.layer-sw.city', { title: 'Outline only' }), h('span.layer-text', {}, h('span.layer-title', {}, 'City limits'), status)));
+  }
+
+  private updateCities(): void {
+    const c = this.cities;
+    const r = this.cityRow;
+    if (!c || !r) return;
+    r.input.checked = c.visible;
+    const built = c.builtLabel();
+    const msg =
+      c.status === 'loading'
+        ? 'Loading…'
+        : c.status === 'error'
+          ? 'Couldn’t load city limits — the city rule is off.'
+          : `${c.index?.size ?? 0} Michigan cities${built ? `, built ${built}` : ''}. Land inside is treated as closed unless a state or federal program opens it.`;
+    fill(r.status, c.status === 'error' ? h('span.err', {}, msg) : msg);
   }
 
   private updateOverview(zoom: number): void {
@@ -91,6 +122,7 @@ export class LayerPanel {
         LEGEND.map((l) => h('li', {}, h('span.legend-chip', { style: `--c:${GRADE_COLORS[l.grade]}` }), h('span', {}, h('strong', {}, l.title), h('span.muted.small', {}, GRADE_LABEL[l.grade])))),
         h('li', {}, h('span.legend-chip.hatch', { style: `--c:${GRADE_COLORS.yellow}` }), h('span', {}, h('strong', {}, 'Hatched: records disagree'), h('span.muted.small', {}, 'County owner and state/federal land records conflict — verify before entering'))),
         h('li', {}, h('span.legend-chip.boundary'), h('span', {}, h('strong', {}, 'Dashed outline: area boundary'), h('span.muted.small', {}, 'Game-area or park boundary — can include private land; not a grade'))),
+        h('li', {}, h('span.legend-chip', { style: `--c:${GRADE_COLORS.red}` }), h('span', {}, h('strong', {}, 'Inside city limits'), h('span.muted.small', {}, 'Treated as closed unless a state or federal program (state land, open park zone, HAP, Commercial Forest) opens it — city ordinances generally ban hunting and firearm discharge'))),
       ),
       h(
         'p.muted.small',
@@ -103,7 +135,7 @@ export class LayerPanel {
       if (!srcs.length) return null;
       const extra = g.id === 'hunting-units' ? this.speciesSelect() : null;
       if (g.id === 'parcels') return this.parcelGroup(g.title, srcs);
-      const lead = g.id === 'public-land' ? this.overviewItem() : null;
+      const lead = g.id === 'public-land' ? this.overviewItem() : g.id === 'reference' ? this.cityItem() : null;
       return h('section.layer-group', {}, h('h3.group-title', {}, g.title), extra, h('ul.layer-list', {}, lead, srcs.map((s) => this.row(s))));
     });
     fill(this.root, legend, this.hint, ...groups.filter((x): x is HTMLElement => x !== null));
@@ -207,6 +239,7 @@ export class LayerPanel {
     this.updateCountyMaster(zoom);
     this.updateHint(zoom);
     this.updateOverview(zoom);
+    this.updateCities();
   }
 
   private updateCountyMaster(zoom: number): void {

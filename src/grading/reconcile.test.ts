@@ -365,7 +365,7 @@ describe('city limits rule', () => {
     const r = inCity('KENT COUNTY PARKS', []);
     expect(r.result.grade).toBe('red');
     expect(r.result.category).toBe('County-owned – inside Grand Rapids city limits');
-    expect(r.result.reason).toMatch(/Inside Grand Rapids city limits/);
+    expect(r.result.reason).toMatch(/^Inside Grand Rapids city limits: city ordinances/);
     expect(r.result.reason).toMatch(/not a statewide law/);
     expect(r.cityRule).toBe('closed');
     expect(r.beforeCity?.grade).toBe('yellow');

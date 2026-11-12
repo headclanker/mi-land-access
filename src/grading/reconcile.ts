@@ -358,7 +358,7 @@ export function cityOverride(r: Reconciled, city: string | undefined): Reconcile
       result: make(
         'red',
         cityCategory(g.category, name),
-        `Inside ${name} city limits. City ordinances in Michigan generally prohibit hunting and the discharge of firearms or bows inside city limits, so this land is treated as closed — verify with the City of ${name} before hunting. ${CITY_RULE_CAVEAT} Record without the city rule: ${g.reason}`,
+        `Inside ${name} city limits: city ordinances in Michigan generally prohibit hunting and discharging firearms or bows inside city limits, so this land is treated as closed — verify with the City of ${name}. ${CITY_RULE_CAVEAT} Without the city rule: ${g.reason}`,
         g.references,
       ),
       city: name,

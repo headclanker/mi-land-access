@@ -134,6 +134,27 @@ Sources that were found but not used:
 | `ref-plss-qtrqtr` | same, `/0` | |
 | `ref-state-forest-compartments` | `…/Mi_State_Forest/FeatureServer/8` | Management compartments only. They include private inholdings, so they are **not** ownership and are not graded green. |
 
+### 4a. City limits (bundled asset, not a live layer)
+
+`public/cities/city-limits.json`, built by `scripts/build-city-limits.mjs` and committed. It
+feeds the city-limits grading rule (section 5a, step 7) and the optional **"City limits"**
+reference layer (thin purple labelled outline, off by default; it is not an ArcGIS layer, so it
+has its own row in the Reference group).
+
+- **Source**: State of Michigan, Michigan Geographic Framework "Minor Civil Divisions",
+  `gisagocss.state.mi.us/arcgis/rest/services/OpenData/michigan_geographic_framework/MapServer/2`,
+  `TYPE='City'` (280 polygons; the other 1,240 rows are townships). Fields kept: `NAME` as the
+  display name `n` (with "The Village of … A Michigan City" and "Village of Clarkston" tidied to
+  "Grosse Pointe Shores" and "Clarkston"), `FIPSCODE`. **Villages are not in this layer** (they
+  sit inside townships), so the rule does not cover village limits.
+- **Build of 2026-11-11**: 280 cities. Generalised on the server with `maxAllowableOffset`
+  0.00012° (≈ 13 m north–south, 10 m east–west), 5-decimal coordinates. 460 KB raw, 122 KB
+  gzipped, so it is precached by the service worker with the rest of the app: the rule works
+  offline and never depends on the state server or its CORS.
+- **Rebuild**: `node scripts/build-city-limits.mjs` (Node 22+; behind a proxy also
+  `NODE_USE_ENV_PROXY=1`), about a second. Re-run after annexations, then rebuild the overview
+  (section 7), which reads this file.
+
 ---
 
 ## 5. Grading rules (plain language)
@@ -148,6 +169,8 @@ Sources that were found but not used:
 - USFS-owned national forest surface.
 - Parcels whose owner string clearly names the DNR (for example "STATE OF MICHIGAN DNR",
   "MICH DEPT OF NAT RES", "DNR"), the Department of Conservation, or the U.S. Forest Service.
+- Inside city limits these stay green, with a note that local firearm-discharge ordinances may
+  still apply (section 5a, step 7).
 
 **Yellow**: possibly legal, but verify first.
 - MDOT and state highway land.
@@ -155,8 +178,8 @@ Sources that were found but not used:
   say so.
 - Other state agencies: State Police, Treasury, Waterways, Building Authority, hatcheries.
 - State parks and rec areas other than the "Open" zones.
-- County, township, city and village land, including names like "GLADWIN CITY" and
-  "OLIVET VILLAGE PARK".
+- County, township and village land, including names like "OLIVET VILLAGE PARK" (the village
+  reason mentions village ordinances). City-owned land is red (below).
 - Road commissions, drain commissions and land banks.
 - School districts, ISDs and public universities or community colleges.
 - Utilities: Consumers, DTE, AEP/I&M, SEMCO, co-ops, ITC/ATC/METC.
@@ -175,6 +198,14 @@ Sources that were found but not used:
 - Inactive HAP properties.
 - State park zones marked "Closed".
 - PAD-US areas closed to the public (`XA`) and national parks (Isle Royale).
+- **City-owned land** ("CITY OF GRAND RAPIDS", "HOUGHTON CITY OF", "GLADWIN CITY"), wherever
+  it lies (cities own land outside their limits too): category "City-owned – closed to hunting".
+  City ordinances in Michigan generally prohibit hunting and discharging firearms or bows in city
+  parks and on city property, so it is treated as closed unless the city confirms otherwise.
+  Village-owned land ("VILLAGE OF SPARTA", "MACKINAW CITY, VILLAGE OF") stays yellow, and a
+  township named after a city ("GRAND RAPIDS TOWNSHIP", "CHARTER TOWNSHIP OF GRAND RAPIDS") is
+  township land, not the city.
+- **Anything that would otherwise be yellow inside city limits** (section 5a, step 7).
 
 **Unknown**: no owner data, and hunting-unit or reference layers, which are not ownership.
 
@@ -218,6 +249,30 @@ highest covering tier decides; within a tier the strictest grade wins:
 5. **The parcel's own owner-name grade.**
 6. **PAD-US.** A parcel with an owner name keeps its own grade (a note mentions the PAD-US
    record); a parcel with a blank owner adopts the PAD-US grade.
+7. **City limits (applied last, after the cross-check of disagreeing public layers)** —
+   `cityOverride()` in `reconcile.ts`. A parcel is inside a city when at least half of it lies
+   inside the city limits (section 4a); a tapped point when it lies inside them. The same step is
+   applied to every graded public-land feature on its own (≥ half its area), so PAD-US local,
+   other-state and NGO fills inside a city draw red where no parcel layer covers them, and to
+   bare-point lookups.
+   - **Yellow → red**, category "<original category> – inside <City> city limits", reason: city
+     ordinances in Michigan generally prohibit hunting and discharging firearms or bows inside
+     city limits, so the land is treated as closed — verify with the city. This covers county
+     parks, school land, township land inside a city, road commissions, utilities, MDOT, generic
+     "State of Michigan" parcels, PAD-US local land, and yellow DNR land (boat launches, trail
+     corridors). The details sheet keeps the original record underneath ("County parcel record:
+     Kent County Parks → Check first").
+   - **Exception**: a yellow verdict adopted from a state access program that opens land to
+     hunting — a restricted state park zone or a restricted HAP lease — keeps its grade, with
+     the note below. That is the state's own decision for that ground.
+   - **Green** (DNR-managed land, USFS, an open park zone, HAP, Commercial Forest, or an owner
+     name alone such as "MICH DNR") is **not** downgraded; it gets the note "Inside <City> city
+     limits — local firearm-discharge ordinances may still apply; check before hunting."
+   - **Unknown** stays unknown, with the note. **Red** stays red; private land gets the note
+     (an owner's permission does not lift a city ordinance), city-owned land and closed zones do not.
+   - **Caveat**: this is a conservative default, not a statewide law. Hunting inside city limits
+     is governed by each city's own ordinances (a few cities run managed archery deer hunts),
+     and state land inside a city follows state rules. The reason text says so.
 
 A layer covering only 10–50% of a parcel never changes its grade; the details sheet notes
 "about N% of this parcel overlaps … — boundary data may be misaligned". A parcel split between
@@ -315,6 +370,9 @@ from the build environment (403 bot check and proxy block), so no link was verif
   the better ownership test.
 - **Safety zones**: the 450-ft zones around buildings are not mapped.
 - **Hunting-unit layers** are 2026 boundaries, and the CWD layers are from 2023.
+- **City limits** are generalised to about 10–13 m and change with annexations; a parcel that
+  straddles a city line is judged by where most of its area lies. Village limits are not
+  mapped, so village parks inside a township are only caught by a "VILLAGE OF" owner name.
 - **Owner-name heuristics** will still misgrade some strings: private developments named
   "X VILLAGE", municipal names without "CITY OF" or "VILLAGE OF", and private schools. Every
   yellow or red reason tells the user to verify.
@@ -329,21 +387,30 @@ The live public-land layers are too heavy to load statewide, so below zoom 9
   catalog: active, not State Park / Recreational Areas rows), `dnr-park-hunting`,
   `usfs-surface-ownership` (inside Michigan) and `padus-federal-other`, each graded with the
   app's own `gradeFeature()`. Not included: HAP, Commercial Forest, local/NGO/other-state
-  PAD-US, parcels. Build of 2026-11-11: 124,470 DNR + 183 park-zone + 7,139 USFS + 38 PAD-US
-  features → green 7.42 M acres, yellow 0.29 M, red 0.18 M.
+  PAD-US, parcels. Build of 2026-11-12: 124,470 DNR + 183 park-zone + 7,139 USFS + 38 PAD-US
+  features → green 7.433 M acres, yellow 0.285 M, red 0.182 M.
+- **City-limits rule** (same rule as the app, section 5a step 7, cell by cell): yellow cells
+  inside the bundled city limits (section 4a) are painted red, except cells whose grade came from
+  a state park hunting zone. Green stays green. In the 2026-11-12 build this turned about
+  **2,640 acres** from yellow to red (DNR boat launches, trail corridors and other yellow DNR
+  land inside cities), kept 294 acres of restricted park zones yellow, and left about 3,110
+  acres of green inside cities (e.g. Gourdneck State Game Area in Portage, state land on
+  Mackinac Island and in Sault Ste. Marie) green. The file records `cityLimitsBuilt` and these
+  totals.
 - **How it is generalised**: server-side `maxAllowableOffset` (~50 m), then the grades are
   painted onto a ~100 m grid clipped to the county outlines in reconcile precedence order
   (PAD-US < USFS / DNR ownership < park hunting zones), so overlaps and neighbours dissolve;
   each grade's regions are traced back to polygons, specks and holes under ~4 ha dropped,
   Douglas–Peucker simplified, coordinates rounded to 3 decimals. One MultiPolygon per grade.
-  Size: ~1.6 MB raw, ~260 KB gzipped. Edges are approximate to a few hundred feet.
+  Size: ~1.8 MB raw, ~280 KB gzipped. Edges are approximate to a few hundred feet.
 - **Hand-off**: those four live layers now have `minZoom` 9. From zoom 9 up to parcel zoom (13)
   the overview stays only until the live layers have drawn something, or while one of them
   hits its per-view feature limit (dense state forest at zoom 9–11); while it stands in, the
   live layers are loaded but not drawn, so the two never double up. The layer panel lists it
   as "Statewide overview (zoomed out)" with its build date.
 - **Rebuild**: `node scripts/build-overview.mjs` (Node 22.18+, which loads the `.ts` catalog and
-  grading modules directly; behind a proxy also `NODE_USE_ENV_PROXY=1`). Takes about 30 s.
+  grading modules directly; behind a proxy also `NODE_USE_ENV_PROXY=1`). Takes about 30 s. It
+  reads `public/cities/city-limits.json`, so rebuild the city limits first when they change.
 
 Map defaults changed with the SketchX release: deer management units are **off** by default
 (a one-time migration also drops the old saved default), and every hunting-unit layer is a thin

@@ -163,7 +163,7 @@ export const CITY_OWNED_CATEGORY = 'City-owned – closed to hunting';
 
 /** Shared caveat for the city rule (owner name and city limits). */
 export const CITY_RULE_CAVEAT =
-  'This is a conservative default, not a statewide law: hunting in a city is governed by that city’s own ordinances (a few run managed archery deer hunts), and state land inside a city follows state rules.';
+  'A conservative default, not a statewide law: each city’s ordinances decide (a few run managed archery deer hunts), and state land inside a city follows state rules.';
 
 function gradeDnrOwner(): GradeResult {
   return result(

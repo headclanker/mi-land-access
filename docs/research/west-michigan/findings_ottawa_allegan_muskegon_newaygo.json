@@ -1,0 +1,1944 @@
+[
+ {
+  "county": "Ottawa",
+  "manager": "County of Ottawa",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Ottawa County Parks hunting page: state DNR rules, no extra permit, on Bass River OS, Bend Area, Bur Oak Landing E/W, Eastmanville Bayou, Grand River OS, Hiawatha Forest, Johnson Street Forest, Jubb Bayou, Kuits Bayou, Port Sheldon NA, Ripps Bayou, Robinson Forest, Van Buren Street Dunes, Marne Bog. Lottery/special-permit hunts (archery deer, 10 hunters/season/site; Crockery Creek waterfowl by written permit; Ottawa Sands/N Ottawa Dunes firearm deer via DMAP lottery) at Crockery Creek, Upper Macatawa, Stearns Creek, North Ottawa Dunes/Ottawa Sands. Closed: Adams St Landing, Deer Creek, Connor Bayou, Eastmanville Farm, Grand River Park, Grand Ravines, Grose, Hager, Hemlock Crossing, Historic Ottawa Beach Parks, Kirk, Musketawa, North Beach, Paw Paw, Pine Bend, Olive Shores, Riverside, Pigeon Creek Park, Spring Grove, Riley Trails, Rosy Mound, Tunnel Park.",
+  "quote": "Ottawa County Parks & Recreation offers hunting on over 4,500 acres of selected properties with some restrictions . Hunters must maintain a 30-yard distance from property lines; no hunting within 450 feet of any occupied building; no baiting; no trapping.",
+  "exceptions": [
+   {
+    "park": "Port Sheldon Natural Area",
+    "hunting": "open",
+    "what": "Listed open under state rules, no permit."
+   },
+   {
+    "park": "Bur Oak Landing",
+    "hunting": "open",
+    "what": "Bur Oak Landing East and West listed open under state rules."
+   },
+   {
+    "park": "Ripps Bayou Site",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Van Buren Street Dunes",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Robinson Forest",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Johnson Street Wildlife Management Area",
+    "hunting": "open",
+    "what": "Johnson Street Forest listed open."
+   },
+   {
+    "park": "Upper Macatawa Natural Area - East",
+    "hunting": "managed-hunts-only",
+    "what": "Archery deer by lottery permit ($20; 10 hunters per season: Oct 15-Nov 15 and Dec 1-Jan 1; 2026-27 dates)."
+   },
+   {
+    "park": "Upper Macatawa Natural Area - West",
+    "hunting": "managed-hunts-only",
+    "what": "Same lottery archery deer hunt."
+   },
+   {
+    "park": "Crockery Creek Site",
+    "hunting": "managed-hunts-only",
+    "what": "Archery deer by lottery; waterfowl by written special permit (boat access only, hunt within 15 ft of water edge); no other game."
+   },
+   {
+    "park": "Pigeon Creek Forest",
+    "hunting": "unknown",
+    "what": "Not on county open, permit or closed lists and has no county park page; adjoins closed Pigeon Creek Park (130 acres of county open space adjacent to the 282-ac park per search summary). Presumed not open but unconfirmed."
+   },
+   {
+    "park": "Hawthorn Pond Natural Area",
+    "hunting": "closed",
+    "what": "Not on any county hunting list; jointly owned with Holland Charter Township, whose parks ban hunting. Not confirmed on a list: treat as closed/unlisted."
+   },
+   {
+    "park": "Rosewood Park",
+    "hunting": "unknown",
+    "what": "Not on county lists or A-Z park list; probably not a county-managed park. Owner not identified."
+   },
+   {
+    "park": "Riley Trails",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Pine Bend",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Connor Bayou",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Hemlock Crossing",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Paw Paw Park East",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Paw Paw Park West",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Historic Ottawa Beach Parks - Mt. Pisgah",
+    "hunting": "closed",
+    "what": "Historic Ottawa Beach Parks listed closed."
+   },
+   {
+    "park": "Tunnel Park",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Adams Street Landing",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "North Beach Park",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Historic Ottawa Beach Parks - Black Lake Boardwalk West",
+    "hunting": "closed",
+    "what": "Historic Ottawa Beach Parks listed closed."
+   },
+   {
+    "park": "Historic Ottawa Beach Parks - Black Lake Boardwalk East",
+    "hunting": "closed",
+    "what": "Historic Ottawa Beach Parks listed closed."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties (Ottawa County Parks)",
+    "date": "2026 (page lists 2026-27 archery dates; fetched 2026-11-12)",
+    "read": "full"
+   },
+   {
+    "url": "https://miottawa.org/wp-content/uploads/Parks-hunting-rules.pdf",
+    "title": "Ottawa County Parks hunting rules (Ordinance 03-2 secs 11-12)",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://www.wgvunews.org/2026-08-05/ottawa-county-tackles-broken-system-with-managed-deer-hunts",
+    "title": "Ottawa County tackles broken system with managed deer hunts (WGVU)",
+    "date": "2026-08-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Rest of the 24 (Port Sheldon NA green, etc.) consistent with map except Pigeon Creek Forest, Hawthorn Pond, Rosewood (yellow, unconfirmed). Page includes 2026-27 archery dates and 2024-25 survey; fetched 2026-11-12."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "partly-open",
+  "what": "DNR status as given in input: Bass River Recreation Area Open (green); P.J. Hoffmaster, Holland SP (2 units), Grand Haven SP Closed. Not researched further.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Bass River Recreation Area",
+    "hunting": "open",
+    "what": "DNR status Open."
+   },
+   {
+    "park": "P.J. Hoffmaster State Park",
+    "hunting": "closed",
+    "what": "DNR status Closed."
+   },
+   {
+    "park": "Holland State Park",
+    "hunting": "closed",
+    "what": "DNR status Closed (both units)."
+   },
+   {
+    "park": "Grand Haven State Park",
+    "hunting": "closed",
+    "what": "DNR status Closed."
+   }
+  ],
+  "sources": [
+   {
+    "url": "file:parks_B.txt",
+    "title": "DNR park hunting status as given in input",
+    "date": "input",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "State of Michigan",
+  "kind": "state",
+  "hunting": "partly-open",
+  "what": "State \"other\" units: Grand Haven State Game Area (929 ac) is a DNR game area managed for waterfowl/hunting (open to hunting under state rules; SGAs are open unless posted); Hoffmaster SP duplicate of the DNR-closed state park; two boat launches not researched.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Grand Haven State Game Area",
+    "hunting": "open",
+    "what": "State game area; DNR master plan emphasises waterfowl hunting. Map shows yellow: should probably be green (open under state rules; check unit-specific SGA special regulations)."
+   },
+   {
+    "park": "Hoffmaster State Park (P.J. Hoffmaster)",
+    "hunting": "closed",
+    "what": "Duplicate of DNR \"Closed\" Hoffmaster; map yellow here vs red above."
+   },
+   {
+    "park": "Mclean Boat Launch",
+    "hunting": "unknown",
+    "what": "DNR boating access site, not researched."
+   },
+   {
+    "park": "North Fruitport Road Boat Launch",
+    "hunting": "unknown",
+    "what": "DNR boating access site, not researched."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/documents/dnr/grand_haven_sga_mp_545239_7.pdf",
+    "title": "Grand Haven State Game Area Master Plan",
+    "date": "2016",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Grand Haven SGA evidence is a DNR master plan snippet; did not read unit boundaries or special regulations."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Ottawa County list (managed as \"County\" in the database): Grand River Open Space, Bend Area, Marne Bog open under state rules; Grand Ravines (North/South), Hager Park, Spring Grove Park explicitly closed.",
+  "quote": "Ottawa County Parks & Recreation offers hunting on over 4,500 acres of selected properties with some restrictions",
+  "exceptions": [
+   {
+    "park": "Grand River Open Space",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Bend Area Open Space",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Marne Bog",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Grand River Ravines - North",
+    "hunting": "closed",
+    "what": "Grand Ravines listed closed; map shows yellow."
+   },
+   {
+    "park": "Grand River Ravines - South",
+    "hunting": "closed",
+    "what": "Grand Ravines listed closed; map shows yellow."
+   },
+   {
+    "park": "Hager Park",
+    "hunting": "closed",
+    "what": "Listed closed; map shows yellow."
+   },
+   {
+    "park": "Spring Grove Park",
+    "hunting": "closed",
+    "what": "Listed closed; map shows yellow."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties (Ottawa County Parks)",
+    "date": "2026 (page lists 2026-27 archery dates; fetched 2026-11-12)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "MAP CONTRADICTION: Grand River Ravines N/S, Hager Park, Spring Grove Park are yellow but county lists them closed (should be red)."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Mixed owners (not county-managed) under a blank/\"Municipal\" label. Only Eastmanville Farm is identifiable as an Ottawa County park and it is on the county closed list. Others are fairgrounds/camp/city parks.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Eastmanville Farm",
+    "hunting": "closed",
+    "what": "Ottawa County Parks lists Eastmanville Farm as hunting NOT allowed; map shows yellow (should be red)."
+   },
+   {
+    "park": "Windmill Island",
+    "hunting": "unknown",
+    "what": "City of Holland attraction; city park, presumed closed (urban)."
+   },
+   {
+    "park": "Hudsonville Community Fairgrounds",
+    "hunting": "unknown",
+    "what": "Fairgrounds, developed."
+   },
+   {
+    "park": "Berlin Fairgrounds",
+    "hunting": "unknown",
+    "what": "Ottawa County fairgrounds, developed."
+   },
+   {
+    "park": "Camp Geneva",
+    "hunting": "unknown",
+    "what": "Private Christian camp."
+   },
+   {
+    "park": "Kimball Wildlife Preserve",
+    "hunting": "unknown",
+    "what": "Owner not identified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties (Ottawa County Parks)",
+    "date": "2026 (page lists 2026-27 archery dates; fetched 2026-11-12)",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "The Meadows (217 ac), Wagner Park, Macatawa Park, Holland Heights School Park, Legion Field, Lincoln Park, Columbia Park, Kimball Wildlife Preserve: owners not identified; no rule found."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Ottawa County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Same county list: Eastmanville Bayou and Kuits Bayou open under state rules; Ottawa Sands County Park is a DMAP-lottery firearm deer hunt (with North Ottawa Dunes); Riverside Park closed.",
+  "quote": "Ottawa County Parks & Recreation offers hunting on over 4,500 acres of selected properties with some restrictions",
+  "exceptions": [
+   {
+    "park": "Ottawa Sands County Park",
+    "hunting": "managed-hunts-only",
+    "what": "Special-permit lottery hunt (Ottawa Sands / North Ottawa Dunes)."
+   },
+   {
+    "park": "Eastmanville Bayou",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Kuits Bayou",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Riverside Park",
+    "hunting": "closed",
+    "what": "Listed closed."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties (Ottawa County Parks)",
+    "date": "2026 (page lists 2026-27 archery dates; fetched 2026-11-12)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.wgvunews.org/2026-08-05/ottawa-county-tackles-broken-system-with-managed-deer-hunts",
+    "title": "Ottawa County tackles broken system with managed deer hunts (WGVU)",
+    "date": "2026-08-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Grand Haven Charter Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Township site (parks page, parking ordinance) gives no hunting rule for Hofma Park & Preserve or its other parks; township code not found online.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Called out in task. Contact township 616-842-5988. Nearby Hiawatha Forest is county, not township."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "County of Ottowa",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Ottawa County Parks: Hiawatha Forest open under state rules; Rosy Mound, Kirk Park closed; Van Wagoner Park not on any list.",
+  "quote": "Ottawa County Parks & Recreation offers hunting on over 4,500 acres of selected properties with some restrictions",
+  "exceptions": [
+   {
+    "park": "Hiawatha Forest",
+    "hunting": "open",
+    "what": "Listed open."
+   },
+   {
+    "park": "Rosy Mound Natural Area",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Kirk Park",
+    "hunting": "closed",
+    "what": "Listed closed."
+   },
+   {
+    "park": "Kirk Park - South Beach",
+    "hunting": "closed",
+    "what": "Listed closed (Kirk Park)."
+   },
+   {
+    "park": "Van Wagoner Park",
+    "hunting": "unknown",
+    "what": "Not on county lists; 5-acre park near Ferrysburg/Spring Lake, owner not identified (possibly Spring Lake Twp/Ferrysburg)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties (Ottawa County Parks)",
+    "date": "2026 (page lists 2026-27 archery dates; fetched 2026-11-12)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Ottawa County Parks and Recreation",
+  "kind": "county",
+  "hunting": "closed",
+  "what": "Pigeon Creek Park, Grand River Park, Grose Park, Deer Creek Park are all on the county \"hunting NOT allowed\" list.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties (Ottawa County Parks)",
+    "date": "2026 (page lists 2026-27 archery dates; fetched 2026-11-12)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Consistent with red on map."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "CITY OF GRAND RAPIDS",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Aman Park (Ottawa Co., city-owned): no hunting rule found. City deer-management page says city is using DMAP/bow hunters in limited places; a 2025 pilot did not proceed at Bristol Ave and Aman Park is not named.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.grandrapidsmi.gov/Deer-Management",
+    "title": "City of Grand Rapids Deer Management",
+    "date": "2025-26",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Holland Charter Township",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Holland Charter Township Parks Department: hunting, trapping or killing of animals in township parks is prohibited.",
+  "quote": "The hunting, trapping or killing of animals in Holland Charter Township Parks is prohibited.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://hct.holland.mi.us/departments/parks",
+    "title": "Holland Charter Township Parks Department",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Cites Comp. Ords. 1987 s20.252(d); Code 1991 s9-5. Hawthorn Pond Natural Area (joint with Ottawa County) also falls under this body."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Grand Haven",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Grand Haven city park rules not found online (Municode not retrievable). Includes Mulligan's Hollow (93 ac) and Duncan Woods (42 ac).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Map treats city land as closed. Municode check not done."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Holland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Holland code ch. 22 has a \"Firearms, etc.\" section (22-4) and ch. 20 sec 20-4 discharge; texts not read. A 2013 hunting regulation was repealed in 2015 (chronological list, snippet).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.ecode360.com/12714016",
+    "title": "City of Holland code (ecode360, 403 to automated requests; chapter titles via search only)",
+    "date": "n/d",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Albert C. Keppel Forest Preserve, DeGraaf Nature Center, Van Raalte Farm are the large city parcels."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Park Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No Park Township park hunting rule found. State rule R 317.170.1 prohibits hunting and discharge of bows/firearms in the east 1/2 of SE 1/4 of sec 22 and all of the township south of Ottawa Beach Road (waterfowl on Lake Macatawa excepted); R 317.170.2 bans firearm hunting on Pine Creek bay.",
+  "quote": "Hunting for any wild animal or wild bird with a firearm, pellet gun, air rifle, spring propelled BB gun, or bow and arrow ... is prohibited in the east 1/2 of the southeast 1/4 of section 22, Park township ... and all of the township south of Ottawa Beach road.",
+  "exceptions": [
+   {
+    "park": "Virginia Park/Maatman Center",
+    "hunting": "closed",
+    "what": "Lies south of Ottawa Beach Rd (approx 42.7714): inside the state-regulated no-hunting area (verify exact road line)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ottawa/hunting",
+    "title": "DNR local hunting controls - Ottawa County (R 317.170.1/.2 Park Township)",
+    "date": "current 2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Winstrom Preserve (42.795) and Cooper-VanWieren/Stu Visser/Wendt/Ransom are north of the line; no township park rule found."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Hudsonville",
+  "kind": "city",
+  "hunting": "closed",
+  "what": "Hudsonville Park & Facility Rental Guidelines 2022 state hunting and target practice are prohibited in all city parks (seen via search summary; PDF URL not retrievable).",
+  "quote": "Hunting and target practice is prohibited in all city parks.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.hudsonville.org/media/Parks & Recreation/Feb 2022/Park _ Facility Rental Guidelines 2022.pdf",
+    "title": "Hudsonville Park & Facility Rental Guidelines 2022 (hunting prohibited in all city parks; seen via search summary, PDF not retrievable)",
+    "date": "2022-02",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "GEORGETOWN CHARTER TOWNSHIP",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No parks/hunting rule found for Rush Creek Park, 8th Ave Community Park or 28th Ave soccer fields; a 2009 proposal to expand firearm-discharge setbacks was reported but outcome not confirmed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Norton Shores",
+  "kind": "city",
+  "hunting": "managed-hunts-only",
+  "what": "Norton Shores runs a volunteer archery deer management program in city parks (2023: about 30 volunteers, 45 deer; council later authorised up to 25 volunteers). Normal ordinance bars bow/firearm use on city property. Which parks were used not found.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Black Lake Park",
+    "hunting": "unknown",
+    "what": "Not confirmed as a hunt site; city deer-program parks not identified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://news.yahoo.com/2023-deer-harvest-down-w-193646086.html",
+    "title": "With 2023 deer harvest down, W. MI cities weigh options (Norton Shores deer program)",
+    "date": "2024-01",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Listed under Ottawa in input but Black Lake Park is in Muskegon County. Municipal code not checked."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Land Conservancy of West Michigan",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "LCWM nature preserve guidelines: hunt or trap prohibited unless otherwise posted; only a few preserves (McDuffee Creek, Richmond Woods, via DNR HAP archery) allow it, none in this list.",
+  "quote": "Hunt or trap (unless otherwise posted)",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://naturenearby.org/nature-preserve-guidelines/",
+    "title": "Land Conservancy of West Michigan Nature Preserve Guidelines",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Palomita Reserve, Minnie Skwarek, DePersia South Highlands: no preserve-specific hunting statement found."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Michigan Audubon Society",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "Michigan Audubon property rules ban hunting, fishing and trapping on its sanctuaries (2018 rules, via search summary; site 403).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michiganaudubon.org/?p=10165",
+    "title": "Michigan Audubon property rules (hunting, fishing, trapping banned; site returned 403, seen via search summary)",
+    "date": "2018 rules",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Owashtanong Islands Sanctuary."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of HOlland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Smallenburg Park: city of Holland; see City of Holland.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Polkton Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Ferrysburg",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Ferrysburg Nature Preserve (40 ac) is the only sizable parcel."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Laketown",
+  "kind": "township",
+  "hunting": "partly-open",
+  "what": "Laketown Township (Allegan Co.) runs an archery deer lottery only at Huyser Farm Park (not in input); Laketown Township Park (47 ac) has no stated hunting.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://laketowntwp.org/hunter-bags-buck-on-first-day-at-huyser/",
+    "title": "Hunter bags buck on first day at Huyser (Laketown Township)",
+    "date": "2026-11-04",
+    "read": "full"
+   },
+   {
+    "url": "https://laketowntwp.org/township-parks/",
+    "title": "Laketown Township parks list (Huyser Farm, Wolters Woods, Sanctuary Woods ...)",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Michigan",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "Second Grand Haven State Park polygon (DNR status Closed in the DNR list).",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Grand Haven State Park",
+    "hunting": "closed",
+    "what": "DNR status Closed; map shows yellow here (should be red)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "file:parks_B.txt",
+    "title": "DNR park hunting status as given in input",
+    "date": "input",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Spring Lake",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rycenga Park straddles Spring Lake/Fruitport townships; no township rule found (Village of Spring Lake bans hunting in village parks, but that does not govern the township).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Laketown Township",
+  "kind": "township",
+  "hunting": "partly-open",
+  "what": "Sanctuary Woods Preserve (38 ac): no hunting statement on the township park page; township archery lottery is at Huyser Farm Park only.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Sanctuary Woods Preserve",
+    "hunting": "unknown",
+    "what": "No hunting statement on the township page."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://laketowntwp.org/hunter-bags-buck-on-first-day-at-huyser/",
+    "title": "Hunter bags buck on first day at Huyser (Laketown Township)",
+    "date": "2026-11-04",
+    "read": "full"
+   },
+   {
+    "url": "https://laketowntwp.org/township-parks/",
+    "title": "Laketown Township parks list (Huyser Farm, Wolters Woods, Sanctuary Woods ...)",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Allendale",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Search returned no Allendale parks/hunting ordinance."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Zeeland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Georgetown",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Same as Georgetown Charter Township: no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "TALLMADGE TWP",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Tallmadge township office 616-677-1248; recreation plan 2023 found but no hunting statement read."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Grand Haven",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Same as Grand Haven city.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Village of Spring Lake",
+  "kind": "village",
+  "hunting": "closed",
+  "what": "Village of Spring Lake Parks Ordinance (ecode360) reported to bar hunting, trapping, killing, wounding or capturing any bird, animal or wildlife in village parks (seen only via search summary; ecode360 returns 403).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "medium",
+  "notes": "Source: ecode360.com/45277263 search summary, not read."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "\"Port Sheldon Sports Complex\" at 42.8838,-85.8587 is in Jenison (Georgetown Township), not Port Sheldon Township; owner presumably Georgetown Charter Township. No rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Coopersville",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Coopersville parks page covers reservations only; no hunting rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Spring Lake Parks",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rycenga Recreation Park: no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Port Sheldon",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Port Sheldon Park (12 ac) not matched to a parcel in the township hunting-policy table (Windsnest, Sheldon Landing and Kouw Park are closed; Stanton/Hiawatha/Van Buren Street parcels open).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.portsheldontwp.org/wp-content/uploads/2025/11/Hunting-and-Target-Practice-Policy-and-Map-PST-updated.pdf",
+    "title": "Port Sheldon Township Hunting and Target Practice Policy and Map",
+    "date": "uploaded 2025-11",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Same township policy applies in general."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Township of Holland",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Roadside Park is probably Holland Charter Township; that township bans hunting in its parks, but Roadside Park was not confirmed as a township park.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://hct.holland.mi.us/departments/parks",
+    "title": "Holland Charter Township Parks Department",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Grand Rapids",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Second Aman Park polygon; same as above.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.grandrapidsmi.gov/Deer-Management",
+    "title": "City of Grand Rapids Deer Management",
+    "date": "2025-26",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Port Sheldon Township",
+  "kind": "township",
+  "hunting": "partly-open",
+  "what": "Township policy (Nov 2025): hunting allowed only on listed township parcels (Stanton, Hiawatha, Van Buren St parcels firearm+archery; Township Hall/Fire Station archery only); Windsnest Park, Sheldon Landing/Crab Dr and Kouw Park not allowed.",
+  "quote": "Kouw Park (70-11-33-100-001) Firearm Hunting: Not Allowed; Archery Hunting: Not Allowed",
+  "exceptions": [
+   {
+    "park": "Kouw Park",
+    "hunting": "closed",
+    "what": "Policy table: no firearm or archery hunting."
+   },
+   {
+    "park": "Zwemer Park",
+    "hunting": "unknown",
+    "what": "Not in the policy table."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.portsheldontwp.org/wp-content/uploads/2025/11/Hunting-and-Target-Practice-Policy-and-Map-PST-updated.pdf",
+    "title": "Port Sheldon Township Hunting and Target Practice Policy and Map",
+    "date": "uploaded 2025-11",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The three open parcels (Stanton St, Hiawatha St, Van Buren St) are not named parks in the input."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "City of Hoilland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "College Avenue Park: city of Holland; see City of Holland.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Spring Lake Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "River Run Park: no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "The Nature Conservancy",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "TNC Michigan hunting guide lists the preserves where deer hunting is allowed; Kitchel-Lindquist/Kitchel Dunes is not among them.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.nature.org/content/dam/tnc/nature/en/documents/Michigan_Hunting_Overview.pdf",
+    "title": "Hunting on TNC Lands in Michigan",
+    "date": "n/d",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Preserve is tiny (1 ac mapped)."
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Michigan Dept of Transportation",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "MDOT-owned Heritage Park (Jenison, 1 ac roadside park): no rule found; developed site.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ottawa",
+  "manager": "Unknown",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Water Tower Park (0 ac, Holland area): owner unknown; no rule.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "closed",
+  "what": "DNR status given in input: Saugatuck Dunes State Park Closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "file:parks_B.txt",
+    "title": "DNR park hunting status as given in input",
+    "date": "input",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "County of Allegan",
+  "kind": "county",
+  "hunting": "closed",
+  "what": "Allegan County Parks FAQ (search summary): hunting is not allowed at any Allegan County owned or run parks or campgrounds. Separate permit program: county residents may hunt deer/waterfowl on the County Services (Dumont) Complex by lottery weekends ($10/weekend; deer apps May 1-Jun 30, waterfowl Jul 1-31; waterfowl limited to the fenced lagoon area).",
+  "quote": "Hunting on the County Services Complex without a valid County Hunting permit is not allowed.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.allegancounty.org/departments/parks-recreation-and-tourism/parks-faqs",
+    "title": "Allegan County Parks FAQs (site returns 403 to automated requests)",
+    "date": "n/d",
+    "read": "snippet"
+   },
+   {
+    "url": "https://www.allegancounty.org/departments/parks-recreation-and-tourism/hunting-allegan-county-dumont-complex-property",
+    "title": "Hunting Allegan County - Dumont Complex Property",
+    "date": "n/d",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "allegancounty.org returned 403 to automated requests, so Ordinance #1010 and the Dumont page were not read; facts are from search summaries. Dumont Complex is not a mapped park in this list (Dumont Lake Park, 15 ac, is a closed county park)."
+ },
+ {
+  "county": "Allegan",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Mixed owners under blank/\"Municipal\": camps (Camp Beachpoint, Pine Trails), school facility (Lansing Environmental Education Center), Dorr Township parks (Dorr Township Park, Gries Park), others unplaced. Village Park (104 ac, 43.8159,-85.0663) and Community Park (43.1497,-85.5216) are far outside Allegan County (coordinates wrong). No rules found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Dorr Township parks page lists parks but rules text not retrievable."
+ },
+ {
+  "county": "Allegan",
+  "manager": "Southwest Michigan Land Conservancy",
+  "kind": "conservancy",
+  "hunting": "restricted",
+  "what": "SWMLC: hunting and trapping are not allowed on its preserves without permission from SWMLC staff; permission is given only as part of ecological management plans, hunting slots are currently full with a long waitlist.",
+  "quote": "Hunting and/or trapping are not allowed on SWMLC preserves without permission from SWMLC staff.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://swmlc.org/public-nature-preserves/",
+    "title": "SWMLC public preserve rules and FAQs",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Not stated which of Wau-Ke-Na, Pritschet/Davis, Swan Creek have hunters; the preserve pages show no hunting text."
+ },
+ {
+  "county": "Allegan",
+  "manager": "Land Conservancy of West Michigan",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "Saugatuck Dunes - Singapore Dunes LLC parcels are the LCWM Saugatuck Township Riverside Park project, which the conservancy says is private and not open to the public; general LCWM rule bans hunting unless posted.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://naturenearby.org/nature-preserve-guidelines/",
+    "title": "Land Conservancy of West Michigan Nature Preserve Guidelines",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Saugatuck",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Mt. Baldhead Park (111 ac) is the large parcel."
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Allegan",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "Michigan Nature Association",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "MNA sanctuary visitation rules: hunting and trapping are not allowed on any MNA sanctuaries unless special permission through an agreement.",
+  "quote": "Hunting and trapping are not allowed on any MNA sanctuaries, unless receive special permission through an agreement.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://michigannature.org/menus/sanctuary-visitation-rules.html",
+    "title": "MNA sanctuary visitation rules",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Wade Memorial Sanctuary."
+ },
+ {
+  "county": "Allegan",
+  "manager": "Laketown Township",
+  "kind": "township",
+  "hunting": "partly-open",
+  "what": "Laketown Township runs an annual archery deer lottery at Huyser Farm Park (102 ac; 15 hunters; Oct 1-Nov 14 and Dec 1-31). Huyser Farm is not in the input list. Other township parks (Wolters Woods, Sanctuary Woods, etc.) have no stated hunting.",
+  "quote": "Applications are now available for the 2025 Laketown Township Archery Deer Hunting Program at Huyser Farm Park",
+  "exceptions": [
+   {
+    "park": "Walter Woods Park",
+    "hunting": "unknown",
+    "what": "Matches Wolters Woods Park (37 ac); park page shows no hunting."
+   },
+   {
+    "park": "Sanctuary Woods Preserve",
+    "hunting": "unknown",
+    "what": "No hunting statement on township park page."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://laketowntwp.org/hunter-bags-buck-on-first-day-at-huyser/",
+    "title": "Hunter bags buck on first day at Huyser (Laketown Township)",
+    "date": "2026-11-04",
+    "read": "full"
+   },
+   {
+    "url": "https://laketowntwp.org/applications-available-for-hunting-at-huyser-farm-park/",
+    "title": "Applications available for hunting at Huyser Farm Park",
+    "date": "2025-08/09",
+    "read": "full"
+   },
+   {
+    "url": "https://laketowntwp.org/township-parks/",
+    "title": "Laketown Township parks list (Huyser Farm, Wolters Woods, Sanctuary Woods ...)",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Huyser Farm Park (4188 64th St, 102 ac) is a MISSING mapped parcel with a managed archery hunt; program began 2008; 2026 applications closed."
+ },
+ {
+  "county": "Allegan",
+  "manager": "Township of Laketown",
+  "kind": "township",
+  "hunting": "partly-open",
+  "what": "Same Laketown Township policy (Huyser Farm Park archery lottery only that is documented). Laketown Township Park / Township Park are probably Township Hall/Beach parks, no hunting stated.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://laketowntwp.org/hunter-bags-buck-on-first-day-at-huyser/",
+    "title": "Hunter bags buck on first day at Huyser (Laketown Township)",
+    "date": "2026-11-04",
+    "read": "full"
+   },
+   {
+    "url": "https://laketowntwp.org/township-parks/",
+    "title": "Laketown Township parks list (Huyser Farm, Wolters Woods, Sanctuary Woods ...)",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Plainwell",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Otsego",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Holland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Matt Urban Sports Complex, Maplewood Recreation Area: city of Holland recreation fields; see Ottawa City of Holland.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Wayland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "City of Douglas",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "Fillmore Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Allegan",
+  "manager": "SAUGATUCK TOWNSHIP",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "River Bluff Park (10 ac)."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "partly-open",
+  "what": "DNR status given in input: Duck Lake State Park Open (green); Muskegon SP, P.J. Hoffmaster, Hart-Montague Trail Closed.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Duck Lake State Park",
+    "hunting": "open",
+    "what": "DNR status Open."
+   },
+   {
+    "park": "Muskegon State Park",
+    "hunting": "closed",
+    "what": "DNR status Closed."
+   },
+   {
+    "park": "P.J. Hoffmaster State Park",
+    "hunting": "closed",
+    "what": "DNR status Closed."
+   },
+   {
+    "park": "WIlliam Field Memorial Hart-Montague Trail SP",
+    "hunting": "closed",
+    "what": "DNR status Closed."
+   }
+  ],
+  "sources": [
+   {
+    "url": "file:parks_B.txt",
+    "title": "DNR park hunting status as given in input",
+    "date": "input",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "State of Michigan",
+  "kind": "state",
+  "hunting": "closed",
+  "what": "Duplicate Hoffmaster SP polygon; DNR status Closed (map shows yellow, should be red).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "file:parks_B.txt",
+    "title": "DNR park hunting status as given in input",
+    "date": "input",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Mixed owners under blank/\"Municipal\": White River Marsh Sanctuary (226 ac), Five Lakes Muskegon Nature Sanctuary (99 ac), Ravenna School Forest, Conklin Park and Village Park (coordinates outside county/misplaced), village/township fields. Owners not identified; no rules found. Muskegon Conservation District leases some of its land for hunting by consent form, but these parcels are not shown to be MCD land.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://whitehalltwp.org/?p=2331",
+    "title": "Whitehall Twp page on Muskegon Conservation District hunting leases",
+    "date": "n/d",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of Norton Shores",
+  "kind": "city",
+  "hunting": "managed-hunts-only",
+  "what": "Same Norton Shores city program (volunteer archery deer management in parks); otherwise bow/firearm use on city property prohibited by city ordinance (police notice, old).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://news.yahoo.com/2023-deer-harvest-down-w-193646086.html",
+    "title": "With 2023 deer harvest down, W. MI cities weigh options (Norton Shores deer program)",
+    "date": "2024-01",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Parks used not identified; Lake Harbor Park 167 ac, Ross Park, Elk's Park are largest."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of Muskegon",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "City of Muskegon park rules page lists hours, alcohol, leash etc.; it does not mention hunting. City code not read.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://muskegon-mi.gov/explore-muskegon/parks-and-recreation/city-of-muskegon-park-rules/",
+    "title": "City of Muskegon Park Rules page (silent on hunting)",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Muskegon County Parks",
+  "kind": "county",
+  "hunting": "closed",
+  "what": "Muskegon County Parks Ordinance sec 13: no hunting on county park property without prior written permission from the County; sec 14 bans discharge of firearms/projectile devices on county park property (possession allowed per state law).",
+  "quote": "No person, while on County Park Property, shall remove, hunt, trap, wound, kill, molest, or in any other way harm any living thing, unless prior written permission is obtained from the County or its Designee.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://muskegoncountyparks.org/wp-content/uploads/2025/04/ParksOrdinance_Adopted061422-1.pdf",
+    "title": "Muskegon County Parks Ordinance (adopted 2022-06-14)",
+    "date": "2022-06-14",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Ordinance adopted 2022-06-14. County wastewater system (not in park list) offers managed waterfowl hunts (daily drawings; DNR Wetland Wonders), plus deer/small game - separate program, not a park."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "County of Muskegon",
+  "kind": "county",
+  "hunting": "closed",
+  "what": "Same Muskegon County Parks Ordinance applies to county park properties (Blue Lake, Twin Lakes, Castenholtz); Muskegon Fairgrounds is a developed fairground.",
+  "quote": "No person, while on County Park Property, shall remove, hunt, trap, wound, kill, molest, or in any other way harm any living thing, unless prior written permission is obtained from the County or its Designee.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://muskegoncountyparks.org/wp-content/uploads/2025/04/ParksOrdinance_Adopted061422-1.pdf",
+    "title": "Muskegon County Parks Ordinance (adopted 2022-06-14)",
+    "date": "2022-06-14",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Blue Lake and Twin Lake appear in the county parks list on muskegoncountyparks.org."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Fruitport",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No Fruitport Charter Township hunting rule found for South Fruitport, Prine, Farr parks.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of Whitehall",
+  "kind": "city",
+  "hunting": "managed-hunts-only",
+  "what": "City Ordinance 25-01 (sec 51.10, effective 2025-10-01): limited controlled bow/crossbow deer hunting only, on city properties designated by council, by lottery permit ($10, background check, Oct 1-Jan 1, two-week periods, elevated stands only, no firearms). Designated sites: part of Funnell Field, Peterson & Lewis, DPW property.",
+  "quote": "Limited and controlled bow, archery, or crossbow hunting is allowed. Firearms are not permitted.",
+  "exceptions": [
+   {
+    "park": "Funnell Field",
+    "hunting": "managed-hunts-only",
+    "what": "Part of Funnell Field is a designated bow-hunting area (150 ft from buildings/streets; elevated stand; shots within 150 ft). Other Whitehall parks not designated."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://cityofwhitehall.org/wp-content/uploads/2026/07/Updated-Hunting-Ord-with-Maps.FAQsa_.pdf",
+    "title": "City of Whitehall Ordinance 25-01 sec 51.10 deer control + FAQ + maps",
+    "date": "adopted 2025-09-09, eff. 2025-10-01",
+    "read": "full"
+   },
+   {
+    "url": "https://catchmarkcommunity.com/hunters-and-anglers-urban-deer-hunting-in-whitehall-and-montague/",
+    "title": "Urban Deer Hunting in Whitehall and Montague",
+    "date": "2025",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Map should show Funnell Field as managed/lottery rather than closed."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of Muskegon Heights",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of Montague",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Montague adopted (Nov 2024) an urban bow-hunting ordinance allowing controlled bow hunting on authorised parcels of at least 6 contiguous acres (owners apply); it is not confirmed whether any city park (Montague Township Park 31 ac, Medbury 10 ac) is designated.",
+  "quote": "City of Montague now allows controlled bow hunting within city limits through an approved and regulated program.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://catchmarkcommunity.com/hunters-and-anglers-urban-deer-hunting-in-whitehall-and-montague/",
+    "title": "Urban Deer Hunting in Whitehall and Montague",
+    "date": "2025",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Ordinance text not read."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Laketon",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Laketon Township Parks and Public Property Ordinance sec 9: no hunting, trapping, killing or pursuing wildlife in any park.",
+  "quote": "No person may hunt, trap, kill or pursue any wildlife in any Park. Shooting into park areas from beyond the Park Property is prohibited.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.laketontwpmi.gov/wp-content/uploads/2024/03/2013-parks-adn-public-property-ordinance-final.pdf",
+    "title": "Laketon Township Parks and Public Property Ordinance",
+    "date": "2013",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Applies to Mullally Park (61 ac)."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Fruitland",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Fruitland Township park ordinance for Nestrom, Marcus and Duck Lake Road parks lists hunting including trapping, shooting and archery among prohibited activities. Fruitland Township Park (50 ac) assumed to be one of these.",
+  "quote": "Hunting including trapping, shooting and archery;",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://fruitlandmi.gov/wp-content/uploads/2021/11/ARTICLE-R-21-NESTROM-PARK-MARCUS-PARK-AND-DUCK-LAKE-ROAD-PARK-ORDINANCE.pdf",
+    "title": "Fruitland Township Article R 21 Nestrom, Marcus and Duck Lake Road Park Ordinance",
+    "date": "uploaded 2021-11",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Match of the mapped park to these three named parks not confirmed."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Spring Lake",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rycenga Park: no rule found (see Ottawa Spring Lake Twp).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of North Muskegon",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Muskegon",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "MERES",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Muskegon Nature Preserve (29 ac, Muskegon Lake) owned by MERES (Muskegon Environmental Research and Education Society); no rules found online.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "WHITEHALL TOWNSHIP",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Durham Road Playground: Whitehall Township; no hunting rule found. Township page notes Muskegon Conservation District hunting leases elsewhere.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://whitehalltwp.org/?p=2331",
+    "title": "Whitehall Twp page on Muskegon Conservation District hunting leases",
+    "date": "n/d",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Michigan Department of Transportation",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "Hidden Cove Park (MDOT, 16 ac): no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Laketown",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Entry is Laketon Township Park (13 ac, Muskegon County; misspelled \"Laketown\"): Laketon Township parks ordinance bans hunting in any park.",
+  "quote": "No person may hunt, trap, kill or pursue any wildlife in any Park.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.laketontwpmi.gov/wp-content/uploads/2024/03/2013-parks-adn-public-property-ordinance-final.pdf",
+    "title": "Laketon Township Parks and Public Property Ordinance",
+    "date": "2013",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Egelston",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Egelston Township Hunting Ordinance: unlawful to hunt on any township property; exceptions only when required by law or with prior written Township Board approval for a demonstrated need to hunt a specific animal.",
+  "quote": "It is unlawful for any person to hunt on Township property.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.egelstontwp.org/wp-content/uploads/2026/02/Prohibit-Hunting-Eff-April-4-2024.pdf",
+    "title": "Egelston Township Hunting Ordinance",
+    "date": "adopted 2024-03-04, eff. 2024-04-04",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Effective 2024-04-04. Applies to Wolf Lake (Beals Wolf Lake) Park and the other township park."
+ },
+ {
+  "county": "Muskegon",
+  "manager": "City of Roosevelt Park",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Village of Fruitport",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Township of Dalton",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Muskegon",
+  "manager": "Muskegon Charter Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Newaygo",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Mixed owners under blank/\"Municipal\": youth/church camps (Camp Echo, Camp Calvary, Camp Henry), Sheridan Township Forest (166 ac), Big Bend Park, Hardy Dam Day Park, Sailors Virgin Pine Forest, village/city parks; Conklin Park and Webster Park coordinates are outside Newaygo County. No rules found; DNR local controls list no ordinances for Newaygo County.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/newaygo/hunting",
+    "title": "DNR local hunting controls - Newaygo County (none listed); also Allegan, Muskegon: none listed",
+    "date": "current 2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Sheridan Township Forest could allow hunting but no source found."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "closed",
+  "what": "DNR status given in input: Newaygo State Park Closed (michigan.gov park page says only that the park borders Manistee NF \"offering easy access to trails, hunting\").",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "file:parks_B.txt",
+    "title": "DNR park hunting status as given in input",
+    "date": "input",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/recsearch/parks/newaygo",
+    "title": "Newaygo State Park (michigan.gov)",
+    "date": "current",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Park-page wording is ambiguous; input DNR status kept."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "County of Newaygo",
+  "kind": "county",
+  "hunting": "restricted",
+  "what": "Newaygo County parks ordinance (established earlier): hunting only if the Parks Commission authorises it. Not independently re-read here; no countywide authorisation found for Ed Henning Park. Newaygo Prairies-Steelcase parcel (152 ac) owner/rules not found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/newaygo/hunting",
+    "title": "DNR local hunting controls - Newaygo County (none listed); also Allegan, Muskegon: none listed",
+    "date": "current 2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Quote not re-verified."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "Michigan Nature Association",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "MNA sanctuary rules: hunting and trapping not allowed unless special permission through an agreement.",
+  "quote": "Hunting and trapping are not allowed on any MNA sanctuaries, unless receive special permission through an agreement.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://michigannature.org/menus/sanctuary-visitation-rules.html",
+    "title": "MNA sanctuary visitation rules",
+    "date": "fetched 2026-11-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Newaygo Prairie and Karner Blue sanctuaries."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "City of Fremont",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Newaygo",
+  "manager": "City of Newaygo",
+  "kind": "city",
+  "hunting": "closed",
+  "what": "City of Newaygo Park Rules (Resolution 2024-18): no hunting or trapping in a public park; weapons including bows and firearms prohibited in any public park.",
+  "quote": "No hunting. No hunting or trapping shall occur within a public park.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://newaygo.gov/documents/Resolution_2024-18__Park_Rules__Epr6g.pdf",
+    "title": "City of Newaygo Resolution 2024-18 Park Rules",
+    "date": "2024",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Document from newaygo.gov (the city, not the county)."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "City of White Cloud",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "City Park 60 ac."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "Township of Croton",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Newaygo",
+  "manager": "City of Grant",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Newaygo",
+  "manager": "Township of Sheridan",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Sheridan Park (8 ac)."
+ },
+ {
+  "county": "Newaygo",
+  "manager": "Township of Ensley",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Newaygo",
+  "manager": "County of Newaygo Parks and Recreation D",
+  "kind": "county",
+  "hunting": "restricted",
+  "what": "No parks listed in input; same county parks ordinance (hunting only if the commission authorises).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ }
+]

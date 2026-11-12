@@ -1,0 +1,598 @@
+
+===== Ottawa County =====
+
+## County of Ottawa  [padus-local; 24 parks, 3199 ac; map now: green/red/yellow; already researched rule: ottawa-hunting-open]
+  - Upper Macatawa Natural Area - East | LCA | 541 ac | yellow | 42.8026,-85.9792
+  - Port Sheldon Natural Area | LCA | 446 ac | green | 42.8788,-86.1756
+  - Riley Trails | LREC | 308 ac | red | 42.8216,-86.1856
+  - Crockery Creek Site | LRMA | 296 ac | yellow | 43.0513,-86.0687
+  - Pigeon Creek Forest | LRMA | 219 ac | yellow | 42.9395,-86.0898
+  - Bur Oak Landing | LP | 211 ac | green | 43.0152,-86.0111
+  - Pine Bend | LP | 158 ac | red | 42.9164,-86.1568
+  - Connor Bayou | LP | 146 ac | red | 43.0367,-86.1081
+  - Ripps Bayou Site | LRMA | 126 ac | green | 43.0055,-85.9237
+  - Hemlock Crossing | LP | 123 ac | red | 42.9138,-86.1499
+  - Van Buren Street Dunes | LCA | 121 ac | green | 42.8663,-86.1971
+  - Paw Paw Park East | LP | 115 ac | red | 42.7982,-86.053
+  - Robinson Forest | LRMA | 77 ac | green | 43.0213,-86.0513
+  - Upper Macatawa Natural Area - West | LCA | 73 ac | yellow | 42.7874,-85.993
+  - Historic Ottawa Beach Parks - Mt. Pisgah | LP | 53 ac | red | 42.7767,-86.2063
+  - Johnson Street Wildlife Management Area | LCA | 45 ac | green | 43.0178,-86.0986
+  - Paw Paw Park West | LP | 45 ac | red | 42.7997,-86.0636
+  - Hawthorn Pond Natural Area | LCA | 40 ac | yellow | 42.778,-86.0257
+  - Tunnel Park | LP | 19 ac | red | 42.798,-86.209
+  - Rosewood Park | LP | 15 ac | yellow | 42.8973,-85.83
+  - Adams Street Landing | LP | 9 ac | red | 42.784,-86.0392
+  - North Beach Park | LP | 6 ac | red | 43.0827,-86.2536
+  - Historic Ottawa Beach Parks - Black Lake Boardwalk West | LREC | 4 ac | red | 42.7728,-86.2042
+  - Historic Ottawa Beach Parks - Black Lake Boardwalk East | LREC | 3 ac | red | 42.7746,-86.201
+
+## (blank)  [dnr-park-hunting; 5 parks, 3020 ac; map now: green/red]
+  - Bass River Recreation Area | Open | 1662 ac | green | 43.0095,-86.0126
+  - P.J. Hoffmaster State Park | Closed | 1181 ac | red | 43.1245,-86.2672
+  - Holland State Park | Closed | 133 ac | red | 42.7783,-86.2045
+  - Grand Haven State Park | Closed | 41 ac | red | 43.0556,-86.2472
+  - Holland State Park | Closed | 3 ac | red | 42.7791,-86.1982
+
+## State of Michigan  [padus-state-other; 4 parks, 2104 ac; map now: yellow]
+  - Hoffmaster State Park (P.J. Hoffmaster) | SP | 1169 ac | yellow | 43.1246,-86.267
+  - Grand Haven State Game Area | SREC | 929 ac | yellow | 43.0385,-86.1412
+  - Mclean Boat Launch | SREC | 5 ac | yellow | 43.0727,-86.1705
+  - North Fruitport Road Boat Launch | SREC | 1 ac | yellow | 43.0882,-86.1744
+
+## County  [padus-local; 7 parks, 951 ac; map now: green/yellow; already researched rule: ottawa-hunting-open-county]
+  - Grand River Open Space | LCA | 276 ac | green | 42.9612,-85.8719
+  - Bend Area Open Space | LCA | 264 ac | green | 42.9427,-85.8155
+  - Grand River Ravines - North | LP | 128 ac | yellow | 42.9515,-85.8782
+  - Hager Park | LP | 109 ac | yellow | 42.9178,-85.8494
+  - Marne Bog | LCA | 89 ac | green | 43.0396,-85.7936
+  - Grand River Ravines - South | LP | 69 ac | yellow | 42.9458,-85.8811
+  - Spring Grove Park | LP | 16 ac | yellow | 42.8328,-85.8264
+
+## Municipal  [padus-local; 13 parks, 670 ac; map now: yellow]
+  - Eastmanville Farm | LP | 225 ac | yellow | 43.0207,-85.9832
+  - The Meadows | LREC | 217 ac | yellow | 42.9668,-85.8999
+  - Kimball Wildlife Preserve | LCA | 51 ac | yellow | 43.0037,-86.222
+  - Berlin Fairgrounds | LREC | 38 ac | yellow | 43.0356,-85.8344
+  - Windmill Island | LP | 36 ac | yellow | 42.7982,-86.0948
+  - Hudsonville Community Fairgrounds | LREC | 35 ac | yellow | 42.8637,-85.8782
+  - Wagner Park | LP | 28 ac | yellow | 42.9093,-85.8546
+  - Camp Geneva | LREC | 17 ac | yellow | 42.8399,-86.2053
+  - Macatawa Park | LP | 12 ac | yellow | 42.771,-86.2099
+  - Holland Heghts School Park | LP | 6 ac | yellow | 42.785,-86.0707
+  - Legion Field | LP | 2 ac | yellow | 42.8174,-86.0112
+  - Lincoln Park | LP | 2 ac | yellow | 42.789,-86.0996
+  - Columbia Park | LP | 1 ac | yellow | 42.7863,-86.0998
+
+## Ottawa County  [padus-local; 4 parks, 658 ac; map now: green/red/yellow; already researched rule: ottawa-hunting-lottery]
+  - Ottawa Sands County Park | LP | 353 ac | yellow | 43.0784,-86.2428
+  - Eastmanville Bayou | LCA | 155 ac | green | 43.0117,-85.9555
+  - Kuits Bayou | LCA | 76 ac | green | 43.0017,-85.9042
+  - Riverside Park | LP | 74 ac | red | 43.0258,-86.0349
+
+## Grand Haven Charter Township  [padus-local; 5 parks, 597 ac; map now: yellow]
+  - Hofma Park & Preserve | LP | 567 ac | yellow | 43.018,-86.1851
+  - Pottawattomie Park | LP | 20 ac | yellow | 43.0355,-86.1765
+  - Mercury Park | LP | 7 ac | yellow | 43.0513,-86.1891
+  - Odawa/Battle Point Launch | LP | 2 ac | yellow | 43.0241,-86.1456
+  - Millhouse Park | LP | 1 ac | yellow | 43.0241,-86.1588
+
+## County of Ottowa  [padus-local; 5 parks, 591 ac; map now: green/red/yellow; already researched rule: ottawa-hunting-open]
+  - Hiawatha Forest | LOTH | 368 ac | green | 42.9484,-86.1984
+  - Rosy Mound Natural Area | LP | 152 ac | red | 43.0211,-86.229
+  - Kirk Park | LP | 64 ac | red | 42.9453,-86.2161
+  - Van Wagoner Park | LP | 5 ac | yellow | 43.0964,-86.1918
+  - Kirk Park - South Beach | LP | 2 ac | red | 42.9436,-86.2189
+
+## Ottawa County Parks and Recreation  [padus-local; 4 parks, 482 ac; map now: red; already researched rule: ottawa-parks-closed]
+  - Pigeon Creek County Park | LP | 267 ac | red | 42.9317,-86.0954
+  - Grand River Park | LP | 167 ac | red | 42.9411,-85.8587
+  - Grose Park | LP | 46 ac | red | 43.1744,-85.8469
+  - Deer Creek Park | LP | 2 ac | red | 43.011,-85.9365
+
+## CITY OF GRAND RAPIDS  [padus-local; 1 parks, 339 ac; map now: yellow]
+  - Aman Park | LP | 339 ac | yellow | 42.9786,-85.833
+
+## Holland Charter Township  [padus-local; 5 parks, 325 ac; map now: yellow]
+  - Helder Park | LP | 170 ac | yellow | 42.8388,-86.047
+  - Quincy Park | LP | 127 ac | yellow | 42.8445,-86.1336
+  - Howard B. Dunton Park | LP | 22 ac | yellow | 42.7968,-86.1204
+  - Beechwood Park | LP | 5 ac | yellow | 42.8031,-86.1237
+  - Brookwood Park | LP | 1 ac | yellow | 42.8244,-86.0377
+
+## Grand Haven  [padus-local; 19 parks, 291 ac; map now: yellow]
+  - Harbor Island | LP | 111 ac | yellow | 43.0736,-86.2249
+  - Mulligan'S Hollow | LP | 93 ac | yellow | 43.0564,-86.2396
+  - Duncan Woods | LP | 42 ac | yellow | 43.0533,-86.2321
+  - Bicentennial Park | LP | 8 ac | yellow | 43.0647,-86.2347
+  - Chinook Pier Park | LP | 6 ac | yellow | 43.0677,-86.2316
+  - East Grand River Park | LP | 6 ac | yellow | 43.0612,-86.2023
+  - Rix Robinson Park | LP | 6 ac | yellow | 43.0727,-86.2185
+  - Sluka Field | LP | 6 ac | yellow | 43.0567,-86.2043
+  - Harbor Island Linear Park | LP | 4 ac | yellow | 43.0686,-86.2323
+  - Escanaba Park | LP | 3 ac | yellow | 43.0607,-86.2387
+  - Central Park | LP | 2 ac | yellow | 43.0632,-86.2268
+  - Lighthouse Connector Park | LP | 2 ac | yellow | 43.0593,-86.2433
+  - Bolt Park | LP | 1 ac | yellow | 43.0598,-86.2054
+  - Hatton Park | LP | 1 ac | yellow | 43.0673,-86.2255
+  - Johnston Park | LP | 0 ac | yellow | 43.0589,-86.2279
+  - Klaver Park | LP | 0 ac | yellow | 43.059,-86.2249
+  - Klempel Park | LP | 0 ac | yellow | 43.0579,-86.1973
+  - Veteran'S Memorial Park | LP | 0 ac | yellow | 43.0596,-86.2393
+  - Willow Park | LP | 0 ac | yellow | 43.0608,-86.2233
+
+## City of Holland  [padus-local; 13 parks, 290 ac; map now: yellow]
+  - Van Raalte Farm Park | LP | 150 ac | yellow | 42.7797,-86.0627
+  - Albert C. Keppel Forest Preserve | LCA | 41 ac | yellow | 42.8062,-86.1947
+  - Riverview Park | LP | 24 ac | yellow | 42.7943,-86.1037
+  - Matt Urban Sports Complex | LREC | 22 ac | yellow | 42.7654,-86.0939
+  - Kollen Park | LP | 15 ac | yellow | 42.7875,-86.1234
+  - Degraaf Nature Center | LCA | 14 ac | yellow | 42.7754,-86.1391
+  - Prospect Park | LP | 7 ac | yellow | 42.7767,-86.1006
+  - Centennial Park | LP | 6 ac | yellow | 42.7875,-86.1081
+  - Moran Park | LP | 4 ac | yellow | 42.778,-86.1133
+  - Van Bragt Park | LP | 4 ac | yellow | 42.7987,-86.1118
+  - Lakeview Park | LP | 2 ac | yellow | 42.7742,-86.1611
+  - Holland Heights Park | LP | 1 ac | yellow | 42.7883,-86.0702
+  - Morton Park | LP | 0 ac | yellow | 42.7904,-86.1173
+
+## Park Township  [padus-local; 8 parks, 278 ac; map now: yellow]
+  - Winstrom Park/Preserve | LP | 75 ac | yellow | 42.7951,-86.1812
+  - Cooper-Vanwieren Park | LP | 61 ac | yellow | 42.7999,-86.1647
+  - Fair Grounds/Park Township Community Center | LP | 51 ac | yellow | 42.7915,-86.1641
+  - Stu Visser Trails | LP | 41 ac | yellow | 42.8019,-86.1403
+  - Wendt Park | LP | 24 ac | yellow | 42.8137,-86.1413
+  - Ransom Street Park | LP | 21 ac | yellow | 42.8462,-86.1919
+  - Virginia Park/Maatman Center | LP | 5 ac | yellow | 42.7714,-86.1779
+  - Chief Waukazoo Park | LP | 0 ac | yellow | 42.7848,-86.168
+
+## City of Hudsonville  [padus-local; 7 parks, 111 ac; map now: yellow]
+  - Hudsonville Nature Center | LP | 71 ac | yellow | 42.8546,-85.8494
+  - Hughes Park | LP | 20 ac | yellow | 42.8682,-85.8787
+  - Sunrise Park | LP | 13 ac | yellow | 42.8811,-85.8455
+  - Hillside Park | LP | 4 ac | yellow | 42.8533,-85.8768
+  - Unknown Park | LREC | 2 ac | yellow | 42.8736,-85.872
+  - Veteran'S Park | LP | 1 ac | yellow | 42.8668,-85.8617
+  - Fountain Of Honor | LP | 0 ac | yellow | 42.865,-85.8687
+
+## GEORGETOWN CHARTER TOWNSHIP  [padus-local; 3 parks, 109 ac; map now: yellow]
+  - 8Th Ave Community Park | LP | 59 ac | yellow | 42.8965,-85.7993
+  - Rush Creek Park | LP | 41 ac | yellow | 42.8906,-85.8941
+  - 28Th Avenue Soccer Fields | LP | 9 ac | yellow | 42.8937,-85.8534
+
+## City of Norton Shores  [padus-local; 1 parks, 77 ac; map now: yellow]
+  - Black Lake Park | LP | 77 ac | yellow | 43.1218,-86.238
+
+## Land Conservancy of West Michigan  [padus-ngo; 3 parks, 74 ac; map now: yellow]
+  - Palomita Reserve | PCON | 40 ac | yellow | 42.9629,-86.2151
+  - Minnie Skwarek Nature Reserve | LCA | 21 ac | yellow | 43.0575,-86.1628
+  - DePersia South Highlands Nature Preserve | PCON | 13 ac | yellow | 43.031,-86.234
+
+## Michigan Audubon Society  [padus-ngo; 1 parks, 61 ac; map now: yellow]
+  - Owashtanong Islands | PCON | 61 ac | yellow | 43.0591,-86.1902
+
+## City of HOlland  [padus-local; 1 parks, 60 ac; map now: yellow]
+  - Smallenburg Park | LP | 60 ac | yellow | 42.7866,-86.09
+
+## Polkton Township  [padus-local; 1 parks, 56 ac; map now: yellow]
+  - Sheridan Park | LP | 56 ac | yellow | 43.0785,-85.9438
+
+## City of Ferrysburg  [padus-local; 4 parks, 49 ac; map now: yellow]
+  - Ferrysburg Nature Preserve | LCA | 40 ac | yellow | 43.0934,-86.2326
+  - Fire Barn Park | LP | 4 ac | yellow | 43.0851,-86.2221
+  - Ferry Park | LP | 3 ac | yellow | 43.0772,-86.2149
+  - Mike Herman Memorial Field | LP | 2 ac | yellow | 43.0923,-86.2359
+
+## Township of Laketown  [padus-local; 1 parks, 47 ac; map now: yellow]
+  - Laketown Township Park | LP | 47 ac | yellow | 42.7658,-86.2008
+
+## Michigan  [padus-state-other; 1 parks, 45 ac; map now: yellow]
+  - Grand Haven State Park | SP | 45 ac | yellow | 43.0555,-86.2474
+
+## Township of Spring Lake  [padus-local; 1 parks, 40 ac; map now: yellow]
+  - Rycenga Park | LP | 40 ac | yellow | 43.1196,-86.1931
+
+## Laketown Township  [padus-local; 1 parks, 38 ac; map now: yellow]
+  - Sanctuary Woods Preserve | LCA | 38 ac | yellow | 42.766,-86.2002
+
+## Township of Allendale  [padus-local; 1 parks, 37 ac; map now: yellow]
+  - Allendale Community Park | LP | 37 ac | yellow | 42.9692,-85.9515
+
+## City of Zeeland  [padus-local; 6 parks, 34 ac; map now: yellow]
+  - Huizenga Park | LP | 24 ac | yellow | 42.8012,-86.0273
+  - Lawrence Street Park | LP | 4 ac | yellow | 42.809,-86.0217
+  - Hoogland Park | LP | 3 ac | yellow | 42.8062,-86.0112
+  - Paw Paw Drive Park | LP | 2 ac | yellow | 42.8116,-86.0365
+  - Three Corner Park | LP | 1 ac | yellow | 42.8106,-86.0139
+  - Michigan Street Tot Lot | LP | 0 ac | yellow | 42.8191,-86.0232
+
+## Township of Georgetown  [padus-local; 3 parks, 32 ac; map now: yellow]
+  - Woodcrest Park | LP | 16 ac | yellow | 42.9048,-85.8145
+  - Maplewood Park | LP | 10 ac | yellow | 42.9155,-85.8137
+  - Pioneer Park | LP | 6 ac | yellow | 42.9006,-85.8109
+
+## TALLMADGE TWP  [padus-local; 1 parks, 31 ac; map now: yellow]
+  - Tallmadge Township Park | LP | 31 ac | yellow | 42.9924,-85.8242
+
+## City of Grand Haven  [padus-local; 6 parks, 30 ac; map now: yellow]
+  - Grand Haven City Beach | LP | 14 ac | yellow | 43.0485,-86.2438
+  - Adams Street Park | LP | 7 ac | yellow | 43.0695,-86.2239
+  - Bi-Centennial Park | LP | 3 ac | yellow | 43.0643,-86.2349
+  - Hatton Park | LP | 3 ac | yellow | 43.0671,-86.2264
+  - East Grand River Park | LP | 2 ac | yellow | 43.0609,-86.204
+  - Rix Robinson Park | LP | 1 ac | yellow | 43.0738,-86.2178
+
+## Village of Spring Lake  [padus-local; 6 parks, 29 ac; map now: yellow]
+  - Mill Point Park | LP | 16 ac | yellow | 43.0752,-86.2062
+  - Central Park | LP | 11 ac | yellow | 43.0785,-86.1792
+  - Lakeside Trail | LP | 1 ac | yellow | 43.0772,-86.2013
+  - Tanglefoot Park | LP | 1 ac | yellow | 43.0752,-86.2012
+  - Jackson Street End Park | LP | 0 ac | yellow | 43.0802,-86.1989
+  - Lakeside Beach | LP | 0 ac | yellow | 43.0812,-86.1858
+
+## Township  [padus-local; 1 parks, 29 ac; map now: yellow]
+  - Port Sheldon Sports Complex | LP | 29 ac | yellow | 42.8838,-85.8587
+
+## City of Coopersville  [padus-local; 3 parks, 21 ac; map now: yellow]
+  - Coopersville Sports Complex | LP | 12 ac | yellow | 43.0577,-85.9332
+  - Grove St Park/ Main St Park | LP | 9 ac | yellow | 43.0645,-85.9292
+  - Dda Pavillion | LP | 0 ac | yellow | 43.0642,-85.9343
+
+## Township of Spring Lake Parks  [padus-local; 1 parks, 17 ac; map now: yellow]
+  - Rycenga Recreation Park | LP | 17 ac | yellow | 43.1141,-86.2038
+
+## Township of Port Sheldon  [padus-local; 1 parks, 12 ac; map now: yellow]
+  - Port Sheldon Park | LP | 12 ac | yellow | 42.8861,-86.1832
+
+## Township of Holland  [padus-local; 1 parks, 11 ac; map now: yellow]
+  - Roadside Park | LP | 11 ac | yellow | 42.8085,-86.0435
+
+## City of Grand Rapids  [padus-local; 1 parks, 11 ac; map now: yellow]
+  - Aman Park | LP | 11 ac | yellow | 42.9737,-85.7908
+
+## Port Sheldon Township  [padus-local; 2 parks, 8 ac; map now: yellow]
+  - Kouw Park | LP | 4 ac | yellow | 42.8696,-86.2101
+  - Zwemer Park | LP | 4 ac | yellow | 42.9347,-86.214
+
+## City of Hoilland  [padus-local; 1 parks, 3 ac; map now: yellow]
+  - College Avenue Park | LP | 3 ac | yellow | 42.7799,-86.1032
+
+## Spring Lake Township  [padus-local; 1 parks, 3 ac; map now: yellow]
+  - River Run Park | LP | 3 ac | yellow | 43.0604,-86.1778
+
+## The Nature Conservancy  [padus-ngo; 1 parks, 1 ac; map now: yellow]
+  - Kitchel Dunes-McInerney | PCON | 1 ac | yellow | 43.0718,-86.2501
+
+## Michigan Dept of Transportation  [padus-state-other; 1 parks, 1 ac; map now: yellow]
+  - Heritage Park | SCA | 1 ac | yellow | 42.8696,-85.8624
+
+## Unknown  [padus-local; 1 parks, 0 ac; map now: yellow]
+  - Water Tower Park | LP | 0 ac | yellow | 42.7716,-86.1175
+
+===== Allegan County =====
+
+## (blank)  [dnr-park-hunting; 1 parks, 1006 ac; map now: red]
+  - Saugatuck Dunes State Park | Closed | 1006 ac | red | 42.6961,-86.2011
+
+## County of Allegan  [padus-local; 7 parks, 627 ac; map now: yellow]
+  - Silver Creek Park | LP | 316 ac | yellow | 42.6645,-85.9265
+  - Littlejohn Lake Park | LP | 100 ac | yellow | 42.5103,-85.8933
+  - Allegan Fairgrounds | LREC | 80 ac | yellow | 42.5383,-85.8598
+  - John and Josie Bysterveld Park | LP | 79 ac | yellow | 42.7212,-85.6787
+  - West Side Park | LP | 33 ac | yellow | 42.575,-86.2267
+  - Dumont Lake Park | LP | 15 ac | yellow | 42.5956,-85.8517
+  - Gun Lake Park | LP | 4 ac | yellow | 42.5954,-85.5487
+
+## Municipal  [padus-local; 11 parks, 481 ac; map now: yellow]
+  - Lansing Environmental Education Center | LREC | 211 ac | yellow | 42.6675,-85.5704
+  - Village Park | LP | 104 ac | yellow | 43.8159,-85.0663
+  - Camp Beachpoint | LREC | 74 ac | yellow | 42.5991,-85.8616
+  - Pine Trails Camp | LREC | 42 ac | yellow | 42.6746,-86.1963
+  - Community Ball Fields | LP | 20 ac | yellow | 42.6699,-85.9994
+  - Dorr Township Park | LP | 10 ac | yellow | 42.7265,-85.7297
+  - Community Park | LP | 8 ac | yellow | 43.1497,-85.5216
+  - Gries Park | LP | 6 ac | yellow | 42.724,-85.7271
+  - East Saugatuck Park | LP | 3 ac | yellow | 42.6809,-86.0932
+  - Kidstuff Park | LP | 2 ac | yellow | 42.6402,-86.206
+  - Willow Park | LP | 1 ac | yellow | 42.6614,-86.2046
+
+## Southwest Michigan Land Conservancy  [padus-ngo; 3 parks, 419 ac; map now: yellow]
+  - Wau-Ke-Na | PCON | 361 ac | yellow | 42.5404,-86.2297
+  - Pritschet/Davis Preserve | PCON | 38 ac | yellow | 42.6339,-85.7167
+  - Swan Creek Preserve | PCON | 20 ac | yellow | 42.4615,-85.9663
+
+## Land Conservancy of West Michigan  [padus-ngo; 2 parks, 164 ac; map now: yellow]
+  - Saugatuck Dunes-Singapore Dunes LLC 1 | PCON | 148 ac | yellow | 42.6714,-86.2106
+  - Saugatuck Dunes-Singapore Dunes LLC 2 | PCON | 16 ac | yellow | 42.6655,-86.2097
+
+## City of Saugatuck  [padus-local; 6 parks, 116 ac; map now: yellow]
+  - Mt. Baldhead Park | LP | 111 ac | yellow | 42.6629,-86.2119
+  - Coghlin Park | LP | 2 ac | yellow | 42.6545,-86.2034
+  - Village Square Park | LP | 2 ac | yellow | 42.6575,-86.2042
+  - Wicks Park | LP | 1 ac | yellow | 42.658,-86.2058
+  - Mason Park | LP | 0 ac | yellow | 42.6556,-86.2039
+  - Willow Park | LP | 0 ac | yellow | 42.6612,-86.2052
+
+## City of Allegan  [padus-local; 8 parks, 81 ac; map now: yellow]
+  - Allegan Sports Complex | LREC | 62 ac | yellow | 42.5259,-85.8217
+  - Jaycee Park | LP | 11 ac | yellow | 42.5319,-85.8516
+  - Rossman Esplanade Park | LP | 3 ac | yellow | 42.522,-85.8445
+  - Water Street Riverfront Park | LP | 2 ac | yellow | 42.5272,-85.8444
+  - Hanson Park | LP | 1 ac | yellow | 42.5269,-85.8528
+  - Mahan Park | LP | 1 ac | yellow | 42.5266,-85.8486
+  - Cook Street Park | LREC | 1 ac | yellow | 42.533,-85.8481
+  - Sue Lange Memorial Park | LREC | 0 ac | yellow | 42.5235,-85.8466
+
+## Michigan Nature Association  [padus-ngo; 1 parks, 71 ac; map now: yellow]
+  - Lawrence A. And Mary Bell Wade Memorial | SCA | 71 ac | yellow | 42.6538,-86.1569
+
+## Laketown Township  [padus-local; 2 parks, 70 ac; map now: yellow]
+  - Sanctuary Woods Preserve | LCA | 38 ac | yellow | 42.766,-86.2002
+  - Walter Woods Park | LP | 32 ac | yellow | 42.7634,-86.1641
+
+## Township of Laketown  [padus-local; 2 parks, 49 ac; map now: yellow]
+  - Laketown Township Park | LP | 47 ac | yellow | 42.7658,-86.2008
+  - Township Park | LP | 2 ac | yellow | 42.7249,-86.2053
+
+## City of Plainwell  [padus-local; 7 parks, 44 ac; map now: yellow]
+  - Kenyon Park | LP | 31 ac | yellow | 42.453,-85.6284
+  - Thurl Cook Park | LP | 6 ac | yellow | 42.447,-85.6365
+  - Bandshell Park | LP | 2 ac | yellow | 42.4444,-85.6399
+  - Fannie Pell Park | LP | 2 ac | yellow | 42.4446,-85.6423
+  - Sherwood Park | LP | 2 ac | yellow | 42.4437,-85.637
+  - Hicks Park | LP | 1 ac | yellow | 42.443,-85.6432
+  - Darrow Park | LP | 0 ac | yellow | 42.4378,-85.6377
+
+## City of Otsego  [padus-local; 4 parks, 39 ac; map now: yellow]
+  - Memorial Park | LP | 20 ac | yellow | 42.4515,-85.6985
+  - Brookside Park | LP | 10 ac | yellow | 42.4558,-85.6853
+  - Unknown Park | LP | 5 ac | yellow | 42.4624,-85.6939
+  - North Side Park | LP | 4 ac | yellow | 42.4661,-85.7002
+
+## City of Holland  [padus-local; 2 parks, 32 ac; map now: yellow]
+  - Matt Urban Sports Complex | LREC | 22 ac | yellow | 42.7654,-86.0939
+  - Maplewood Recreation Area | LREC | 10 ac | yellow | 42.7639,-86.104
+
+## City of Wayland  [padus-local; 6 parks, 30 ac; map now: yellow]
+  - Rabbit River Nature Trail | LP | 23 ac | yellow | 42.6795,-85.6356
+  - Wayland City Park | LP | 4 ac | yellow | 42.6757,-85.6459
+  - North Park | LP | 2 ac | yellow | 42.6806,-85.6439
+  - Wayland Skate Park | LREC | 1 ac | yellow | 42.6725,-85.6478
+  - Wayland Mini Park | LP | 0 ac | yellow | 42.6739,-85.6429
+  - Wayland Mini Park | LP | 0 ac | yellow | 42.674,-85.6431
+
+## City of Douglas  [padus-local; 6 parks, 27 ac; map now: yellow]
+  - Howard C. Schultz Park | LP | 22 ac | yellow | 42.6413,-86.1914
+  - Wade’S Bayou Memorial Park | LP | 2 ac | yellow | 42.6434,-86.198
+  - Alice Mcclay Park | LP | 1 ac | yellow | 42.6474,-86.2001
+  - Douglas Beach | LP | 1 ac | yellow | 42.6442,-86.2262
+  - Harold Berry Field | LP | 1 ac | yellow | 42.6433,-86.2
+  - Veterans Walk Park | LP | 0 ac | yellow | 42.6483,-86.2012
+
+## Fillmore Township  [padus-local; 1 parks, 20 ac; map now: yellow]
+  - Cottonwood Park | LP | 20 ac | yellow | 42.7312,-86.0798
+
+## SAUGATUCK TOWNSHIP  [padus-local; 1 parks, 10 ac; map now: yellow]
+  - River Bluff Park | LP | 10 ac | yellow | 42.6524,-86.184
+
+===== Muskegon County =====
+
+## (blank)  [dnr-park-hunting; 4 parks, 3321 ac; map now: green/red]
+  - Muskegon State Park | Closed | 1378 ac | red | 43.2476,-86.3418
+  - P.J. Hoffmaster State Park | Closed | 1181 ac | red | 43.1245,-86.2672
+  - Duck Lake State Park | Open | 739 ac | green | 43.3478,-86.3938
+  - WIlliam Field Memorial Hart-Montague Trail SP | Closed | 23 ac | red | 43.4122,-86.361
+
+## State of Michigan  [padus-state-other; 1 parks, 1169 ac; map now: yellow]
+  - Hoffmaster State Park (P.J. Hoffmaster) | SP | 1169 ac | yellow | 43.1246,-86.267
+
+## Municipal  [padus-local; 9 parks, 507 ac; map now: yellow]
+  - White River Marsh Sanctuary | LCA | 226 ac | yellow | 43.4201,-86.3166
+  - Village Park | LP | 104 ac | yellow | 43.8159,-85.0663
+  - Five Lakes Muskegon Nature Sanctuary | LCA | 99 ac | yellow | 43.2182,-86.1203
+  - Conklin Park | LP | 28 ac | yellow | 43.236,-85.8922
+  - Beegle Field | LP | 20 ac | yellow | 43.3169,-86.254
+  - Thatcher Park | LP | 12 ac | yellow | 43.1877,-85.9346
+  - Ravenna School Forest | LRMA | 9 ac | yellow | 43.1795,-85.9491
+  - Green Creek Park | LP | 8 ac | yellow | 43.276,-86.3109
+  - Catalpa Park | LP | 1 ac | yellow | 43.38,-86.2178
+
+## City of Norton Shores  [padus-local; 7 parks, 388 ac; map now: yellow]
+  - Lake Harbor Park | LP | 167 ac | yellow | 43.1716,-86.2969
+  - Black Lake Park | LP | 77 ac | yellow | 43.1218,-86.238
+  - Ross Park | LREC | 55 ac | yellow | 43.1747,-86.2458
+  - Vanderplew Playground | LREC | 40 ac | yellow | 43.1532,-86.2576
+  - Elk's Park | LP | 38 ac | yellow | 43.1539,-86.2874
+  - Pleasure Island Water Park | LP | 9 ac | yellow | 43.1269,-86.2475
+  - E Broadway Park | LP | 2 ac | yellow | 43.1996,-86.2128
+
+## City of Muskegon  [padus-local; 21 parks, 366 ac; map now: yellow]
+  - Beachwood Park | LP | 55 ac | yellow | 43.2141,-86.3255
+  - Green Acres Park | LP | 33 ac | yellow | 43.2406,-86.2367
+  - Mcgraft Park | LP | 29 ac | yellow | 43.2125,-86.2832
+  - Mccrea Playground | LP | 26 ac | yellow | 43.2272,-86.2286
+  - Veterans Memorial Park | LP | 25 ac | yellow | 43.2598,-86.2426
+  - Richards Park | LP | 24 ac | yellow | 43.2528,-86.2374
+  - Kruse Park | LP | 24 ac | yellow | 43.2048,-86.3201
+  - Fisherman's Landing | LP | 23 ac | yellow | 43.2447,-86.2439
+  - Seyferth Playground | LP | 18 ac | yellow | 43.2076,-86.2995
+  - Smith Playground | LP | 18 ac | yellow | 43.2413,-86.2314
+  - Heritage Landing Park | LP | 17 ac | yellow | 43.232,-86.2619
+  - Reese Playground | LP | 14 ac | yellow | 43.222,-86.2109
+  - Lake Michigan Park | LP | 11 ac | yellow | 43.2136,-86.3279
+  - Campbell Playground | LP | 10 ac | yellow | 43.2154,-86.2692
+  - Margaret Drake Elliot Park | LP | 9 ac | yellow | 43.2277,-86.3368
+  - Marsh Field | LREC | 9 ac | yellow | 43.2188,-86.2431
+  - Veterans' Memorial Park | LP | 8 ac | yellow | 43.2637,-86.2472
+  - Sheldon Park | LP | 6 ac | yellow | 43.2314,-86.2178
+  - Hackley Park | LP | 3 ac | yellow | 43.2338,-86.2526
+  - Beukema Playfield | LP | 2 ac | yellow | 43.2447,-86.2146
+  - Aamodt Park | LP | 2 ac | yellow | 43.2458,-86.2344
+
+## Muskegon County Parks  [padus-local; 5 parks, 273 ac; map now: yellow]
+  - Pioneer Park | LP | 163 ac | yellow | 43.2839,-86.3679
+  - Moore Park | LP | 46 ac | yellow | 43.262,-85.8093
+  - Meinert Park | LP | 30 ac | yellow | 43.4585,-86.4561
+  - Patterson Park | LP | 22 ac | yellow | 43.1463,-85.9499
+  - Deremo Park | LP | 12 ac | yellow | 43.4609,-86.2065
+
+## County of Muskegon  [padus-local; 4 parks, 188 ac; map now: yellow]
+  - Muskegon Fairgrounds | LREC | 163 ac | yellow | 43.1873,-86.0816
+  - Blue Lake Park | LP | 12 ac | yellow | 43.4494,-86.1949
+  - Twin Lakes Park | LP | 12 ac | yellow | 43.3663,-86.1659
+  - Castenholtz Park | LP | 1 ac | yellow | 43.324,-86.2657
+
+## Township of Fruitport  [padus-local; 3 parks, 87 ac; map now: yellow]
+  - South Fruitport Township Park | LP | 41 ac | yellow | 43.1376,-86.1386
+  - Prine Park | LP | 24 ac | yellow | 43.1736,-86.1982
+  - Farr Park | LP | 22 ac | yellow | 43.1373,-86.1425
+
+## City of Whitehall  [padus-local; 11 parks, 70 ac; map now: yellow]
+  - Funnell Field | LP | 24 ac | yellow | 43.4117,-86.3365
+  - Playing Field | LP | 17 ac | yellow | 43.405,-86.3339
+  - Goodrich Park / White Lake Municipal Marina | LP | 7 ac | yellow | 43.41,-86.351
+  - Covell Park | LP | 5 ac | yellow | 43.413,-86.3506
+  - Mill Pond Park | LP | 4 ac | yellow | 43.3899,-86.3557
+  - Gee Park | LP | 3 ac | yellow | 43.3922,-86.3505
+  - Slocum Park | LP | 3 ac | yellow | 43.409,-86.342
+  - Svensson Park | LP | 3 ac | yellow | 43.3967,-86.3539
+  - Lions Park | LP | 2 ac | yellow | 43.4113,-86.347
+  - Norman Park | LP | 1 ac | yellow | 43.4124,-86.3419
+  - Veteran’S Memorial | LP | 1 ac | yellow | 43.4104,-86.3495
+
+## City of Muskegon Heights  [padus-local; 5 parks, 69 ac; map now: yellow]
+  - Mona Lake Park | LP | 37 ac | yellow | 43.1874,-86.2385
+  - Harris Nature Park | LREC | 13 ac | yellow | 43.197,-86.2316
+  - Johnny Harris Park | LP | 11 ac | yellow | 43.1998,-86.2299
+  - West Heights Park | LP | 5 ac | yellow | 43.2099,-86.2528
+  - Rowan City Park | LP | 3 ac | yellow | 43.2003,-86.2429
+
+## City of Montague  [padus-local; 7 parks, 63 ac; map now: yellow]
+  - Montague Township Park | LP | 31 ac | yellow | 43.4153,-86.3773
+  - Medbury Park | LP | 10 ac | yellow | 43.3764,-86.4257
+  - Cullen Field | LP | 6 ac | yellow | 43.411,-86.3688
+  - Cullen Memorial Fields | LP | 6 ac | yellow | 43.4093,-86.3675
+  - Athletic Field | LP | 4 ac | yellow | 43.4156,-86.3648
+  - Maple Grove Park | LP | 4 ac | yellow | 43.4019,-86.359
+  - Koon Creek Park | LP | 2 ac | yellow | 43.4111,-86.3669
+
+## Township of Laketon  [padus-local; 1 parks, 61 ac; map now: yellow]
+  - Mullally Park | LP | 61 ac | yellow | 43.2847,-86.2792
+
+## Township of Fruitland  [padus-local; 1 parks, 50 ac; map now: yellow]
+  - Fruitland Township Park | LP | 50 ac | yellow | 43.3455,-86.3786
+
+## Township of Spring Lake  [padus-local; 1 parks, 40 ac; map now: yellow]
+  - Rycenga Park | LP | 40 ac | yellow | 43.1196,-86.1931
+
+## City of North Muskegon  [padus-local; 7 parks, 39 ac; map now: yellow]
+  - Park | LREC | 12 ac | yellow | 43.2607,-86.2652
+  - Waterfront Sports Park | LREC | 8 ac | yellow | 43.2511,-86.2697
+  - Bear Lake Beach Park | LP | 6 ac | yellow | 43.2577,-86.271
+  - West End Park | LP | 6 ac | yellow | 43.2459,-86.3017
+  - Walker Park | LP | 4 ac | yellow | 43.2571,-86.2677
+  - Custer Park | LP | 2 ac | yellow | 43.2565,-86.2663
+  - East End Park | LP | 1 ac | yellow | 43.2658,-86.2557
+
+## Township of Muskegon  [padus-local; 2 parks, 38 ac; map now: yellow]
+  - Riverside Park | LP | 29 ac | yellow | 43.2748,-86.2196
+  - Parslow Park | LP | 9 ac | yellow | 43.2297,-86.2005
+
+## MERES  [padus-local; 1 parks, 29 ac; map now: yellow]
+  - Muskegon Nature Preserve | LCA | 29 ac | yellow | 43.2626,-86.2504
+
+## WHITEHALL TOWNSHIP  [padus-local; 1 parks, 20 ac; map now: yellow]
+  - Durham Road Playground | LP | 20 ac | yellow | 43.3964,-86.3089
+
+## Michigan Department of Transportation  [padus-state-other; 1 parks, 16 ac; map now: yellow]
+  - Hidden Cove Park | SP | 16 ac | yellow | 43.1824,-86.2229
+
+## Township of Laketown  [padus-local; 1 parks, 13 ac; map now: yellow]
+  - Laketon Township Park | LP | 13 ac | yellow | 43.2734,-86.3106
+
+## Township of Egelston  [padus-local; 2 parks, 13 ac; map now: yellow]
+  - Unknown Park | LP | 7 ac | yellow | 43.2284,-86.1051
+  - Wolf Lake County Park | LP | 6 ac | yellow | 43.2523,-86.1064
+
+## City of Roosevelt Park  [padus-local; 5 parks, 11 ac; map now: yellow]
+  - City Park | LP | 4 ac | yellow | 43.1967,-86.2762
+  - Unknown Park | LP | 4 ac | yellow | 43.1958,-86.2753
+  - Wells Park | LP | 1 ac | yellow | 43.2003,-86.2785
+  - Davies Park | LREC | 1 ac | yellow | 43.1964,-86.2716
+  - Lambert Park | LREC | 1 ac | yellow | 43.2009,-86.2722
+
+## Village of Fruitport  [padus-local; 1 parks, 11 ac; map now: yellow]
+  - Pomona Park | LP | 11 ac | yellow | 43.1232,-86.1563
+
+## Township of Dalton  [padus-local; 2 parks, 10 ac; map now: yellow]
+  - Browns Field Park | LP | 10 ac | yellow | 43.3053,-86.1801
+  - Padley Park | LP | 0 ac | yellow | 43.3651,-86.1867
+
+## Muskegon Charter Township  [padus-local; 1 parks, 8 ac; map now: yellow]
+  - Buel Avenue Park | LP | 8 ac | yellow | 43.2918,-86.2401
+
+===== Newaygo County =====
+
+## Municipal  [padus-local; 16 parks, 1206 ac; map now: yellow]
+  - Camp Echo | LREC | 416 ac | yellow | 43.4894,-85.8512
+  - Camp Calvary | LREC | 214 ac | yellow | 43.4138,-85.6848
+  - Camp Henry | LREC | 171 ac | yellow | 43.4487,-85.82
+  - Sheridan Township Forest | LRMA | 166 ac | yellow | 43.3985,-85.9546
+  - Big Bend Park | LP | 104 ac | yellow | 43.5184,-85.5796
+  - Sailors Virgin Pine Forest | LCA | 35 ac | yellow | 43.4634,-85.6552
+  - Conklin Park | LP | 28 ac | yellow | 43.236,-85.8922
+  - Summerbreeze Par 3 | LREC | 17 ac | yellow | 43.4478,-85.943
+  - Airport Park | LP | 13 ac | yellow | 43.5595,-85.776
+  - Hardy Dam Day Park | LP | 13 ac | yellow | 43.4804,-85.6399
+  - Kimble Park | LP | 8 ac | yellow | 43.4386,-85.67
+  - Diamond Lake Park | LP | 6 ac | yellow | 43.6033,-85.8111
+  - Webster Park | LP | 5 ac | yellow | 42.2658,-84.7507
+  - Pine Hills Park | LP | 4 ac | yellow | 43.5524,-85.7703
+  - Ole Swimming Hole Park | LP | 3 ac | yellow | 43.5475,-85.7655
+  - Oxbow Park | LP | 3 ac | yellow | 43.5054,-85.6102
+
+## (blank)  [dnr-park-hunting; 1 parks, 411 ac; map now: red]
+  - Newaygo State Park (leased from Consumer's Energy) | Closed | 411 ac | red | 43.5019,-85.5918
+
+## County of Newaygo  [padus-local; 2 parks, 192 ac; map now: yellow]
+  - Newaygo Prairies-Steelcase, Inc 2 | LOTH | 152 ac | yellow | 43.6156,-85.8163
+  - Ed Henning County Park | LP | 40 ac | yellow | 43.4213,-85.7897
+
+## Michigan Nature Association  [padus-ngo; 2 parks, 190 ac; map now: yellow]
+  - Newaygo Prairie | SCA | 109 ac | yellow | 43.4512,-85.7204
+  - Karner Blue | SCA | 81 ac | yellow | 43.4277,-85.7401
+
+## City of Fremont  [padus-local; 6 parks, 69 ac; map now: yellow]
+  - Branstrom Park | LP | 49 ac | yellow | 43.4795,-85.9425
+  - Arboretum Park | LP | 9 ac | yellow | 43.463,-85.9306
+  - Fremont Lake Park | LP | 4 ac | yellow | 43.4583,-85.963
+  - Unknown Parl | LP | 3 ac | yellow | 43.4731,-85.9541
+  - Veterans Memorial Park | LP | 3 ac | yellow | 43.4676,-85.9483
+  - Unknown Park | LP | 1 ac | yellow | 43.4568,-85.9617
+
+## City of Newaygo  [padus-local; 7 parks, 63 ac; map now: yellow]
+  - River Front Park | LP | 21 ac | yellow | 43.4199,-85.8065
+  - Nawaygo Soccer Fields | LREC | 16 ac | yellow | 43.4264,-85.7871
+  - Shaw Park | LP | 15 ac | yellow | 43.4229,-85.7936
+  - Evergreen Baseball Fields | LREC | 4 ac | yellow | 43.4265,-85.8023
+  - Unknown Park | LP | 3 ac | yellow | 43.4222,-85.8001
+  - Brooks Park | LP | 2 ac | yellow | 43.42,-85.7985
+  - Newaygo Skate Park | LREC | 2 ac | yellow | 43.4151,-85.7925
+
+## City of White Cloud  [padus-local; 1 parks, 60 ac; map now: yellow]
+  - City Park | LP | 60 ac | yellow | 43.5485,-85.7876
+
+## Township of Croton  [padus-local; 1 parks, 26 ac; map now: yellow]
+  - Croton Township Park | LP | 26 ac | yellow | 43.4494,-85.6589
+
+## City of Grant  [padus-local; 1 parks, 20 ac; map now: yellow]
+  - Blanch Lake City Park | LP | 20 ac | yellow | 43.3402,-85.8023
+
+## Township of Sheridan  [padus-local; 1 parks, 8 ac; map now: yellow]
+  - Sheridan Park | LP | 8 ac | yellow | 43.4396,-85.9636
+
+## Township of Ensley  [padus-local; 1 parks, 3 ac; map now: yellow]
+  - Baptist Lake Township Park | LP | 3 ac | yellow | 43.3351,-85.5818
+
+## County of Newaygo Parks and Recreation D  [padus-local; 1 parks, 2 ac; map now: yellow; already researched rule: newaygo-parks-authorisation]
+  - Pettibone Lake Park | LP | 2 ac | yellow | 43.7731,-85.8122

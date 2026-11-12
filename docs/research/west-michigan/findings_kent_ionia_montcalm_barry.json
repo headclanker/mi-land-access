@@ -1,0 +1,1366 @@
+[
+ {
+  "county": "Kent",
+  "manager": "Kent County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Kent County Parks' lottery archery program (deer and turkey, permit only, firearms prohibited, $25 if drawn) now covers six parks. Two of them are in this block: Donald Lamoreaux Park and Thornapple Riverbend Park, the 2026 additions (county page via search snippet names them as Donald J Lamoreaux Park 195 ac and Thornapple Riverbend Greenspace 239 ac). The other parks in this block are presumed closed.",
+  "quote": "Participating 2026: Cooper Creek Park/Spencer Forest (458 ac), Lowell Regional Greenspace (330 ac), Long Lake Park (100 ac), Two Rivers Greenspace (252 ac), Donald J Lamoreaux Park (195 ac), Thornapple Riverbend Greenspace (239 ac). Bow only, deer and turkey, permit only.",
+  "exceptions": [
+   {
+    "park": "Donald Lamoreaux Park",
+    "hunting": "managed-hunts-only",
+    "what": "County lists Donald J Lamoreaux Park, 195 ac, in 2026 bow lottery (input: 232 ac, map yellow). Name match inferred."
+   },
+   {
+    "park": "Thornapple Riverbend Park",
+    "hunting": "managed-hunts-only",
+    "what": "County lists Thornapple Riverbend Greenspace, 239 ac, in 2026 bow lottery (input: 207 ac, map RED - contradicts). Name match inferred."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County Parks: Hunting on Kent County Parks Property (403 to curl; search-snippet of page)",
+    "date": "2026",
+    "read": "snippet"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/3efc537",
+    "title": "Kent County Parks newsletter: Apply for Bow Hunting at Select Kent County Parks",
+    "date": "2025 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/427e235",
+    "title": "Kent County Parks newsletter: More Parks, More Bow Hunting Opportunities",
+    "date": "2026 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.yahoo.com/news/articles/bow-hunting-applications-kent-county-215736760.html",
+    "title": "WOOD TV: Bow hunting applications at Kent County parks rising",
+    "date": "2025-10-20",
+    "read": "full"
+   },
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County: Hunting on Kent County Parks Property (403 Cloudflare, not read)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "The two parks added in 2026 are inferred to be Lamoreaux and Thornapple Riverbend: the 2026 list has six parks and the earlier four-park newsletter list had neither. Two Rivers Greenspace is not named in the input."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Grand Rapids",
+  "kind": "city",
+  "hunting": "closed",
+  "what": "City park code bans hunting and trapping in any city park or Parks and Recreation property; the 2020 weapons ordinance bans discharge of firearms, and of bows/crossbows except on authorized ranges or private property with permission. City deer program allows bow hunting only on private land (parcels 3+ ac suggested). Includes non-city sites (Blandford Nature Center, Meijer Gardens) which were not separately checked.",
+  "quote": "No person shall hunt or trap or attempt to hunt or trap any animal or bird in any City Park or other area under the jurisdiction of the Parks and Recreation Department.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://library.municode.com/mi/grand_rapids/codes/code_of_ordinances?nodeId=TITIII--PARKS_PUBLIC_GROUNDS_CH41PARE_S3.5MOWASTEN",
+    "title": "Grand Rapids Code Title III Ch. 41 (Municode; 403 to curl, search snippet)",
+    "date": "2026",
+    "read": "snippet"
+   },
+   {
+    "url": "https://www.grandrapidsmi.gov/files/assets/public/v/1/initatives/weapons-ordinance/files/info-sheet-weapons-ordinance.pdf",
+    "title": "Info sheet: Weapons Ordinance",
+    "date": "2020",
+    "read": "snippet"
+   },
+   {
+    "url": "https://www.grandrapidsmi.gov/initiatives/deer-management/",
+    "title": "GR Deer Management",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Blandford Nature Center is a nonprofit-run site; its own rule is unchecked."
+ },
+ {
+  "county": "Kent",
+  "manager": "Kent County Parks",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Kent County Parks runs a lottery-permit archery (deer and turkey) program on a few select parks only: Cooper Creek Park/Spencer Forest (458 ac, 15 hunters), Lowell Regional Greenspace (306 ac hunt area, 15), Long Lake Park (100 ac, 5), Two Rivers Greenspace (252 ac, 7); 2 more parks were added in 2026 (65 hunters, >1,500 ac total) but the newsletter excerpt does not name them. Permit $25 if drawn; lottery opens early Sept. Director: 'We are very careful to choose which ones we allow hunting in', so other county parks are presumed closed.",
+  "quote": "This year, the participating parks include: Cooper Creek Park/Spencer Forest 458 acres, max 15 hunters; Lowell Regional Greenspace 306 acres, max 15; Long Lake Park 100 acres, max 5; Two Rivers Greenspace 252 acres, max 7.",
+  "exceptions": [
+   {
+    "park": "Spencer Forest",
+    "hunting": "managed-hunts-only",
+    "what": "Cooper Creek Park/Spencer Forest combined hunt area 458 ac, lottery archery, max 15 hunters (map: yellow)"
+   },
+   {
+    "park": "Cooper Creek Park",
+    "hunting": "managed-hunts-only",
+    "what": "Same combined 458-ac Cooper Creek/Spencer Forest archery lottery area, max 15 hunters (map: yellow)"
+   },
+   {
+    "park": "Long Lake Park",
+    "hunting": "managed-hunts-only",
+    "what": "Lottery archery on ~100 ac of the park, max 5 hunters; rest of park open to public (map: yellow)"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/3efc537",
+    "title": "Kent County Parks newsletter: Apply for Bow Hunting at Select Kent County Parks",
+    "date": "2025 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/427e235",
+    "title": "Kent County Parks newsletter: More Parks, More Bow Hunting Opportunities",
+    "date": "2026 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.yahoo.com/news/articles/bow-hunting-applications-kent-county-215736760.html",
+    "title": "WOOD TV: Bow hunting applications at Kent County parks rising",
+    "date": "2025-10-20",
+    "read": "full"
+   },
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County: Hunting on Kent County Parks Property (403 Cloudflare, not read)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Input names 'Cooper Creek Park' as 'Cooper Creek Park' - exact input name used. Other parks (Fallasburg, Townsend, Wabasis, Pickerel Lake...) not in the program per the lists read; 2 additions in 2026 unnamed."
+ },
+ {
+  "county": "Kent",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "closed",
+  "what": "Fred Meijer White Pine Trail State Park: DNR status Closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "parks_A.txt input (DNR park hunting layer)",
+    "title": "DNR status as supplied",
+    "date": "",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Status taken from input, not re-researched."
+ },
+ {
+  "county": "Kent",
+  "manager": "County of Kent",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Lowell Regional Park is the county's 'Lowell Regional Greenspace': 306 acres of it are in the county lottery archery program (deer and turkey, max 15 hunters). Map shows it red. County page snippet gives Lowell Regional Greenspace as 330 ac (older newsletter said 306 ac); this supports the match to Lowell Regional Park.",
+  "quote": "This year, the participating parks include: Cooper Creek Park/Spencer Forest 458 acres, max 15 hunters; Lowell Regional Greenspace 306 acres, max 15; Long Lake Park 100 acres, max 5; Two Rivers Greenspace 252 acres, max 7.",
+  "exceptions": [
+   {
+    "park": "Lowell Regional Park",
+    "hunting": "managed-hunts-only",
+    "what": "Lottery archery hunting on ~306 of 702 ac, max 15 hunters; map colour red contradicts this"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County Parks: Hunting on Kent County Parks Property (403 to curl; search-snippet of page)",
+    "date": "2026",
+    "read": "snippet"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/3efc537",
+    "title": "Kent County Parks newsletter: Apply for Bow Hunting at Select Kent County Parks",
+    "date": "2025 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/427e235",
+    "title": "Kent County Parks newsletter: More Parks, More Bow Hunting Opportunities",
+    "date": "2026 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.yahoo.com/news/articles/bow-hunting-applications-kent-county-215736760.html",
+    "title": "WOOD TV: Bow hunting applications at Kent County parks rising",
+    "date": "2025-10-20",
+    "read": "full"
+   },
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County: Hunting on Kent County Parks Property (403 Cloudflare, not read)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Name match Lowell Regional Park = Lowell Regional Greenspace is inferred (same county, Lowell; acreage 702 vs 306 hunt area)."
+ },
+ {
+  "county": "Kent",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Not researched to a rule (budget); no hunting ordinance or posted allowance found. Manager blank/'Municipal': owner cannot be identified from name alone; several records geocode outside the county (e.g. Village Park 43.8159,-85.0663; Veterans Park 44.44,-85.17).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Mis-geocoded records likely."
+ },
+ {
+  "county": "Kent",
+  "manager": "Ada Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Wyoming",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "MI Dept of Agriculture and Rural Development",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "MDARD-listed parcels (Bull, Keech / Spring Valley), type UNK: probably Farmland and Open Space Preservation easement land (private) - not public hunting land. Not verified.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Nothing searched; easement land would be private."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Kentwood",
+  "kind": "city",
+  "hunting": "closed",
+  "what": "Kentwood: firearm hunting is prohibited in the city. Bow hunting allowed only where City Code 38-200 is met: an outdoor site of at least 5 contiguous acres with owner's written agreement, not within 450 ft of an occupied building without consent. Whether any city park qualifies was not found; the parks chapter (42) was not readable. Treated as closed for parks.",
+  "quote": "Firearm hunting is prohibited in the City of Kentwood.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.kentwood.us/city_services/city_departments/police/neighborhood_concerns.php",
+    "title": "Kentwood Police: Neighborhood Concerns FAQ",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Municode returned 403."
+ },
+ {
+  "county": "Kent",
+  "manager": "Land Conservancy of West Michigan",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "LCWM preserve guidelines: no hunting or trapping unless otherwise posted. No preserve in this list was found posted as open.",
+  "quote": "Don't: ... Hunt or trap (unless otherwise posted)",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://naturenearby.org/nature-preserve-guidelines/",
+    "title": "Nature Preserve Guidelines - Land Conservancy of West Michigan",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Per-preserve pages for Saul Lake, Brower Lake and Wege not read."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of East Grand Rapids",
+  "kind": "city",
+  "hunting": "closed",
+  "what": "Public park rules: no hunting or trapping in any public park without a permit from the Parks & Recreation Director, and weapons (firearm, air gun, bow and arrow) prohibited in parks except as provided by law.",
+  "quote": "No hunting or trapping shall occur within a public park or in any waters adjacent thereto unless a permit has been obtained from the Parks & Recreation Director.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://eastgrmi.gov/DocumentCenter/View/57",
+    "title": "East Grand Rapids Rules and Regulations for Public Parks",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Permit route is theoretical; no program found. Weapons clause 3.28 begins 'Except as provided by law'."
+ },
+ {
+  "county": "Kent",
+  "manager": "Michigan Nature Association",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "MNA sanctuaries do not allow hunting or trapping unless a special-permission agreement exists.",
+  "quote": "Hunting and trapping are not allowed on any MNA sanctuaries, unless receive special permission through an agreement.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michigannature.org/menus/sanctuary-visitation-rules.html",
+    "title": "MNA Sanctuary Visitation Rules",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Applies to Dolan, Krum, Thornapple Lake sanctuaries; no per-sanctuary agreement found."
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Cadscade Charter",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Township parks ordinance allows hunting only in Cascade Peace Park (archery only, permit lottery, 45 permits, doe-only since 2022). All other township parks are therefore closed to hunting. Cascade Peace Park (198 ac) is not in the input list.",
+  "quote": "Hunting shall only be permitted in Cascade Peace Park in accordance with the following regulations: Only archery hunting shall be permitted. Firearm hunting is prohibited.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://cascadetwp.com/parks/parks-ordinance/",
+    "title": "Cascade Charter Township Ordinance No. 1 of 2025 (Parks)",
+    "date": "2025",
+    "read": "full"
+   },
+   {
+    "url": "https://cascadetwp.com/hunting/",
+    "title": "Cascade Peace Park hunting page",
+    "date": "2022-2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Cascade Peace Park is an open archery park missing from the input; consider adding it. Manager string is a typo for Cascade Charter Township; the park (Mainstem Grand River-Leonard Fase Trust 1, 122 ac) is a conservation parcel, not named in the ordinance's park list, so confidence low."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Lowell",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "The Nature Conservancy",
+  "kind": "conservancy",
+  "hunting": "unknown",
+  "what": "TNC allows permit deer hunting only on specific Michigan preserves (e.g. Grand River Fen); 'Mainstem Grand River-Leonard Fase Trust 1' is not on its list read, so presumed closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.nature.org/en-us/about-us/where-we-work/united-states/michigan/stories-in-michigan/deer-hunting-in-michigan/",
+    "title": "Hunting on TNC Lands in Michigan",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Cascade Township",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Township parks ordinance allows hunting only in Cascade Peace Park (archery only, permit lottery, 45 permits, doe-only since 2022). All other township parks are therefore closed to hunting. Cascade Peace Park (198 ac) is not in the input list.",
+  "quote": "Hunting shall only be permitted in Cascade Peace Park in accordance with the following regulations: Only archery hunting shall be permitted. Firearm hunting is prohibited.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://cascadetwp.com/parks/parks-ordinance/",
+    "title": "Cascade Charter Township Ordinance No. 1 of 2025 (Parks)",
+    "date": "2025",
+    "read": "full"
+   },
+   {
+    "url": "https://cascadetwp.com/hunting/",
+    "title": "Cascade Peace Park hunting page",
+    "date": "2022-2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Cascade Peace Park is an open archery park missing from the input; consider adding it."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Walker",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Cascade",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Township parks ordinance allows hunting only in Cascade Peace Park (archery only, permit lottery, 45 permits, doe-only since 2022). All other township parks are therefore closed to hunting. Cascade Peace Park (198 ac) is not in the input list.",
+  "quote": "Hunting shall only be permitted in Cascade Peace Park in accordance with the following regulations: Only archery hunting shall be permitted. Firearm hunting is prohibited.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://cascadetwp.com/parks/parks-ordinance/",
+    "title": "Cascade Charter Township Ordinance No. 1 of 2025 (Parks)",
+    "date": "2025",
+    "read": "full"
+   },
+   {
+    "url": "https://cascadetwp.com/hunting/",
+    "title": "Cascade Peace Park hunting page",
+    "date": "2022-2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Cascade Peace Park is an open archery park missing from the input; consider adding it."
+ },
+ {
+  "county": "Kent",
+  "manager": "Cascade Charter Township",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Township parks ordinance allows hunting only in Cascade Peace Park (archery only, permit lottery, 45 permits, doe-only since 2022). All other township parks are therefore closed to hunting. Cascade Peace Park (198 ac) is not in the input list.",
+  "quote": "Hunting shall only be permitted in Cascade Peace Park in accordance with the following regulations: Only archery hunting shall be permitted. Firearm hunting is prohibited.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://cascadetwp.com/parks/parks-ordinance/",
+    "title": "Cascade Charter Township Ordinance No. 1 of 2025 (Parks)",
+    "date": "2025",
+    "read": "full"
+   },
+   {
+    "url": "https://cascadetwp.com/hunting/",
+    "title": "Cascade Peace Park hunting page",
+    "date": "2022-2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Cascade Peace Park is an open archery park missing from the input; consider adding it."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Grandville",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "LOWELL CHARTER TOWNSHIP PARK",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Byron Center",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Plainfield",
+  "kind": "township",
+  "hunting": "closed",
+  "what": "Plainfield Township General Offenses Code: all township parks are wildlife sanctuaries; hunting/trapping prohibited and discharge of any firearm or bow in parks prohibited.",
+  "quote": "All parks of the Township shall be wildlife sanctuaries and shall be treated as such by all users of the parks.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://plainfieldtwpmi.com/wp-content/uploads/2018/07/ORDINANCE-NO-24-GENERAL-OFFENSES-CODE.pdf",
+    "title": "Plainfield Twp Ordinance 24 General Offenses Code",
+    "date": "2018 upload",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "2010 NRA article says Plainfield had to correct posted firearm-in-park ordinances (state preemption of possession rules); the hunting and discharge bans were not contested in that snippet. Current version not checked."
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Cannon",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Cannon Township has Chapter 313 'Parks and Recreational Areas' on ecode360 (https://ecode360.com/34321547), which returned 403 (Cloudflare); text unread."
+ },
+ {
+  "county": "Kent",
+  "manager": "Village of Sparta",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Grand Rapids Public Schools",
+  "kind": "school",
+  "hunting": "unknown",
+  "what": "Not researched to a rule (budget); no hunting ordinance or posted allowance found. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Rockford",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Kentwood Parks",
+  "kind": "city",
+  "hunting": "closed",
+  "what": "Kentwood: firearm hunting is prohibited in the city. Bow hunting allowed only where City Code 38-200 is met: an outdoor site of at least 5 contiguous acres with owner's written agreement, not within 450 ft of an occupied building without consent. Whether any city park qualifies was not found; the parks chapter (42) was not readable. Treated as closed for parks.",
+  "quote": "Firearm hunting is prohibited in the City of Kentwood.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.kentwood.us/city_services/city_departments/police/neighborhood_concerns.php",
+    "title": "Kentwood Police: Neighborhood Concerns FAQ",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Municode returned 403."
+ },
+ {
+  "county": "Kent",
+  "manager": "Byron Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Alpine Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Village of Sand Lake",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "Sparta Township",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Code is on American Legal (codelibrary.amlegal.com/codes/spartatwpmi), 403 to curl; search found no firearm clause."
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Grattan",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Cedar Springs",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ionia",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "partly-open",
+  "what": "Ionia Recreation Area DNR layer: 2,036 ac and 172 ac Open; 1,930 ac and 93 ac Open-Restricted; 183 ac Closed. State park page (search snippet) says hunting allowed with special rules.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Ionia Recreation Area",
+    "hunting": "closed",
+    "what": "183-ac polygon at 42.9388,-85.1248 is DNR Closed"
+   }
+  ],
+  "sources": [
+   {
+    "url": "parks_A.txt input (DNR park hunting layer)",
+    "title": "DNR status as supplied",
+    "date": "",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Status taken from input, not re-researched."
+ },
+ {
+  "county": "Ionia",
+  "manager": "State of Michigan",
+  "kind": "state",
+  "hunting": "partly-open",
+  "what": "Ionia State Recreation Area duplicate polygon (4,413 ac, map yellow) overlaps the DNR layer where most is Open/Open-Restricted; map yellow conflicts with DNR green.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "parks_A.txt input (DNR park hunting layer)",
+    "title": "DNR status as supplied",
+    "date": "",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Status taken from input, not re-researched."
+ },
+ {
+  "county": "Ionia",
+  "manager": "Michigan State University",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "MSU Clarksville Horticultural Experiment Station (444 ac, research orchards/farm): no hunting policy found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ionia",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Not researched to a rule (budget); no hunting ordinance or posted allowance found. Manager blank/'Municipal': owner cannot be identified from name alone; several records geocode outside the county (e.g. Village Park 43.8159,-85.0663; Veterans Park 44.44,-85.17).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Mis-geocoded records likely."
+ },
+ {
+  "county": "Ionia",
+  "manager": "Ionia County",
+  "kind": "county",
+  "hunting": "closed",
+  "what": "Bertha Brock Park rules: no hunting at any time and firearm discharge unlawful.",
+  "quote": "NO hunting is allowed within this park at any time.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://ioniacounty.org/wp-content/uploads/2026/02/Bertha-Brock-Park-Rules-2026.pdf",
+    "title": "Bertha Brock Park Rules 2026",
+    "date": "2026-02",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Belding",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ionia",
+  "manager": "County of Ionia",
+  "kind": "county",
+  "hunting": "unknown",
+  "what": "Ionia Free Fairgrounds (county, 144 ac): no rule found. Likely not hunted but unverified.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not searched specifically."
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Portland",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Ionia, MI",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "City code Parks and City Cemeteries chapter 1062 is on amlegal (403 to curl); search snippet showed no hunting section."
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Ionia",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Michigan Department of Transportation (MDOT)",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "Forest Reserve (4,230 ac, SCA) at 43.4265,-84.3368, outside Montcalm (Gratiot/Clinton area) - probably wrong-county; no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Coordinates do not match Montcalm; check data."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "State of Michigan",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "State Forest (1,930 ac) at 43.8433,-83.9744, far outside Montcalm (Arenac/Bay area) - probably a mis-assigned record; DNR state forest land is generally open to hunting but unverified for this polygon.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Coordinates do not match Montcalm; check data."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "closed",
+  "what": "Fred Meijer White Pine Trail State Park: DNR status Closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "parks_A.txt input (DNR park hunting layer)",
+    "title": "DNR status as supplied",
+    "date": "",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Status taken from input, not re-researched."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "County Road Commission",
+  "kind": "county",
+  "hunting": "unknown",
+  "what": "Local Forest (797 ac, LRMA) at 43.5409,-84.0576 is outside Montcalm; no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Coordinates do not match Montcalm; check data."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Kent County Parks",
+  "kind": "county",
+  "hunting": "partly-open",
+  "what": "Spencer Forest is the Spencer Forest half of Cooper Creek Park/Spencer Forest in Kent County Parks' archery lottery (458 ac, max 15 hunters).",
+  "quote": "This year, the participating parks include: Cooper Creek Park/Spencer Forest 458 acres, max 15 hunters; Lowell Regional Greenspace 306 acres, max 15; Long Lake Park 100 acres, max 5; Two Rivers Greenspace 252 acres, max 7.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/3efc537",
+    "title": "Kent County Parks newsletter: Apply for Bow Hunting at Select Kent County Parks",
+    "date": "2025 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/KENTCOMI/bulletins/427e235",
+    "title": "Kent County Parks newsletter: More Parks, More Bow Hunting Opportunities",
+    "date": "2026 (undated in page)",
+    "read": "full"
+   },
+   {
+    "url": "https://www.yahoo.com/news/articles/bow-hunting-applications-kent-county-215736760.html",
+    "title": "WOOD TV: Bow hunting applications at Kent County parks rising",
+    "date": "2025-10-20",
+    "read": "full"
+   },
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County: Hunting on Kent County Parks Property (403 Cloudflare, not read)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Same property as Kent County Parks entry; input lists it under Montcalm too."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "County of Montcalm",
+  "kind": "county",
+  "hunting": "restricted",
+  "what": "Draft/2026 county parks ordinance: hunting and trapping prohibited in county parks unless posted otherwise; firearms regulated by state law. Final adopted text not confirmed (PDF footer says DRAFT). Two 'Local Forest'-type county tax-reverted lands are not parks and were not researched.",
+  "quote": "Hunting and trapping are prohibited unless posted otherwise.",
+  "exceptions": [
+   {
+    "park": "Local Forest",
+    "hunting": "unknown",
+    "what": "County-owned 251 ac forest (LRMA); no rule found, may be open like other county forest land - verify with county"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.montcalm.us/DocumentCenter/View/5735/Final-BOC---Montcalm-Co-Parks-Ordinance-22326",
+    "title": "Montcalm County Parks Ordinance of 2026 (file marked DRAFT - FOR REVIEW ONLY)",
+    "date": "2026-02",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Old ordinance was repealed Nov 2025 (soar.com article, snippet). Montcalm Soil Cons District parcel unknown."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "City of Greenville",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Township of Reynolds",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "City of Stanton",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Township of Eureka",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Gravel Pit (37 ac, map red): no township rule on hunting found; Eureka's regulatory-ordinance page did not yield text.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Township of Montcalm",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "City of Carson City",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Township of Crystal",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Montcalm",
+  "manager": "Michigan Nature Association",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "MNA sanctuaries do not allow hunting or trapping unless a special-permission agreement exists.",
+  "quote": "Hunting and trapping are not allowed on any MNA sanctuaries, unless receive special permission through an agreement.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michigannature.org/menus/sanctuary-visitation-rules.html",
+    "title": "MNA Sanctuary Visitation Rules",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Applies to Dolan, Krum, Thornapple Lake sanctuaries; no per-sanctuary agreement found."
+ },
+ {
+  "county": "Montcalm",
+  "manager": "City of Howard City",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "(blank)",
+  "kind": "state",
+  "hunting": "partly-open",
+  "what": "Yankee Springs Recreation Area: 3,522 ac Open, 1,268 ac Closed per DNR layer. Barry County plan text (read) says part of the recreation area is open to waterfowl, small game and deer.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Yankee Springs Recreation Area",
+    "hunting": "closed",
+    "what": "1,268-ac polygon at 42.6185,-85.4985 is DNR Closed"
+   }
+  ],
+  "sources": [
+   {
+    "url": "parks_A.txt input (DNR park hunting layer)",
+    "title": "DNR status as supplied",
+    "date": "",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Status taken from input, not re-researched."
+ },
+ {
+  "county": "Barry",
+  "manager": "Michigan State University",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "Lux Arbor Reserve (1,236 ac, MSU): no Lux Arbor hunting policy found. Other MSU research forests (Fred Russ, Kellogg) allow permit-only archery; firearms prohibited on MSU land (those pages, snippet only). Not confirmed for Lux Arbor.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.canr.msu.edu/fredruss/uploads/MSU Fred Russ Forest Hunting Policy and Permit Application081723.pdf",
+    "title": "MSU Fred Russ Forest Hunting Policy (comparison only)",
+    "date": "2023",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Southwest Michigan Land Conservancy",
+  "kind": "conservancy",
+  "hunting": "restricted",
+  "what": "Hunting/trapping not allowed on SWMLC preserves without permission from staff; a hunting-permission program exists but all slots are currently filled. Which of the six Barry preserves are in it is not published.",
+  "quote": "Hunting and/or trapping are not allowed on SWMLC preserves without permission from SWMLC staff.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://swmlc.org/swmlc-faqs/",
+    "title": "SWMLC FAQs",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Treat as closed to the public; permission-only."
+ },
+ {
+  "county": "Barry",
+  "manager": "County of Barry",
+  "kind": "county",
+  "hunting": "unknown",
+  "what": "No hunting rule for Charlton Park found. Park site and 2024-28 recreation plan snippets do not mention hunting; Charlton Park is a historic village/museum with public trails, hunting presumed not offered.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.charltonpark.org/parks/bailey-nature-preserve",
+    "title": "Barry County Parks site",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/barry/hunting",
+    "title": "DNR local controls Barry County (only Barry Twp Kellogg school land and Shelp Lake)",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Barry County Parks has no published rules page found."
+ },
+ {
+  "county": "Barry",
+  "manager": "MI Dept of Agriculture and Rural Development",
+  "kind": "state",
+  "hunting": "unknown",
+  "what": "MDARD-listed parcels (Bull, Keech / Spring Valley), type UNK: probably Farmland and Open Space Preservation easement land (private) - not public hunting land. Not verified.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Nothing searched; easement land would be private."
+ },
+ {
+  "county": "Barry",
+  "manager": "Michigan Audubon Society",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "Michigan Audubon policy: hunting, fishing and trapping strictly prohibited on its sanctuaries (older 2018 policy allowed conservation-need hunting by its decision).",
+  "quote": "Hunting, fishing, and trapping are strictly prohibited in accordance with state and federal regulations.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michiganaudubon.org/?p=10165",
+    "title": "Michigan Audubon sanctuary policies (403 on direct fetch; search snippet)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Site returns 403 to curl; snippet only."
+ },
+ {
+  "county": "Barry",
+  "manager": "Barry Agricultural Society",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Barry Fairgrounds (159 ac): fairgrounds, no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched only briefly (grand rapids audubon search found nothing)."
+ },
+ {
+  "county": "Barry",
+  "manager": "BARRY COUNTY WATERFOWL PRODUCTION AREA",
+  "kind": "other",
+  "hunting": "open",
+  "what": "Barry County Waterfowl Production Area (158 ac): rule taken from input note (fws-wpa), not re-researched; WPAs are generally open to hunting under Federal/state rules.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "medium",
+  "notes": "Duplicate manager spelling."
+ },
+ {
+  "county": "Barry",
+  "manager": "Barry County Waterfowl Production Area",
+  "kind": "other",
+  "hunting": "open",
+  "what": "Barry County Waterfowl Production Area (158 ac): rule taken from input note (fws-wpa), not re-researched; WPAs are generally open to hunting under Federal/state rules.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "medium",
+  "notes": "Duplicate manager spelling."
+ },
+ {
+  "county": "Barry",
+  "manager": "Michigan Nature Association",
+  "kind": "conservancy",
+  "hunting": "closed",
+  "what": "MNA sanctuaries do not allow hunting or trapping unless a special-permission agreement exists.",
+  "quote": "Hunting and trapping are not allowed on any MNA sanctuaries, unless receive special permission through an agreement.",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.michigannature.org/menus/sanctuary-visitation-rules.html",
+    "title": "MNA Sanctuary Visitation Rules",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Applies to Dolan, Krum, Thornapple Lake sanctuaries; no per-sanctuary agreement found."
+ },
+ {
+  "county": "Barry",
+  "manager": "Grand Rapids Audubon Society",
+  "kind": "conservancy",
+  "hunting": "unknown",
+  "what": "Nature Preserve (77 ac): no GR Audubon policy found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched only briefly (grand rapids audubon search found nothing)."
+ },
+ {
+  "county": "Barry",
+  "manager": "JOHNSON PAT TAFFEE TRUST",
+  "kind": "conservancy",
+  "hunting": "unknown",
+  "what": "Sweezy's Pond Park (66 ac, Hastings area): no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched only briefly (grand rapids audubon search found nothing)."
+ },
+ {
+  "county": "Barry",
+  "manager": "CITY OF HASTINGS",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Village of Middleville",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Township of Orangeville",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "YMCA of Barry County",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Camp Algonquin (45 ac): private YMCA camp, no rule found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched only briefly (grand rapids audubon search found nothing)."
+ },
+ {
+  "county": "Barry",
+  "manager": "Village of Nashville",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Township of Prairieville",
+  "kind": "township",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Village of Freeport",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Village of Woodland",
+  "kind": "village",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Barry",
+  "manager": "Municipal",
+  "kind": "other",
+  "hunting": "unknown",
+  "what": "Not researched to a rule (budget); no hunting ordinance or posted allowance found. Manager blank/'Municipal': owner cannot be identified from name alone; several records geocode outside the county (e.g. Village Park 43.8159,-85.0663; Veterans Park 44.44,-85.17).",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "Mis-geocoded records likely."
+ },
+ {
+  "county": "Barry",
+  "manager": "City of Middleville",
+  "kind": "city",
+  "hunting": "unknown",
+  "what": "Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ }
+]

@@ -168,3 +168,12 @@ These are marked as DNR marks them; the note is shown so you can see the tension
 - **Lake Gogebic, North Higgins Lake and Grand Haven:** the park boundary is larger than the zones, but DNR-owned acreage matches the zoned acreage, so the difference is land or water the DNR does not own.
 
 Not checked: DNR's published park hunting maps and the Wildlife Conservation Order text, because michigan.gov refuses automated requests. This check confirms the app matches DNR's GIS record, not that the GIS record matches the printed rules.
+
+## How restricted zones are coloured (2026-11-12)
+
+DNR marks 20 zones "Open-Restricted". The app now splits them by what the restriction is:
+
+- **Green, with the limit stated (16 zones, about 7,200 acres):** the limit is on weapons or dates, so hunting is allowed. Examples: no centerfire or rimfire rifles (Proud Lake, Highland), no firearms (parts of Island Lake, Bald Mountain, Thompson's Harbor), shotgun or muzzleloader only (Bald Mountain), no rifles or handguns (Grand Mere), no firearms 11/15–12/1 (Fort Custer), quail reserved for field-trial participants (Ionia, Highland).
+- **Yellow (4 zones, about 1,050 acres):** hunting is limited to particular game or activities — waterfowl only (Waterloo 85 ac, Highland 47 ac) and trapping and waterfowl only (Sterling, two zones).
+
+A restricted zone with no DNR note would stay yellow; none currently lacks one. Green here means "hunting is allowed", not "any weapon is allowed" — read the limit in the zone's details.

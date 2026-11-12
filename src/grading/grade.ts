@@ -498,6 +498,11 @@ function gradeHap(p: Record<string, unknown>): GradeResult {
   return result('yellow', 'Hunting Access Program (restricted)', `Private land leased by the DNR for public hunting, with restrictions: ${huntType.trim()} Follow the property's check-in/permit rules.${extra}`, [REFS.hap, REFS.safetyZone]);
 }
 
+/** DNR park-zone notes that limit hunting to particular game or activities (not just weapons). */
+export function isActivityLimited(notes: string): boolean {
+  return /open to [^.;]*\bonly\b|waterfowl only|trapping only/i.test(notes);
+}
+
 function gradeParkHunting(p: Record<string, unknown>): GradeResult {
   const status = str(p.HuntTrap).toUpperCase();
   const facility = str(p.Facility) || 'This park';
@@ -509,6 +514,14 @@ function gradeParkHunting(p: Record<string, unknown>): GradeResult {
     return result('green', 'State park – hunting open', `${facility}: this part of the park is open to hunting and trapping.${notes ? ` ${notes}` : ''}${goose} Safety zones around buildings and use areas still apply.`, [REFS.landUseOrders, REFS.safetyZone]);
   }
   if (status === 'OPEN-RESTRICTED') {
+    // DNR uses Open-Restricted for two different things. Where hunting is limited to particular
+    // game or activities (waterfowl only, trapping only) the zone stays "check first". Where
+    // the limit is on weapons or dates (no rifles, archery only, no firearms in summer) hunting
+    // is plainly allowed, so the zone is open — with the limit stated up front.
+    // A restricted zone with no note at all stays "check first": the limit is unknown.
+    if (notes && !isActivityLimited(notes)) {
+      return result('green', 'State park – hunting open (weapon limits)', `${facility}: open to hunting, with limits. ${notes}${goose} Safety zones around buildings and use areas still apply.`, [REFS.landUseOrders, REFS.safetyZone]);
+    }
     return result('yellow', 'State park – restricted hunting', `${facility}: hunting is allowed with restrictions.${notes ? ` ${notes}` : ''}${goose} Check the park's hunting map before going.`, [REFS.landUseOrders, REFS.safetyZone]);
   }
   if (status === 'CLOSED') {

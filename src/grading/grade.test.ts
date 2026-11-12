@@ -361,6 +361,16 @@ describe('gradeFeature – public land layers', () => {
     expect(gradeFeature(s, { Facility: 'Silver Lake State Park', HuntTrap: 'Open' }).grade).toBe('green');
     expect(gradeFeature(s, { Facility: 'X', HuntTrap: 'Open-Restricted', HuntTrapRestrictions: 'Archery only' }).reason).toContain('Archery only');
     expect(gradeFeature(s, { Facility: 'Saugatuck Dunes State Park', HuntTrap: 'Closed' }).grade).toBe('red');
+    // Open-Restricted: weapon/date limits are open with the limit stated; game/activity limits stay yellow.
+    for (const note of ['Local Controls: No Centerfire Rifles or Rimfire Rifles', 'Local Controls: No Firearms', 'No Firearms from 11/15 - 12/1', "No Rifles or Handguns (Director's Order 5.11).", 'Local Controls: No firearms except for waterfowl hunting']) {
+      const r = gradeFeature(s, { Facility: 'Proud Lake Recreation Area', HuntTrap: 'Open-Restricted', HuntTrapRestrictions: note });
+      expect(r.grade, note).toBe('green');
+      expect(r.reason, note).toContain(note);
+    }
+    for (const note of ['Open to Waterfowl Only', 'Open to Trapping & Waterfowl Only; Waterfowl hunting allowed from the day after Labor Day through the end of February']) {
+      expect(gradeFeature(s, { Facility: 'Sterling State Park', HuntTrap: 'Open-Restricted', HuntTrapRestrictions: note }).grade, note).toBe('yellow');
+    }
+    expect(gradeFeature(s, { Facility: 'X', HuntTrap: 'Open-Restricted' }).grade).toBe('yellow');
     // Closed zones that carry a DNR note keep the note (audit of all 183 zones, Nov 2026).
     const sterling = gradeFeature(s, { Facility: 'Sterling State Park', HuntTrap: 'Closed', HuntTrapRestrictions: 'Open to Trapping Only' });
     expect(sterling.grade).toBe('red');

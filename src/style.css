@@ -1199,6 +1199,19 @@ select {
 .reason {
   margin: 10px 0;
 }
+.researched {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 0;
+  font-weight: 600;
+  color: var(--muted);
+}
+.researched .ic {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
 .refs {
   margin: 0 0 10px;
   padding-left: 18px;

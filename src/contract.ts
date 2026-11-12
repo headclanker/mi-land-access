@@ -38,6 +38,18 @@ export interface GradeResult {
   references?: { label: string; url?: string }[];
   /** Owner classification behind an owner-name grade (parcels only). See OwnerKind. */
   ownerKind?: OwnerKind;
+  /**
+   * Set when the grade comes from a researched rule for this specific unit (src/data/parkRules.ts)
+   * rather than from the layer's attributes: how sure the research is, when it was done
+   * (YYYY-MM-DD) and the rule id. References then carry the rule's source links.
+   */
+  researched?: Researched;
+}
+
+export interface Researched {
+  confidence: 'high' | 'medium' | 'low';
+  date: string;
+  rule: string;
 }
 
 export type LayerGroup = 'public-land' | 'parcels' | 'hunting-units' | 'reference';

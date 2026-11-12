@@ -11,14 +11,17 @@
 //   3. commercial-forest  – Commercial Forest Act enrollment (public foot access)
 //   4. high-confidence ownership layers (dnr-managed-lands, usfs-surface-ownership)
 //   5. the parcel's own owner-name grade
-//   6. low-confidence ownership layers (PAD-US)
+//   6. low-confidence ownership layers (PAD-US) — except that a PAD-US unit with a researched
+//      rule (src/data/parkRules.ts) covering the parcel decides for a public or blank owner
+//      record, and makes a private owner record a disagreement
 // Within one tier the most restrictive grade wins. Boundary layers never take part.
 // Partial overlaps (PARTIAL_FRACTION ≤ f < COVER_FRACTION) never change the grade; they add a note.
 //
 // Last, cityOverride() applies the city-limits rule: inside an incorporated city, ground that
 // would otherwise be yellow is treated as closed (red), because city ordinances generally
 // prohibit hunting and firearm discharge; green verdicts from state/federal records and yellow
-// state access programs (restricted park zones, restricted HAP) keep their status with a note.
+// state access programs (restricted park zones, restricted HAP) and researched unit rules keep
+// their status with a note.
 //
 // Pure module: no DOM, no map. Tested in reconcile.test.ts.
 
@@ -124,6 +127,26 @@ function aggregate(overlaps: Overlap[]): LayerAgg[] {
   return [...byLayer.values()];
 }
 
+/** Owner kinds a researched public unit decides for (a specific public body, or a generic / blank record). */
+const RESEARCH_ADOPT_KINDS: ReadonlySet<OwnerKind> = new Set(['other', 'state', 'federal', 'dnr', 'usfs', 'none']);
+
+/**
+ * The strictest researched feature among low-confidence layers whose researched features together
+ * cover at least COVER_FRACTION of the parcel, or null.
+ */
+function researchedCover(layers: LayerAgg[]): { layer: LayerAgg; feature: Overlap } | null {
+  let best: { layer: LayerAgg; feature: Overlap } | null = null;
+  for (const layer of layers) {
+    if (layer.tier <= OWNER_TIER) continue;
+    const feats = layer.features.filter((f) => f.grade.researched);
+    const share = feats.reduce((a, f) => a + f.fraction, 0);
+    if (share < COVER_FRACTION) continue;
+    for (const feature of feats)
+      if (!best || RESTRICTIVENESS[feature.grade.grade] > RESTRICTIVENESS[best.feature.grade.grade]) best = { layer, feature };
+  }
+  return best;
+}
+
 /** The most restrictive feature among covering layers of one tier. */
 function strictest(layers: LayerAgg[]): { layer: LayerAgg; feature: Overlap } {
   let best: { layer: LayerAgg; feature: Overlap } | null = null;
@@ -175,6 +198,27 @@ function resolve(owner: GradeResult, overlaps: Overlap[], ownerName?: string): R
   if (topTier > OWNER_TIER) {
     // Only low-confidence layers (or nothing) cover the parcel.
     if (!covering.length) return done(owner);
+    // A researched rule for the covering unit (src/data/parkRules.ts) is specific evidence, not a
+    // coarse compilation: it decides for a public or blank owner record, and a private owner
+    // record against it is a disagreement to check.
+    const researched = researchedCover(layers);
+    if (researched) {
+      const { layer: rl, feature: rf } = researched;
+      const rg = rf.grade;
+      if (RESEARCH_ADOPT_KINDS.has(kind)) {
+        if (kind !== 'none' && owner.grade !== rg.grade) notes.push(`The county record names “${ownerName?.trim() || owner.category}” (${owner.category}); the researched rule for ${rf.name || rg.category} decides.`);
+        return done(rg, { adoptedFrom: rl.source.id });
+      }
+      return done(
+        make(
+          moreRestrictive('yellow', rg.grade),
+          'Records disagree',
+          `The county parcel record says this is privately owned by ${who}, but ${rl.source.title} shows it inside ${featureLabel(rf)}, which has a researched hunting rule. It may be a recent sale, an inholding or a mapping error — verify ownership before entering.`,
+          withRefs(owner, rg),
+        ),
+        { conflict: true },
+      );
+    }
     const { layer, feature } = strictest(covering);
     if (kind === 'none') {
       notes.push(`No owner name in the county record; using ${layer.source.title}.`);
@@ -352,7 +396,9 @@ export function cityOverride(r: Reconciled, city: string | undefined): Reconcile
   if (!name) return r;
   const g = r.result;
   const note = cityNote(name);
-  if (g.grade === 'yellow' && !(r.adoptedFrom && CITY_EXEMPT_PROGRAMS.has(r.adoptedFrom))) {
+  // A researched rule for this specific unit (open, or a stated permit / archery rule) already
+  // accounts for the local situation, so it is exempt like the state access programs.
+  if (g.grade === 'yellow' && !(r.adoptedFrom && CITY_EXEMPT_PROGRAMS.has(r.adoptedFrom)) && !g.researched) {
     return {
       ...r,
       result: make(

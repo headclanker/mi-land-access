@@ -7,10 +7,11 @@ import { bbox as turfBbox } from '@turf/turf';
 import type { Feature } from 'geojson';
 import { GRADE_COLORS, type Grade, type LayerSource } from '../../contract';
 import type { LayerManager } from '../layers/manager';
-import { P, acresOf, gradeFromProps, isGrade, listRank, parseRefs } from '../layers/enrich';
+import { P, acresOf, gradeFromProps, isGrade, listRank, parseRefs, parseResearched } from '../layers/enrich';
 import { parseNotes, parseOverlaps } from '../layers/reconcileLayers';
 import { prepared, contains } from '../layers/coverage';
 import { PARCEL_MIN_ZOOM } from '../../data/sources';
+import { researchedLabel } from '../../data/parkRules';
 import { NO_PARCEL, cityOverride, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
 import { CITY_OWNED_CATEGORY } from '../../grading/grade';
 import { BOUNDARY_NOTE } from '../../grading/grade';
@@ -35,7 +36,7 @@ const gradeOrder = (g: Grade): number => ['green', 'yellow', 'red', 'unknown'].i
 /** Badge text; a red park hunting zone, city-owned land or land closed by the city rule is closed rather than private. */
 export function shortLabel(g: Grade, sourceId?: string, category?: string): string {
   if (g !== 'red') return GRADE_SHORT[g];
-  return sourceId === 'dnr-park-hunting' || (category && (category === CITY_OWNED_CATEGORY || / city limits$/.test(category))) ? 'Closed' : GRADE_SHORT[g];
+  return sourceId === 'dnr-park-hunting' || (category && (category === CITY_OWNED_CATEGORY || / city limits$/.test(category) || /closed to hunting$/.test(category))) ? 'Closed' : GRADE_SHORT[g];
 }
 
 interface Hit {
@@ -248,6 +249,7 @@ export class Details {
       'section.verdict',
       { 'data-grade': g, 'data-conflict': v.conflict ? 'true' : null, style: `--c:${GRADE_COLORS[g]}` },
       h('div.verdict-head', {}, h('span.badge', { style: `--c:${GRADE_COLORS[g]}`, 'data-grade': g }, v.conflict ? 'Verify' : shortLabel(g, v.adoptedFrom, v.result.category)), h('span', {}, h('strong', {}, v.result.category), h('span.small', {}, GRADE_LABEL[g]))),
+      v.result.researched ? h('p.researched.small', {}, icon('info'), researchedLabel(v.result.researched)) : null,
       v.result.reason ? h('p.reason', {}, v.result.reason) : null,
       v.notes.length ? h('ul.verdict-notes', {}, v.notes.map((n) => h('li', {}, n))) : null,
       refs.length ? h('ul.refs', {}, refs.map((r) => h('li', {}, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.label) : r.label))) : null,
@@ -286,6 +288,7 @@ export class Details {
     const category = str(props[P.category]) || source.title;
     const reason = str(props[P.reason]);
     const refs = parseRefs(props[P.refs]);
+    const researched = parseResearched(props[P.researched]);
     const isParcel = source.group === 'parcels';
     const isUnit = source.group === 'hunting-units';
     const ob = ownerBlock(source, props);
@@ -403,6 +406,7 @@ export class Details {
         showGrade ? h('div.grade-line', { style: `--c:${GRADE_COLORS[hit.grade]}` }, h('strong', {}, category), h('span', {}, GRADE_LABEL[hit.grade])) : null,
         isBoundary ? h('p.reason', {}, `Inside the boundary of ${name || category} (${category}) — ${BOUNDARY_NOTE}. It is not an access verdict: the parcel and land-ownership records decide whether you may hunt here.`) : null,
         primary ? h('p.muted.small', {}, 'The verdict above is this parcel’s resolved grade.') : null,
+        researched && !primary && !isBoundary ? h('p.researched.small', {}, icon('info'), researchedLabel(researched)) : null,
         reason && !primary && !isBoundary ? h('p.reason', {}, reason) : null,
         refs.length && !primary ? h('ul.refs', {}, refs.map((r) => h('li', {}, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.label) : r.label))) : null,
         rows.length ? h('dl.kv', {}, rows.flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, v)])) : null,

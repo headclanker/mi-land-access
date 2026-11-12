@@ -3,7 +3,7 @@
 
 import { area } from '@turf/turf';
 import type { Feature, Polygon, MultiPolygon } from 'geojson';
-import type { Grade, GradeResult, LayerSource, OwnerKind } from '../../contract';
+import type { Grade, GradeResult, LayerSource, OwnerKind, Researched } from '../../contract';
 import { gradeFeature } from '../../grading/grade';
 import { tierOf } from '../../grading/reconcile';
 import { SQM_PER_ACRE } from '../util/geo';
@@ -15,6 +15,8 @@ export const P = {
   category: '_category',
   reason: '_reason',
   refs: '_refs',
+  /** JSON Researched (contract) when the verdict comes from a researched unit rule, else ''. */
+  researched: '_researched',
   name: '_name',
   owner: '_owner',
   // Parcels only: the owner-name grade, kept when reconciliation replaces _grade/_category/_reason.
@@ -29,6 +31,7 @@ export const P = {
   baseCategory: '_baseCategory',
   baseReason: '_baseReason',
   baseRefs: '_baseRefs',
+  baseResearched: '_baseResearched',
   /** City whose limits hold the feature (parcels and public land; set by reconciliation). */
   city: '_city',
   // Parcels only, set by reconciliation (see layers/reconcileLayers.ts).
@@ -108,6 +111,7 @@ export function enrichFeature(source: LayerSource, f: Feature): Feature {
   props[P.category] = g.category;
   props[P.reason] = g.reason;
   props[P.refs] = JSON.stringify(g.references ?? []);
+  props[P.researched] = researchedProp(g);
   const name = source.nameField ? str(props[source.nameField]) : '';
   props[P.name] = name;
   const owner = source.parcel?.ownerField ? str(props[source.parcel.ownerField]) : '';
@@ -127,6 +131,7 @@ export function enrichFeature(source: LayerSource, f: Feature): Feature {
     props[P.baseCategory] = g.category;
     props[P.baseReason] = g.reason;
     props[P.baseRefs] = props[P.refs];
+    props[P.baseResearched] = props[P.researched];
     // Same values reconciliation writes outside every city, so it only re-sends layers it changed.
     props[P.city] = '';
     props[P.notes] = '[]';
@@ -148,6 +153,21 @@ export function acresOf(source: LayerSource, f: Feature): number | null {
     }
   }
   return null;
+}
+
+/** Property value for GradeResult.researched ('' when absent). */
+export function researchedProp(g: GradeResult): string {
+  return g.researched ? JSON.stringify(g.researched) : '';
+}
+
+export function parseResearched(raw: unknown): Researched | undefined {
+  if (typeof raw !== 'string' || !raw) return undefined;
+  try {
+    const v = JSON.parse(raw) as Researched;
+    return v && typeof v.date === 'string' && typeof v.confidence === 'string' ? v : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 export function parseRefs(raw: unknown): { label: string; url?: string }[] {
@@ -174,12 +194,14 @@ export function gradeFromProps(props: Record<string, unknown>, which: 'current' 
   const g = props[o ? P.ownerGrade : b ? P.baseGrade : P.grade];
   const refs = parseRefs(props[o ? P.ownerRefs : b ? P.baseRefs : P.refs]);
   const kind = o ? str(props[P.ownerKind]) : '';
+  const researched = o ? undefined : parseResearched(props[b ? P.baseResearched : P.researched]);
   return {
     grade: isGrade(g) ? g : 'unknown',
     category: str(props[o ? P.ownerCategory : b ? P.baseCategory : P.category]),
     reason: str(props[o ? P.ownerReason : b ? P.baseReason : P.reason]),
     ...(refs.length ? { references: refs } : {}),
     ...(kind ? { ownerKind: kind as OwnerKind } : {}),
+    ...(researched ? { researched } : {}),
   };
 }
 

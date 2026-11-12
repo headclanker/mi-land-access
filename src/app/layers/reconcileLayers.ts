@@ -10,7 +10,8 @@ import type { LayerSource } from '../../contract';
 import { cityOverride, cityOverrideFeature, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
 import type { CityIndex } from './cities';
 import { coverage, prepared, type BBox, type Shape } from './coverage';
-import { P, gradeFromProps } from './enrich';
+import { P, gradeFromProps, researchedProp } from './enrich';
+import { RESEARCHED_LAYER_IDS } from '../../data/parkRules';
 
 export interface LoadedLayer {
   source: LayerSource;
@@ -49,9 +50,13 @@ export function isReconcilable(s: LayerSource): boolean {
   return s.group === 'public-land' && tierOf(s) !== null;
 }
 
-/** Public layers that must load whenever parcels are shown, even with their own fill off. */
+/**
+ * Public layers that must load whenever parcels are shown, even with their own fill off: the
+ * authoritative ones, and low-confidence (PAD-US) layers that carry researched unit rules
+ * (src/data/parkRules.ts), which can decide a parcel's verdict.
+ */
 export function loadsForParcels(s: LayerSource): boolean {
-  return s.group === 'public-land' && (s.role === 'access-program' || (s.role === 'ownership' && !s.lowConfidence));
+  return s.group === 'public-land' && (s.role === 'access-program' || (s.role === 'ownership' && (!s.lowConfidence || RESEARCHED_LAYER_IDS.has(s.id))));
 }
 
 export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], opts: { visible: (id: string) => boolean; view: BBox; cities?: CityIndex | null }): ReconcileOutcome {
@@ -93,6 +98,7 @@ export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], 
         [P.category]: r.result.category,
         [P.reason]: r.result.reason,
         [P.refs]: JSON.stringify(r.result.references ?? []),
+        [P.researched]: researchedProp(r.result),
         [P.city]: city ?? '',
         [P.notes]: JSON.stringify(r.notes),
       };
@@ -138,6 +144,7 @@ export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], 
       [P.category]: r.result.category,
       [P.reason]: r.result.reason,
       [P.refs]: JSON.stringify(r.result.references ?? []),
+      [P.researched]: researchedProp(r.result),
       [P.tint]: tint,
       [P.conflict]: r.conflict,
       [P.adopted]: r.adoptedFrom ?? '',

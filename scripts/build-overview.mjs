@@ -12,15 +12,19 @@
 // What it does:
 //   1. Pulls every feature of the catalog's dnr-managed-lands (same where clause),
 //      dnr-park-hunting, usfs-surface-ownership (inside Michigan) and padus-federal-other layers,
-//      generalised on the server (maxAllowableOffset) to keep the download small.
-//   2. Grades each feature with the app's own gradeFeature() — the same colours the live layers use.
+//      plus padus-local and padus-state-researched (only features with a researched green or red
+//      rule from src/data/parkRules.ts are painted), generalised on the server
+//      (maxAllowableOffset) to keep the download small.
+//   2. Grades each feature with the app's own gradeFeature() — the same colours the live layers
+//      use, researched unit rules included.
 //   3. Paints the grades onto a ~100 m grid clipped to Michigan's county outlines, in reconcile
 //      precedence order (PAD-US federal, then USFS, then DNR ownership, then park hunting zones
 //      on top), which dissolves overlaps and neighbours of the same grade for free.
 //   4. Applies the city-limits rule (src/grading/reconcile.ts cityOverride) cell by cell, using
 //      the committed city limits (public/cities/city-limits.json, scripts/build-city-limits.mjs):
 //      a yellow cell inside a city turns red, except cells whose grade came from a state park
-//      hunting zone (a restricted zone is the state's own decision). Green stays green.
+//      hunting zone (a restricted zone is the state's own decision) or a researched unit rule.
+//      Green stays green.
 //   5. Traces each grade's connected regions back into polygons (with holes), drops specks,
 //      simplifies, and writes one MultiPolygon per grade with 3-decimal coordinates.
 
@@ -331,7 +335,12 @@ async function main() {
   const stats = {};
   // Paint order = reconcile precedence, lowest first: PAD-US (low confidence) < USFS / DNR
   // ownership < park hunting zones (an access program decides access regardless of owner).
+  // padus-local and padus-state-researched paint only features with a researched GREEN or RED
+  // rule (src/data/parkRules.ts), e.g. the Gogebic County Forest; unresearched local land stays
+  // off the overview.
   const layers = [
+    { id: 'padus-local', researchedOnly: true },
+    { id: 'padus-state-researched', researchedOnly: true },
     { id: 'padus-federal-other' },
     { id: 'usfs-surface-ownership', envelope: [W_LON, S_LAT, E_LON, N_LAT] },
     { id: 'dnr-managed-lands' },
@@ -344,23 +353,36 @@ async function main() {
     // Within a layer the strictest grade paints last, so where zones overlap (a closed zone drawn
     // inside an open one) the overview never shows the looser status.
     const STRICT = { green: 0, unknown: 1, yellow: 2, red: 3 };
-    const graded = features.map((f) => ({ f, grade: gradeFeature(src, f.properties ?? {}).grade })).sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
+    const graded = features
+      .map((f) => {
+        const r = gradeFeature(src, f.properties ?? {});
+        return { f, grade: r.grade, researched: Boolean(r.researched) };
+      })
+      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow'))
+      .sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
     // The county mask only exists to clip federal data from other states; Michigan DNR layers
     // are in-state by definition, and the generalised mask would clip shoreline parks.
     const useMask = !l.id.startsWith('dnr-');
     const isProgram = l.id === 'dnr-park-hunting';
-    for (const { f, grade } of graded) {
+    const researchedAcres = { green: 0, yellow: 0, red: 0 };
+    for (const { f, grade, researched } of graded) {
       g[grade]++;
       const code = GRADE_CODE[grade];
       if (!code) continue;
+      // A researched unit rule is exempt from the city rule, like a park hunting zone.
+      const exempt = isProgram || researched;
       for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => {
         if (useMask && !mask[i]) return;
         grid[i] = code;
-        program[i] = isProgram ? 1 : 0;
+        program[i] = exempt ? 1 : 0;
+        if (researched) researchedAcres[grade] += (CELL_M * CELL_M) / 4046.86;
       });
     }
-    stats[l.id] = { features: features.length, serverCount: count, grades: g };
-    console.error(`${l.id}: ${features.length}/${count} features`, g);
+    stats[l.id] = { features: graded.length, serverCount: count, grades: g };
+    if (researchedAcres.green + researchedAcres.yellow + researchedAcres.red) {
+      console.error(`  researched rules painted: ${Object.entries(researchedAcres).map(([k, v]) => `${k} ${Math.round(v)} ac`).join(', ')}`);
+    }
+    console.error(`${l.id}: ${graded.length} painted of ${features.length}/${count} features`, g);
   }
 
   // City-limits rule: yellow inside a city → red (not park-zone cells); green and red unchanged.

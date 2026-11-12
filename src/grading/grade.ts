@@ -9,6 +9,7 @@
 // This is a screening aid, not legal advice. Every reason tells the user what to verify.
 
 import type { Grade, GradeResult, LayerSource, OwnerKind } from '../contract.ts';
+import { applyParkRule, findParkRule } from '../data/parkRules.ts';
 
 type Ref = { label: string; url?: string };
 
@@ -624,8 +625,14 @@ function gradeNonLand(source: LayerSource): GradeResult {
 // ---------------------------------------------------------------------------
 
 export function gradeFeature(source: LayerSource, properties: Record<string, unknown>): GradeResult {
+  const base = gradeByLayer(source, properties ?? {});
+  // A researched rule for this specific unit (src/data/parkRules.ts) replaces the layer's grade.
+  const rule = findParkRule(source.id, properties ?? {});
+  return rule ? applyParkRule(rule, base, source.nameField ? str((properties ?? {})[source.nameField]) : '') : base;
+}
+
+function gradeByLayer(source: LayerSource, p: Record<string, unknown>): GradeResult {
   if (source.fixedGrade) return source.fixedGrade;
-  const p = properties ?? {};
   const id = source.id;
 
   if (id === 'dnr-managed-lands') return gradeDnrManagedLands(p);

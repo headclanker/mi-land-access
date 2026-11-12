@@ -13,6 +13,9 @@ const PADUS_FEE =
   'https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/Fee_Managers_PADUS/FeatureServer/0';
 const PADUS_MI_FEE = "State_Nm = 'MI' AND Category = 'Fee'";
 
+/** PAD-US state units served by padus-state-researched (and left out of padus-state-other). */
+export const PADUS_STATE_RESEARCHED_UNITS = ['Mackinac State Park', 'Fort Michilimackinac State Park'] as const;
+
 const ATTR_DNR = 'Michigan DNR';
 const ATTR_PADUS = 'USGS Protected Areas Database of the United States (PAD-US 4.1)';
 
@@ -241,7 +244,25 @@ const PUBLIC_LAND: LayerSource[] = [
     minZoom: 8,
     defaultVisible: false,
     fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'GIS_Acres'],
-    where: `${PADUS_MI_FEE} AND Mang_Type = 'STAT' AND Mang_Name IN ('OTHS', 'SDOL')`,
+    where: `${PADUS_MI_FEE} AND Mang_Type = 'STAT' AND Mang_Name IN ('OTHS', 'SDOL') AND Unit_Nm NOT IN (${PADUS_STATE_RESEARCHED_UNITS.map((u) => `'${u}'`).join(', ')})`,
+    nameField: 'Unit_Nm',
+    role: 'ownership',
+    lowConfidence: true,
+  },
+  {
+    // State-land units with a researched rule (src/data/parkRules.ts) that no default layer shows:
+    // the Mackinac State Historic Parks. Kept out of padus-state-other (off by default, mostly
+    // unresearched) so they draw red without switching that whole layer on.
+    id: 'padus-state-researched',
+    title: 'Mackinac state historic parks (researched)',
+    group: 'public-land',
+    url: PADUS_FEE,
+    geometry: 'polygon',
+    attribution: ATTR_PADUS,
+    minZoom: 8,
+    defaultVisible: true,
+    fields: ['Unit_Nm', 'Mang_Type', 'Mang_Name', 'Des_Tp', 'Pub_Access', 'Loc_Mang', 'GIS_Acres'],
+    where: `${PADUS_MI_FEE} AND Mang_Type = 'STAT' AND Unit_Nm IN (${PADUS_STATE_RESEARCHED_UNITS.map((u) => `'${u}'`).join(', ')})`,
     nameField: 'Unit_Nm',
     role: 'ownership',
     lowConfidence: true,

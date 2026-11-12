@@ -2024,3 +2024,36 @@ a.btn {
   letter-spacing: 0.08em;
   color: var(--muted);
 }
+
+/* ==========================================================================
+   3D view (terrain + buildings) — src/app/map/view3d.ts
+   ========================================================================== */
+
+/* The 3D button joins the map-button column, so the north arrow moves down one slot. */
+#north {
+  top: calc(var(--safe-t) + 308px);
+}
+#btn-3d span {
+  font-size: 0.66rem;
+}
+#btn-3d[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: transparent;
+}
+/* Approximate ground elevation after the coordinates. */
+#coord-readout .elev {
+  font-weight: 700;
+  color: var(--muted);
+}
+.v3d-toggle {
+  margin-bottom: 4px;
+}
+.v3d-label {
+  margin: 10px 0 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.v3d-switch {
+  margin-top: 6px;
+}

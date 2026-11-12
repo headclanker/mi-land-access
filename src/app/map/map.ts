@@ -14,6 +14,12 @@ import { prefGet, prefSet } from '../util/store';
 export const ANCHORS = ['anchor-fills', 'anchor-lines', 'anchor-units', 'anchor-points', 'anchor-labels', 'anchor-markups', 'anchor-top'] as const;
 export type Anchor = (typeof ANCHORS)[number];
 
+/**
+ * Placeholder between the basemap and the land fills: shaded relief (3D view) goes just above it,
+ * and a re-added basemap goes just below it, so switching styles never covers the relief.
+ */
+export const RELIEF_ANCHOR = 'anchor-relief';
+
 const BASEMAP_SOURCE = 'basemap';
 const BASEMAP_LAYER = 'basemap';
 
@@ -27,6 +33,7 @@ function initialStyle(b: Basemap): StyleSpecification {
     layers: [
       { id: 'bg', type: 'background', paint: { 'background-color': '#dfe3da' } },
       { id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: { 'raster-fade-duration': 150 } },
+      { id: RELIEF_ANCHOR, type: 'symbol', source: 'empty', layout: { visibility: 'none' } },
       ...ANCHORS.map((id) => ({ id, type: 'symbol' as const, source: 'empty', layout: { visibility: 'none' as const } })),
     ],
   };
@@ -78,7 +85,7 @@ export function setBasemap(map: MLMap, b: Basemap): void {
   if (map.getLayer(BASEMAP_LAYER)) map.removeLayer(BASEMAP_LAYER);
   if (map.getSource(BASEMAP_SOURCE)) map.removeSource(BASEMAP_SOURCE);
   map.addSource(BASEMAP_SOURCE, { type: 'raster', tiles: b.tiles, tileSize: 256, maxzoom: b.maxzoom, attribution: b.attribution });
-  map.addLayer({ id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: { 'raster-fade-duration': 150 } }, ANCHORS[0]);
+  map.addLayer({ id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: { 'raster-fade-duration': 150 } }, RELIEF_ANCHOR);
   document.documentElement.dataset.basemap = b.dark ? 'dark' : 'light';
   window.dispatchEvent(new CustomEvent('basemapchange', { detail: b.id }));
 }

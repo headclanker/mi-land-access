@@ -20,6 +20,7 @@ import {
 import { P, enrichFeature } from './enrich';
 import { CountyIndex } from './counties';
 import { loadsForParcels, reconcileLoaded } from './reconcileLayers';
+import { loadBBoxFor } from '../map/view3dModel';
 
 export interface LayerStatus {
   /** User toggle. */
@@ -379,8 +380,8 @@ export class LayerManager {
   // ---------- loading ----------
 
   private viewBBox(): BBox {
-    const b = this.map.getBounds();
-    return [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+    // A tilted (3D) camera sees to the horizon: load detail near the camera only.
+    return loadBBoxFor(this.map);
   }
 
   refresh(): void {

@@ -9,6 +9,8 @@ import { fill, copyText, debounce, h, icon, showDialog, toast } from '../util/do
 import type { SearchResult } from './search';
 import { formatLatLon, toDMS } from '../util/coords';
 import { prefGet, prefSet } from '../util/store';
+import { view3dSettings } from '../map/view3d';
+import { TERRAIN_CREDITS_TEXT } from '../map/view3dModel';
 
 // ---------- theme ----------
 
@@ -275,6 +277,18 @@ export function setupSearch(form: HTMLFormElement, input: HTMLInputElement, list
   });
 }
 
+/**
+ * Optional ground-elevation text for the readout ("≈ 1,230 ft"), e.g. from the 3D view. Returns ''
+ * when there is nothing to show. Returns a function that re-renders the readout.
+ */
+let elevationText: ((lon: number, lat: number) => string) | null = null;
+let rerenderReadout: () => void = () => {};
+export function setReadoutElevation(fn: (lon: number, lat: number) => string): () => void {
+  elevationText = fn;
+  rerenderReadout();
+  return () => rerenderReadout();
+}
+
 export function setupReadout(map: MLMap, el: HTMLElement): void {
   let dms = prefGet('dms', false);
   let pointer: [number, number] | null = null;
@@ -282,7 +296,10 @@ export function setupReadout(map: MLMap, el: HTMLElement): void {
     const [lon, lat] = pointer ?? map.getCenter().toArray();
     el.textContent = dms ? `${toDMS(lat, true)} ${toDMS(lon, false)}` : formatLatLon(lat, lon);
     el.dataset.mode = pointer ? 'pointer' : 'center';
+    const elev = elevationText?.(lon, lat) ?? '';
+    if (elev) el.append(h('span.elev', { title: 'Approximate ground elevation (10–30 m elevation data)' }, ` · ${elev}`));
   };
+  rerenderReadout = render;
   map.on('move', () => {
     if (!pointer) render();
   });
@@ -363,6 +380,7 @@ export function renderMorePane(root: HTMLElement, sources: LayerSource[], onInst
       ),
     ),
     onInstall ? h('button.btn.primary', { type: 'button', onclick: onInstall }, icon('download'), 'Install app') : null,
+    view3dSettings(),
     h('h2.pane-title', {}, 'Offline'),
     h('p.muted.small', {}, 'The app works offline once loaded. Map tiles and land data you have viewed recently are kept (up to ~2,500 tiles). To prepare for no signal, pan and zoom over your hunting area at home before you go.'),
     h(
@@ -373,6 +391,9 @@ export function renderMorePane(root: HTMLElement, sources: LayerSource[], onInst
           if (!('caches' in window)) return toast('No cache in this browser');
           await caches.delete('basemap-tiles');
           await caches.delete('land-data');
+          await caches.delete('terrain-tiles');
+          await caches.delete('building-tiles');
+          await caches.delete('building-tilejson');
           toast('Cached tiles and land data cleared');
         },
       },
@@ -382,6 +403,6 @@ export function renderMorePane(root: HTMLElement, sources: LayerSource[], onInst
     h('h2.pane-title', {}, 'About'),
     h('p.small', {}, `${APP_NAME} is an independent Michigan land-access map for hunters. It is not affiliated with the Michigan DNR or any county.`),
     h('button.btn.ghost.sm', { type: 'button', onclick: () => void showDialog(disclaimerDialog(false)) }, icon('legal'), 'Not legal advice — read'),
-    h('details.attrs', {}, h('summary', {}, 'Data sources'), h('ul.small', {}, h('li', {}, 'Basemaps: USGS The National Map; © OpenStreetMap contributors'), attributions.map((a) => h('li', {}, a)))),
+    h('details.attrs', {}, h('summary', {}, 'Data sources'), h('ul.small', {}, h('li', {}, 'Basemaps: USGS The National Map; © OpenStreetMap contributors'), TERRAIN_CREDITS_TEXT.map((a) => h('li', {}, a)), attributions.map((a) => h('li', {}, a)))),
   );
 }

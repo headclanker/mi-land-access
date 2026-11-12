@@ -30,6 +30,7 @@ export const UI_ICONS: Record<string, string> = {
   undo: 'M9 14 4 9l5-5 M4 9h10.5a5.5 5.5 0 0 1 0 11H11',
   crosshair: 'M12 3v6 M12 15v6 M3 12h6 M15 12h6',
   map: 'M9 4 3 6.5v14L9 18l6 2.5 6-2.5V4l-6 2.5L9 4z M9 4v14 M15 6.5v14',
+  terrain: 'M2.5 19.5 8.5 9l3.5 5.5 2.5-3.5 7 8.5z M7 11.6l1.5 1.4 1.6-1.3',
   more: 'M5 12h.01 M12 12h.01 M19 12h.01',
   chevron: 'M6 9l6 6 6-6',
   nav: 'M12 2.5l7 18.5-7-4-7 4z',

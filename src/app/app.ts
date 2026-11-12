@@ -14,7 +14,8 @@ import { LayerPanel } from './ui/layerPanel';
 import { Details } from './details/details';
 import { Sheet, desktopQuery } from './ui/sheet';
 import { injectSprite } from './ui/icons';
-import { applyTheme, maybeShowDisclaimer, renderMorePane, setupBasemapPicker, setupReadout, setupSatelliteToggle, setupSearch, showLegal, watchTheme } from './ui/chrome';
+import { applyTheme, maybeShowDisclaimer, renderMorePane, setupBasemapPicker, setupReadout, setReadoutElevation, setupSatelliteToggle, setupSearch, showLegal, watchTheme } from './ui/chrome';
+import { View3D } from './map/view3d';
 import { MarkupStore } from './markups/store';
 import { MARKUP_LAYERS, installMarkupLayers, renderMarkups } from './markups/render';
 import { DrawController } from './markups/draw';
@@ -294,6 +295,8 @@ export async function startApp(): Promise<void> {
   setupBasemapPicker(map, $('#btn-basemap'));
   setupSatelliteToggle(map, $('#btn-sat') as HTMLButtonElement);
   setupReadout(map, $('#coord-readout'));
+  const view3d = new View3D(map, $('#fabs'));
+  view3d.onChange(setReadoutElevation((lon, lat) => view3d.elevationLabel(lon, lat)));
   let searchPin: Marker | null = null;
   /** Coordinates search: pin the spot, and once the map has arrived and loaded, show what is there. */
   const goToCoord = (lon: number, lat: number): void => {
@@ -439,5 +442,5 @@ export async function startApp(): Promise<void> {
   await importFromHash();
 
   // Exposed for debugging / automated checks only.
-  Object.assign(window, { __mila: { map, layers, overview, store, tracker, compass, loc, draw, setBasemap, applyTheme } });
+  Object.assign(window, { __mila: { map, view3d, layers, overview, store, tracker, compass, loc, draw, setBasemap, applyTheme } });
 }

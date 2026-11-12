@@ -179,6 +179,8 @@ export class View3D {
     const from = map.getPitch();
     const t0 = performance.now();
     const step = (now: number): void => {
+      // Heading-up switched off (e.g. north tapped): stop, so its own bearing ease is not cancelled.
+      if (!this.headingUp()) return;
       const k = Math.min(1, (now - t0) / EASE_MS);
       const e = k < 0.5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2;
       map.setPitch(from + (cam.pitch - from) * e);
@@ -194,8 +196,15 @@ export class View3D {
     const finish = (): void => {
       this.leaving = 0;
       if (this.prefs.on) return; // switched back on meanwhile
+      if (map.getPitch() !== 0) {
+        // Interrupted (a gesture or the north button's ease): level out once it has finished.
+        if (map.isMoving()) {
+          map.once('moveend', () => window.setTimeout(finish, 0));
+          return;
+        }
+        map.jumpTo({ pitch: 0 });
+      }
       map.setTerrain(null);
-      if (map.getPitch() !== 0) map.jumpTo({ pitch: 0 });
       map.setMaxPitch(0);
       this.setMousePitch(false);
     };
@@ -346,7 +355,7 @@ export class View3D {
       h(
         'div.v3d-toggle',
         {},
-        h('button.btn.sm', { type: 'button', class: p.on ? 'primary' : null, 'aria-pressed': String(p.on), onclick: () => this.dispatch({ type: 'toggle' }) }, icon('terrain'), p.on ? '3D is on — back to flat' : 'Turn on 3D'),
+        h('button.btn.sm', { type: 'button', 'aria-pressed': String(p.on), onclick: () => this.dispatch({ type: 'toggle' }) }, icon('terrain'), p.on ? '3D is on — back to flat' : 'Turn on 3D'),
       ),
       h('p.muted.small', {}, 'Tilt the map over terrain with buildings. In 3D, drag with two fingers to tilt and turn (on a computer: right-drag or Ctrl-drag).'),
       h('p.v3d-label', {}, 'Terrain height'),

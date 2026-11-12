@@ -2049,6 +2049,11 @@ a.btn {
 .v3d-toggle {
   margin-bottom: 4px;
 }
+.v3d-toggle .btn[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: transparent;
+  color: var(--accent-ink);
+}
 .v3d-label {
   margin: 10px 0 6px;
   font-size: 0.85rem;

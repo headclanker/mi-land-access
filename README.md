@@ -35,7 +35,7 @@ localhost).
 | `src/contract.ts` | Fixed interface between the app shell and the data/grading module |
 | `src/data/**`, `src/grading/**` | Layer catalogue, county list, grading rules (data module) |
 | `src/app/app.ts` | Wires everything together |
-| `src/app/map/` | MapLibre setup, basemaps, layer-order anchors, worker URL |
+| `src/app/map/` | MapLibre setup, basemaps, layer-order anchors, worker URL; 3D view (`view3d.ts`, pure logic in `view3dModel.ts`) |
 | `src/app/layers/arcgis.ts` | Generic ArcGIS REST loader: tile-snapped bbox queries, pagination, generalisation, LRU cache, Esri-JSON fallback |
 | `src/app/layers/manager.ts` | Per-layer loading (debounce, abort, global request limiter, county filtering) and grade styling |
 | `src/app/layers/enrich.ts` | Grading glue (`gradeFeature` → `_grade/_category/_reason/_refs`, parcels also `_ownerGrade/_ownerCategory`), stable feature ids, acreage |
@@ -84,10 +84,22 @@ coordinates. The permission dialog drafts a mailed letter or a short text messag
 records have no phone numbers, so the text opens your messaging app via an `sms:` link with the
 message filled in and the number you type (remembered per owner on this device only).
 
+## 3D view
+
+The **3D** button in the map-button column tilts the map over real terrain (AWS Terrain Tiles,
+free, no key) with shaded relief, a hazy horizon and simple extruded buildings from OpenFreeMap
+(OpenStreetMap data) from zoom 14. Every land layer, markup, track and the GPS dot stays draped
+on the ground, and taps, drawing and the crosshair work on the terrain. Terrain height (1×–3×),
+3D buildings and shaded relief (off / in 3D / always) are under More → 3D view. Nothing extra is
+downloaded until 3D or relief is switched on. See [docs/3D_VIEW.md](docs/3D_VIEW.md) for data
+sources, attribution, limits and cost.
+
 ## Offline
 
 The app shell is precached. Basemap tiles you have viewed are cached cache-first, up to 2,500
 tiles or 30 days. Land-data responses are cached network-first, up to 400 responses or 14 days.
+3D elevation tiles (up to 1,500, 60 days) and building tiles (up to 800, 30 days) are cached
+cache-first too.
 To prepare for no signal, pan over your area before you go. The cache can be cleared under
 More → Offline.
 

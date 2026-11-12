@@ -10,6 +10,7 @@ import type { LayerManager } from '../layers/manager';
 import { P, acresOf, gradeFromProps, isGrade, listRank, parseRefs } from '../layers/enrich';
 import { parseNotes, parseOverlaps } from '../layers/reconcileLayers';
 import { prepared, contains } from '../layers/coverage';
+import { PARCEL_MIN_ZOOM } from '../../data/sources';
 import { NO_PARCEL, cityOverride, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
 import { CITY_OWNED_CATEGORY } from '../../grading/grade';
 import { BOUNDARY_NOTE } from '../../grading/grade';
@@ -162,7 +163,18 @@ export class Details {
       }
       return { result: gradeFromProps(props), notes, conflict: props[P.conflict] === true, adoptedFrom: adopted || undefined, parcel };
     }
-    if (!graded.length) return null;
+    if (!graded.length) {
+      // Nothing graded under the tap. Below parcel zoom the land layers simply aren't loaded,
+      // so say nothing; at parcel zoom it is a real gap (a road, water, or missing county
+      // data) and the spot still gets a verdict — including the city-limits note.
+      if (this.deps.map.getZoom() < PARCEL_MIN_ZOOM) return null;
+      const gap: GradeResult = {
+        ...NO_PARCEL,
+        reason: 'No parcel or public-land record covers this exact spot — it may be a road, water, or a gap in the county data. Tap the land beside it, and verify ownership before entering.',
+      };
+      const r = cityOverride(reconcileParcel(gap, []), this.deps.layers.cities?.at(lon, lat));
+      return { result: r.result, notes: r.notes, conflict: false };
+    }
     const r = cityOverride(reconcileParcel(NO_PARCEL, graded), this.deps.layers.cities?.at(lon, lat));
     const from = r.adoptedFrom ? graded.find((o) => o.source.id === r.adoptedFrom) : undefined;
     return {
@@ -375,12 +387,15 @@ export class Details {
       ? h('span.badge.unit', { style: `--c:${this.deps.layers.colorForUnitLayer(source.id)}` }, 'Unit')
       : isBoundary
         ? h('span.badge.unit', { style: `--c:${boundaryColor(source.id)}` }, 'Boundary')
+        : source.group === 'reference'
+          ? h('span.badge.unit', { style: `--c:${GRADE_COLORS.unknown}` }, 'Reference')
         : h('span.badge', { style: `--c:${GRADE_COLORS[hit.grade]}`, 'data-grade': hit.grade }, props[P.conflict] === true ? 'Verify' : shortLabel(hit.grade, str(props[P.adopted]) || source.id, category));
-    const showGrade = !isUnit && !isBoundary && !primary;
+    const isReference = source.group === 'reference';
+    const showGrade = !isUnit && !isBoundary && !isReference && !primary;
 
     const el = h(
       'details.feature-card',
-      { open: expanded, 'data-grade': isBoundary ? 'boundary' : hit.grade },
+      { open: expanded, 'data-grade': isBoundary || isReference ? 'boundary' : hit.grade },
       h('summary', {}, badge, h('span.fc-title', {}, h('strong', {}, title), h('span.muted.small', {}, source.title)), icon('chevron', 'ic chev')),
       h(
         'div.fc-body',

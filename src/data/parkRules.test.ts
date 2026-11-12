@@ -83,11 +83,11 @@ describe('park rules – federal', () => {
     ['Barry County Waterfowl Production Area', 'FWS', 'RMA', 'green', 'Waterfowl Production Area'],
     ['Jackson County Waterfowl Production Area Of Mi', 'FWS', 'RMA', 'green', 'Waterfowl Production Area'],
     ['VAN BUREN COUNTY WATERFOWL PRODUCTION AREA', 'FWS', 'RMA', 'green', 'Waterfowl Production Area'],
-    ['Harbor Island National Wildlife Refuge', 'FWS', 'NWR', 'green', 'black bear'],
+    ['Harbor Island National Wildlife Refuge', 'FWS', 'NWR', 'green', 'state seasons'],
     ['Kirtlands Warbler Wildlife Management Area', 'FWS', 'NCA', 'green', '1 May to 15 August'],
     ['Seney National Wildlife Refuge', 'FWS', 'NWR', 'yellow', 'Hunt Areas A, B and C'],
-    ['Shiawassee National Wildlife Refuge', 'FWS', 'NWR', 'yellow', 'lottery'],
-    ['Detroit River International Wildlife Refuge', 'FWS', 'NWR', 'yellow', 'archery'],
+    ['Shiawassee National Wildlife Refuge', 'FWS', 'NWR', 'yellow', 'Units A and C'],
+    ['Detroit River International Wildlife Refuge', 'FWS', 'NWR', 'yellow', 'Strong unit south is closed'],
     ['Jordan River National Fish Hatchery', 'FWS', 'FOTH', 'yellow', 'mapped open'],
     ['Pendills Creek National Fish Hatchery', 'FWS', 'FOTH', 'yellow', 'mapped open'],
     ['Camp Grayling Military Reservation', 'OTHF', 'SOTH', 'yellow', 'gated'],
@@ -102,10 +102,10 @@ describe('park rules – federal', () => {
     expect(g.reason).toContain(text);
     expect(g.researched).toBeDefined();
   });
-  it('Keweenaw NHP and unlisted federal land keep the layer grade', () => {
+  it('Keweenaw NHP is closed (low confidence); unlisted federal land keeps the layer grade', () => {
     const k = gf(fed('Keweenaw National Historical Park', 'NPS', 'HCA'));
-    expect(k.grade).toBe('yellow');
-    expect(k.researched).toBeUndefined();
+    expect(k.grade).toBe('red');
+    expect(k.researched?.confidence).toBe('low');
     expect(gf(fed('Farm Service Agency Interest Of Mi')).researched).toBeUndefined();
   });
 });
@@ -130,7 +130,7 @@ describe('park rules – county and regional land', () => {
       [local('Orion Oaks County Park', 'Unknown County'), 'archery deer hunting only'],
       [local('Upper Macatawa Natural Area - East', 'County of Ottawa', { Des_Tp: 'LCA' }), 'lottery'],
       [local('Ottawa Sands County Park', 'Ottawa County'), 'lottery'],
-      [local('Russ Forest Park', 'Cass County Parks Department'), 'sign-in'],
+      [local('Russ Forest Park', 'Cass County Parks Department'), 'MSU permit'],
       [local('Pine Haven Recreational Area', 'County of Midland'), 'tourism listing'],
       [local('Genessee Recreation Area', 'County of Genesee'), 'Cummings'],
       [local('Sharon Mills Preserve', 'Washtenaw County Parks & Recreation Commission', { Des_Tp: 'LCA' }), 'Beyond BOW'],
@@ -173,7 +173,6 @@ describe('park rules – county and regional land', () => {
 
   it('over-matching traps stay unresearched', () => {
     const traps: Record<string, unknown>[] = [
-      local('Long Lake Park', 'Alpena County Parks'), // same name as a Kent bow park
       local('Donald J Lamoreaux Park', 'City of Grand Rapids', { Mang_Name: 'CITY' }),
       local('Kent City Park', 'Village of Kent City', { Mang_Name: 'CITY' }),
       local('Kentwood Park', 'City of Kentwood', { Mang_Name: 'CITY' }),
@@ -184,7 +183,6 @@ describe('park rules – county and regional land', () => {
       local('Ionia Free Fairgrounds', 'County of Ionia', { Des_Tp: 'LREC' }),
       local('Local Forest', 'Gogebic County Road Commission', { Des_Tp: 'LRMA' }),
       local('Little Girls Point County Park', 'County of Gogebic'),
-      local('Kirk Park', 'County of Ottowa'),
       local('Whispering Willows Golf Course', 'City of Livonia', { Mang_Name: 'CITY', Des_Tp: 'LREC' }),
       local('Willow Park', 'City of Lincoln Park', { Mang_Name: 'CITY' }),
       local('Land', 'Huron Clinton Metropark Authority', { Mang_Name: 'CITY' }),
@@ -194,6 +192,19 @@ describe('park rules – county and regional land', () => {
     ];
     for (const p of traps) expect(gl(p).researched, `${p.Unit_Nm} / ${p.Loc_Mang}`).toBeUndefined();
     expect(gl(local('Crittenden Park', 'Osceola County Parks')).grade).toBe('yellow');
+    // Alpena's Long Lake Park shares a name with a Kent bow-permit park: it gets Alpena's own rule.
+    const alpena = gl(local('Long Lake Park', 'Alpena County Parks'));
+    expect(alpena.grade).toBe('red');
+    expect(alpena.reason).toContain('Alpena County Parks Ordinance');
+    // Second research round (verified from the counties' own pages).
+    expect(gl(local('Kirk Park', 'County of Ottowa')).grade).toBe('red');
+    expect(gl(local('Marne Bog', 'County')).grade).toBe('green');
+    expect(gl(local('Spring Grove Park', 'County')).researched).toBeUndefined();
+    expect(gl(local('Historic Bridge Park', 'County of Calhoun')).grade).toBe('red');
+    expect(gl(local('Gratiot County Farm', 'County of Gratiot')).grade).toBe('red');
+    expect(gl(local('Local Forest', 'County of Gratiot', { Des_Tp: 'LRMA' })).researched).toBeUndefined();
+    expect(gl(local('Fitzgerald Park', 'Eaton County Parks')).grade).toBe('red');
+    expect(gl(local('Eaton Fairgrounds', 'County of Eaton', { Des_Tp: 'LREC' })).researched).toBeUndefined();
     // A rule only applies on its own layers.
     expect(gradeFeature(src('padus-ngo'), local('Fallasberg Park', 'Kent County Parks')).researched).toBeUndefined();
   });

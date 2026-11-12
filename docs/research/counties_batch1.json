@@ -1,0 +1,508 @@
+[
+ {
+  "county": "Alcona",
+  "system": "Alcona County Board of Commissioners (Alcona Recreation Area / fairgrounds, run with Fair Board volunteers)",
+  "hunting": "unknown",
+  "what": "County's own 2027-2031 joint recreation plan draft says the county owns only one recreation facility, the Alcona Recreation Area (fairgrounds near Lincoln, incl. 80 acres undeveloped forest). No county park hunting/firearms rule was found. The only 'public hunting' site named (Hansen Road 40 Acre Site) is in the Caledonia Township section of the plan.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified in county plan; PAD-US lists none for Alcona County.",
+  "sources": [
+   {
+    "url": "https://alconacountymi.com/wp-content/uploads/2026/09/Alcona-County-Joint-Rec-DRAFT-Public-Review.pdf",
+    "title": "Alcona County Joint Recreation Plan 2027-2031 (draft)",
+    "date": "2026-09",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/alcona/hunting",
+    "title": "MDNR local controls: Alcona",
+    "date": "current",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Opened county site (www.alconacountymi.com) and the rec plan; no ordinance/rules page for Recreation Area found. Not recorded as closed because no rule text exists in what was read."
+ },
+ {
+  "county": "Alger",
+  "system": "none (no county parks department; Alger Parks & Recreation Dept is township/city funded)",
+  "hunting": "no-county-parks",
+  "what": "Alger County's government site lists Parks & Recreation only as outside links (Alger Parks and Recreation Department, county fair, conservation district); no county-owned parks or county forest rules found; PAD-US lists no county-managed land.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest found; PAD-US shows none.",
+  "sources": [
+   {
+    "url": "https://algercounty.gov/services/parks-recreation/",
+    "title": "Alger County Parks & Recreation Links",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "2024-2029 recreation plan PDF URL returned 404 so not read. Could not rule out small county parcels (tax-reverted land)."
+ },
+ {
+  "county": "Alpena",
+  "system": "Alpena County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "Alpena County Parks Ordinance bans hunting/trapping and discharging any weapon on county park property unless prior written permission from the County; possession of firearms allowed per state law. Applies to Long Lake, Beaver Lake, Sunken Lake parks etc. (parks also closed Oct 16-May 14).",
+  "quote": "No person, while on County Park property, shall remove, hunt, trap, wound, kill, molest, or in any other way harm any living thing, unless prior written permission is obtained from the County or its Designee.",
+  "open_units": [],
+  "closed_units": [
+   "All county parks (Long Lake Park, Beaver Lake, Sunken Lake, others)"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://alpenacounty.org/583/Alpena-County-Parks-Ordinance-PDF",
+    "title": "Alpena County Parks Ordinance (adopted 2025-10-14, amended 2025-12-17)",
+    "date": "2025-12-17",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "county": "Arenac",
+  "system": "Arenac County Parks & Recreation",
+  "hunting": "closed",
+  "what": "County Parks campground rules (2026) prohibit firearms in the park and campground. Only county park is the campground/beach park; no hunting provision found.",
+  "quote": "Fireworks and firearms are PROHIBITED in the park and campground.",
+  "open_units": [],
+  "closed_units": [
+   "Arenac County campground park"
+  ],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US lists 253 ac 'Local Forest' for County of Arenac; no county forest rules found.",
+  "sources": [
+   {
+    "url": "https://www.arenaccountymi.gov/Docs/Parks/2026%20ACP%20Rules.pdf",
+    "title": "2026 Arenac County Parks campground rules",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Rules are campground-specific; no ordinance read."
+ },
+ {
+  "county": "Baraga",
+  "system": "unknown",
+  "hunting": "unknown",
+  "what": "Not reached beyond one search (no county parks page found); county site baragacounty.org redirects to an unrelated site.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/baraga/hunting",
+    "title": "MDNR local controls: Baraga",
+    "date": "current",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "unknown (not reached beyond one search)."
+ },
+ {
+  "county": "Barry",
+  "system": "Barry County Parks & Recreation Commission / Charlton Park Board",
+  "hunting": "unknown",
+  "what": "County owns Historic Charlton Park (300+ ac), Bailey Nature Preserve, McKeown Bridge Park, Paul Henry-Thornapple Trail. No hunting or firearms rule found on barrycountyparks.org, the 2019-2023 parks plan, or Charlton Park rental materials (which cite only an alcohol/glass ordinance).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "No county forest; Charlton Park has a 2008 forestry management plan only.",
+  "sources": [
+   {
+    "url": "https://barrycountyparks.org/parks/barry-countys-parks.html",
+    "title": "Barry County's Parks",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://charltonpark.org/file_download/8ad30513-375e-429a-bc93-44162a584268",
+    "title": "Barry County Parks and Recreation Plan 2019-2023",
+    "date": "2019",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Read site and plan; no rule text. Parks plan notes trail closed in November for firearm deer season."
+ },
+ {
+  "county": "Benzie",
+  "system": "unknown",
+  "hunting": "unknown",
+  "what": "Not reached: benziecounty.org connection reset; one search found nothing.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/benzie/hunting",
+    "title": "MDNR local controls: Benzie",
+    "date": "current",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "unknown (not reached; benziecounty.org connection reset)."
+ },
+ {
+  "county": "Berrien",
+  "system": "Berrien County Parks (Ordinance 8 governs all county parks)",
+  "hunting": "unknown",
+  "what": "Berrien County Ordinance 8 (Park Rules) exists and bans fireworks, explosives and 'devices capable of launching a projectile' at all facilities; full text (hunting/firearms clauses) could not be opened because berriencounty.org returns 403 to automated requests.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://berriencounty.org/DocumentCenter/View/999/Park-Rules---Ordinance-8-PDF",
+    "title": "Berrien County Ordinance 8 - Park Rules",
+    "date": "undated",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Tried curl (403) and web archive (reset); did not attempt to bypass bot protection."
+ },
+ {
+  "county": "Branch",
+  "system": "Branch County Parks & Recreation (Board of Park Trustees)",
+  "hunting": "unknown",
+  "what": "Parks: Angel Cove, Gilead Lake, Memorial, Quincy-Marble Lake, Riverbend. branchcountyparks.org park pages and about page have no rules text; no ordinance found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://branchcountyparks.org/",
+    "title": "Branch County Parks",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Read all park pages via site; no hunting/firearms language."
+ },
+ {
+  "county": "Calhoun",
+  "system": "Calhoun County Parks & Recreation Commission",
+  "hunting": "closed",
+  "what": "County park rules ban hunting, trapping and killing any bird or animal in all county parks (Historic Bridge Park, Kimball Pines, Ott Biological Preserve, Trailway, Riverside Park).",
+  "quote": "No person shall hunt, trap, catch, wound, kill or treat cruelly, attempt to trap, catch, wound or kill any bird or animal ... in or upon any park.",
+  "open_units": [],
+  "closed_units": [
+   "Historic Bridge Park",
+   "Kimball Pines Park",
+   "Ott Biological Preserve",
+   "Calhoun County Trailway",
+   "Riverside Park"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://www.calhouncountymi.gov/Parks/CCParksRules.pdf",
+    "title": "Calhoun County Parks - Rules and Regulations",
+    "date": "2024-10",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Fairgrounds not covered by this rule set."
+ },
+ {
+  "county": "Charlevoix",
+  "system": "Charlevoix County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "County runs Whiting Park (240 ac) and Porter Creek Natural Area (~100 ac). Porter Creek has a 'Park Rules' PDF on a blocked host (charlevoixcountymi.documents-on-demand.com). A 2013 news item says the parks committee recommended deer-only hunting Oct 1-Dec 31 with registration at Porter Creek; adoption and current status unconfirmed.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://www.charlevoixcounty.org/portercreek/index.php",
+    "title": "Porter Creek Natural Area (county)",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://ulysses-herbivore.blogspot.com/2013/05/hunting-and-hiking-will-likely-coexist.html",
+    "title": "Petoskey News repost: hunting and hiking at Porter Creek",
+    "date": "2013-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Possible partly-open (Porter Creek deer) pending rules PDF."
+ },
+ {
+  "county": "Cheboygan",
+  "system": "Cheboygan County (fairgrounds; planning)",
+  "hunting": "unknown",
+  "what": "Read 2016 county recreation plan; no county park hunting/firearms rule found. PAD-US lists only Cheboygan Fairgrounds (30 ac).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://www.cheboygancounty.net/wp-content/uploads/2021/06/fs41-1453927863-89959.pdf",
+    "title": "Cheboygan County Recreation Plan",
+    "date": "2016-01-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "county": "Chippewa",
+  "system": "unknown",
+  "hunting": "unknown",
+  "what": "Two searches and the county homepage (chippewacountymi.gov) showed no county parks department, county parks ordinance or county forest; PAD-US lists no county-managed land for Chippewa. Not conclusive.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [],
+  "confidence": "low",
+  "notes": "unknown: no evidence of county park land, but not proven (homepage menu only scanned)."
+ },
+ {
+  "county": "Clare",
+  "system": "none found",
+  "hunting": "no-county-parks",
+  "what": "Clare County tourism parks page lists only city parks (Clare, Farwell, Harrison etc.); no county parks department found. PAD-US lists a 14 ac county 'Local Forest'.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US: 14 ac 'Local Forest' County of Clare.",
+  "sources": [
+   {
+    "url": "https://www.clarecounty.com/things-to-do/outdoor-recreation/parks/",
+    "title": "Clare County parks (CVB)",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Did not open county government site for a parks department; medium-low certainty."
+ },
+ {
+  "county": "Crawford",
+  "system": "none found (county owns fairgrounds/sportsplex)",
+  "hunting": "no-county-parks",
+  "what": "County ordinances page lists ORV/house-number/etc. ordinances, no parks ordinance. PAD-US: only Crawford Fairgrounds & Sportsplex (43 ac).",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://crawfordco.org/offices-departments/board-of-commissioners/county-ordinances/",
+    "title": "Crawford County ordinances",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "No parks dept found; fairgrounds rules not seen."
+ },
+ {
+  "county": "Dickinson",
+  "system": "Dickinson County Parks (Lake Antoine Park)",
+  "hunting": "closed",
+  "what": "Dickinson County Park Ordinance (adopted 2020-05-11) for Lake Antoine Park makes it unlawful to discharge firearms in the park except law enforcement. No hunting allowance found; Marion Park and fairgrounds rules not found.",
+  "quote": "To discharge firearms, firecrackers, rockets, or any other fireworks within said park, except by a law enforcement officer or other authorized personnel.",
+  "open_units": [],
+  "closed_units": [
+   "Lake Antoine Park"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://www.dickinsoncountymi.gov/Documents%20Center/Governments/Department/Parks/ParkOrdinance.Adopted.5.11.2020.docx",
+    "title": "Dickinson County Michigan Park Ordinance",
+    "date": "2020-05-11",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Ordinance names only Lake Antoine Park."
+ },
+ {
+  "county": "Eaton",
+  "system": "Eaton County Parks & Recreation Commission (Parks Ordinance No. I)",
+  "hunting": "restricted",
+  "what": "Parks ordinance bans hunting/trapping on Commission property, except archery bow hunting by permit of the County Parks Office at Crandell Park. Firearm discharge and possession of bows/slingshots need prior written permission; lawful possession/transport per state law allowed.",
+  "quote": "archery bow hunting by permit of the County Parks Office may be allowed at Crandell Park as designated by the commission or its representative",
+  "open_units": [
+   "Crandell Park (archery by permit only)"
+  ],
+  "closed_units": [
+   "Fitzgerald Park",
+   "Fox Memorial Park",
+   "Lincoln Brick Park",
+   "other Commission property"
+  ],
+  "county_forest": "none",
+  "county_forest_what": "No county forest identified.",
+  "sources": [
+   {
+    "url": "https://www.eatoncounty.org/1552/Rules-Regulations-Policy",
+    "title": "Eaton County Parks Rules, Regulations & Policy (ordinance adopted 1980, amended 2021-04-14)",
+    "date": "2021-04-14",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Fairgrounds are separate (fair board) and not covered."
+ },
+ {
+  "county": "Emmet",
+  "system": "Emmet County Parks & Recreation",
+  "hunting": "partly-open",
+  "what": "County 2023-2027 parks plan says the 116-acre North Conway Rd parcel is open to the public for hunting. Maple River Forest (315 ac, county-owned since 1945) is managed for grouse habitat/timber; hunting status not stated. No county-wide park hunting rule found.",
+  "quote": "it is open to the public for hunting, bird watching, other wildlife enjoyment, and is used for model airplane flying.",
+  "open_units": [
+   "North Conway Rd parcel (116 ac)"
+  ],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "Maple River Forest 315 ac county-owned, logged 2018 for grouse habitat; hunting not explicitly stated.",
+  "sources": [
+   {
+    "url": "https://emmetcounty.org/Documents/Departments/Parks%20&%20Recreation/2023-01-05_2023-2027_Parks_Rec_Plan.pdf",
+    "title": "Emmet County Parks & Recreation Plan 2023-2027",
+    "date": "2023-01-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No rules document for Camp Pet-o-se-ga/Headlands read."
+ },
+ {
+  "county": "Gladwin",
+  "system": "unknown",
+  "hunting": "unknown",
+  "what": "One search; no county parks rules found. PAD-US lists Gladwin County Ice Carnival site, a 'Local Forest' and an unknown park (276 ac). gladwincounty.org opened but no parks/forest links found.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://gladwincounty.org/",
+    "title": "Gladwin County site",
+    "date": "2026",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Not resolved; county forest parcel unverified."
+ },
+ {
+  "county": "Gratiot",
+  "system": "Gratiot County Parks & Recreation Commission (Ordinance #2005-2)",
+  "hunting": "closed",
+  "what": "Park rules ordinance bans hunting/trapping on Commission property and bans bringing or possessing any firearm or weapon on park property (CCW pistol may be carried but not discharged). Parks: Reed, Paul Hubscher, Luneack, Pompeii County Parks.",
+  "quote": "No person shall hunt, trap, catch, wound or kill or treat cruelly, attempt to trap, catch, wound or kill any bird or animal ... in or upon Commission property.",
+  "open_units": [],
+  "closed_units": [
+   "Reed County Park",
+   "Paul Hubscher County Park",
+   "Luneack County Park",
+   "Pompeii Park",
+   "all Commission property"
+  ],
+  "county_forest": "unknown",
+  "county_forest_what": "PAD-US lists a 'Local Forest' and County Farm for County of Gratiot; no county forest rules found.",
+  "sources": [
+   {
+    "url": "https://www.gratiotmi.com/DocumentCenter/View/3295/Gratiot-County-Parks-Rules-and-Ordinance-PDF",
+    "title": "Gratiot County Parks Rules and Ordinance (#2005-2)",
+    "date": "2005 (undated copy)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Ordinance dated 2005; I did not find a later amendment. County Farm not covered."
+ },
+ {
+  "county": "Hillsdale",
+  "system": "Hillsdale County Parks (Lewis Emery Park)",
+  "hunting": "unknown",
+  "what": "Opened county parks page and Lewis Emery Park brochure (image PDF, viewed): amenities only (fishing ponds, trails, camping, community center); no hunting or firearms statement.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "county_forest_what": "",
+  "sources": [
+   {
+    "url": "https://hillsdalecountymi.org/index.php/county-parks",
+    "title": "Hillsdale County Parks",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://hillsdalecounty.gov/images/parks/Park_Brochure.pdf",
+    "title": "Lewis Emery Park brochure",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "No rules/ordinance found; PAD-US: Lewis Emery County Park 86 ac, fairgrounds 44 ac."
+ },
+ {
+  "county": "Houghton",
+  "system": "unknown",
+  "hunting": "unknown",
+  "what": "Searched; no county park or county forest rules found. PAD-US lists Houghton County park, 'Local Forest' parcels (Dept Public Works, Road Commission, county) ~1,500 ac total. Site houghtoncounty.net has only gun-free-zone page for county buildings.",
+  "quote": "",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "county_forest_what": "Likely tax-reverted/'Local Forest' parcels per PAD-US; no policy found.",
+  "sources": [
+   {
+    "url": "https://houghtoncounty.net/clerk-cw-gun-free-zones.php",
+    "title": "Houghton County Clerk: Gun-Free Zones",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Not resolved."
+ }
+]

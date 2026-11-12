@@ -1,0 +1,2096 @@
+[
+ {
+  "unit": "Isle Royale National Park",
+  "manager": "National Park Service",
+  "part": "A",
+  "hunting": "closed",
+  "what": "Hunting and killing of wildlife is prohibited by the park's enabling statute (16 U.S.C. 408 series); firearm possession is legal under federal law since 2010 but discharge/use is prohibited.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.nps.gov/isro/learn/management/lawsandpolicies.htm",
+    "title": "Isle Royale NP - Laws & Policies",
+    "date": "undated (current NPS page)"
+   },
+   {
+    "url": "https://www.govinfo.gov/link/uscode/16/408j",
+    "title": "16 U.S.C. 408j",
+    "date": "current U.S. Code"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Moose-hunt proposals (2020) were never authorized."
+ },
+ {
+  "unit": "Sleeping Bear Dunes National Lakeshore",
+  "manager": "National Park Service",
+  "part": "A",
+  "hunting": "partly-open",
+  "what": "Most of the lakeshore is open to hunting under Michigan DNR seasons and 36 CFR 7.80; dogs allowed per DNR rules but dog training and trapping are prohibited. North Manitou Island has a permit deer hunt.",
+  "closed_parts": "Developed/high-use areas plus a 450-ft safety zone: South Manitou campgrounds (Weather Station, Bay, Popple), North and South Manitou village areas, Pierce Stocking Scenic Drive while open to vehicles, Glen Lake and Good Harbor picnic areas and other sites mapped in the compendium.",
+  "sources": [
+   {
+    "url": "https://www.nps.gov/slbe/planyourvisit/hunting.htm",
+    "title": "Sleeping Bear Dunes - Hunting",
+    "date": "undated (current NPS page)"
+   },
+   {
+    "url": "https://www.nps.gov/slbe/learn/management/upload/Sleeping-Bear-Dunes-Compendium-Maps.pdf",
+    "title": "Sleeping Bear Dunes Compendium Maps",
+    "date": "undated"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Closed-area list taken from search snippet of NPS hunting page; full compendium not opened."
+ },
+ {
+  "unit": "Pictured Rocks National Lakeshore",
+  "manager": "National Park Service",
+  "part": "A",
+  "hunting": "partly-open",
+  "what": "Hunting is allowed under Michigan DNR regulations and 36 CFR 7.32(c), except that hunting is prohibited park-wide from April 1 through Labor Day. Common game: deer, grouse, woodcock, bear, snowshoe hare.",
+  "closed_parts": "Zones listed in 36 CFR 7.32(c) (1995 rule), including within 150 yards of the Miners Castle overlooks, walkways and parking lot, and within 150 yards of any campsite in Little Beaver, Twelvemile Beach and Hurricane River campgrounds, plus other developed/high-use areas; whole park April 1-Labor Day.",
+  "sources": [
+   {
+    "url": "https://nps.gov/piro/planyourvisit/hunting-fishing.htm",
+    "title": "Hunting & Fishing at Pictured Rocks",
+    "date": "undated (current NPS page)"
+   },
+   {
+    "url": "https://www.law.cornell.edu/cfr/text/36/7.32",
+    "title": "36 CFR 7.32 Pictured Rocks",
+    "date": "current CFR"
+   },
+   {
+    "url": "https://www.govinfo.gov/content/pkg/FR-1995-09-14/pdf/95-22747.pdf",
+    "title": "Pictured Rocks NL; Hunting Closure (60 FR)",
+    "date": "1995-09-14"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Full 7.32(c) zone list not seen (law.cornell.edu and nps.gov blocked from fetch); trapping status not confirmed."
+ },
+ {
+  "unit": "Keweenaw National Historical Park",
+  "manager": "National Park Service",
+  "part": "A",
+  "hunting": "unknown",
+  "what": "No hunting provision found. NPS owns only ~1,700 acres in the Calumet and Quincy units (historic mining-town/industrial sites); most land in the boundary is private or other-government. Under 36 CFR 2.2 hunting on NPS land is prohibited unless a statute authorizes it, and none was found for this park.",
+  "closed_parts": "Likely all NPS-owned land (unconfirmed)",
+  "sources": [
+   {
+    "url": "https://www.nps.gov/kewe/learn/management/superintendent-s-compendium.htm",
+    "title": "KEWE Superintendent's Compendium",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Searched compendium and firearms pages via snippets; nps.gov could not be fetched. Non-NPS land inside the boundary follows owner/state rules. Leaning closed."
+ },
+ {
+  "unit": "River Raisin National Battlefield Park",
+  "manager": "National Park Service",
+  "part": "A",
+  "hunting": "closed",
+  "what": "Park safety page lists hunting animals among prohibited activities; relic hunting and metal detecting also forbidden. NPS default (36 CFR 2.2) bars hunting unless authorized by statute, and none exists for this park.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.nps.gov/rira/planyourvisit/safety.htm",
+    "title": "River Raisin NBP - Safety",
+    "date": "undated"
+   },
+   {
+    "url": "https://www.nps.gov/rira/learn/management/superintendent-s-compendium.htm",
+    "title": "Superintendent's Compendium for River Raisin NBP",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Small urban battlefield in Monroe."
+ },
+ {
+  "unit": "North Country National Scenic Trail (NPS-owned segments)",
+  "manager": "National Park Service",
+  "part": "A",
+  "hunting": "unknown",
+  "what": "The only NPS-owned parcel in Michigan named in the NOCO compendium is between EF Avenue and Augusta Drive in Augusta (Kalamazoo County); no hunting provision for it was found. Elsewhere the trail follows the host land manager's rules (state forest, national forest, etc.), many of which allow hunting.",
+  "closed_parts": "",
+  "sources": [
+   {
+    "url": "https://www.nps.gov/noco/learn/management/superintendent-s-compendium.htm",
+    "title": "NOCO Superintendent's Compendium",
+    "date": "undated (search snippet only)"
+   },
+   {
+    "url": "https://northcountrytrail.org/4-hiking-safety-tips-hunting-season/",
+    "title": "NCTA - hiking safety in hunting season",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "nps.gov could not be fetched from this session (DNS blocked); compendium hunting section not seen. Under 36 CFR 2.2 hunting in NPS units is prohibited unless authorized by statute, and the NCT's 1980 act (16 U.S.C. 1246) is generally read as deferring to host managers; NPS fee parcel is tiny and likely closed by default - treat as closed if a conservative default is needed."
+ },
+ {
+  "unit": "Seney National Wildlife Refuge",
+  "manager": "U.S. Fish and Wildlife Service",
+  "part": "A",
+  "hunting": "partly-open",
+  "what": "Hunting with a Michigan license under state seasons in Hunting Areas A, B and C shown on the refuge map (deer, bear, grouse, woodcock/snipe in designated areas, etc.); no bait, no hunting within 200 yards of structures.",
+  "closed_parts": "Areas marked 'Closed to Hunting' on the 2026 map, historically about 3,000 acres on the west end around refuge headquarters/visitor center, which serve as safety zones.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/seney-hunt26-online.pdf",
+    "title": "Seney NWR hunting regulations 2026",
+    "date": "2026-08"
+   },
+   {
+    "url": "https://www.fws.gov/refuge/seney/visit-us/rules-policies",
+    "title": "Seney NWR rules and policies",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "fws.gov could not be fetched; content from search snippets. Species list per area not fully confirmed."
+ },
+ {
+  "unit": "Shiawassee National Wildlife Refuge",
+  "manager": "U.S. Fish and Wildlife Service",
+  "part": "A",
+  "hunting": "managed-hunts-only",
+  "what": "Deer hunting only by reserved-access lottery (DNR drawing, DMU 273 / refuge units; archery, limited firearm and muzzleloader, plus youth Liberty and accessibility hunts); waterfowl (and goose) by self-registered refuge lottery in the southern-zone regular season on designated units.",
+  "closed_parts": "All refuge land outside the permit hunts and designated hunt units; no walk-in general hunting.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/shiawassee_hunt26_online.pdf",
+    "title": "Shiawassee NWR hunting regulations 2026",
+    "date": "2026-08"
+   },
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2025-09/2025-shiawassee-nwr-waterfowl-info-sheet.pdf",
+    "title": "2025 Shiawassee NWR waterfowl info sheet",
+    "date": "2025-09-09"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/things-to-do/hunting/deer/reserved-deer-hunts/dmu-273-reserved-deer-hunting-information",
+    "title": "DMU 273 reserved deer hunting information",
+    "date": "2025"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "The 2026 brochure may also list small-game/turkey openings on some units; not visible in snippets."
+ },
+ {
+  "unit": "Detroit River International Wildlife Refuge",
+  "manager": "U.S. Fish and Wildlife Service",
+  "part": "A",
+  "hunting": "managed-hunts-only",
+  "what": "Deer: archery, antlerless-only lottery permits (with DNR) on Humbug Marsh/mainland units, no personal tree stands. Waterfowl: boat-access open water at Humbug and Brancheau Unit diked area on set days with daily/annual waterfowl area permits (Pointe Mouillee-style). Other units closed.",
+  "closed_parts": "Most mainland units (e.g., Refuge Gateway, Lagoona Beach, Gibraltar Wetlands, etc.) except designated hunt areas; no access from private property.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/detroitriver_hunt-online-26.pdf",
+    "title": "Detroit River IWR hunt brochure 2026",
+    "date": "2026-08"
+   },
+   {
+    "url": "https://www.fws.gov/refuge/detroit-river/visit-us/rules-policies",
+    "title": "Detroit River IWR rules and policies",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Brochure could not be opened; unit-by-unit status inferred from snippets of 2022/2026 brochures."
+ },
+ {
+  "unit": "Kirtland's Warbler Wildlife Management Area",
+  "manager": "U.S. Fish and Wildlife Service (via Seney NWR)",
+  "part": "A",
+  "hunting": "restricted",
+  "what": "Scattered tracts open to waterfowl, turkey, small game and big game under state seasons, except May 1-Aug 15 (warbler nesting) when occupied tracts are closed to entry and no hunting is allowed; trapping closed year-round; no baiting.",
+  "closed_parts": "Warbler-occupied parcels May 1-Aug 15.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/kirtlandswarblerwma_hunt26_online.pdf",
+    "title": "Kirtland's Warbler WMA hunting regulations 2026",
+    "date": "2026-08"
+   },
+   {
+    "url": "https://www.fws.gov/refuge/kirtlands-warbler-wildlife-management-area/visit-us/activities/hunting",
+    "title": "KWWMA hunting",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "unit": "Michigan Islands National Wildlife Refuge",
+  "manager": "U.S. Fish and Wildlife Service",
+  "part": "A",
+  "hunting": "closed",
+  "what": "All refuge islands are closed to public access (colonial waterbird nesting, threatened plants); entry only by special use permit or emergency landing.",
+  "closed_parts": "Entire refuge",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/michigan-islands/visit-us",
+    "title": "Michigan Islands NWR - Visit Us",
+    "date": "undated"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Hunting not separately addressed; closure to all public entry excludes it."
+ },
+ {
+  "unit": "Harbor Island National Wildlife Refuge",
+  "manager": "U.S. Fish and Wildlife Service (via Seney NWR)",
+  "part": "A",
+  "hunting": "open",
+  "what": "Boat-access island off Drummond Island open to white-tailed deer (archery and firearm under state seasons) and black bear on designated areas per 50 CFR 32.41; one portable stand/blind per hunter during deer season, labeled with license number.",
+  "closed_parts": "None identified",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/harborisland_huntbrochures_26-online.pdf",
+    "title": "Harbor Island NWR hunt brochure 2026",
+    "date": "2026-08"
+   },
+   {
+    "url": "https://www.fws.gov/refuge/harbor-island/visit-us/activities/hunting",
+    "title": "Harbor Island NWR hunting",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Whether small game/waterfowl are open not confirmed."
+ },
+ {
+  "unit": "Huron National Wildlife Refuge",
+  "manager": "U.S. Fish and Wildlife Service (via Seney NWR)",
+  "part": "A",
+  "hunting": "closed",
+  "what": "Only Lighthouse (Huron) Island is open, daylight only, for visiting; all other islands closed. No hunting program is listed.",
+  "closed_parts": "Entire refuge to hunting; all islands but Lighthouse Island closed to entry.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/huron/visit-us",
+    "title": "Huron NWR - Visit Us",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Refuge is a wilderness area; not listed as open to hunting in 50 CFR 32.41 per snippets."
+ },
+ {
+  "unit": "Green Bay National Wildlife Refuge (Michigan: St. Martin Island)",
+  "manager": "U.S. Fish and Wildlife Service (Horicon NWR complex)",
+  "part": "A",
+  "hunting": "closed",
+  "what": "The refuge's Michigan land (part of St. Martin Island, Delta County) is closed to all public use. Hunting at this refuge happens only on Wisconsin islands (Detroit Island open deer hunting; Plum Island permit deer hunt).",
+  "closed_parts": "St. Martin Island (MI) entirely",
+  "sources": [
+   {
+    "url": "https://fws.gov/refuge/green-bay/visit-us",
+    "title": "Green Bay NWR - Visit Us",
+    "date": "undated"
+   },
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/Green-Bay-national-wildlife-refuge-hunt-fish-public-use-regulations_0.pdf",
+    "title": "Green Bay NWR hunt/fish public use regulations",
+    "date": "undated"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Plum, Pilot and Detroit islands are in Wisconsin."
+ },
+ {
+  "unit": "Michigan Wetland Management District WPAs (Barry, Jackson, Van Buren counties)",
+  "manager": "U.S. Fish and Wildlife Service (via Shiawassee NWR), co-managed with Michigan DNR",
+  "part": "A",
+  "hunting": "open",
+  "what": "All WPAs (e.g., Edger WPA in Barry Co., Kinney WPA in Van Buren Co., Schlee and Mahan WPAs in Jackson Co.) are open to hunting and trapping under state regulations; non-toxic shot required for small/upland game with shotguns.",
+  "closed_parts": "None identified",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/michigan-wetland-management-district/visit-us/activities/hunting",
+    "title": "Michigan WMD hunting",
+    "date": "undated"
+   },
+   {
+    "url": "https://www.fws.gov/refuge/michigan-wetland-management-district/visit-us/rules-policies",
+    "title": "Michigan WMD rules and policies",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Sources disagree on WPA count (3-5)."
+ },
+ {
+  "unit": "Jordan River National Fish Hatchery",
+  "manager": "U.S. Fish and Wildlife Service",
+  "part": "A",
+  "hunting": "partly-open",
+  "what": "74 acres open to hunting under Michigan regulations (upland game etc. on designated areas per 50 CFR part 32/71).",
+  "closed_parts": "Hatchery buildings/rearing facilities and remainder of property.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/fish-hatchery/jordan-river/visit-us/activities/hunting",
+    "title": "Jordan River NFH hunting",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "unit": "Pendills Creek National Fish Hatchery",
+  "manager": "U.S. Fish and Wildlife Service",
+  "part": "A",
+  "hunting": "partly-open",
+  "what": "2026 brochure maps areas open to Michigan hunting seasons and regulations; no shooting on or over hatchery roads.",
+  "closed_parts": "Areas mapped closed around hatchery facilities.",
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/pendillscreek_2026-online_0.pdf",
+    "title": "Pendills Creek NFH hunting brochure 2026",
+    "date": "2026-08"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "An older FWS page said 'Public Hunting Access: No'; the 2026 brochure supersedes it."
+ },
+ {
+  "unit": "Camp Grayling Joint Maneuver Training Center",
+  "manager": "Michigan National Guard (DMVA) on mostly state-owned land leased from DNR",
+  "part": "A",
+  "hunting": "partly-open",
+  "what": "Most of the ~148,000-acre training area is state forest land open to public hunting under state rules, but access is temporarily restricted (gated) during training; Guard stated no training on leased lands during regular firearm deer season (Nov 15-30).",
+  "closed_parts": "Cantonment, impact/artillery ranges and live-fire areas, and any area gated for training.",
+  "sources": [
+   {
+    "url": "https://www.mucc.org/what-does-the-dnr-and-national-guards-camp-grayling-agreement-really-mean",
+    "title": "MUCC - what the DNR/Guard Camp Grayling agreement means",
+    "date": "2023"
+   },
+   {
+    "url": "https://content.govdelivery.com/attachments/MIDNR/2022/06/09/file_attachments/2181063/CG-proposal-FAQ.pdf",
+    "title": "DNR Camp Grayling proposal FAQ",
+    "date": "2022-06-09"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Military-owned (fee) parts and impact areas are closed; exact boundaries not found."
+ },
+ {
+  "unit": "Huron-Manistee National Forests",
+  "manager": "USDA Forest Service",
+  "part": "A",
+  "hunting": "open",
+  "what": "Open to hunting under Michigan DNR seasons and licenses. Developed sites posted closed and seasonal wildlife closures (Kirtland's warbler, piping plover, loon nest orders) restrict entry.",
+  "closed_parts": "Posted developed recreation sites (order R904-18-02); Kirtland's warbler nesting areas May-Aug (R904-14-20); piping plover beach closures (R904-14-11). Nordhouse Dunes Wilderness has its own occupancy order (R904-14-09) - hunting there believed allowed but not confirmed.",
+  "sources": [
+   {
+    "url": "https://www.fs.usda.gov/r09/huron-manistee/recreation",
+    "title": "Huron-Manistee NF recreation",
+    "date": "2026"
+   },
+   {
+    "url": "https://www.fs.usda.gov/sites/nfs/files/r09/huron-manistee/publication/Kirtland%27s%20Warbler%3B%20R904-14-20.pdf",
+    "title": "Forest order R904-14-20 Kirtland's warbler",
+    "date": "2014"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No forest-wide hunting closure found."
+ },
+ {
+  "unit": "Hiawatha National Forest (incl. Grand Island NRA)",
+  "manager": "USDA Forest Service",
+  "part": "A",
+  "hunting": "open",
+  "what": "Open to hunting per MDNR seasons; blinds must be temporary. No Grand Island-specific hunting closure found.",
+  "closed_parts": "Posted developed sites; Grand Island NRA rules not found.",
+  "sources": [
+   {
+    "url": "https://fs.usda.gov/r09/hiawatha/recreation/opportunities/hunting-fishing-and-shooting",
+    "title": "Hiawatha NF hunting, fishing and shooting",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Grand Island NRA status: unknown specifically (searched twice)."
+ },
+ {
+  "unit": "Ottawa National Forest (incl. Sylvania Wilderness)",
+  "manager": "USDA Forest Service",
+  "part": "A",
+  "hunting": "open",
+  "what": "Open to hunting with state licenses under DNR seasons, including Sylvania Wilderness (special rules there are about fishing, boating and camping); firearms not to be used near campsites.",
+  "closed_parts": "Posted developed sites; Sylvania perimeter/wilderness orders do not appear to close hunting.",
+  "sources": [
+   {
+    "url": "https://fs.usda.gov/r09/ottawa/recreation/opportunities/hunting-fishing-and-shooting",
+    "title": "Ottawa NF hunting, fishing and shooting",
+    "date": "undated"
+   },
+   {
+    "url": "https://fs.usda.gov/r09/ottawa/alerts/sylvania-perimeter-area-forest-order-09-07-21-06",
+    "title": "Sylvania perimeter area forest order 09-07-21-06",
+    "date": "2021"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Wilderness order 09-07-21-07 text not seen."
+ },
+ {
+  "unit": "Michigan state parks vs. state recreation areas (default rule)",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "partly-open",
+  "what": "WCO 7.1(1): no hunting or trapping in any state park unless Chapter VII or a director's permit allows it; 7.1(2): state recreation areas are open to hunting and trapping in established seasons unless Chapter VII says otherwise; 7.1(3): trapping in recreation areas and open parks must be at least 50 ft outside mowed picnic areas, beaches, parking lots, launches, playgrounds, campgrounds and HQ areas. DNR says over 90% of park/recreation-area land is open to hunting.",
+  "closed_parts": "All state parks not named in Chapter VII; posted closures in recreation areas per sections 7.52-7.73.",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   },
+   {
+    "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/3fb7888",
+    "title": "DNR News: Snipes, snowmobiles, hunting in parks and more (points to Michigan.gov/RecSearch hunting filter)",
+    "date": "2025-11 (week of Nov. 17, 2025; search snippet only)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "No downloadable current list of open parks was found; DNR points to Recreation Search (Michigan.gov/RecSearch, filter 'hunting'). WCO Chapter VII itself is the de facto list: parks opened by name are Craig Lake 7.3, Fayette 7.4, Indian Lake 7.5, Laughing Whitefish Falls 7.6, McLain 7.7, Palms Book 7.8, Porcupine Mountains 7.9, Tahquamenon Falls 7.10, Van Riper 7.11, Wagner Falls 7.12, J.W. Wells 7.13, Mitchell 7.14 (amended 2026), Cheboygan 7.15, Fisherman's Island 7.16, Hartwick Pines 7.17, Hoeft 7.18, Leelanau 7.19, Ludington 7.20, Negwegon 7.21, North Higgins Lake 7.22, Old Mission Point 7.22a, Silver Lake 7.24, South Higgins Lake 7.25, Sturgeon Point 7.26, Wilderness 7.27, Algonac 7.28, Duck Lake 7.30, Port Crescent 7.31, Seven Lakes 7.32, Sleeper 7.33, Sleepy Hollow 7.34, Sterling (waterfowl/trapping only) 7.35, Van Buren SP 7.36, Warren Dunes 7.37, P.J. Hoffmaster (as designated) 7.39, Watkins Lake 7.40, Grand Mere 7.50, Bay City 7.51, Coldwater Lake 7.61, Thompson's Harbor 7.62, Fort Wilkins 7.72, North Central State Trail/Gete Mino Mshkiigan 7.74 (2025). Repealed: Brimley 7.2 (2016), Onaway 7.23 (2021), Cambridge 7.29 (2016), Wetzel 7.38 (2004). Also federal/state law 450-ft safety zone around occupied buildings applies everywhere."
+ },
+ {
+  "unit": "Agate Falls Scenic Site",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Aloha State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Baraga State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Belle Isle Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Urban island park (DNR-managed since 2014). No Chapter VII section; no 2025-2026 managed hunt or cull found (searched). Historic fallow deer herd was removed to the zoo in 2002."
+ },
+ {
+  "unit": "Bewabic State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Bond Falls Scenic Site",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Burt Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Charles Mears State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Clear Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Dodge #4 State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Fred Meijer White Pine Trail State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Linear trail park; no Chapter VII section. Searched for a trail-specific hunting rule and found none. Adjacent lands may be open."
+ },
+ {
+  "unit": "Grand Haven State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Harrisville State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Walter J. Hayes State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Holland State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Houghton-Douglass Falls Scenic Site",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Interlochen State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Kal-Haven Trail State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Linear trail park; no Chapter VII section; no trail-specific hunting rule found."
+ },
+ {
+  "unit": "Traverse City State Park (Keith J. Charters)",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Lake Gogebic State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Lakeport State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Maybury State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No Chapter VII section; searched for a managed/archery deer hunt and found none."
+ },
+ {
+  "unit": "Meridian-Baseline State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Lakelands Trail State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Linear trail park; no Chapter VII section. Where it crosses Pinckney RA, the surrounding recreation area is open."
+ },
+ {
+  "unit": "William G. Milliken State Park and Harbor",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Muskallonge Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Muskegon State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Newaygo State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "WCO 7.61 formerly opened Newaygo SP to hunting; that section now applies to Coldwater Lake SP, so Newaygo has no opening."
+ },
+ {
+  "unit": "Orchard Beach State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Otsego Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Petoskey State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Sanilac Petroglyphs Historic State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Saugatuck Dunes State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Straits State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Tawas Point State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Twin Lakes State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Van Buren Trail State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Linear trail park; no Chapter VII section. Do not confuse with Van Buren State Park (7.36, partly open)."
+ },
+ {
+  "unit": "Hart-Montague Trail State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Linear trail park; no Chapter VII section."
+ },
+ {
+  "unit": "Warren Woods State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Do not confuse with Warren Dunes SP, which WCO 7.37 opens in part. Warren Woods has no section."
+ },
+ {
+  "unit": "Wilson State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Young State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "State park with no section in WCO Chapter VII opening it, so the default closure of WCO 7.1(1) applies: no hunting or trapping without a director's permit.",
+  "closed_parts": "Entire unit",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with DNR GIS (closed). No source found saying hunting is allowed."
+ },
+ {
+  "unit": "Brimley State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "WCO 7.2, which used to open Brimley SP to hunting and trapping, was repealed in 2016; the default state-park closure now applies.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS (closed)."
+ },
+ {
+  "unit": "Onaway State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "WCO 7.23 (Onaway hunting and trapping allowed) was repealed Mar. 12, 2021; the default closure applies.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS (closed). Older maps or guides may still show it open."
+ },
+ {
+  "unit": "Cambridge Junction Historic State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "closed",
+  "what": "WCO 7.29 (Cambridge state park, hunting allowed) was repealed in 2016; the default closure applies.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS (closed)."
+ },
+ {
+  "unit": "P.J. Hoffmaster State Park",
+  "manager": "Michigan DNR Parks and Recreation Division (2026 hunt run by Ottawa County Parks)",
+  "part": "B",
+  "hunting": "managed-hunts-only",
+  "what": "WCO 7.39 lets the Parks chief designate hunting in portions of the park. In 2026 a lottery-only firearm deer hunt (Ottawa County's Lakeshore Wildlife Management hunt, also covering North Ottawa Dunes and Ottawa Sands) runs Nov. 20-23 in assigned zones. The whole park is closed to other visitors on those days.",
+  "closed_parts": "Closed to all general hunting; only lottery permit holders on hunt days.",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/08/26/hoffmaster-state-park",
+    "title": "Hoffmaster State Park to close Nov. 20-23 for special managed deer hunt; lottery available",
+    "date": "2026-08-26"
+   }
+  ],
+  "confidence": "high",
+  "notes": "CONTRADICTS GIS 'entirely closed': a managed lottery hunt exists."
+ },
+ {
+  "unit": "Gete Mino Mshkiigan (North Central State Trail)",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.74 (added by Am. 1 of 2025, effective Mar. 13, 2025) allows hunting and trapping in established seasons on all state-owned land in section 31, T36N R2W, known as Gete Mino Mshkiigan.",
+  "closed_parts": "None in WCO; 450-ft safety zone from occupied buildings applies.",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "CONTRADICTS GIS 'entirely closed'. The GIS layer may predate the 2025 amendment."
+ },
+ {
+  "unit": "Bass River Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area, so it is open under the WCO 7.1(2) default; Chapter VII has no restrictive section for it.",
+  "closed_parts": "Trapping setback of 50 ft from developed areas (7.1(3)).",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS (open)."
+ },
+ {
+  "unit": "Coldwater Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.61 opens all state-owned land in the dedicated boundary to hunting and trapping.",
+  "closed_parts": "None",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Craig Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.3 opens all state-owned land to hunting and trapping in established seasons.",
+  "closed_parts": "None",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Duck Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.30 opens all state-owned land in sections 18 and 19 (T11N R17W) and sections 13 and 24 (T11N R18W).",
+  "closed_parts": "Any park land outside those sections (none is believed to exist)",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Agrees with GIS, assuming the park lies within the listed sections."
+ },
+ {
+  "unit": "Fisherman's Island State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.16 opens all state-owned land; from April 1 until waterfowl season opens, waterfowl may be taken only in sections 13, 14, 23, 26 and 27, T33N R09W.",
+  "closed_parts": "Seasonal waterfowl limit only",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Holly Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by default. WCO 7.64 bans only waterfowl hunting Sept. 1-Labor Day in the block bounded by Grange Hall Rd, Wildwood Rd and Dixie Hwy.",
+  "closed_parts": "Early-September waterfowl closure in that block",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Essentially agrees with GIS; minor seasonal waterfowl restriction."
+ },
+ {
+  "unit": "Laughing Whitefish Falls Scenic Site",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.6 opens all state-owned land to hunting and trapping.",
+  "closed_parts": "None",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Menominee River Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by WCO 7.1(2) default; no restrictive section.",
+  "closed_parts": "Trapping setbacks only",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Metamora-Hadley Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "partly-open",
+  "what": "Open by recreation-area default, but WCO 7.68 bans hunting in the campground, headquarters, day-use and wastewater-treatment areas; no waterfowl Sept. 1-Labor Day anywhere, and none within 450 ft of campsites, launches, parking, picnic areas or beach until Sept. 15.",
+  "closed_parts": "Campground, HQ, day-use and wastewater treatment areas (all year)",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "CONTRADICTS GIS 'fully open, no closed zone': WCO 7.68(3) closes developed areas to hunting."
+ },
+ {
+  "unit": "Negwegon State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.21 opens all state-owned land in the dedicated boundary.",
+  "closed_parts": "None",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Old Mission Peninsula / Old Mission Point State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "partly-open",
+  "what": "WCO 7.22a opens state-owned land in sections 23-26, T30N R10W, except within 450 ft of a picnic area or parking lot.",
+  "closed_parts": "450-ft zone around picnic areas and parking lots",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "CONTRADICTS GIS 'no closed zone' (small safety buffers). Could not confirm whether the GIS unit 'Old Mission Peninsula' is the same land as the WCO's 'Old Mission Point state park'."
+ },
+ {
+  "unit": "Ortonville Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by default. WCO 7.69 bans waterfowl on Big Fish Lake Sept. 1-Labor Day and within 450 ft of campsites, launches, parking, picnic areas or beaches Sept. 1-15.",
+  "closed_parts": "Early-September waterfowl buffers only",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Essentially agrees with GIS."
+ },
+ {
+  "unit": "Pinckney Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by default. WCO 7.70 bans waterfowl Sept. 1-Labor Day within 450 ft of launches, campsites, beaches, parking and picnic areas at Bruin, Half Moon and Silver lakes.",
+  "closed_parts": "Early-September waterfowl buffers only",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Essentially agrees with GIS."
+ },
+ {
+  "unit": "Pontiac Lake Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by default. WCO 7.71 limits waterfowl: none after 8 a.m. Sept. 1-Labor Day in section 18, and none Sept. 1-15 in the day-use area south of Gale Rd or in the campground.",
+  "closed_parts": "Early-September waterfowl limits only",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Essentially agrees with GIS."
+ },
+ {
+  "unit": "Seven Lakes State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.32 opens state-owned land in sections 19, 20, 29 and 30, T5N R7E; no waterfowl from two days before Labor Day through Labor Day.",
+  "closed_parts": "Any park land outside those four sections; short waterfowl closure",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Agrees with GIS if the park lies entirely within those sections (not verified)."
+ },
+ {
+  "unit": "South Higgins Lake State Park",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.25 opens state-owned land in sections 3 and 4 (T23N R3W) and sections 33 and 34 (T24N R3W).",
+  "closed_parts": "Any park land outside those sections (not verified)",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Agrees with GIS if the park lies within those sections. Unusually for a campground park, no campground exclusion is written in the WCO, but the 450-ft safety zone around occupied buildings and campsites still applies."
+ },
+ {
+  "unit": "Tippy Dam Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by WCO 7.1(2) default; no restrictive section.",
+  "closed_parts": "Trapping setbacks only",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Wetzel State Recreation Area",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "Recreation area open by default. The old Wetzel-specific section 7.38 was repealed in 2004 and nothing closes it now.",
+  "closed_parts": "None",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Wagner Falls Scenic Site",
+  "manager": "Michigan DNR Parks and Recreation Division",
+  "part": "B",
+  "hunting": "open",
+  "what": "WCO 7.12 opens all state-owned land in section 14, T16N R19W.",
+  "closed_parts": "None",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf",
+    "title": "Wildlife Conservation Order, Chapter VII - State Parks and Recreation Areas (current compiled text; latest amendments Am. 9 and 10 of 2026, eff. Sept. 9, 2026)",
+    "date": "2026-09-09 (downloaded 2026-11-12)"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agrees with GIS."
+ },
+ {
+  "unit": "Mackinac Island State Park",
+  "manager": "Mackinac Island State Park Commission / Mackinac State Historic Parks",
+  "part": "C",
+  "hunting": "closed",
+  "what": "R 318.143: no person shall hunt in Mackinac Island State Park or Michilimackinac State Park. The only shooting allowed is at a permit-only shooting range east of British Landing Road.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-318-143",
+    "title": "Mich. Admin. Code R 318.143 - Camping and hunting (Mackinac Island State Park Commission)",
+    "date": "current code (search snippet)"
+   },
+   {
+    "url": "https://www.mackinacparks.com/wp-content/uploads/2025/10/Shooting-Range-POLICY2014-2.pdf",
+    "title": "Mackinac Island State Park shooting range policy",
+    "date": "posted 2025-10"
+   }
+  ],
+  "confidence": "high",
+  "notes": "No archery or cull program found."
+ },
+ {
+  "unit": "Colonial Michilimackinac / Michilimackinac State Park",
+  "manager": "Mackinac State Historic Parks",
+  "part": "C",
+  "hunting": "closed",
+  "what": "R 318.143 bans hunting in Michilimackinac State Park.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-318-143",
+    "title": "Mich. Admin. Code R 318.143 - Camping and hunting (Mackinac Island State Park Commission)",
+    "date": "current code (search snippet)"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Dousman's Mill (formerly Historic Mill Creek Discovery Park)",
+  "manager": "Mackinac State Historic Parks",
+  "part": "C",
+  "hunting": "unknown",
+  "what": "Its 625 acres are on US-23 southeast of Mackinaw City. R 318.143 bans camping here but, judging by the snippet, names only Mackinac Island and Michilimackinac in its hunting ban. No hunting allowance was found.",
+  "closed_parts": "",
+  "sources": [
+   {
+    "url": "https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-318-143",
+    "title": "Mich. Admin. Code R 318.143 - Camping and hunting (Mackinac Island State Park Commission)",
+    "date": "current code (search snippet)"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Searched the code and the park's site. The full text of R 318.143 could not be opened, so it may also cover Mill Creek. Treat as closed unless confirmed. Renamed in 2025."
+ },
+ {
+  "unit": "MSU W.K. Kellogg Experimental Forest",
+  "manager": "Michigan State University",
+  "part": "C",
+  "hunting": "managed-hunts-only",
+  "what": "Archery only, with an annual MSU permit ($35, or $65 combined with Russ Forest). Applications run May 1-July 31; the season is Oct. 1-Jan. 1; hunters register daily. Firearms are banned on all MSU property.",
+  "closed_parts": "Everything outside the permit program; no firearms",
+  "sources": [
+   {
+    "url": "https://www.canr.msu.edu/kelloggforest/uploads/W.K. Kellogg Experimental Forest Hunting Application (V.3.1-032026)_Fillable.pdf",
+    "title": "W.K. Kellogg Experimental Forest Hunting Application v3.1",
+    "date": "2026-03"
+   },
+   {
+    "url": "https://www.canr.msu.edu/kelloggforest/uploads/MSU W.K. Kellogg Experimental Forest Hunting Policy and Permit Application081723.pdf",
+    "title": "Kellogg Forest Hunting Policy",
+    "date": "2023-08-17"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Read from search snippets; canr.msu.edu could not be fetched."
+ },
+ {
+  "unit": "MSU Fred Russ Forest",
+  "manager": "Michigan State University",
+  "part": "C",
+  "hunting": "managed-hunts-only",
+  "what": "Hunting by MSU permit under its own hunting policy. A combined permit with Kellogg Forest exists; archery only is assumed because MSU bans firearms.",
+  "closed_parts": "",
+  "sources": [
+   {
+    "url": "https://www.canr.msu.edu/fredruss/uploads/MSU Fred Russ Forest Hunting Policy and Permit Application081723.pdf",
+    "title": "MSU Fred Russ Forest Hunting Policy and Permit Application",
+    "date": "2023-08-17"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Policy text not opened."
+ },
+ {
+  "unit": "MSU Campus Natural Areas (Baker Woodlot, Sanford Natural Area, etc.)",
+  "manager": "Michigan State University",
+  "part": "C",
+  "hunting": "closed",
+  "what": "These are Category I areas, limited to non-destructive use, and MSU bans firearms on its property. No public hunting program was found.",
+  "closed_parts": "Entire areas",
+  "sources": [
+   {
+    "url": "https://campusnaturalareas.msu.edu/general-guidelines",
+    "title": "MSU Campus Natural Areas - General Use Guidelines",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No explicit hunting clause was seen."
+ },
+ {
+  "unit": "University of Michigan Biological Station (Pellston)",
+  "manager": "University of Michigan",
+  "part": "C",
+  "hunting": "partly-open",
+  "what": "Station property rules ban hunting, trapping and firearm possession in designated 'No Hunting Zones', which implies hunting may be allowed elsewhere on station land.",
+  "closed_parts": "Posted No Hunting Zones (boundaries not found)",
+  "sources": [
+   {
+    "url": "https://prod.lsa.umich.edu/umbs/about-us/property-rules.html",
+    "title": "UMBS property rules",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "It is unclear whether non-affiliated public hunters are allowed."
+ },
+ {
+  "unit": "U-M Stinchfield Woods, Saginaw Forest and Matthaei Botanical Gardens/Nichols Arboretum",
+  "manager": "University of Michigan",
+  "part": "C",
+  "hunting": "unknown",
+  "what": "No hunting policy was found for these properties.",
+  "closed_parts": "",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched twice. Matthaei and the Arboretum are in Ann Arbor city limits, where local firearm-discharge rules apply; likely closed but not confirmed."
+ },
+ {
+  "unit": "Michigan Tech Ford Forest / Ford Center Research Forest (Alberta)",
+  "manager": "Michigan Technological University",
+  "part": "C",
+  "hunting": "unknown",
+  "what": "The 3,700-acre research forest is described as open to public recreation, but no hunting policy was found.",
+  "closed_parts": "",
+  "sources": [
+   {
+    "url": "https://www.mtu.edu/forest/fordcenter/forest/",
+    "title": "Ford Center Research Forest",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Searched twice; mtu.edu could not be fetched."
+ },
+ {
+  "unit": "MDOT roadside parks and rest areas",
+  "manager": "Michigan Department of Transportation",
+  "part": "C",
+  "hunting": "unknown",
+  "what": "No MDOT rule on hunting at roadside parks or rest areas was found. They are small developed sites where the 450-ft safety zone from occupied buildings, and local discharge ordinances, would normally prevent hunting.",
+  "closed_parts": "",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched for an MDOT administrative rule and found nothing. Recommend treating as closed in the app."
+ },
+ {
+  "unit": "Delhi Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Dexter-Huron Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Hudson Mills Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls (this park has had culls since 1999).",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Huron Meadows Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Indian Springs Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Kensington Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls (this park has had culls since 1999).",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Lake St. Clair Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Lower Huron Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Oakwoods Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Stony Creek Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls (this park has had culls since 1999).",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Willow Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Wolcott Mill Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "closed",
+  "what": "No public hunting. Deer are managed only by staff or contracted sharpshooter culls under the 2022-2026 deer plan, with the park closed during culls; up to seven parks take part.",
+  "closed_parts": "Entire park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA 2022-2026 Deer Herd and Ecosystem Management Plan",
+    "date": "2021-12"
+   },
+   {
+    "url": "https://www.pressreader.com/usa/detroit-free-press/20240402/281560885807450",
+    "title": "Detroit Free Press - In rarity, Kensington didn't have deer cull",
+    "date": "2024-04-02"
+   },
+   {
+    "url": "https://outdoorlife.com/conservation/michigan-parks-deer-culls",
+    "title": "Outdoor Life - Michigan parks authority culls 330 deer",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HCMA ordinance text was not seen (metroparks.com could not be fetched). A 2004 report says hunting is not normally permitted to the public."
+ },
+ {
+  "unit": "Lake Erie Metropark",
+  "manager": "Huron-Clinton Metropolitan Authority",
+  "part": "D",
+  "hunting": "restricted",
+  "what": "The park map says access to Lake Erie for waterfowl hunting is allowed during DNR seasons. Hunting on park land itself is otherwise prohibited.",
+  "closed_parts": "All park uplands and marshes; waterfowl hunting only on Lake Erie reached through the park",
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2017/05/2017-Lake-Erie-Map1.pdf",
+    "title": "Lake Erie Metropark map",
+    "date": "2017"
+   }
+  ],
+  "confidence": "low",
+  "notes": "The source is a 2017 map, seen only as a truncated snippet. The park is also a cooperative unit of Detroit River IWR."
+ },
+ {
+  "unit": "Other multi-county park authorities in Michigan",
+  "manager": "n/a",
+  "part": "D",
+  "hunting": "unknown",
+  "what": "No other multi-county park authority was found. The Hoffmaster 2026 managed hunt is run by Ottawa County Parks, which is county-level, not multi-county.",
+  "closed_parts": "",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Search was limited. County park systems (Oakland, Ottawa, Genesee, etc.) are out of scope here."
+ }
+]

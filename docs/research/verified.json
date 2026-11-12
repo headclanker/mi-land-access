@@ -1,0 +1,1863 @@
+[
+ {
+  "unit": "Isle Royale National Park",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "No hunting authorization exists for the park; 36 CFR 2.2 prohibits taking wildlife except authorized hunting, and the 2026 compendium designates no hunting. Firearm possession is legal but discharge/use is not.",
+  "quote": "The taking of wildlife, except by authorized hunting and trapping activities conducted in accordance with paragraph (b) of this section. [prohibited; 36 CFR 2.2(a)(1) as quoted in compendium]",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.nps.gov/isro/learn/management/superintendents-compendium.htm",
+    "title": "Isle Royale Superintendent's Compendium",
+    "date": "2026-06-25",
+    "read": "full"
+   },
+   {
+    "url": "https://www.nps.gov/isro/learn/management/lawsandpolicies.htm",
+    "title": "Isle Royale Laws & Policies",
+    "date": "2026-03-17",
+    "read": "full"
+   },
+   {
+    "url": "https://www.ecfr.gov/current/title-36/chapter-I/part-2/section-2.2",
+    "title": "36 CFR 2.2",
+    "date": "current (read 2026-11-12)",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Closure inferred from absence of any hunting authorization (36 CFR 2.2(b)); no page states 'hunting prohibited' in so many words. Earlier cite 16 USC 408j not verified."
+ },
+ {
+  "unit": "Sleeping Bear Dunes National Lakeshore",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Majority of the lakeshore is open to hunting under Michigan rules; high-use areas and a 450-ft safety zone are closed. Trapping prohibited; dogs allowed per DNR rules; special deer hunt on North Manitou Island.",
+  "quote": "The majority of Sleeping Bear Dunes National Lakeshore is open to hunting. However, most high visitor use areas and facilities are closed and include a 450 foot safety zone.",
+  "open_units": [],
+  "permit_units": [
+   "North Manitou Island special deer hunt"
+  ],
+  "closed_units": [
+   "All occupied structures",
+   "Platte River Campground",
+   "D.H. Day Campground",
+   "White Pine and Backcountry Campgrounds",
+   "D.H. Day Group Campground",
+   "Village Campground (North Manitou)",
+   "Weather Station, Bay, Popple Campgrounds (South Manitou)",
+   "Village areas on North and South Manitou",
+   "Pierce Stocking Scenic Drive when open to vehicles",
+   "Glen Lake Picnic Area",
+   "Good Harbor Picnic Area"
+  ],
+  "sources": [
+   {
+    "url": "https://www.nps.gov/slbe/planyourvisit/hunting.htm",
+    "title": "SLBE Hunting",
+    "date": "2026-05-27",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Earlier closed-site list was incomplete (missing Platte River, D.H. Day, White Pine, Village campgrounds)."
+ },
+ {
+  "unit": "Pictured Rocks National Lakeshore",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Hunting allowed under Michigan rules but prohibited park-wide April 1 through Labor Day; listed developed zones closed; trapping not permitted; 450-ft safety zone.",
+  "quote": "Hunting is prohibited park wide during the period of April 1 through Labor Day.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Sand Point area (below bluff top and within Munising city limits incl. Sand Point Road)",
+   "150 yd of campsites at Little Beaver, Twelvemile Beach, Hurricane River campgrounds",
+   "Miners Castle overlooks/walkways/lot (150 yd), 100 ft of Miners Castle Rd, Miners Falls lot/trail",
+   "100 ft of Chapel Falls, Little Beaver backpacker, Twelvemile Beach picnic, Log Slide, Grand Sable Lake picnic/boat launch/overlook lots",
+   "Au Sable Light Station (150 yd) and trail to Hurricane River CG (100 ft)",
+   "Sable Falls lot/building/walkways (150 yd), 100 ft of Sable Falls Rd",
+   "Grand Sable Visitor Center/barn/Grand Marais quarters (150 yd)",
+   "Coast Guard Point, Grand Marais (8.6 ac)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.nps.gov/piro/planyourvisit/hunting-fishing.htm",
+    "title": "PIRO Hunting & Fishing",
+    "date": "2025-05-08",
+    "read": "full"
+   },
+   {
+    "url": "https://www.ecfr.gov/current/title-36/chapter-I/part-7/section-7.32",
+    "title": "36 CFR 7.32(c)",
+    "date": "current (amended 2022)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Full 7.32(c) read. Earlier omitted Sand Point closure. Trapping prohibited per NPS page."
+ },
+ {
+  "unit": "Keweenaw National Historical Park",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": "unknown",
+  "what": "The 2026 compendium designates no hunting on NPS-administered parcels; under 36 CFR 2.2(b) hunting is allowed only where statute mandates/authorizes it. Land inside the boundary that is not NPS-owned follows its owner's rules.",
+  "quote": "There are no areas designated for the collection of wood in areas administered by the National Park Service within the boundaries of Keweenaw National Historical Park. [compendium: no hunting provision]",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "NPS-owned parcels (Calumet and Quincy units)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.nps.gov/kewe/learn/management/superintendent-s-compendium.htm",
+    "title": "KEWE Compendium",
+    "date": "2026-01-20",
+    "read": "full"
+   },
+   {
+    "url": "https://www.ecfr.gov/current/title-36/chapter-I/part-2/section-2.2",
+    "title": "36 CFR 2.2",
+    "date": "current",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "No explicit hunting-closure sentence found; closed by default under 36 CFR 2.2(b). Quote field is not a hunting rule. Park enabling act not checked. NPS Traveler May 2026 article (could not open, 503) reports Interior pushing superintendents to open more hunting; no Michigan unit change seen."
+ },
+ {
+  "unit": "River Raisin National Battlefield Park",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "Park safety page lists hunting animals among prohibited activities.",
+  "quote": "Feeding, Disturbing, Handling or Hunting Animals [listed under The Following are Prohibited]",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.nps.gov/rira/planyourvisit/safety.htm",
+    "title": "RIRA Safety",
+    "date": "2024-09-05",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "unit": "North Country National Scenic Trail (NPS-owned segments)",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": "unknown",
+  "what": "The only NPS-owned parcel (between EF Avenue and Augusta Drive, Augusta, Kalamazoo Co.) is closed to hunting and trapping by superintendent's compendium. Elsewhere the trail follows host-land rules.",
+  "quote": "The property is closed to hunting and trapping.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "NPS-owned parcel, Augusta (EF Ave to Augusta Dr)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.nps.gov/noco/learn/management/superintendent-s-compendium.htm",
+    "title": "NOCO Compendium",
+    "date": "2025-12-22",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Seney National Wildlife Refuge",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Hunting with a Michigan license in Hunting Areas A, B, C by state season; Area A closed to grouse/woodcock/snipe/bear, Area C closed to bear, deer open in all three; areas marked closed are safety zones. No bait or possession of bait, no ATVs, no hunting within 200 yds of structures.",
+  "quote": "Hunting is permitted with a valid Michigan hunting license. In addition to all applicable state regulations, the following refuge regulations apply",
+  "open_units": [
+   "Area B (all species)",
+   "Area C (all but bear)",
+   "Area A (deer, snowshoe hare)"
+  ],
+  "permit_units": [],
+  "closed_units": [
+   "Areas marked Closed to Hunting on map",
+   "Wilderness/Natural Areas for camping"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/seney-hunt26-online.pdf",
+    "title": "Seney Hunting Regulations 2026",
+    "date": "2026-08",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Camping permits Nov 13-Dec 1 for deer firearm season."
+ },
+ {
+  "unit": "Shiawassee National Wildlife Refuge",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": "managed-hunts-only",
+  "what": "Deer hunting is reserved-hunt (DNR lottery) only, but turkey, small game, furbearers and crow are open in state seasons on Units A and C, and migratory game birds on Unit A on set days (Sat, Sun, Tue to noon, Thu from noon). Species not listed are closed.",
+  "quote": "Reserved Hunt only. Lottery and access permits are administered through Michigan DNR. [white-tailed deer]",
+  "open_units": [
+   "Unit A (turkey, small game/furbearers, migratory birds on set days)",
+   "Unit C (turkey, small game/furbearers)"
+  ],
+  "permit_units": [
+   "Units A, B, C white-tailed deer: DNR reserved hunt lottery",
+   "Special deer hunts (see refuge website)"
+  ],
+  "closed_units": [
+   "Areas Closed to All Hunting (map)",
+   "All species not listed"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/shiawassee_hunt26_online.pdf",
+    "title": "Shiawassee Hunting & Fishing Regulations 2026",
+    "date": "2026-08",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Brochure points to refuge website for further small-game/turkey specifics; trapping by sealed-bid special use permit."
+ },
+ {
+  "unit": "Detroit River International Wildlife Refuge",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": "managed-hunts-only",
+  "what": "Most listed units are open under state seasons (Humbug open water and islands, Calf, Sugar, Strong north, Fix, Plum Creek, North Maumee Bay, Brancheau coastal wetlands), some boat-only. Humbug Mainland deer and Brancheau diked waterfowl need special permits; Strong south closed. Hunting allowed only on listed units; no baiting or hounding; no access from private property.",
+  "quote": "Hunting is allowed only on refuge units described in this brochure. Only the species listed in this brochure may be hunted.",
+  "open_units": [
+   "Humbug Marsh Open Water",
+   "Humbug Island",
+   "Calf Island",
+   "Sugar Island",
+   "Strong Unit north portion",
+   "Brancheau Unit Coastal Wetlands",
+   "Fix Unit (no firearm deer)",
+   "Plum Creek Bay Unit (no firearm deer)",
+   "North Maumee Bay"
+  ],
+  "permit_units": [
+   "Brancheau Unit Diked Portion waterfowl (opening day then Sun/Tue/Thu; SGA waterfowl area permit $4/$13)",
+   "Humbug Marsh Mainland deer hunt (permit; no personal stands)"
+  ],
+  "closed_units": [
+   "Strong Unit southern portion (Estral Beach)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/detroitriver_hunt-online-26.pdf",
+    "title": "Detroit River IWR Hunting Regulations 2026",
+    "date": "2026-08",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Unit species checkmarks were read from raw text; per-unit species columns not fully resolvable."
+ },
+ {
+  "unit": "Kirtland's Warbler Wildlife Management Area",
+  "kind": "federal",
+  "hunting": "open",
+  "changed_from": "restricted",
+  "what": "All big game, small game, waterfowl, turkey and furbearer hunting open under state seasons, except closed May 1 - Aug 15 (warbler nesting). Trapping and fishing prohibited; no baiting; shotgun non-toxic shot.",
+  "quote": "No hunting due to the Kirtland's warbler breeding season from May 1 to Aug. 15.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/kirtlandswarblerwma_hunt26_online.pdf",
+    "title": "Kirtland's Warbler WMA Hunting Regulations 2026",
+    "date": "2026-08",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Spring turkey after May 1 is closed. Brochure map not itemised by tract."
+ },
+ {
+  "unit": "Michigan Islands National Wildlife Refuge",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "All islands closed to the public (special use permits only).",
+  "quote": "Michigan Islands National Wildlife Refuge is closed to the public.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "All nine islands"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/michigan-islands",
+    "title": "Michigan Islands NWR",
+    "date": "2026 (undated)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Harbor Island National Wildlife Refuge",
+  "kind": "federal",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "Open to hunting under state seasons for bear, deer, turkey, small game, furbearers and waterfowl (full species list); daylight only, no night hunting, no camping.",
+  "quote": "Species and season dates align with Michigan state seasons, except for no night hunting.",
+  "open_units": [
+   "Harbor Island",
+   "Standerson Island"
+  ],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/harborisland_huntbrochures_26-online.pdf",
+    "title": "Harbor Island NWR Hunting 2026",
+    "date": "2026-08",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Boat access only; ATVs/horses prohibited; non-toxic shot only."
+ },
+ {
+  "unit": "Huron National Wildlife Refuge",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "Only 40-acre Lighthouse Island is open to visitors (dawn-dusk, approved activities); other islands closed; no hunting program on the refuge page.",
+  "quote": "Lighthouse Island is open daily from dawn until dusk for approved activities.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire refuge (no hunting program)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/huron",
+    "title": "Huron NWR",
+    "date": "2026 (undated)",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Page does not say 'hunting prohibited'; no hunting program or brochure exists."
+ },
+ {
+  "unit": "Green Bay National Wildlife Refuge (Michigan: St. Martin Island)",
+  "kind": "federal",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "St. Martin Island is closed to public access; hunting at the refuge occurs only on Wisconsin units.",
+  "quote": "St. Martin Island is also closed to public access for habitat and other resource protection",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "St. Martin Island"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/green-bay",
+    "title": "Green Bay NWR",
+    "date": "2026 (undated)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Michigan Wetland Management District WPAs (Barry, Jackson, Van Buren counties)",
+  "kind": "federal",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "Four WPAs open to hunting of deer, upland birds and upland game under Michigan regulations; non-toxic shot required; ducks hunted at Schlee and Kinney.",
+  "quote": "All are open to hunting.",
+  "open_units": [
+   "Schlee WPA (Jackson, 160 ac)",
+   "Mahan WPA (Jackson, 137 ac)",
+   "Kinney WPA (Van Buren, 77 ac)",
+   "Edgar WPA (Barry, 160 ac)"
+  ],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/refuge/michigan-wetland-management-district/visit-us/activities/hunting",
+    "title": "Michigan WMD Hunting",
+    "date": "2026 (undated)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Earlier 'Edger' is Edgar. Earlier note of 3-5 WPAs resolved: four."
+ },
+ {
+  "unit": "Jordan River National Fish Hatchery",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Hatchery described as an all-legal-species hunting program under state seasons; hatchery buildings closed.",
+  "quote": "The hatchery is open as an all-legal species-hunting program under all state of Michigan hunting seasons and regulations.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/fish-hatchery/jordan-river/visit-us/activities/hunting",
+    "title": "Jordan River NFH Hunting",
+    "date": "2026 (undated)",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "74-acre figure from earlier pass not re-confirmed; no brochure/map read."
+ },
+ {
+  "unit": "Pendills Creek National Fish Hatchery",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Open to state-season hunting (bear, deer, turkey, bobcat, grouse, woodcock) on mapped areas; no hunting within 450 ft of buildings; no shooting on or within 50 ft of roads; no boats, ATVs.",
+  "quote": "Hunting will be in accordance with applicable State of Michigan regulations subject to the conditions stated below.",
+  "open_units": [
+   "Mapped 'Open to MI hunting seasons' areas"
+  ],
+  "permit_units": [],
+  "closed_units": [
+   "Mapped closed areas",
+   "450 ft of buildings/residences"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fws.gov/sites/default/files/documents/2026-08/pendillscreek_2026-online_0.pdf",
+    "title": "Pendills Creek NFH Hunting 2026",
+    "date": "2026-08",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Camp Grayling Joint Maneuver Training Center",
+  "kind": "federal",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Most state-leased land remains open to public hunting but access is gated during training. In 2026 about 21,633 acres (Range 30 Complex and adjoining land) are closed Nov 7-22 for a DoD drone test, overlapping opening of firearm deer season (Nov 15).",
+  "quote": "approximately 21,633 acres, or 33.8 square miles, of Camp Grayling's footprint will be impacted by the temporary closure [Nov 7-22, 2026]",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Range 30 Complex and adjoining property, Nov 7-22 2026 (21,633 ac)",
+   "Impact areas/cantonment"
+  ],
+  "sources": [
+   {
+    "url": "https://www.michiganpublic.org/environment-climate-change/2026-10-27/camp-grayling-to-test-combat-drones-towns-hunters-fear-impact-on-area",
+    "title": "Camp Grayling to test combat drones",
+    "date": "2026-10-27",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Prior statement 'no training on leased land during firearm deer season' is contradicted for 2026 closure. Guard weekly closure notices not read."
+ },
+ {
+  "unit": "Huron-Manistee National Forests",
+  "kind": "federal",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "Hunting allowed with state licenses under DNR seasons; no forest-wide closure. Nordhouse Dunes Wilderness order R904-14-09 (2014) restricts camping, campfires, wheeled/mechanized equipment and horses but does not prohibit hunting.",
+  "quote": "Hunting is allowed on National Forest lands with appropriate state hunting licenses.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fs.usda.gov/r09/huron-manistee/recreation/opportunities/hunting-shooting",
+    "title": "HMNF Hunting & Shooting",
+    "date": "2026-05-22",
+    "read": "full"
+   },
+   {
+    "url": "https://www.fs.usda.gov/media/228607",
+    "title": "Order R904-14-09 Nordhouse Dunes",
+    "date": "2014-10-07",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Nordhouse Dunes resolved: hunting not prohibited by the order; carts/bikes banned so game must be carried. Seasonal Kirtland's warbler/piping plover orders not re-read."
+ },
+ {
+  "unit": "Hiawatha National Forest (incl. Grand Island NRA)",
+  "kind": "federal",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "Open to hunting under DNR seasons; blinds portable and temporary; no cross-country motor travel. Grand Island NRA statute leaves hunting regulation to Michigan; the island is listed by Forest Service booking page as a hunting site.",
+  "quote": "Hiawatha National Forest provides nearly a million acres of public land open for this and other for the uses.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fs.usda.gov/r09/hiawatha/recreation/opportunities/hunting-shooting",
+    "title": "Hiawatha Hunting & Shooting",
+    "date": "2026-02-19",
+    "read": "full"
+   },
+   {
+    "url": "https://www.law.cornell.edu/uscode/text/16/460aaa-4",
+    "title": "16 USC 460aaa-4",
+    "date": "current",
+    "read": "full"
+   },
+   {
+    "url": "https://www.recreation.gov/camping/campgrounds/10288329",
+    "title": "Grand Island NRA (rec.gov)",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Grand Island: statute allows Secretary to designate no-hunting zones; no such order found. Medium confidence for the island."
+ },
+ {
+  "unit": "Ottawa National Forest (incl. Sylvania Wilderness)",
+  "kind": "federal",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "Hunting allowed with state licenses; no firearm discharge within 150 yd of developed sites/buildings or across forest roads. Sylvania Wilderness orders allow dogs off leash while pursuing game in state seasons and do not prohibit hunting.",
+  "quote": "Hunting is allowed on National Forest lands with appropriate state hunting licenses.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.fs.usda.gov/r09/ottawa/recreation/opportunities/hunting-shooting",
+    "title": "Ottawa Hunting & Shooting",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://fs.usda.gov/r09/ottawa/alerts/wilderness-order-forest-order-09-07-21-07",
+    "title": "Wilderness Order 09-07-21-07",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://www.fs.usda.gov/r09/ottawa/recreation/sylvania-wilderness-backcountry-camping",
+    "title": "Sylvania Wilderness",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Mackinac Island State Park",
+  "kind": "state-other",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "R 318.143(2) bars hunting in Mackinac Island and Michilimackinac state parks.",
+  "quote": "A person shall not hunt in Mackinac Island state park or Michilimackinac state park.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-318-143",
+    "title": "Mich Admin Code R 318.143",
+    "date": "current (2014 AACS)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Colonial Michilimackinac / Michilimackinac State Park",
+  "kind": "state-other",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "Same rule R 318.143(2).",
+  "quote": "A person shall not hunt in Mackinac Island state park or Michilimackinac state park.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-318-143",
+    "title": "Mich Admin Code R 318.143",
+    "date": "current",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Dousman's Mill (formerly Historic Mill Creek Discovery Park)",
+  "kind": "state-other",
+  "hunting": "unknown",
+  "changed_from": null,
+  "what": "R 318.143 bans camping at Historic Mill Creek but names only Mackinac Island and Michilimackinac in the hunting ban; no hunting authorization or program found for this paid-admission historic site.",
+  "quote": "A person shall not camp within the Mackinac Island state park, Historic Mill Creek state park, or Michilimackinac state park.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-318-143",
+    "title": "Mich Admin Code R 318.143 (full text read)",
+    "date": "current",
+    "read": "full"
+   },
+   {
+    "url": "https://www.mackinacparks.com/attraction/dousmans-mill",
+    "title": "Dousman's Mill",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Full rule read: hunting ban does NOT name Mill Creek. Not in WCO. Treat as not available for hunting; confirm with Mackinac State Historic Parks 231-436-4100."
+ },
+ {
+  "unit": "MSU W.K. Kellogg Experimental Forest",
+  "kind": "state-other",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "Archery deer only, by annual MSU permit ($55/hunter), applications May 1-June 15, first-come first-served; Oct 1-Jan 1; sign in at the visitor lot each hunt; no firearms on MSU property; no hunting within 450 ft of buildings.",
+  "quote": "ABSOLUTELY NO FIREARMS permitted on Michigan State University property.",
+  "open_units": [],
+  "permit_units": [
+   "Whole forest (720 ac) by permit"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.canr.msu.edu/kelloggforest/uploads/W.K. Kellogg Experimental Forest Hunting Application (V.3.1-032026)_Fillable.pdf",
+    "title": "Kellogg Forest Hunting Application v3.1",
+    "date": "2026-03",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Earlier fee $35, window to Jul 31 and combined permit are superseded."
+ },
+ {
+  "unit": "MSU Fred Russ Forest",
+  "kind": "state-other",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "Archery deer only by annual MSU permit ($55/hunter), May 1-June 15 application, Oct 1-Jan 1, no firearms, no hunting within 450 ft of buildings or parking lots.",
+  "quote": "ABSOLUTELY NO FIREARMS permitted on Michigan State University property.",
+  "open_units": [],
+  "permit_units": [
+   "Whole forest (760 ac) by permit"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://msu-prod-2.dotcms.cloud/fredruss/uploads/2026 Fred Russ Research Forest Hunting Application (V.3.1-032026)_Fillable.pdf",
+    "title": "Fred Russ Forest Hunting Application v3.1",
+    "date": "2026-03",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Earlier 'archery assumed' now confirmed."
+ },
+ {
+  "unit": "MSU Campus Natural Areas (Baker Woodlot, Sanford Natural Area, etc.)",
+  "kind": "state-other",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "General Use Guidelines prohibit fishing, hunting, camping and campfires.",
+  "quote": "Fishing, hunting, camping, campfires and establishment of any structures are prohibited.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "All Campus Natural Areas"
+  ],
+  "sources": [
+   {
+    "url": "https://campusnaturalareas.msu.edu/general-guidelines",
+    "title": "CNA General Use Guidelines",
+    "date": "2021-07",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "University of Michigan Biological Station (Pellston)",
+  "kind": "state-other",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Property rules ban hunting, trapping and firearm possession in posted No Hunting Zones; whether public hunting is allowed elsewhere on station land is not stated.",
+  "quote": "No hunting, trapping, or possession of firearms in \"No Hunting Zones.\"",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Posted No Hunting Zones"
+  ],
+  "sources": [
+   {
+    "url": "https://prod.lsa.umich.edu/umbs/about-us/property-rules.html",
+    "title": "UMBS Property Rules",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Ambiguous: rule implies hunting may occur outside zones; zone map not found."
+ },
+ {
+  "unit": "U-M Stinchfield Woods, Saginaw Forest and Matthaei Botanical Gardens/Nichols Arboretum",
+  "kind": "state-other",
+  "hunting": "closed",
+  "changed_from": "unknown",
+  "what": "Only unofficial caretaker-posted rules found: Saginaw Forest 'no hunting or harming vertebrates' (2010); Stinchfield Woods reported similarly (2011, search snippet). No official umich.edu hunting rule could be opened (403). Matthaei/Nichols: nothing found.",
+  "quote": "No cutting or collecting of plant material; no hunting or harming vertebrates (this includes no fishing ). [Saginaw Forest caretakers' blog, 2010]",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Saginaw Forest",
+   "Stinchfield Woods (snippet only)"
+  ],
+  "sources": [
+   {
+    "url": "https://saginawforest.blogspot.com/2010/06/one-needs-offical-reason-to-be-on.html",
+    "title": "Saginaw Forest caretakers' blog",
+    "date": "2010-06-25",
+    "read": "full"
+   },
+   {
+    "url": "https://stinchfieldwoods.blogspot.com/2011/10",
+    "title": "Stinchfield Woods blog",
+    "date": "2011",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "umich.edu pages return 403. Matthaei/Nichols status unverified."
+ },
+ {
+  "unit": "Michigan Tech Ford Forest / Ford Center Research Forest (Alberta)",
+  "kind": "state-other",
+  "hunting": "unknown",
+  "changed_from": null,
+  "what": "No hunting policy found on mtu.edu pages that could be opened; described as a research forest open to community recreation.",
+  "quote": "(no hunting rule found)",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.mtu.edu/forest/fordcenter/forest/",
+    "title": "Ford Center Research Forest",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "unit": "MDOT roadside parks and rest areas",
+  "kind": "state-other",
+  "hunting": "closed",
+  "changed_from": "unknown",
+  "what": "MDOT's proposed administrative rules (R 247.601 et seq.) would bar hunting, trapping, fishing and swimming at all rest areas, roadside parks, scenic turnouts and welcome centers; adoption not confirmed.",
+  "quote": "A person is not allowed to hunt, trap, fish, or swim at a facility.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "All MDOT roadside parks/rest areas (proposed rule R 247.621(9))"
+  ],
+  "sources": [
+   {
+    "url": "https://www.legislature.mi.gov/Publications/JCAR/JCAR%20Files/2025%20Documents%20Received/Draft%20Proposed%20Rules/2025-030%20TP%20Highway%20Motorist%20Service%20Area_MDOT%20Facilities.doc.htm",
+    "title": "JCAR draft Highway Motorist Service Areas rules (2025-030)",
+    "date": "2025",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/mdot/travel/tourists/new-safety-rules-for-roadside-facilities",
+    "title": "MDOT new safety rules",
+    "date": "2025",
+    "read": "full"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Source is a PROPOSED rule; not confirmed in force. Small developed sites; treat as closed."
+ },
+ {
+  "unit": "Delhi Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Dexter-Huron Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Hudson Mills Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Huron Meadows Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Indian Springs Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Kensington Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Lake St. Clair Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Lower Huron Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Oakwoods Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Stony Creek Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Willow Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Wolcott Mill Metropark",
+  "kind": "regional",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "HCMA general rules prohibit hunting in any park without written permission; deer are managed by staff sharpshooters and approved volunteers under DNR permits (park closed during culls), not open public hunting.",
+  "quote": "No person shall kill, trap, hunt, pursue or in any manner disturb or cause to be disturbed any wild bird or animal within the boundaries of any park, without written permission of the Metroparks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Entire park"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2021/12/FINAL_2022-2026-Deer-Herd-and-Ecosystem-Management-Plan.pdf",
+    "title": "HCMA Deer Herd and Ecosystem Management Plan 2022-2026",
+    "date": "2021-12",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "Lake Erie Metropark",
+  "kind": "regional",
+  "hunting": "restricted",
+  "changed_from": null,
+  "what": "All hunting is prohibited within the Metroparks, but access to Lake Erie for waterfowl hunting through the park is permitted during DNR seasons.",
+  "quote": "Access to Lake Erie for Waterfowl hunting is permitted during the MDNR seasons. All hunting is prohibited within the Metroparks",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "All park land and marsh"
+  ],
+  "sources": [
+   {
+    "url": "https://www.metroparks.com/wp-content/uploads/2017/05/2017-Lake-Erie-Map1.pdf",
+    "title": "Lake Erie Metropark map",
+    "date": "2017-05",
+    "read": "full"
+   },
+   {
+    "url": "https://www.metroparks.com/rules-and-regulations/",
+    "title": "HCMA Rules and Regulations",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Map is 2017; current park page does not repeat the sentence."
+ },
+ {
+  "unit": "Other multi-county park authorities in Michigan",
+  "kind": "regional",
+  "hunting": "unknown",
+  "changed_from": null,
+  "what": "Not researched in this pass.",
+  "quote": "(not researched)",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": ""
+ },
+ {
+  "unit": "Gete Mino Mshkiigan (North Central State Trail)",
+  "kind": "state-park",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "WCO 7.74 allows hunting and trapping in established seasons on state land in section 31, T36N R2W.",
+  "quote": "Hunting and trapping shall be allowed during the established seasons on all state-owned lands in section 31, T36N R2W, known as Gete Mino Mshkiigan.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/WCO.pdf",
+    "title": "Wildlife Conservation Order (7.74)",
+    "date": "Am. 1 of 2025, eff. 2025-03-13",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Spot-check confirmed."
+ },
+ {
+  "unit": "P.J. Hoffmaster State Park",
+  "kind": "state-park",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "WCO 7.39 lets the Parks chief designate hunting; in 2026 a lottery firearm deer hunt (Ottawa County Lakeshore Wildlife Management hunt) runs Nov 20-23 and the park closes.",
+  "quote": "Hunting may be allowed as designated by the chief of the Parks and Recreation division in portions of the P.J. Hoffmaster state park.",
+  "open_units": [],
+  "permit_units": [
+   "Lottery managed deer hunt Nov 20-23, 2026"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/WCO.pdf",
+    "title": "WCO 7.39",
+    "date": "2021",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/08/26/hoffmaster-state-park",
+    "title": "DNR release: Hoffmaster to close Nov 20-23",
+    "date": "2026-08-26",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Spot-check confirmed."
+ },
+ {
+  "unit": "Metamora-Hadley Recreation Area",
+  "kind": "state-park",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "WCO 7.68 bans hunting in the campground, headquarters, day-use and wastewater areas, and waterfowl taking Sept 1-Labor Day.",
+  "quote": "A person shall not hunt within the campground, headquarters, day use and wastewater treatment areas.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Campground",
+   "Headquarters",
+   "Day-use",
+   "Wastewater treatment areas"
+  ],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/WCO.pdf",
+    "title": "WCO 7.68",
+    "date": "2016/2021",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Spot-check confirmed."
+ },
+ {
+  "unit": "Old Mission Peninsula / Old Mission Point State Park",
+  "kind": "state-park",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "WCO 7.22a allows hunting and trapping in season on state land in sections 23-26, T30N R10W except within 450 ft of a picnic area or parking lot.",
+  "quote": "Hunting and trapping shall be allowed during the established seasons, except within 450 feet of a picnic area or parking lot",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "450 ft of picnic areas and parking lots"
+  ],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/WCO.pdf",
+    "title": "WCO 7.22a",
+    "date": "2021",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Spot-check confirmed text; unit identity with GIS 'Old Mission Peninsula' unconfirmed."
+ },
+ {
+  "unit": "Ottawa County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Hunting is available on 19 listed Ottawa County Parks properties (4,500+ acres) under DNR rules plus county rules (no trapping, no bait, 450 ft from buildings, 30 yd from property lines, type 1 blinds). Six properties require a lottery or special permit; 25 or so others are closed.",
+  "quote": "Properties requiring a special permit for hunting include Crockery Creek Natural Area, Upper Macatawa Natural Area, Stearns Creek Park, Stearns Creek North, North Ottawa Dunes, and Ottawa Sands.",
+  "open_units": [
+   "Bass River Open Space",
+   "Bend Area",
+   "Bur Oak Landing-East",
+   "Bur Oak Landing-West",
+   "Eastmanville Bayou",
+   "Grand River Open Space",
+   "Hiawatha Forest",
+   "Johnson Street Forest",
+   "Jubb Bayou",
+   "Kuits Bayou",
+   "Port Sheldon Natural Area",
+   "Ripps Bayou",
+   "Robinson Forest",
+   "Van Buren Street Dunes",
+   "Marne Bog"
+  ],
+  "permit_units": [
+   "Crockery Creek Natural Area (archery deer lottery Oct 15-Nov 15 and Dec 1-Jan 1; waterfowl by boat with special permit)",
+   "Upper Macatawa Natural Area (archery deer lottery)",
+   "Stearns Creek Park (archery deer lottery)",
+   "Stearns Creek North (all-game lottery, Oct 15-Jan 1 and Apr 15-May 15 2027)",
+   "North Ottawa Dunes (Lakeshore Wildlife Management firearm lottery Nov 20-23 2026)",
+   "Ottawa Sands (same lottery)"
+  ],
+  "closed_units": [
+   "Adams Street Landing",
+   "Deer Creek Park",
+   "Connor Bayou",
+   "Eastmanville Farm",
+   "Grand River Park",
+   "Grand Ravines",
+   "Grose Park",
+   "Hager Park",
+   "Hemlock Crossing",
+   "Historic Ottawa Beach Parks",
+   "Kirk Park",
+   "Musketawa Trail",
+   "North Beach Park",
+   "Paw Paw Park",
+   "Pine Bend",
+   "Olive Shores",
+   "Riverside Park",
+   "Pigeon Creek Park",
+   "Spring Grove Park",
+   "Riley Trails",
+   "Rosy Mound Natural Area",
+   "Tunnel Park"
+  ],
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Hunting on Parks & Recreation Properties",
+    "date": "2026 (page copyright 2026; 2026-27 dates)",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Page lists no-permit properties without weapon split; some may be deer-archery-only per older 2023 brochure (not opened). Earlier 'Johnson Street Wildlife Management Area' is 'Johnson Street Forest'. Lottery: $20 permit, apply by Aug 31 (closed for 2026). Statuses of the unlisted parks (e.g., Bur Oak) taken from this page only."
+ },
+ {
+  "unit": "Oakland County",
+  "kind": "county",
+  "hunting": "restricted",
+  "changed_from": null,
+  "what": "Public archery deer hunting only, in six parks (restricted portions at Addison Oaks and Independence Oaks); Oct 1-Jan 1; no hunting during the September early antlerless firearm season; no public firearm hunts, USDA Wildlife Services culls at Addison, Groveland and Independence Oaks.",
+  "quote": "Public deer archery hunting (with some limitations) is allowed at six Oakland County Parks.",
+  "open_units": [
+   "Addison Oaks-East County Park Nature Area",
+   "Highland Oaks County Park Nature Area",
+   "Independence Oaks-North County Park Nature Area",
+   "Lyon Oaks County Park & Golf Course (per archery map)",
+   "Orion Oaks County Park Nature Area",
+   "Rose Oaks County Park Nature Area"
+  ],
+  "permit_units": [],
+  "closed_units": [
+   "All other Oakland County Parks (by exclusion from list)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.oakgov.com/community/oakland-county-parks/recreation/hunting",
+    "title": "Oakland County Parks Hunting",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Season now ends Jan 1 (the January extension was eliminated); earlier Jan 31 claim is out of date. Archery maps not opened."
+ },
+ {
+  "unit": "Genesee County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "Managed archery lottery hunt at E.A. Cummings Event Center (Nov 1-8, Genesee County residents only, 10 hunt sites, firearms not allowed) plus waterfowl hunting at Bluebell Beach and Mott Lake areas with drawing (2026-27 season sheet published).",
+  "quote": "Managed Archery Hunt by Lottery Program ... Firearms: Not Allowed",
+  "open_units": [],
+  "permit_units": [
+   "E.A. Cummings Event Center (archery lottery Nov 1-8, residents only)",
+   "Bluebell Beach waterfowl area (daily drawing)",
+   "Mott Lake waterfowl area (daily drawing)"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://geneseecountyparks.org/hunting/",
+    "title": "Genesee County Parks Hunting",
+    "date": "2026-09",
+    "read": "full"
+   },
+   {
+    "url": "https://geneseecountyparks.org/wp-content/uploads/2023/04/HUNTING-rules.pdf",
+    "title": "Managed Archery Hunt rules (2022-23 edition)",
+    "date": "2023-04",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Archery rules PDF is the 2022-23 edition; waterfowl PDF and maps not opened. Earlier pass missed the waterfowl areas."
+ },
+ {
+  "unit": "Antrim County",
+  "kind": "county",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "County says hunting is allowed on most county properties with some restrictions; restricted zones are in a county ordinance that could not be opened.",
+  "quote": "With some restrictions, hunting is allowed on most Antrim County properties. This includes popular parks such as Glacial Hills Natural Area, Antrim Creek Natural Area, and Grass River Natural Area.",
+  "open_units": [
+   "Glacial Hills Natural Area & Pathway",
+   "Antrim Creek Natural Area",
+   "Grass River Natural Area",
+   "Mohrmann Natural Area (earlier pass; not re-read)"
+  ],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://files.constantcontact.com/4a9f3212501/6c73d9fb-76b0-4d35-8663-d8b58f44812b.pdf?rdr=true",
+    "title": "Antrim County Bulletin",
+    "date": "2025-10",
+    "read": "full"
+   },
+   {
+    "url": "https://antrimcounty.org/business_detail_T11_R5.php",
+    "title": "Glacial Hills page",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Restricted-area ordinance not read; developed parks (Barnes Park) status unverified. The newsletter calls it 'Antrim County Bulletin'."
+ },
+ {
+  "unit": "Bay County",
+  "kind": "county",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "Pinconning County Park rules state no hunting in any area of the park and no firearms except for legal transport.",
+  "quote": "No hunting is allowed in any area of Pinconning Park.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Pinconning County Park"
+  ],
+  "sources": [
+   {
+    "url": "https://baycountymi.gov/recreation/pinconning_park/rules_and_regulations.php",
+    "title": "Pinconning Park Rules",
+    "date": "2026 (undated)",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Earlier note that waterfowl hunters may cross the park to the bay not re-found on the rules page. Other Bay County units not checked."
+ },
+ {
+  "unit": "Cass County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": "restricted",
+  "what": "The county's Fred Russ Forest Park is a 13-acre park inside MSU's Fred Russ research forest; the county page states no hunting rule. Hunting in the forest itself is archery only by MSU permit.",
+  "quote": "ABSOLUTELY NO FIREARMS permitted on Michigan State University property. [MSU Russ Forest policy]",
+  "open_units": [],
+  "permit_units": [
+   "Fred Russ Research Forest (MSU, archery by permit)"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://casscountymi.org/1397/Fred-Russ-Forest-Park",
+    "title": "Fred Russ Forest Park (Cass County)",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://msu-prod-2.dotcms.cloud/fredruss/uploads/2026 Fred Russ Research Forest Hunting Application (V.3.1-032026)_Fillable.pdf",
+    "title": "Fred Russ hunting application",
+    "date": "2026-03",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Rule belongs to MSU, not the county; county parks (Lawless Park) have no found hunting rule."
+ },
+ {
+  "unit": "Clinton County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "County park rules ordinance (amended 2022) make hunting unlawful in parks without prior written authorization of the Commission.",
+  "quote": "It shall be unlawful to hunt, trap, catch, wound, kill, or disturb any bird or animal without the prior written authorization of the Commission.",
+  "open_units": [],
+  "permit_units": [
+   "Clinton Lakes County Park (drawn waterfowl hunt, per earlier news report, not re-verified)"
+  ],
+  "closed_units": [
+   "All other county parks absent authorization"
+  ],
+  "sources": [
+   {
+    "url": "https://www.clinton-county.org/DocumentCenter/View/8505/Clinton-County-Amended-Park-Rules-Ordinance042022",
+    "title": "Clinton County Amended Park Rules Ordinance",
+    "date": "2022-04",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Waterfowl hunt year not confirmed."
+ },
+ {
+  "unit": "Delta County",
+  "kind": "county",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "County Forest-Land Policies (2018) say state public-land hunting and trapping laws apply on county forest land during seasons; county campgrounds (Sac Bay, Pioneer Trail, etc.) allow camping in designated sites only.",
+  "quote": "During hunting and/or trapping seasons, all Michigan hunting and trapping laws and regulations on public-land apply and will be enforced",
+  "open_units": [
+   "Delta County forest lands"
+  ],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://deltacountymi.gov/wp-content/uploads/2025/03/Delta-County-Forest-Land-Policies-and-Regulations.pdf",
+    "title": "Delta County Forest Land Policies and Regulations (2018)",
+    "date": "2018 (uploaded 2025-03)",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PDF returns 404 to direct fetch; quote taken from search-result excerpt. DNR local controls lists no Delta ordinance."
+ },
+ {
+  "unit": "Gogebic County",
+  "kind": "county",
+  "hunting": "open",
+  "changed_from": null,
+  "what": "County forest page confirms 54,408.9 acres under the Forestry and Parks Commission; no hunting rule text found on the county site. Open public hunting rests on earlier news reports.",
+  "quote": "(no hunting rule on county pages opened)",
+  "open_units": [
+   "Gogebic County Forest (54,409 ac)",
+   "Mosinee GEMS (earlier source)"
+  ],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.gogebicforestryandparks.com/county-forest",
+    "title": "Gogebic County Forestry",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/gogebic/hunting",
+    "title": "DNR local controls: Gogebic",
+    "date": "undated",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Unverified from a county rule; keep earlier status. Remote camping needs special use permit."
+ },
+ {
+  "unit": "Grand Traverse County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "changed_from": "restricted",
+  "what": "County hunting page lists three properties where hunting is permitted: Power Island, Maple Bay Natural Area, and one parcel at the Vasa Trailhead. Page does not state weapon; Power Island was closed to hunting in 2022 and FAQ says hunting may be permitted there if approved by the Parks Director.",
+  "quote": "Hunting is permitted at the following parks: Power Island; Maple Bay Natural Area; Vasa Trailhead (ONLY on the parcel highlighted in pink below)",
+  "open_units": [
+   "Power Island (Bassett Island connected)",
+   "Maple Bay Natural Area",
+   "Vasa Trailhead (marked parcel only)"
+  ],
+  "permit_units": [],
+  "closed_units": [
+   "All other county parks"
+  ],
+  "sources": [
+   {
+    "url": "https://gtcountymi.gov/2859/Hunting",
+    "title": "Hunting in Grand Traverse County Parks",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://gtcountymi.gov/2563/FAQs",
+    "title": "GT Parks FAQs",
+    "date": "undated",
+    "read": "full"
+   },
+   {
+    "url": "https://www.gtcountymi.gov/Archive.aspx?ADID=1726",
+    "title": "Power Island closed for 2022 deer hunting",
+    "date": "2022",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Earlier 'Natural Education Reserve closed' not re-verified. Power Island archery-only status now unconfirmed. Park Rules (amended May 21, 2025) say hunting allowed only on property open by Commission rule."
+ },
+ {
+  "unit": "Ingham County",
+  "kind": "county",
+  "hunting": "closed",
+  "changed_from": "managed-hunts-only",
+  "what": "No county-run public hunting found; Meridian Township's volunteer archery program (township residents only, approved hunters, Oct 1-Jan 1) places hunters on select township and county-owned properties and is not open to the general public.",
+  "quote": "The managed harvest is NOT open to the general public. The program is only open to Township residents.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.meridian.mi.us/community/living-with-wildlife/deer-management-program",
+    "title": "Meridian Township Deer Management Program",
+    "date": "2026",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Ingham county parks rules not opened."
+ },
+ {
+  "unit": "Ionia County",
+  "kind": "county",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "Bertha Brock Park rules prohibit hunting at any time.",
+  "quote": "NO hunting is allowed within this park at any time.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "Bertha Brock Park"
+  ],
+  "sources": [
+   {
+    "url": "https://ioniacounty.org/wp-content/uploads/2026/02/Bertha-Brock-Park-Rules-2026.pdf",
+    "title": "Bertha Brock Park Rules 2026",
+    "date": "2026-02",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Other Ionia County parks not checked."
+ },
+ {
+  "unit": "Kent County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "Kent County runs a limited-permit bow program (deer and turkey) on 1,100+ acres of select county parks (about 40-50 hunters selected), including Long Lake Park (about 100 acres). The official county page could not be opened (403), so the park list is from earlier snippets.",
+  "quote": "Kent County is accepting applications from bow hunters for limited access to hunt in select county parks this fall as part of a deer population management program.",
+  "open_units": [],
+  "permit_units": [
+   "Long Lake Park, Sparta (confirmed by Fox17, 2026)",
+   "Cooper Creek Park / Spencer Forest (earlier snippet, unverified)",
+   "Donald J. Lamoreaux Park (earlier snippet, unverified)",
+   "Other participating parks (WOOD TV: four original parks plus Long Lake; names not confirmed)"
+  ],
+  "closed_units": [
+   "All other Kent County parks (earlier snippet)"
+  ],
+  "sources": [
+   {
+    "url": "https://www.fox17online.com/news/local-news/rockford-cedar-springs-sparta/kent-county-opens-some-parks-to-bow-hunters-for-deer-management",
+    "title": "Fox17: Kent County opens some parks to bow hunters",
+    "date": "2026-08/09",
+    "read": "full"
+   },
+   {
+    "url": "https://wgrd.com/deer-management-permits-kent/",
+    "title": "WGRD: Kent bow hunting",
+    "date": "2026",
+    "read": "full"
+   },
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County Bow Hunting",
+    "date": "unknown",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Primary page blocked; named list NOT verified. Applications due around Labor Day weekend."
+ },
+ {
+  "unit": "Midland County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Pine Haven Recreation Area (325 acres) is state-owned, county-managed and open to hunting; no hunting rule found for other county parks.",
+  "quote": "Please be aware that Pine Haven is managed by the County but is owned by the State of Michigan, therefore is open for hunting.",
+  "open_units": [
+   "Pine Haven Recreation Area"
+  ],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.gogreat.com/directory/pine-haven-recreational-area/",
+    "title": "Pine Haven (tourism listing)",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Source is a tourism site; county page lacks the hunting sentence."
+ },
+ {
+  "unit": "Muskegon County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "The county Wastewater (Resource Recovery) system is a DNR managed waterfowl area (3,500 acres) with free daily-drawing zone permits throughout waterfowl season. No hunting rule found for county parks.",
+  "quote": "This hunting location conducts daily drawings for free hunting zone permits throughout the open waterfowl season.",
+  "open_units": [],
+  "permit_units": [
+   "Muskegon County Wastewater Managed Waterfowl Area, 7600 E. Messinger Rd, Twin Lake (daily drawing)"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/things-to-do/hunting/where/wetland-wonders/muskegon-county-rr",
+    "title": "DNR Wetland Wonders: Muskegon County Resource Recovery",
+    "date": "undated",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Not a county park; county park rules not checked."
+ },
+ {
+  "unit": "Oceana County",
+  "kind": "county",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "Park rules (April 4, 2024) bar hunting, trapping and archery in county parks.",
+  "quote": "Due to safety concerns: No hunting, trapping, archery are allowed in county parks.",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [
+   "All Oceana County parks"
+  ],
+  "sources": [
+   {
+    "url": "https://oceana.mi.us/wp-content/uploads/2024/05/Parks-Rules-and-Regulations-April-4-2024.pdf",
+    "title": "Oceana County Parks Rules and Regulations",
+    "date": "2024-04-04",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "unit": "St. Clair County",
+  "kind": "county",
+  "hunting": "partly-open",
+  "changed_from": null,
+  "what": "Columbus County Park allows hunting by permit only (call 810-989-6960) in designated areas; no hunting information found for other county parks.",
+  "quote": "Hunting is allowed in the park by permit only.",
+  "open_units": [],
+  "permit_units": [
+   "Columbus County Park (designated areas)"
+  ],
+  "closed_units": [],
+  "sources": [
+   {
+    "url": "https://www.stclaircounty.org/Uploads/ParksAndRecreation/forms/Brochures/Columbus Brochure 25 FOR WEB.pdf",
+    "title": "Columbus County Park brochure",
+    "date": "2025",
+    "read": "full"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Brochure marks a Hunting Area on the map; boundaries (south of Belle River, west of Kronner Rd) from earlier source."
+ },
+ {
+  "unit": "Allegan County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "County page returned 403; earlier finding (Dumont Complex resident permit hunts) unverified.",
+  "quote": "(not re-read)",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "UNVERIFIED: earlier value kept."
+ },
+ {
+  "unit": "Wayne County",
+  "kind": "county",
+  "hunting": "closed",
+  "changed_from": null,
+  "what": "County pages returned 403; earlier finding (Crosswinds Marsh 'No hunting!') unverified.",
+  "quote": "(not re-read)",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "UNVERIFIED: earlier value kept."
+ },
+ {
+  "unit": "Washtenaw County",
+  "kind": "county",
+  "hunting": "managed-hunts-only",
+  "changed_from": null,
+  "what": "Not re-verified; earlier finding (managed archery hunts only) retained.",
+  "quote": "(not re-read)",
+  "open_units": [],
+  "permit_units": [],
+  "closed_units": [],
+  "sources": [],
+  "confidence": "low",
+  "notes": "UNVERIFIED: earlier value kept."
+ }
+]

@@ -1,0 +1,1677 @@
+[
+ {
+  "county": "Alcona",
+  "system": "Alcona County (fairgrounds/recreation area; county parks)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/alcona/hunting",
+    "title": "MDNR local controls: Alcona",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search (combined with Alpena)."
+ },
+ {
+  "county": "Alger",
+  "system": "Alger County",
+  "hunting": "unknown",
+  "what": "No county park/forest hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www2.dnr.state.mi.us/publications/pdfs/Mi-HUNT/DNRE_Facilities/Alger.pdf",
+    "title": "MDNR facilities list: Alger",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Allegan",
+  "system": "Allegan County Parks, Recreation & Tourism",
+  "hunting": "managed-hunts-only",
+  "what": "Deer and waterfowl (goose/teal/duck) hunting on the County Services (Dumont) Complex property only by special county permit, Allegan County residents 18+, on set weekends posted each April 15. County parks FAQ does not list hunting in the parks.",
+  "open_units": [
+   "County Services / Dumont Complex property (resident permit, deer & waterfowl)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.allegancounty.org/departments/parks-recreation-and-tourism/hunting-allegan-county-dumont-complex-property",
+    "title": "Allegan County: Hunting Allegan County - Dumont Complex Property",
+    "date": "current"
+   },
+   {
+    "url": "https://allegancounty.org/departments/parks-recreation-and-tourism/parks-faqs",
+    "title": "Allegan County Parks FAQs",
+    "date": "current"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The Dumont Complex is county services land adjacent to Dumont Lake Park, not a park per se. Parks themselves presumed closed (not explicitly verified)."
+ },
+ {
+  "county": "Alpena",
+  "system": "Alpena County Parks (Long Lake, Beaver Lake, Sunken Lake parks)",
+  "hunting": "unknown",
+  "what": "Alpena County Parks Ordinance (2025) covers hours/conduct; parks closed Oct 16-May 14. Hunting text not seen.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://alpenacounty.org/583/Alpena-County-Parks-Ordinance-PDF",
+    "title": "Alpena County Parks Ordinance",
+    "date": "2025"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Seasonal closure during most hunting seasons implies no hunting in practice."
+ },
+ {
+  "county": "Antrim",
+  "system": "Antrim County Parks & Recreation (parks and natural areas)",
+  "hunting": "open",
+  "what": "County bulletin: 'with some restrictions, hunting is allowed on most Antrim County properties', e.g., Glacial Hills Natural Area & Pathway, Antrim Creek Natural Area, Grass River Natural Area, Mohrmann Natural Area; restricted areas are listed in county ordinances. Developed parks (e.g., Barnes Park campground) not confirmed.",
+  "open_units": [
+   "Glacial Hills Natural Area & Pathway",
+   "Antrim Creek Natural Area",
+   "Grass River Natural Area",
+   "Mohrmann Natural Area"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://files.constantcontact.com/4a9f3212501/6c73d9fb-76b0-4d35-8663-d8b58f44812b.pdf?rdr=true",
+    "title": "Antrim County bulletin (hunting allowed on most county properties)",
+    "date": "undated"
+   },
+   {
+    "url": "https://antrimcounty.org/business_detail_T11_R5.php",
+    "title": "Antrim County: Glacial Hills Natural Area & Pathway",
+    "date": "current"
+   },
+   {
+    "url": "https://antrimcounty.org/departments___services_/parks___recreation/natural_areas/mohrmann_natural_area.php",
+    "title": "Antrim County: Mohrmann Natural Area",
+    "date": "current"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Glacial Hills is jointly owned with Forest Home Twp and Village of Bellaire. Check county ordinance tab for restricted areas; Barnes Park and Elk Rapids beach park likely restricted."
+ },
+ {
+  "county": "Arenac",
+  "system": "Arenac County",
+  "hunting": "unknown",
+  "what": "No source found on the ~250-acre county 'Local Forest' parcel or county parks and hunting.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/documents/dnr/DNR_HAP_lands_list_439893_7.pdf",
+    "title": "MDNR Hunting Access Program lands list",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Searched 'Arenac County forest hunting county-owned land'; results were state wildlife areas and private listings."
+ },
+ {
+  "county": "Baraga",
+  "system": "Baraga County (county park on Lake Superior)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found; DNR lists no county ordinance.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/baraga/hunting",
+    "title": "MDNR local hunting controls: Baraga",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Barry",
+  "system": "Barry County Parks & Recreation Commission (Historic Charlton Park)",
+  "hunting": "unknown",
+  "what": "No general hunting provision found for Historic Charlton Park (museum village/recreation area); it hosts archery events only.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.charltonpark.org/park/",
+    "title": "Historic Charlton Park",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Likely closed in practice."
+ },
+ {
+  "county": "Bay",
+  "system": "Bay County Recreation (Pinconning County Park, etc.)",
+  "hunting": "closed",
+  "what": "Pinconning Park FAQ/rules: no hunting allowed under any circumstances on park property; waterfowl hunters may cross park property to reach Saginaw Bay. No other Bay County park hunting found.",
+  "open_units": [],
+  "closed_units": [
+   "Pinconning County Park (access to bay allowed for waterfowl hunters)"
+  ],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.baycountymi.gov/recreation/pinconning_park/faq_frequently_asked_questions.php",
+    "title": "Bay County Pinconning Park FAQ",
+    "date": "current"
+   },
+   {
+    "url": "https://baycountymi.gov/recreation/pinconning_park/rules_and_regulations.php",
+    "title": "Pinconning Park Rules and Regulations",
+    "date": "current"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "PAD shows Bay 'Local Forest' parcel; no source on it."
+ },
+ {
+  "county": "Benzie",
+  "system": "Benzie County Parks & Recreation Commission",
+  "hunting": "unknown",
+  "what": "No definitive county rule found; one county-related listing says an unnamed county property is 'open to the public for hunting, fishing...', and a third-party site lists a 'Benzie County Forest' with hunting. Unverified.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://cms1files.revize.com/benzienew/Document%20Center/Government/Boards%20&%20Committees/Parks%20and%20Recreation%20Commission/Benzie_County_Recreation_and_Cultural_Plan_2015_2019.pdf",
+    "title": "Benzie County Recreation and Cultural Plan 2015-2019",
+    "date": "2015"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Possible open county parcel; needs verification via the recreation plan inventory."
+ },
+ {
+  "county": "Berrien",
+  "system": "Berrien County Parks and Recreation",
+  "hunting": "unknown",
+  "what": "No hunting rule or program found for Berrien County parks (Love Creek, Galien River, Madeline Bertrand, Rocky Gap, Silver Beach).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/berrien/hunting",
+    "title": "MDNR local controls: Berrien",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Branch",
+  "system": "Branch County Parks (Memorial Park, Quincy Marble Lake, River Bend)",
+  "hunting": "unknown",
+  "what": "No hunting found for Branch County parks (campgrounds/day use). DNR describes Coldwater Lake State Park as the only public land open to hunting in the county.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/coldwaterlake",
+    "title": "MDNR: Coldwater Lake State Park (only public hunting land in county)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "DNR statement implies county parks are not open to hunting, but not explicit."
+ },
+ {
+  "county": "Calhoun",
+  "system": "Calhoun County Parks (Ott Biological Preserve, Historic Bridge Park, Kimball Pines, trailway)",
+  "hunting": "unknown",
+  "what": "The Historic Bridge Park brochure mentions hunting together with flower picking and firewood cutting in its rules (apparently as activities needing a special use permit or prohibited \u2014 wording not visible). No hunting provision found for Ott Biological Preserve (298 ac) or Kimball Pines.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://cms5.revize.com/revize/calhouncountymi/Parks/HBPBrochure.pdf",
+    "title": "Calhoun County: Historic Bridge Park brochure",
+    "date": "undated"
+   },
+   {
+    "url": "https://cms5.revize.com/revize/calhouncountymi24/Parks/2025-2029%20Park%20Master%20Plan%20FINAL%20with%20maps.pdf",
+    "title": "Calhoun County 2025-2029 Park Master Plan",
+    "date": "2025"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Most likely hunting is prohibited without special permission, but unverified."
+ },
+ {
+  "county": "Cass",
+  "system": "Cass County Parks Department",
+  "hunting": "restricted",
+  "what": "Fred Russ Forest Park (inside MSU's Russ Forest) allows bow hunting during deer season, with daily sign-in/out at the forest office kiosk and only in areas shown on the posted maps (hunting policy and permit application referenced). No hunting information found for Dr. T.K. Lawless Park or other county parks.",
+  "open_units": [
+   "Fred Russ Forest Park (archery deer, sign-in, designated areas)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.canr.msu.edu/fredruss/fredruss_visitor_information",
+    "title": "MSU Fred Russ Forest: Visitor Information (bow hunting in deer season)",
+    "date": "undated (current)"
+   },
+   {
+    "url": "https://casscountymi.org/1397/Fred-Russ-Forest-Park",
+    "title": "Cass County: Fred Russ Forest Park",
+    "date": "current"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Rule is on MSU's page; the hunting areas may be the MSU research forest surrounding the 13-acre county park rather than county land itself. Lawless Park status unknown."
+ },
+ {
+  "county": "Charlevoix",
+  "system": "Charlevoix County Parks & Recreation (Whiting Park, Mt. McSauba is city-owned)",
+  "hunting": "unknown",
+  "what": "No hunting rule found for Charlevoix County parks (Whiting Park 240 ac, etc.).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://outdoormichigan.org/feature/6982",
+    "title": "Outdoor Michigan: Whiting Park",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Cheboygan",
+  "system": "Cheboygan County (fairgrounds, small parks)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found; DNR lists no county ordinance.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/cheboygan/hunting",
+    "title": "MDNR local hunting controls: Cheboygan",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Chippewa",
+  "system": "Chippewa County",
+  "hunting": "unknown",
+  "what": "No county park/forest hunting rules found; DNR lists no county ordinance.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/chippewa/hunting",
+    "title": "MDNR local hunting controls: Chippewa",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Clare",
+  "system": "Clare County",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found; PAD shows a small (14 ac) county 'Local Forest' parcel.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not searched individually."
+ },
+ {
+  "county": "Clinton",
+  "system": "Clinton County Parks & Green Space Commission",
+  "hunting": "managed-hunts-only",
+  "what": "Park rules ordinance (amended 2022) makes it unlawful to hunt or trap in county parks without prior written authorization of the Commission. The county runs a drawn-permit waterfowl (nuisance goose) hunt at Clinton Lakes County Park, Sept-Dec: 7 applicants drawn for each of 10 hunt days, each may bring up to two guests.",
+  "open_units": [
+   "Clinton Lakes County Park (drawn waterfowl hunt)"
+  ],
+  "closed_units": [
+   "Francis Motz County Park"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.clinton-county.org/DocumentCenter/View/8505/Clinton-County-Amended-Park-Rules-Ordinance042022",
+    "title": "Clinton County Amended Park Rules Ordinance",
+    "date": "2022-04"
+   },
+   {
+    "url": "https://fox47news.com/neighborhoods/dewitt-st-johns/clinton-county-to-hold-a-waterfowl-hunt-to-reduce-the-population",
+    "title": "FOX47: Clinton County to hold a waterfowl hunt to reduce the population",
+    "date": "undated (c. 2019-2023)"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Motz closed by inference (no authorization found). Confirm current waterfowl hunt year."
+ },
+ {
+  "county": "Crawford",
+  "system": "Crawford County (fairgrounds/sportsplex)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found; DNR local controls restrict firearm hunting in parts of Grayling, Frederic and Lovells townships (not county parks).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/crawford/hunting",
+    "title": "MDNR local hunting controls: Crawford",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Delta",
+  "system": "Delta County (county forest lands; Delta County Parks)",
+  "hunting": "open",
+  "what": "Delta County Forest-Land Policies/Regulations (Board of Commissioners, 2018) state that during hunting/trapping seasons all Michigan public-land hunting and trapping laws apply on county forest land; no off-road motorized access, rustic camping by permit. County parks (Sac Bay, Pioneer Trail) are campgrounds; no hunting rule found for them.",
+  "open_units": [
+   "Delta County forest lands"
+  ],
+  "closed_units": [],
+  "county_forest": "open",
+  "sources": [
+   {
+    "url": "https://deltacountymi.gov/wp-content/uploads/2025/03/Delta-County-Forest-Land-Policies-and-Regulations.pdf",
+    "title": "Delta County Forest-Land Policies and Regulations",
+    "date": "adopted 2018; posted 2025-03"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Campground parks presumably not hunted."
+ },
+ {
+  "county": "Dickinson",
+  "system": "Dickinson County (Marion Park, fairgrounds)",
+  "hunting": "unknown",
+  "what": "No county-owned forest or county park hunting rule found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/en/dnr/managing-resources/laws/controls/localcontrols/dickinson/hunting",
+    "title": "MDNR local controls: Dickinson",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Eaton",
+  "system": "Eaton County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Eaton County parks (Crandell Park 432 ac, Fitzgerald, Lincoln Brick, Fox Memorial).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.wkar.org/wkar-news/2022-08-08/eaton-county-officials-hope-crandell-park-upgrades-encourage-more-residents-outdoors",
+    "title": "WKAR: Crandell Park upgrades",
+    "date": "2022-08-08"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Crandell Park bought with 75% DNR Trust Fund grant; such grants sometimes require hunting access (cf. St. Clair Columbus) \u2014 worth checking."
+ },
+ {
+  "county": "Emmet",
+  "system": "Emmet County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Emmet County parks (Camp Pet-O-Se-Ga, The Headlands Dark Sky Park, etc.).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.emmetcounty.org/parks-recreation/maps-directory/",
+    "title": "Emmet County Parks: Maps & Directory",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Nearby Little Traverse Conservancy preserves allow hunting on designated lands with written permission (not county)."
+ },
+ {
+  "county": "Genesee",
+  "system": "Genesee County Parks and Recreation Commission",
+  "hunting": "managed-hunts-only",
+  "what": "Parks FAQ says hunting is allowed in some parks on a limited basis, under DNR rules plus Genesee County Parks hunting rules; the published hunting rules describe a lottery-based managed archery deer hunt (E.A. Cummings Event Center area, Nov 1-8, in-person registration and drawing). General park rules otherwise prohibit hunting/firearms.",
+  "open_units": [
+   "E.A. Cummings Event Center (managed archery lottery)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://geneseecountyparks.org/hunting/",
+    "title": "Genesee County Parks: Hunting",
+    "date": "undated (checked 2026-11)"
+   },
+   {
+    "url": "https://geneseecountyparks.org/wp-content/uploads/2023/04/HUNTING-rules.pdf",
+    "title": "Genesee County Parks Hunting Rules (2022-23 season)",
+    "date": "2023-04"
+   },
+   {
+    "url": "https://greatlakesecho.org/2009/09/11/registration-for-proposed-managed-archery-hunt-at-for-mar",
+    "title": "Great Lakes Echo: Proposed managed archery hunt at For-Mar",
+    "date": "2009-09-11"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Pages not fetchable from this session; summary from search snippets. Exact list of parks in the limited program may include more than Cummings; For-Mar archery hunt proposed 2009, outcome unconfirmed. Verify 2026 season."
+ },
+ {
+  "county": "Gladwin",
+  "system": "Gladwin County",
+  "hunting": "unknown",
+  "what": "No source found for the county 'Local Forest' parcel or county parks and hunting.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www2.dnr.state.mi.us/FLW/LandsOpen-Hunting/Hunting_Land_gladwin_COUNTY.pdf",
+    "title": "MDNR Lands Open to Public Hunting: Gladwin County",
+    "date": "2020-12-14"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Gogebic",
+  "system": "Gogebic County Forestry and Parks Commission (Gogebic County Forest, ~50,000 ac)",
+  "hunting": "open",
+  "what": "The ~50,000-acre Gogebic County Forest is managed for multiple use and is open to public hunting under state seasons; the 1,136-acre Mosinee Grouse Enhanced Management System within it has 4.5 mi of hunter walk-in trails. Developed county parks (Little Girls Point, McDonald Lake) are campgrounds/day-use; no hunting rule for them was found.",
+  "open_units": [
+   "Gogebic County Forest",
+   "Mosinee Grouse Enhanced Management System (GEMS)"
+  ],
+  "closed_units": [],
+  "county_forest": "open",
+  "sources": [
+   {
+    "url": "https://yourdailyglobe.com/story/2016/10/22/news/mosinee-grade-gems-trail-open/7414.html",
+    "title": "Daily Globe: Mosinee grouse GEMS trail open (county forest, open to public hunting)",
+    "date": "2016-10-22"
+   },
+   {
+    "url": "https://treefarmsystem.org/gogebic-county-forest-celebrates-76-years-of-forest-management",
+    "title": "American Tree Farm System: Gogebic County Forest celebrates 76 years",
+    "date": "undated"
+   },
+   {
+    "url": "https://wuppdr.squarespace.com/s/GoCoRecPlan2023-27_FINAL.pdf",
+    "title": "Gogebic County Recreation Plan 2023-2027",
+    "date": "2023"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/gogebic/hunting",
+    "title": "MDNR local hunting controls: Gogebic (none listed)",
+    "date": "current"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "County forest site gogebicforestryandparks.com could not be fetched from this session (host blocked). Public hunting access confirmed via GEMS article; a county forest hunting ordinance/blind rules not seen. Park campgrounds likely closed in practice."
+ },
+ {
+  "county": "Grand Traverse",
+  "system": "Grand Traverse County Parks & Recreation",
+  "hunting": "restricted",
+  "what": "Power Island and adjacent Bassett Island (in West Grand Traverse Bay) are open to deer bow hunting during state archery seasons only (no firearms), no registration required; opened on MDNR recommendation for deer control. Natural Education Reserve (Boardman River) shown as no-hunting on a 2020 Garfield Twp map; no hunting found for other county parks.",
+  "open_units": [
+   "Power Island (archery deer)",
+   "Bassett Island (archery deer)"
+  ],
+  "closed_units": [
+   "Grand Traverse Natural Education Reserve (per 2020 township map)"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.traverseticker.com/news/bow-hunting-permitted-on-power-island-starting-monday/",
+    "title": "Traverse Ticker: Bow hunting permitted on Power Island",
+    "date": "c. 2017"
+   },
+   {
+    "url": "https://www.gtcountymi.gov/DocumentCenter/View/21216/GTCPR-Park-Rules",
+    "title": "GTCPR Park Rules (amended 2025-05-21)",
+    "date": "2025-05-21"
+   },
+   {
+    "url": "https://garfield-twp.com/hunting.asp",
+    "title": "Garfield Township: Hunting, Fishing and Trapping in Township Parks",
+    "date": "2020"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Power Island program reported 2017-2020; current status not re-verified. Township: Garfield Township (Grand Traverse) allows shotgun (shot only) and bow hunting by permit in some township parks (e.g., Miller Creek Nature Reserve). Old Mission Peninsula (Peninsula Twp) parks also publish hunting schedules."
+ },
+ {
+  "county": "Gratiot",
+  "system": "Gratiot County",
+  "hunting": "unknown",
+  "what": "No source found on county-owned forest or park hunting.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/gratiot/hunting",
+    "title": "MDNR local controls: Gratiot",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PAD 'Local Forest' parcel may be county farm/conservation district land."
+ },
+ {
+  "county": "Hillsdale",
+  "system": "Hillsdale County Parks (Lewis Emery County Park, Sauk River, etc.)",
+  "hunting": "unknown",
+  "what": "No hunting provision found; county parks open dawn to dusk.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://hillsdalecounty.gov/index.php/county-parks",
+    "title": "Hillsdale County: County Parks",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Houghton",
+  "system": "Houghton County (parks + county forest parcels)",
+  "hunting": "unknown",
+  "what": "No source found on hunting on Houghton County-owned forest or park land; DNR lists no county ordinance.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/houghton/hunting",
+    "title": "MDNR local hunting controls: Houghton (none listed)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Searched 'Houghton County Michigan county forest land hunting'; results were state forest/Ottawa NF and land listings."
+ },
+ {
+  "county": "Huron",
+  "system": "Huron County Parks",
+  "hunting": "unknown",
+  "what": "Huron County Parks rules page (hours, parking, pets, horses) did not show any hunting provision in search results; no hunting program found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://huroncountyparks.com/park-rules",
+    "title": "Huron County Parks: Park Rules",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Parks are mostly lakeshore campgrounds/day-use (e.g., Lighthouse Park, Bird Creek). Could not read full rules."
+ },
+ {
+  "county": "Ingham",
+  "system": "Ingham County Parks & Recreation",
+  "hunting": "managed-hunts-only",
+  "what": "No county-run park hunting program found. Some Ingham County-owned properties (e.g., Ingham County Farm area) are included in Meridian Township's volunteer archery-only Deer Management Program (Oct 1-Jan 1); the township states township and county property is NOT open to the general public for hunting.",
+  "open_units": [
+   "Selected county-owned properties in Meridian Township (Meridian Twp volunteer archery program only)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.meridian.mi.us/community/living-with-wildlife/deer-management-program",
+    "title": "Meridian Township Deer Management Program",
+    "date": "2024-2025"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ingham/hunting",
+    "title": "MDNR local controls: Ingham",
+    "date": "current"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Township: Meridian Township runs a volunteer archery deer program on township parks/preserves (Ingham County). County parks (Hawk Island, Lake Lansing, Burchfield) presumably closed."
+ },
+ {
+  "county": "Ionia",
+  "system": "Ionia County Parks (Bertha Brock Park, Charles A. Ime Park)",
+  "hunting": "closed",
+  "what": "Bertha Brock Park Rules 2026: 'NO hunting is allowed within this park at any time.' Bertha Brock is the main county park.",
+  "open_units": [],
+  "closed_units": [
+   "Bertha Brock Park"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://ioniacounty.org/wp-content/uploads/2026/02/Bertha-Brock-Park-Rules-2026.pdf",
+    "title": "Ionia County: Bertha Brock Park Rules 2026",
+    "date": "2026-02"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Other small parks not checked."
+ },
+ {
+  "county": "Iosco",
+  "system": "Iosco County (fairgrounds; no county park system found)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Iron",
+  "system": "Iron County (MI) \u2014 county parks and small county forest parcels",
+  "hunting": "unknown",
+  "what": "No Iron County, Michigan county-park or county-forest hunting rule found. Note: the widely cited '174,317-acre Iron County Forest open to hunting' is Iron County, WISCONSIN, not Michigan.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/iron/hunting",
+    "title": "MDNR local hunting controls: Iron (none listed)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PAD lists ~1,558 ac county land (County of Iron Park + 'Local Forest'). Searched 'Iron County Michigan county forest hunting'."
+ },
+ {
+  "county": "Isabella",
+  "system": "Isabella County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "Deerfield Nature Park brochure: hunting is not permitted within the park. No hunting rule found for other county parks (Coldwater Lake Family Park, Herrick, Majeske Landing, etc.).",
+  "open_units": [],
+  "closed_units": [
+   "Deerfield Nature Park"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.isabellacounty.org/wp-content/uploads/2023/10/Deerfield-Nature-Park-Brochure.pdf",
+    "title": "Isabella County: Deerfield Nature Park brochure",
+    "date": "2023-10"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Largest natural county park (Deerfield) is closed; others likely closed but unverified. (Coldwater Lake State Park, which allows hunting, is in Branch County, not Isabella; Isabella's Coldwater Lake Family Park is county-run, status unknown.)"
+ },
+ {
+  "county": "Jackson",
+  "system": "Jackson County Parks Department",
+  "hunting": "unknown",
+  "what": "No hunting rule or program found for Jackson County (MI) parks (Sparks Foundation/Cascades, lake parks).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://waterlootwpmi.gov/wp-content/uploads/2026/01/2025-Annual-Report-Jackson-County-Parks.pdf",
+    "title": "Jackson County Parks 2025 Annual Report",
+    "date": "2026-01"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Two searches. Beware: 'Jackson County Parks managed hunts' results are Jackson County, Missouri."
+ },
+ {
+  "county": "Kalamazoo",
+  "system": "Kalamazoo County Parks & Expo Center",
+  "hunting": "unknown",
+  "what": "No hunting rule or program found for Kalamazoo County Parks (Prairie View, River Oaks, Markin Glen, Cold Brook, Scotts Mill, Lillian Anderson Arboretum).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.kalcounty.com/parks/riveroaks",
+    "title": "Kalamazoo County Parks: River Oaks",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Two searches. City of Kalamazoo (not county) has a deer management program on city properties (2026 FAQ via comstockmi.gov)."
+ },
+ {
+  "county": "Kalkaska",
+  "system": "Kalkaska County",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/kalkaska/hunting",
+    "title": "MDNR local hunting controls: Kalkaska",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Kent",
+  "system": "Kent County Parks Department",
+  "hunting": "managed-hunts-only",
+  "what": "Only bow hunting of deer and turkey, by county permit (about 40 permits/yr, drawn from hundreds of applications), at select parks: Cooper Creek Park/Spencer Forest, Long Lake Park (Sparta, ~100 huntable acres) and Donald J. Lamoreaux Park; deer only during the state archery season. Parks stay open to other users during the season. All other Kent County parks closed to hunting.",
+  "open_units": [
+   "Cooper Creek Park / Spencer Forest (bow permit)",
+   "Long Lake Park (bow permit)",
+   "Donald J. Lamoreaux Park (bow permit)"
+  ],
+  "closed_units": [
+   "all other Kent County parks"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.kentcountymi.gov/1861/Bow-Hunting",
+    "title": "Kent County: Hunting on Kent County Parks Property (Bow Hunting)",
+    "date": "current (checked 2026-11)"
+   },
+   {
+    "url": "https://wgrd.com/deer-management-permits-kent/",
+    "title": "WGRD: Kent County deer management permits",
+    "date": "2026"
+   },
+   {
+    "url": "https://www.fox17online.com/news/local-news/rockford-cedar-springs-sparta/kent-county-opens-some-parks-to-bow-hunters-for-deer-management",
+    "title": "FOX17: Kent County opens some parks to bow hunters",
+    "date": "undated"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Earlier reports mention four parks plus Long Lake; the current county page named three (some may be grouped). Program covers 1,100+ acres per county bulletin. Applications due around Labor Day."
+ },
+ {
+  "county": "Keweenaw",
+  "system": "Keweenaw County (county parks incl. Gratiot River area; Keweenaw Mountain Lodge)",
+  "hunting": "unknown",
+  "what": "No county hunting rule found for Keweenaw County-owned park land. Nearby public lands: Keweenaw Point State Lands (hunting approved Oct 14 2026), Gratiot River Community Forest (conservancy).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/11/06/dnr-tnc-protect-public-access",
+    "title": "MDNR: DNR, TNC protect public access (Keweenaw Point; hunting approved)",
+    "date": "2026-11-06"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PAD county units ~475 ac plus road-commission 'Local Forest' ~295 ac; no rule found."
+ },
+ {
+  "county": "Lake",
+  "system": "Lake County (no county park system found)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not searched individually; county is mostly Manistee National Forest."
+ },
+ {
+  "county": "Lapeer",
+  "system": "Lapeer County Parks",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Lapeer County parks.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/lapeer/hunting",
+    "title": "MDNR local controls: Lapeer (none)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PAD lists a small county 'Local Forest' parcel; no info."
+ },
+ {
+  "county": "Leelanau",
+  "system": "Leelanau County Parks (Myles Kimmerly Park, Old Settlers Park, etc.)",
+  "hunting": "unknown",
+  "what": "No hunting rule found for Leelanau County parks; parks are small developed sites.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://leelanau.gov/countyparks.asp",
+    "title": "Leelanau County Parks",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Leelanau Conservancy opens 18 natural areas to hunters by free permit (not county)."
+ },
+ {
+  "county": "Lenawee",
+  "system": "Lenawee County Parks (6 parks: Gerber Hill, Medina, Ramsdell, Iron Lake, Bicentennial, etc.)",
+  "hunting": "unknown",
+  "what": "No hunting provision found; parks open 8 a.m.-dusk seasonal day use.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.wlen.com/?p=104326",
+    "title": "WLEN: Lenawee parks open for summer season (419 acres)",
+    "date": "2025"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Livingston",
+  "system": "Livingston County Parks (Lutz County Park, Fillmore County Park)",
+  "hunting": "unknown",
+  "what": "No hunting information found for Livingston County's parks.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://livingston.macaronikid.com/articles/687947da5287d1e0d3c26bca/fillmore-county-park-is-a-great-space-for-family-fun",
+    "title": "Macaroni Kid: Fillmore County Park",
+    "date": "2025"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Small system of two parks."
+ },
+ {
+  "county": "Luce",
+  "system": "Luce County (Luce County Park, ~100 ac)",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Luce County Park.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www2.dnr.state.mi.us/publications/pdfs/Mi-HUNT/DNRE_Facilities/Luce.pdf",
+    "title": "MDNR facilities list: Luce",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Mackinac",
+  "system": "Mackinac County",
+  "hunting": "unknown",
+  "what": "No county park/forest hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not searched individually (time); no county park system surfaced in UP searches."
+ },
+ {
+  "county": "Macomb",
+  "system": "Macomb County Parks (Freedom Hill County Park)",
+  "hunting": "unknown",
+  "what": "No county park hunting rule found; Freedom Hill is an urban amphitheater/park. Stony Creek is a Huron-Clinton Metropark, not county.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/macomb/hunting",
+    "title": "MDNR local controls: Macomb",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Effectively no huntable county park land."
+ },
+ {
+  "county": "Manistee",
+  "system": "Manistee County (no dedicated county park system found)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found; Orchard Beach is a state park.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://manisteecountymi.gov/DocumentCenter/View/527/2016-County-Wide-Recreation-Plan-Appendix-A-Chapter-3-PDF",
+    "title": "Manistee County 2016 Recreation Plan",
+    "date": "2016"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Marquette",
+  "system": "Marquette County Parks",
+  "hunting": "unknown",
+  "what": "No Marquette County-owned forest program or park hunting rule found; hunting land in the county is state forest, CFA and conservation-easement land.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/marquette/hunting",
+    "title": "MDNR local controls: Marquette (none)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "County parks include Forestville, Perkins, Lake Independence parks (campgrounds). 'County of Chocolay' PAD unit is likely Chocolay Township."
+ },
+ {
+  "county": "Mason",
+  "system": "Mason County Parks & Recreation Commission (Mason County Campground, picnic area)",
+  "hunting": "unknown",
+  "what": "No hunting rule found for Mason County parks.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.masoncountymi.gov/explore/park/index.php",
+    "title": "Mason County Park and Campground",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Buttersville Park is Pere Marquette Township, not county."
+ },
+ {
+  "county": "Mecosta",
+  "system": "Mecosta County Park Commission",
+  "hunting": "unknown",
+  "what": "All seven county parks are waterfront campground/day-use parks (School Section Lake, Paris, Merrill-Gorrel, etc.); no hunting provision found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.mecostacountyparks.com/",
+    "title": "Mecosta County Parks",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Hunting in the county is on state game areas, not county parks. Likely closed in practice."
+ },
+ {
+  "county": "Menominee",
+  "system": "Menominee County (county parks)",
+  "hunting": "unknown",
+  "what": "No county forest or county park hunting rule found; DNR lists no county ordinance.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/menominee/hunting",
+    "title": "MDNR local controls: Menominee (none)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Midland",
+  "system": "Midland County Parks & Recreation Commission",
+  "hunting": "partly-open",
+  "what": "Pine Haven Recreation Area is state-owned land managed by the county and is open to hunting under state rules. No hunting information found for other county parks (Laur Big Salt River, Veterans Memorial, etc.).",
+  "open_units": [
+   "Pine Haven Recreation Area (state-owned, county-managed)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.gogreat.com/directory/pine-haven-recreational-area/",
+    "title": "Go Great Lakes Bay: Pine Haven Recreational Area (open for hunting)",
+    "date": "undated"
+   },
+   {
+    "url": "https://midlandcountymi.gov/parks-and-recreation",
+    "title": "Midland County Parks and Recreation",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Status of other units unknown; source is a tourism listing. Verify with county parks."
+ },
+ {
+  "county": "Missaukee",
+  "system": "Missaukee County (Missaukee County Park, Lake City)",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Missaukee County Park (lakeside campground/beach).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www2.dnr.state.mi.us/publications/pdfs/Mi-HUNT/DNRE_Facilities/Missaukee.pdf",
+    "title": "MDNR facilities list: Missaukee",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Monroe",
+  "system": "Monroe County Parks (Vienna Park, Nike Park, West County Park)",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Monroe County parks; Vienna Park has an archery range (target) but no hunting listed.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.monroeinfo.com/parks.html",
+    "title": "Monroe County parks listing",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Montcalm",
+  "system": "Montcalm County Parks",
+  "hunting": "unknown",
+  "what": "Draft 2026 County Parks Ordinance says state laws remain in force in county parks; no explicit hunting provision seen. County parks are small lake parks (Krampe, Ford Lincoln, Schmied, etc.).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.montcalm.us/DocumentCenter/View/5735/Final-BOC---Montcalm-Co-Parks-Ordinance-22326",
+    "title": "Montcalm County Parks Ordinance (draft, 2026)",
+    "date": "2026"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Ordinance text not readable here."
+ },
+ {
+  "county": "Montmorency",
+  "system": "Montmorency County (fairgrounds)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not searched individually; PAD shows only fairgrounds."
+ },
+ {
+  "county": "Muskegon",
+  "system": "Muskegon County Parks (and Muskegon County Wastewater Management System)",
+  "hunting": "managed-hunts-only",
+  "what": "No hunting found for Muskegon County parks. Separately, the county-owned Wastewater Management System land (not a park) is a managed waterfowl hunting area (ducks and geese) with some zones by local permit only (Twin Lake office 231-788-5055); the DNR co-manages it as a Wetland Wonders managed waterfowl area.",
+  "open_units": [
+   "Muskegon County Wastewater Management System (waterfowl, permit areas)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/things-to-do/hunting/where/wetland-wonders/muskegon-county-rr",
+    "title": "MDNR Wetland Wonders: Muskegon County Wastewater",
+    "date": "current"
+   },
+   {
+    "url": "https://www.dnr.state.mi.us/PUBLICATIONS/PDFS/HuntingWildlifeHabitat/SGA/Muskegon_Co_WW_map.pdf",
+    "title": "MDNR: Muskegon Co. Wastewater map",
+    "date": "undated"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Parks themselves (Pioneer, Meinert, Moore, Patterson, Blue Lake) are lakeshore/day-use; hunting status not stated."
+ },
+ {
+  "county": "Newaygo",
+  "system": "Newaygo County Parks & Recreation",
+  "hunting": "unknown",
+  "what": "Five campground/day-use county parks (Sandy Beach, Ed Henning, White Cloud, Diamond Lake, Pettibone Lake) governed by County Ordinance #01/2020; hunting provision not found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.newaygocountymi.gov/departments/parks/white-cloud-park/",
+    "title": "Newaygo County: White Cloud County Park",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Likely closed in practice (campgrounds)."
+ },
+ {
+  "county": "Oakland",
+  "system": "Oakland County Parks (Oakland County Parks & Recreation Commission)",
+  "hunting": "restricted",
+  "what": "Archery deer hunting only, in six parks (Addison Oaks-East, Highland Oaks, Independence Oaks-North, Lyon Oaks, Orion Oaks, Rose Oaks) per park archery maps, Oct 1-Jan 1 (older FAQ: through Jan 31 under urban deer zone); only deer may be hunted; harvest report required within 24 h. No public firearm hunting; volunteer managed firearm hunts were discontinued in 2018, and USDA Wildlife Services firearm culls are planned Feb-Mar 2026.",
+  "open_units": [
+   "Addison Oaks-East",
+   "Highland Oaks",
+   "Independence Oaks-North",
+   "Lyon Oaks",
+   "Orion Oaks",
+   "Rose Oaks"
+  ],
+  "closed_units": [
+   "Addison Oaks (west/main)",
+   "Independence Oaks (south/main)",
+   "Groveland Oaks",
+   "Springfield Oaks",
+   "Red Oaks",
+   "Waterford Oaks",
+   "Catalpa Oaks",
+   "Glen Oaks",
+   "White Lake Oaks",
+   "Lyon Oaks golf course areas"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.oakgov.com/community/oakland-county-parks/recreation/hunting",
+    "title": "Oakland County Parks: Hunting",
+    "date": "current (checked 2026-11)"
+   },
+   {
+    "url": "https://www.oakgov.com/home/showpublisheddocument/30095/639051166274530000",
+    "title": "Oakland County Parks deer management FAQ (USDA firearms program Feb-Mar 2026)",
+    "date": "2026"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Township: Oakland Township Parks & Recreation (Oakland County) explicitly allows hunting in some township parks (oaklandtownship.org 'Hunting in the Parks'). Closed-unit list for the rest is by inference (not in archery list)."
+ },
+ {
+  "county": "Oceana",
+  "system": "Oceana County Parks & Recreation",
+  "hunting": "closed",
+  "what": "Oceana County Parks Rules and Regulations (April 4, 2024): hunting, trapping and archery are not allowed in county parks (safety); firearm possession governed by state law.",
+  "open_units": [],
+  "closed_units": [
+   "all Oceana County parks (Crystal Valley, Pentwater Pathway, etc.)"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://oceana.mi.us/wp-content/uploads/2024/05/Parks-Rules-and-Regulations-April-4-2024.pdf",
+    "title": "Oceana County Parks Rules and Regulations",
+    "date": "2024-04-04"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Text partially seen via search snippet."
+ },
+ {
+  "county": "Ogemaw",
+  "system": "Ogemaw County",
+  "hunting": "unknown",
+  "what": "No source found on the ~400-acre county 'Local Forest' parcel or county parks and hunting.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ogemaw/hunting",
+    "title": "MDNR local controls: Ogemaw (none)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Ontonagon",
+  "system": "Ontonagon County (county forest ~3,600 ac)",
+  "hunting": "unknown",
+  "what": "No source found describing hunting rules on Ontonagon County-owned forest land; no county ordinance listed by DNR. County land is likely unposted forest, but unverified.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ontonagon/hunting",
+    "title": "MDNR local hunting controls: Ontonagon (none listed)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Searched 'Ontonagon County forest land hunting public'; results were Ottawa NF and private leases."
+ },
+ {
+  "county": "Osceola",
+  "system": "Osceola County Parks (Crittenden Park)",
+  "hunting": "unknown",
+  "what": "Crittenden Park is a 10-acre campground; no hunting provision found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.osceola-county.org/residents/county_departments/parks/crittenden_park.php",
+    "title": "Osceola County: Crittenden Park",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PAD lists a small county 'Local Forest' parcel; no info."
+ },
+ {
+  "county": "Oscoda",
+  "system": "Oscoda County (Oscoda County Park, Mio)",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Oscoda County Park (campground on Mio Pond).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Not searched individually."
+ },
+ {
+  "county": "Otsego",
+  "system": "Otsego County Parks & Recreation (Otsego Lake County Park, dog park)",
+  "hunting": "unknown",
+  "what": "Otsego Lake County Park is an 80-site campground open May-Oct; no hunting provision found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://gaylordmichigan.net/member/otsego-lake-county-park/",
+    "title": "Gaylord CVB: Otsego Lake County Park",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Ottawa",
+  "system": "Ottawa County Parks & Recreation",
+  "hunting": "partly-open",
+  "what": "Hunting on ~16 selected properties (4,500+ acres) under DNR rules plus county hunting rules; some require no permit, others are archery-deer-only by lottery permit (Crockery Creek Natural Area, Upper Macatawa Natural Area, Stearns Creek South; Oct 15-Nov 15 and Dec 1-Jan 1), and a firearm Lakeshore Wildlife Management lottery hunt at North Ottawa Dunes and Ottawa Sands (with Hoffmaster SP, Nov 21-24 2025). Rules: 450 ft from occupied buildings, type-1 temporary blinds only, no vehicles off parking.",
+  "open_units": [
+   "Crockery Creek Natural Area (archery lottery)",
+   "Upper Macatawa Natural Area (archery lottery)",
+   "Stearns Creek South (archery lottery)",
+   "North Ottawa Dunes (firearm lottery)",
+   "Ottawa Sands (firearm lottery)",
+   "Johnson Street Wildlife Management Area",
+   "other non-permit hunting properties per county hunting map"
+  ],
+  "closed_units": [
+   "Kirk Park",
+   "Tunnel Park",
+   "Rosy Mound",
+   "Grand Haven beach parks and most developed parks"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://miottawa.org/Parks/hunting.htm",
+    "title": "Ottawa County Parks: Hunting on Parks & Recreation Properties",
+    "date": "current"
+   },
+   {
+    "url": "https://Www.miOttawa.org/Parks/pdf/hunting_rules.pdf",
+    "title": "Ottawa County Parks hunting rules",
+    "date": "undated"
+   },
+   {
+    "url": "https://www.wgvunews.org/news/2025-08-06/lottery-open-now-for-special-hunting-permits-at-select-ottawa-county-parks",
+    "title": "WGVU: Lottery open for special hunting permits at select Ottawa County parks",
+    "date": "2025-08-06"
+   },
+   {
+    "url": "https://www.wgvunews.org/2026-08-05/ottawa-county-tackles-broken-system-with-managed-deer-hunts",
+    "title": "WGVU: Ottawa County managed deer hunts (six parks, 2026)",
+    "date": "2026-08-05"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Full non-permit property list is on the county hunting map (not read). Closed units listed are developed beach/day-use parks presumed closed (not explicitly verified)."
+ },
+ {
+  "county": "Presque Isle",
+  "system": "Presque Isle County (Fletcher/Gilchrist Park, 40 Mile Point Lighthouse Park)",
+  "hunting": "unknown",
+  "what": "No hunting provision found for county parks; recreation plans 2017-2021 and 2023-2027 draft not readable.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.discovernortheastmichigan.org/downloads/presque_isle_county_recreation_plan_20232027_draft.pdf",
+    "title": "Presque Isle County Recreation Plan 2023-2027 (draft)",
+    "date": "2023"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Roscommon",
+  "system": "Roscommon County",
+  "hunting": "unknown",
+  "what": "No source on the small county 'Local Forest' parcel; DNR lists no county ordinance.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/roscommon/hunting",
+    "title": "MDNR local hunting controls: Roscommon",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Saginaw",
+  "system": "Saginaw County Parks & Recreation Commission",
+  "hunting": "unknown",
+  "what": "County park rules (2025 draft and current PDF) exist; the rules include a section on hunting and trapping access from the Saginaw Valley Rail Trail, suggesting hunting is at least addressed, but the text could not be read.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://saginawcounty.com/media/youihgmv/park-rules-draft-2025.pdf",
+    "title": "Saginaw County park rules draft 2025",
+    "date": "2025"
+   },
+   {
+    "url": "https://www.saginawcounty.com/media/rgbp3r0b/saginaw-county-parks-and-recreation-commission-park-rules.pdf",
+    "title": "Saginaw County Parks & Recreation Commission Park Rules",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "PDFs not fetchable from this session."
+ },
+ {
+  "county": "Sanilac",
+  "system": "Sanilac County Parks (Lexington, Forester, Evergreen, Delaware parks)",
+  "hunting": "unknown",
+  "what": "No hunting provision found; parks are lakeshore campgrounds.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/sanilac/hunting",
+    "title": "MDNR local controls: Sanilac (none)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search (combined with Tuscola)."
+ },
+ {
+  "county": "Schoolcraft",
+  "system": "Schoolcraft County",
+  "hunting": "unknown",
+  "what": "No county park/forest hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "unknown",
+  "sources": [
+   {
+    "url": "https://www2.dnr.state.mi.us/publications/pdfs/Mi-HUNT/DNRE_Facilities/Schoolcraft.pdf",
+    "title": "MDNR facilities list: Schoolcraft",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ },
+ {
+  "county": "Shiawassee",
+  "system": "Shiawassee County Parks & Recreation Commission",
+  "hunting": "unknown",
+  "what": "No hunting provision found for the seven county parks (Henderson, Kerby, Pine Grove, etc.).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://shiawassee.net/wp-content/uploads/2023/01/County-Parks-Plan-Narrative-01-25-17.pdf",
+    "title": "Shiawassee County Parks Plan narrative",
+    "date": "2017"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "St. Clair",
+  "system": "St. Clair County Parks & Recreation Commission",
+  "hunting": "partly-open",
+  "what": "Columbus County Park allows hunting by county-issued permit only, in designated areas south of the Belle River, west of Kronner Road, and a small area just east of Kronner Road (a condition of the state grant used to buy the land). No hunting information found for Goodells County Park or other county parks.",
+  "open_units": [
+   "Columbus County Park (permit, designated areas)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.stclaircounty.org/Uploads/ParksAndRecreation/forms/Brochures/Columbus Brochure 25 FOR WEB.pdf",
+    "title": "St. Clair County Parks: Columbus County Park brochure 2025",
+    "date": "2025"
+   },
+   {
+    "url": "https://legacy.stclaircounty.org/Offices/parks/columbus.aspx?meid=-250",
+    "title": "St. Clair County Parks: Columbus County Park",
+    "date": "undated"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Permit from parks office (810) 989-6960. Goodells likely closed (developed park) but not verified."
+ },
+ {
+  "county": "St. Joseph",
+  "system": "St. Joseph County Parks & Recreation (Meyer Broadway Park, Covered Bridge, etc.)",
+  "hunting": "unknown",
+  "what": "No hunting provision found; a St. Joseph County Parks Ordinance (PDF) exists but was not readable. Parks open dawn to dusk.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.stjosephcountymi.gov/government/parks-recreation/park-resources",
+    "title": "St. Joseph County Parks: Park Resources (ordinance PDF)",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search."
+ },
+ {
+  "county": "Tuscola",
+  "system": "Tuscola County Parks (Vanderbilt County Park)",
+  "hunting": "unknown",
+  "what": "No hunting provision found for Vanderbilt County Park (Saginaw Bay campground).",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://michigan.org/property/vanderbilt-county-park-campground",
+    "title": "Pure Michigan: Vanderbilt County Park & Campground",
+    "date": "undated"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One search (combined with Sanilac)."
+ },
+ {
+  "county": "Van Buren",
+  "system": "Van Buren County (Deerlick Creek Park; no formal park system found)",
+  "hunting": "unknown",
+  "what": "No hunting information found for Van Buren County parks.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [],
+  "confidence": "low",
+  "notes": "Searched 'Van Buren County parks Michigan hunting Deerlick Creek Park'; results were other states."
+ },
+ {
+  "county": "Washtenaw",
+  "system": "Washtenaw County Parks & Recreation Commission (WCPARC) incl. Natural Areas Preservation Program",
+  "hunting": "managed-hunts-only",
+  "what": "County generally bars public hunting on its parks and preserves; exceptions are special managed archery deer hunts, e.g. DNR 'Beyond BOW' archery deer hunt workshops on WCPARC land (Sharon Mills County Park 2023; Oct 2025; Oct 1-4 2026) and a 2016 limited disabled-veteran hunt at Leonard Preserve.",
+  "open_units": [
+   "Sharon Mills County Park (Beyond BOW workshop hunt)",
+   "Leonard Preserve (2016 limited veterans hunt)"
+  ],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/3690811",
+    "title": "MDNR: Beyond BOW archery deer hunt offered in Washtenaw County",
+    "date": "2023"
+   },
+   {
+    "url": "https://www.michigan.gov/dnr/things-to-do/calendar/2026/10/01/beyond-bow-archery-deer-hunt-workshop",
+    "title": "MDNR calendar: Beyond BOW archery deer hunt workshop",
+    "date": "2026-10-01"
+   },
+   {
+    "url": "https://themanchestermirror.com/2016/10/03/leonard-preserve-hunt-limited-in-response-to-neighbors-concerns",
+    "title": "Manchester Mirror: Leonard Preserve hunt limited",
+    "date": "2016-10-03"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Watkins Lake State Park & County Preserve is co-managed with DNR (state-park portion follows state park rules). Washtenaw County also has a 2026 'Iron Creek Preserve Hunting Program' application form (jotform) of unclear ownership \u2014 possibly a land conservancy, not WCPARC."
+ },
+ {
+  "county": "Wayne",
+  "system": "Wayne County Parks",
+  "hunting": "closed",
+  "what": "Wayne County Parks' Crosswinds Marsh page states 'No hunting!'; no hunting program found for any Wayne County park (Holliday Nature Preserve, Hines Park, Lower Rouge Parkway are urban greenways).",
+  "open_units": [],
+  "closed_units": [
+   "Crosswinds Marsh"
+  ],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.waynecountymi.gov/Parks-Recreation/Explore/Crosswinds-Marsh",
+    "title": "Wayne County: Crosswinds Marsh",
+    "date": "current"
+   },
+   {
+    "url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/community-events-amp-recreation/documents/2026-wayne-county-parks-brochure.pdf",
+    "title": "2026 Wayne County Parks brochure",
+    "date": "2026"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Full parks rules PDF not read; Holliday Forest status inferred (urban, no program found)."
+ },
+ {
+  "county": "Wexford",
+  "system": "Wexford County (fairgrounds; no county park system found)",
+  "hunting": "unknown",
+  "what": "No county park hunting rules found.",
+  "open_units": [],
+  "closed_units": [],
+  "county_forest": "none",
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/wexford/hunting",
+    "title": "MDNR local hunting controls: Wexford",
+    "date": "current"
+   }
+  ],
+  "confidence": "low",
+  "notes": "One combined search."
+ }
+]

@@ -32,6 +32,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 import { LAYER_SOURCES } from '../src/data/sources.ts';
 import { gradeFeature, drawsPurple } from '../src/grading/grade.ts';
+import { LOTTERY_RULE_IDS } from '../src/data/parkRules.ts';
 
 const OUT = new URL('../public/overview/public-land.json', import.meta.url);
 const CITY_LIMITS = new URL('../public/cities/city-limits.json', import.meta.url);
@@ -41,7 +42,9 @@ const MIN_CELLS = 4; // regions (and holes) smaller than this are dropped (~9 ha
 const SIMPLIFY_CELLS = 0.75; // Douglas–Peucker tolerance in cells
 const SERVER_OFFSET = 0.0006; // degrees, ~50 m: generalisation done by the ArcGIS server
 const GRADE_CODE = { green: 1, yellow: 2, red: 3 };
-const CODE_GRADE = ['', 'green', 'yellow', 'red', 'refuge'];
+const CODE_GRADE = ['', 'green', 'yellow', 'red', 'refuge', 'lottery'];
+/** Lottery-only land gets its own colour whatever its grade. */
+const LOTTERY_CODE = 5;
 /** Refuges, nature preserves and nature centers get their own colour whatever their grade. */
 const REFUGE_CODE = 4;
 
@@ -359,18 +362,18 @@ async function main() {
     const graded = features
       .map((f) => {
         const r = gradeFeature(src, f.properties ?? {});
-        return { f, grade: r.grade, researched: Boolean(r.researched), refuge: drawsPurple(l.id, f.properties) };
+        return { f, grade: r.grade, researched: Boolean(r.researched), refuge: drawsPurple(l.id, f.properties), lottery: Boolean(r.researched && LOTTERY_RULE_IDS.has(r.researched.rule)) };
       })
-      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow') || (l.yellowToo && x.grade === 'yellow') || x.refuge)
+      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow') || (l.yellowToo && x.grade === 'yellow') || x.refuge || x.lottery)
       .sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
     // The county mask only exists to clip federal data from other states; Michigan DNR layers
     // are in-state by definition, and the generalised mask would clip shoreline parks.
     const useMask = !l.id.startsWith('dnr-');
     const isProgram = l.id === 'dnr-park-hunting';
     const researchedAcres = { green: 0, yellow: 0, red: 0 };
-    for (const { f, grade, researched, refuge } of graded) {
+    for (const { f, grade, researched, refuge, lottery } of graded) {
       g[grade]++;
-      const code = refuge ? REFUGE_CODE : GRADE_CODE[grade];
+      const code = refuge ? REFUGE_CODE : lottery ? LOTTERY_CODE : GRADE_CODE[grade];
       if (!code) continue;
       // A researched unit rule is exempt from the city rule, like a park hunting zone.
       const exempt = isProgram || researched;
@@ -432,7 +435,7 @@ async function main() {
   const features = [];
   // Closed (red) land is left out of the overview: from far out it is clutter, and the live map
   // shows it from parcel zoom. Its cells stay red in the grid, so they are never drawn as open.
-  for (const code of [1, 2, REFUGE_CODE]) {
+  for (const code of [1, 2, REFUGE_CODE, LOTTERY_CODE]) {
     // Closed (red) regions are kept however small; dropping one would let the surrounding open
     // land read as huntable. Restricted (yellow) and refuge regions are kept however small too.
     const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'green' ? MIN_CELLS : 1);

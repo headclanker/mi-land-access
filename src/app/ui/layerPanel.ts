@@ -1,5 +1,5 @@
 import type { Map as MLMap } from 'maplibre-gl';
-import { GRADE_COLORS, REFUGE_COLOR, type Grade, type LayerGroup, type LayerSource } from '../../contract';
+import { GRADE_COLORS, LOTTERY_COLOR, REFUGE_COLOR, type Grade, type LayerGroup, type LayerSource } from '../../contract';
 import type { LayerManager } from '../layers/manager';
 import type { Overview } from '../layers/overview';
 import type { CityLimitsLayer } from '../layers/cities';
@@ -120,6 +120,7 @@ export class LayerPanel {
         'ul',
         {},
         LEGEND.map((l) => h('li', {}, h('span.legend-chip', { style: `--c:${GRADE_COLORS[l.grade]}` }), h('span', {}, h('strong', {}, l.title), h('span.muted.small', {}, GRADE_LABEL[l.grade])))),
+        h('li', {}, h('span.legend-chip', { style: `--c:${LOTTERY_COLOR}` }), h('span', {}, h('strong', {}, 'Lottery only'), h('span.muted.small', {}, 'Hunting only by lottery or drawn permit — tap for how to apply'))),
         h('li', {}, h('span.legend-chip', { style: `--c:${REFUGE_COLOR}` }), h('span', {}, h('strong', {}, 'Refuge, nature preserve or nature center'), h('span.muted.small', {}, 'Usually closed or tightly restricted — tap one for its status'))),
         h('li', {}, h('span.legend-chip.hatch', { style: `--c:${GRADE_COLORS.yellow}` }), h('span', {}, h('strong', {}, 'Hatched: records disagree'), h('span.muted.small', {}, 'County owner and state/federal land records conflict — verify before entering'))),
         h('li', {}, h('span.legend-chip.boundary'), h('span', {}, h('strong', {}, 'Dashed outline: area boundary'), h('span.muted.small', {}, 'Game-area or park boundary — can include private land; not a grade'))),

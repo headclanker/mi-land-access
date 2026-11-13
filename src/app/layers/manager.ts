@@ -3,7 +3,7 @@
 
 import type { Map as MLMap, GeoJSONSource, ExpressionSpecification, FilterSpecification } from 'maplibre-gl';
 import type { Feature, FeatureCollection } from 'geojson';
-import { GRADE_COLORS, REFUGE_COLOR, type LayerSource } from '../../contract';
+import { GRADE_COLORS, LOTTERY_COLOR, REFUGE_COLOR, type LayerSource } from '../../contract';
 import { PARCEL_MIN_ZOOM } from '../../data/sources';
 import { LOADER } from '../config';
 import { debounce } from '../util/dom';
@@ -52,6 +52,8 @@ const gradeColor: ExpressionSpecification = [
   'case',
   // National wildlife refuges draw purple whatever their grade (the details still give the grade).
   ['==', ['get', P.refuge], true], REFUGE_COLOR,
+  // Lottery-only land draws orange.
+  ['==', ['get', P.lottery], true], LOTTERY_COLOR,
   [
     'match',
     ['get', P.grade],
@@ -135,13 +137,13 @@ export function loadPriority(s: LayerSource): number {
 }
 
 /** A "check first" feature that is not drawn in the refuge colour. */
-const IS_YELLOW: ExpressionSpecification = ['all', ['==', ['get', P.grade], 'yellow'], ['!=', ['get', P.refuge], true]];
+const IS_YELLOW: ExpressionSpecification = ['all', ['==', ['get', P.grade], 'yellow'], ['!=', ['get', P.refuge], true], ['!=', ['get', P.lottery], true]];
 /**
  * Closed (red) public land is drawn only from parcel zoom: from farther out it is clutter (thousands
  * of closed local parks), and red only matters next to the parcels around it. Refuge / preserve
  * purple is kept at every zoom.
  */
-const RED_ONLY_NEAR: ExpressionSpecification = ['any', ['!=', ['get', P.grade], 'red'], ['==', ['get', P.refuge], true], ['>=', ['zoom'], PARCEL_MIN_ZOOM]];
+const RED_ONLY_NEAR: ExpressionSpecification = ['any', ['!=', ['get', P.grade], 'red'], ['==', ['get', P.refuge], true], ['==', ['get', P.lottery], true], ['>=', ['zoom'], PARCEL_MIN_ZOOM]];
 
 /** Brighter than the yellow fill so thin outlines read on both topo and imagery. */
 const YELLOW_LINE = '#ffd21f';

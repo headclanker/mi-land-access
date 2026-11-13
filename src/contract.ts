@@ -20,6 +20,12 @@ export const GRADE_COLORS: Record<Grade, string> = {
 export const REFUGE_COLOR = '#8e44ad';
 
 /**
+ * Map colour for land where the only hunting is by lottery or drawn permit (county permit hunts,
+ * managed deer hunts). A display colour only, like REFUGE_COLOR; the details give the rule.
+ */
+export const LOTTERY_COLOR = '#f57c00';
+
+/**
  * Who a county parcel's owner string says owns the land, as far as reconciliation needs to know
  * (set by the owner-name grader only; public-land layer grades leave it undefined):
  *   dnr     – Michigan DNR (incl. "state park" owners)

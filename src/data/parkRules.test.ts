@@ -334,3 +334,11 @@ describe('park rules – reconciliation', () => {
     expect(loadsForParcels(src('padus-state-other'))).toBe(false);
   });
 });
+
+describe('lottery-only rules', () => {
+  it('are flagged so the map can draw them orange', async () => {
+    const { LOTTERY_RULE_IDS, PARK_RULES } = await import('./parkRules');
+    expect([...LOTTERY_RULE_IDS].sort()).toEqual(['genesee-managed-archery', 'hoffmaster', 'kent-bow-permit', 'ottawa-hunting-lottery', 'whitehall-funnell-field']);
+    for (const id of LOTTERY_RULE_IDS) expect(PARK_RULES.find((x) => x.id === id)?.text, id).toMatch(/lotter/i);
+  });
+});

@@ -149,6 +149,7 @@ export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], 
       [P.conflict]: r.conflict,
       [P.adopted]: r.adoptedFrom ?? '',
       // A parcel mostly inside a national wildlife refuge takes the refuge colour.
+      [P.lottery]: hits.reduce((sum, { key, fraction }) => sum + ((key.properties as Record<string, unknown>)[P.lottery] === true ? fraction : 0), 0) >= COVER_FRACTION,
       [P.refuge]: hits.reduce((sum, { key, fraction }) => sum + ((key.properties as Record<string, unknown>)[P.refuge] === true ? fraction : 0), 0) >= COVER_FRACTION,
       [P.split]: r.split,
       [P.city]: city ?? '',

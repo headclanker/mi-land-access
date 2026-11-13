@@ -5,6 +5,7 @@ import { area } from '@turf/turf';
 import type { Feature, Polygon, MultiPolygon } from 'geojson';
 import type { Grade, GradeResult, LayerSource, OwnerKind, Researched } from '../../contract';
 import { gradeFeature, drawsPurple } from '../../grading/grade';
+import { LOTTERY_RULE_IDS } from '../../data/parkRules';
 import { tierOf } from '../../grading/reconcile';
 import { SQM_PER_ACRE } from '../util/geo';
 
@@ -36,6 +37,8 @@ export const P = {
   city: '_city',
   /** true on refuge, nature-preserve and nature-center land (and parcels mostly inside it): drawn in REFUGE_COLOR. */
   refuge: '_refuge',
+  /** true where the only hunting is by lottery (and on parcels mostly inside): drawn in LOTTERY_COLOR. */
+  lottery: '_lottery',
   // Parcels only, set by reconciliation (see layers/reconcileLayers.ts).
   /** 'fill' (own tint) | 'none' (colour comes from the adopted public layer) | 'conflict' (hatched). */
   tint: '_tint',
@@ -115,6 +118,7 @@ export function enrichFeature(source: LayerSource, f: Feature): Feature {
   props[P.refs] = JSON.stringify(g.references ?? []);
   props[P.researched] = researchedProp(g);
   if (drawsPurple(source.id, props)) props[P.refuge] = true;
+  if (g.researched && LOTTERY_RULE_IDS.has(g.researched.rule)) props[P.lottery] = true;
   const name = source.nameField ? str(props[source.nameField]) : '';
   props[P.name] = name;
   const owner = source.parcel?.ownerField ? str(props[source.parcel.ownerField]) : '';

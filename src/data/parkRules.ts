@@ -43,6 +43,8 @@ export interface ParkRule {
   sources: readonly Source[];
   /** Also quote the layer's own record (e.g. the DNR park zone note) after the rule. */
   keepLayerReason?: boolean;
+  /** The only hunting here is by lottery / drawn permit: drawn in LOTTERY_COLOR whatever the grade. */
+  lottery?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -162,6 +164,7 @@ export const PARK_RULES: readonly ParkRule[] = [
   }),
   r({
     id: 'hoffmaster',
+    lottery: true,
     name: 'P.J. Hoffmaster State Park',
     layers: PARK_ZONES,
     where: { Facility: 'P.J. Hoffmaster State Park' },
@@ -528,6 +531,7 @@ export const PARK_RULES: readonly ParkRule[] = [
   }),
   r({
     id: 'ottawa-hunting-lottery',
+    lottery: true,
     name: 'Ottawa County lottery hunting properties',
     layers: PADUS_LOCAL,
     where: { Loc_Mang: OTTAWA, Unit_Nm: ['Crockery Creek Site', 'Upper Macatawa Natural Area - East', 'Upper Macatawa Natural Area - West', 'Ottawa Sands County Park'] },
@@ -587,6 +591,7 @@ export const PARK_RULES: readonly ParkRule[] = [
   }),
   r({
     id: 'kent-bow-permit',
+    lottery: true,
     name: 'Kent County bow-permit parks',
     layers: PADUS_LOCAL,
     where: { Loc_Mang: KENT, Unit_Nm: ['Cooper Creek Park', 'Spencer Forest', 'Long Lake Park', 'Donald Lamoreaux Park', 'Lowell Regional Park', 'Thornapple Riverbend Park'] },
@@ -626,6 +631,7 @@ export const PARK_RULES: readonly ParkRule[] = [
   }),
   r({
     id: 'genesee-managed-archery',
+    lottery: true,
     name: 'Genesee Recreation Area (E.A. Cummings Center managed hunt)',
     layers: PADUS_LOCAL,
     where: { Loc_Mang: 'County of Genesee', Unit_Nm: 'Genessee Recreation Area' },
@@ -846,6 +852,7 @@ export const PARK_RULES: readonly ParkRule[] = [
   ),
   r({
     id: 'whitehall-funnell-field',
+    lottery: true,
     name: 'Funnell Field (City of Whitehall)',
     layers: PADUS_LOCAL,
     where: { Loc_Mang: 'City of Whitehall', Unit_Nm: 'Funnell Field' },
@@ -1179,6 +1186,9 @@ export const PARK_RULES: readonly ParkRule[] = [
     sources: [{ label: 'Michigan hunting-access map – park research notes', url: 'https://github.com/headclanker/mi-land-access/blob/main/docs/PARK_HUNTING_RESEARCH.md' }],
   }),
 ];
+
+/** Rules whose only hunting is by lottery or drawn permit (drawn orange on the map). */
+export const LOTTERY_RULE_IDS: ReadonlySet<string> = new Set(PARK_RULES.filter((x) => x.lottery).map((x) => x.id));
 
 /** Layers that carry at least one researched rule. */
 export const RESEARCHED_LAYER_IDS: ReadonlySet<string> = new Set(PARK_RULES.flatMap((x) => x.layers));

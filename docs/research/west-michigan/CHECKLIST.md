@@ -105,7 +105,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - What was tried: Winstrom Preserve (42.795) and Cooper-VanWieren/Stu Visser/Wendt/Ransom are north of the line; no township park rule found.
   - Known address: https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ottawa/hunting
   - Search: https://www.google.com/search?q=Park+Township+Michigan+parks+ordinance+hunting+firearms
-- [ ] **GEORGETOWN CHARTER TOWNSHIP** (township; 3 parks, 109 acres)
+- [x] **GEORGETOWN CHARTER TOWNSHIP** — Done: red (gtwp.com park rules) (township; 3 parks, 109 acres)
   - Parks: 8Th Ave Community Park (59 ac), Rush Creek Park (41 ac), 28Th Avenue Soccer Fields (9 ac)
   - What was tried: No parks/hunting rule found for Rush Creek Park, 8th Ave Community Park or 28th Ave soccer fields; a 2009 proposal to expand firearm-discharge setbacks was reported but outcome not confirmed.
   - Search: https://www.google.com/search?q=GEORGETOWN+CHARTER+TOWNSHIP+Michigan+parks+ordinance+hunting+firearms
@@ -121,7 +121,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - Parks: Allendale Community Park (37 ac)
   - What was tried: Search returned no Allendale parks/hunting ordinance.
   - Search: https://www.google.com/search?q=Township+of+Allendale+Michigan+parks+ordinance+hunting+firearms
-- [ ] **Township of Georgetown** (township; 3 parks, 32 acres)
+- [x] **Township of Georgetown** — Done: red (gtwp.com park rules) (township; 3 parks, 32 acres)
   - Parks: Woodcrest Park (16 ac), Maplewood Park (10 ac), Pioneer Park (6 ac)
   - What was tried: Same as Georgetown Charter Township: no rule found.
   - Search: https://www.google.com/search?q=Township+of+Georgetown+Michigan+parks+ordinance+hunting+firearms
@@ -246,7 +246,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
 
 ## Barry County (16)
 
-- [ ] **County of Barry** (county; 1 parks, 288 acres)
+- [x] **County of Barry** — Done: red (Barry County park rules) (county; 1 parks, 288 acres)
   - Parks: Charlton Park (288 ac)
   - What was tried: Barry County Parks has no published rules page found.
   - Known address: https://www.charltonpark.org/parks/bailey-nature-preserve
@@ -328,7 +328,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - Parks: Lansing Environmental Education Center (211 ac), Village Park (104 ac), Camp Beachpoint (74 ac), Pine Trails Camp (42 ac), Community Ball Fields (20 ac), Dorr Township Park (10 ac), and 5 more
   - What was tried: Dorr Township parks page lists parks but rules text not retrievable.
   - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
-- [ ] **City of Saugatuck** (city; 6 parks, 116 acres)
+- [x] **City of Saugatuck** — Done: red (city park rules) (city; 6 parks, 116 acres)
   - Parks: Mt. Baldhead Park (111 ac), Coghlin Park (2 ac), Village Square Park (2 ac), Wicks Park (1 ac), Mason Park (0 ac), Willow Park (0 ac)
   - What was tried: Mt. Baldhead Park (111 ac) is the large parcel.
   - Search: https://www.google.com/search?q=City+of+Saugatuck+Michigan+parks+ordinance+hunting+firearms
@@ -348,7 +348,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - Parks: Matt Urban Sports Complex (22 ac), Maplewood Recreation Area (10 ac)
   - What was tried: Matt Urban Sports Complex, Maplewood Recreation Area: city of Holland recreation fields; see Ottawa City of Holland.
   - Search: https://www.google.com/search?q=City+of+Holland+Michigan+parks+ordinance+hunting+firearms
-- [ ] **City of Wayland** (city; 6 parks, 30 acres)
+- [x] **City of Wayland** — Done: red (city park rules PDF) (city; 6 parks, 30 acres)
   - Parks: Rabbit River Nature Trail (23 ac), Wayland City Park (4 ac), North Park (2 ac), Wayland Skate Park (1 ac), Wayland Mini Park (0 ac), Wayland Mini Park (0 ac)
   - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
   - Search: https://www.google.com/search?q=City+of+Wayland+Michigan+parks+ordinance+hunting+firearms

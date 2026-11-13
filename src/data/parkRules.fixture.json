@@ -383,6 +383,14 @@
  },
  {
   "layer": "padus-local",
+  "rule": "wayland-city-parks",
+  "Unit_Nm": "Wayland Mini Park",
+  "Loc_Mang": "City of Wayland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "hcma-closed",
   "Unit_Nm": "Kensington Metropark",
   "Loc_Mang": "Huron Clinton Metropark Authority",
@@ -618,6 +626,14 @@
   "rule": "allegan-county-closed",
   "Unit_Nm": "West Side Park",
   "Loc_Mang": "County of Allegan",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "barry-county-parks",
+  "Unit_Nm": "Charlton Park",
+  "Loc_Mang": "County of Barry",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -1568,7 +1584,7 @@
  {
   "layer": "padus-local",
   "rule": "douglas-city-parks",
-  "Unit_Nm": "Wade\u2019S Bayou Memorial Park",
+  "Unit_Nm": "Wade’S Bayou Memorial Park",
   "Loc_Mang": "City of Douglas",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
@@ -3087,6 +3103,94 @@
  },
  {
   "layer": "padus-local",
+  "rule": "saugatuck-city-parks",
+  "Unit_Nm": "Coghlin Park",
+  "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saugatuck-city-parks",
+  "Unit_Nm": "Mason Park",
+  "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saugatuck-city-parks",
+  "Unit_Nm": "Mt. Baldhead Park",
+  "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saugatuck-city-parks",
+  "Unit_Nm": "Village Square Park",
+  "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saugatuck-city-parks",
+  "Unit_Nm": "Wicks Park",
+  "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "saugatuck-city-parks",
+  "Unit_Nm": "Willow Park",
+  "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wayland-city-parks",
+  "Unit_Nm": "North Park",
+  "Loc_Mang": "City of Wayland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wayland-city-parks",
+  "Unit_Nm": "Rabbit River Nature Trail",
+  "Loc_Mang": "City of Wayland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wayland-city-parks",
+  "Unit_Nm": "Wayland City Park",
+  "Loc_Mang": "City of Wayland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wayland-city-parks",
+  "Unit_Nm": "Wayland Mini Park",
+  "Loc_Mang": "City of Wayland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wayland-city-parks",
+  "Unit_Nm": "Wayland Skate Park",
+  "Loc_Mang": "City of Wayland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
   "rule": "whitehall-funnell-field",
   "Unit_Nm": "Funnell Field",
   "Loc_Mang": "City of Whitehall",
@@ -3191,6 +3295,30 @@
  },
  {
   "layer": "padus-local",
+  "rule": "georgetown-twp-parks",
+  "Unit_Nm": "28Th Avenue Soccer Fields",
+  "Loc_Mang": "GEORGETOWN CHARTER TOWNSHIP",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "georgetown-twp-parks",
+  "Unit_Nm": "8Th Ave Community Park",
+  "Loc_Mang": "GEORGETOWN CHARTER TOWNSHIP",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "georgetown-twp-parks",
+  "Unit_Nm": "Rush Creek Park",
+  "Loc_Mang": "GEORGETOWN CHARTER TOWNSHIP",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "holland-charter-twp-closed",
   "Unit_Nm": "Beechwood Park",
   "Loc_Mang": "Holland Charter Township",
@@ -3250,6 +3378,30 @@
   "rule": "egelston-twp-closed",
   "Unit_Nm": "Wolf Lake County Park",
   "Loc_Mang": "Township of Egelston",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "georgetown-twp-parks",
+  "Unit_Nm": "Maplewood Park",
+  "Loc_Mang": "Township of Georgetown",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "georgetown-twp-parks",
+  "Unit_Nm": "Pioneer Park",
+  "Loc_Mang": "Township of Georgetown",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "georgetown-twp-parks",
+  "Unit_Nm": "Woodcrest Park",
+  "Loc_Mang": "Township of Georgetown",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },

@@ -394,3 +394,20 @@ Also applied, on the owner's instruction (2026-11-13):
 - **Norton Shores — Lake Harbor, Ross and Black Lake parks:** yellow, managed archery deer program with city-selected volunteers only (low confidence: the program is confirmed to run in city parks, but which parks comes from one news summary).
 
 Not mapped: Cannon Township bans hunting in Bostwick Lake Park, which has no shape in the data.
+
+## Sixth round (2026-11-13): crawl of the bodies' own websites
+
+The ordinance hosts (ecode360, Municode, American Legal) refuse automated requests, so a plain script (`scripts/research-crawl.py`) read each remaining body's own website instead: one request a second, robots.txt obeyed, up to 160 pages and 60 PDFs per site, stopping at any block or challenge page. It reached 78 of 79 sites before its time limit; five bodies had no website to read. Sentences mentioning hunting, firearms, bows or trapping near park words are kept in `docs/research/west-michigan/crawl_park_sentences.txt`.
+
+Applied (all red):
+
+| Body | Parks | Evidence | Confidence |
+|---|---|---|---|
+| Barry County | Charlton Park | "No hunting or shooting is permitted on or across the trails or in parks." | high |
+| Georgetown Charter Township | 6 parks | "No person shall hunt within the Township park…" (park rules in the pavilion agreement) | medium |
+| City of Wayland | 6 parks | "Hunting is not permitted in any City of Wayland Park." | high |
+| City of Saugatuck | 6 parks | "No hunting or trapping" at the nature preserve; hunting regulated by city code; deer control by city cull | medium |
+
+Seen but not applied: Muskegon and Newaygo county park ordinances (already covered), Fruitport Township and Freeport cemetery rules (cemeteries only), Middleville's Paul Henry Trail notice (a trail over private land, not village parks), an Ensley Township plan mentioning an unnamed preserve.
+
+Most township and village sites publish no park hunting rule at all; their text sits only on the blocked code hosts. Those parks stay yellow ("check first"), as chosen, and remain on the checklist.

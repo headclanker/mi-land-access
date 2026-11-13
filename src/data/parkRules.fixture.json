@@ -327,6 +327,86 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-carson-city-city-of-carson-city-park",
+  "Unit_Nm": "City of Carson City Park",
+  "Loc_Mang": "City of Carson City",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-grand-haven-adams-street-park",
+  "Unit_Nm": "Adams Street Park",
+  "Loc_Mang": "City of Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-grand-haven-adams-street-park",
+  "Unit_Nm": "East Grand River Park",
+  "Loc_Mang": "City of Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-grand-haven-adams-street-park",
+  "Unit_Nm": "Rix Robinson Park",
+  "Loc_Mang": "City of Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-grant-blanch-lake-city-park",
+  "Unit_Nm": "Blanch Lake City Park",
+  "Loc_Mang": "City of Grant",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Greenville City Land",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Baldwin Lake Beach",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "City of Greenville Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Pearl Street Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Morton Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "howard-city-parks",
   "Unit_Nm": "Park",
   "Loc_Mang": "City of Howard City",
@@ -359,6 +439,14 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Richards Park",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "montague-city-parks",
   "Unit_Nm": "Athletic Field",
   "Loc_Mang": "City of Montague",
@@ -378,6 +466,62 @@
   "rule": "montague-city-parks",
   "Unit_Nm": "Medbury Park",
   "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Beukema Playfield",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Fisherman's Landing",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Lake Michigan Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Richards Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Bandshell Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-roosevelt-park-city-park",
+  "Unit_Nm": "City Park",
+  "Loc_Mang": "City of Roosevelt Park",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-stanton-city-of-stanton-park",
+  "Unit_Nm": "City of Stanton Park",
+  "Loc_Mang": "City of Stanton",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -479,9 +623,33 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-kent-township-of-cannon-cannon-township-center-property",
+  "Unit_Nm": "Cannon Township Center Property",
+  "Loc_Mang": "Township of Cannon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "cascade-twp-closed",
   "Unit_Nm": "Museums Garden Park",
   "Loc_Mang": "Township of Cascade",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-township-of-crystal-park",
+  "Unit_Nm": "Park",
+  "Loc_Mang": "Township of Crystal",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-township-of-ensley-baptist-lake-township-park",
+  "Unit_Nm": "Baptist Lake Township Park",
+  "Loc_Mang": "Township of Ensley",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -495,9 +663,49 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-fruitport-south-fruitport-township-park",
+  "Unit_Nm": "South Fruitport Township Park",
+  "Loc_Mang": "Township of Fruitport",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-township-of-grattan-grattan-township-roadside-park",
+  "Unit_Nm": "Grattan Township Roadside Park",
+  "Loc_Mang": "Township of Grattan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-township-of-holland-roadside-park",
+  "Unit_Nm": "Roadside Park",
+  "Loc_Mang": "Township of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "laketon-twp-park-closed",
   "Unit_Nm": "Laketon Township Park",
   "Loc_Mang": "Township of Laketown",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-township-of-montcalm-township-land",
+  "Unit_Nm": "Township Land",
+  "Loc_Mang": "Township of Montcalm",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-township-of-orangeville-orangeville-township-park",
+  "Unit_Nm": "Orangeville Township Park",
+  "Loc_Mang": "Township of Orangeville",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -559,6 +767,70 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-barry-township-of-prairieville-gull-lake-park",
+  "Unit_Nm": "Gull Lake Park",
+  "Loc_Mang": "Township of Prairieville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-township-of-prairieville-gull-lake-park",
+  "Unit_Nm": "Lower Crooked Lake Park",
+  "Loc_Mang": "Township of Prairieville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-township-of-prairieville-gull-lake-park",
+  "Unit_Nm": "Pine Lake Park",
+  "Loc_Mang": "Township of Prairieville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-township-of-prairieville-gull-lake-park",
+  "Unit_Nm": "Prairieville Recreation Area",
+  "Loc_Mang": "Township of Prairieville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-township-of-reynolds-park",
+  "Unit_Nm": "Park",
+  "Loc_Mang": "Township of Reynolds",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-township-of-reynolds-park",
+  "Unit_Nm": "Township of Reynolds Park",
+  "Loc_Mang": "Township of Reynolds",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-township-of-spring-lake-parks-rycenga-recreation-park",
+  "Unit_Nm": "Rycenga Recreation Park",
+  "Loc_Mang": "Township of Spring Lake Parks",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-freeport-moore-park",
+  "Unit_Nm": "Moore Park",
+  "Loc_Mang": "Village of Freeport",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "nashville-parks",
   "Unit_Nm": "Old Town Field",
   "Loc_Mang": "Village of Nashville",
@@ -570,6 +842,22 @@
   "rule": "nashville-parks",
   "Unit_Nm": "Putnam Park",
   "Loc_Mang": "Village of Nashville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sand-lake-salisbury-park",
+  "Unit_Nm": "Salisbury Park",
+  "Loc_Mang": "Village of Sand Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-woodland-classic-memorial-park",
+  "Unit_Nm": "Classic Memorial Park",
+  "Loc_Mang": "Village of Woodland",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -1383,6 +1671,38 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-grand-haven-adams-street-park",
+  "Unit_Nm": "Bi-Centennial Park",
+  "Loc_Mang": "City of Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-grand-haven-adams-street-park",
+  "Unit_Nm": "Hatton Park",
+  "Loc_Mang": "City of Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Kruse Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-white-cloud-city-park",
+  "Unit_Nm": "City Park",
+  "Loc_Mang": "City of White Cloud",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "hcma-closed",
   "Unit_Nm": "Huron Meadows Metropark",
   "Loc_Mang": "Huron Clinton Metropark Authority",
@@ -1394,6 +1714,14 @@
   "rule": "cascade-twp-closed",
   "Unit_Nm": "Michael McGraw Park",
   "Loc_Mang": "Township of Cascade",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-township-of-croton-croton-township-park",
+  "Unit_Nm": "Croton Township Park",
+  "Loc_Mang": "Township of Croton",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -1503,6 +1831,54 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-kent-ada-township-grand-river-nature-area",
+  "Unit_Nm": "Grand River Nature Area",
+  "Loc_Mang": "Ada Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-ada-township-grand-river-nature-area",
+  "Unit_Nm": "Ada Park",
+  "Loc_Mang": "Ada Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-ada-township-grand-river-nature-area",
+  "Unit_Nm": "Leonard Field",
+  "Loc_Mang": "Ada Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-ada-township-grand-river-nature-area",
+  "Unit_Nm": "Roselle Park",
+  "Loc_Mang": "Ada Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-alpine-township-westgate-neighborhood-park",
+  "Unit_Nm": "Westgate Neighborhood Park",
+  "Loc_Mang": "Alpine Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-byron-township-cutler-park",
+  "Unit_Nm": "Cutler Park",
+  "Loc_Mang": "Byron Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "cascade-twp-closed",
   "Unit_Nm": "Michael Mcgraw Park",
   "Loc_Mang": "Cascade Charter Township",
@@ -1514,6 +1890,142 @@
   "rule": "cascade-twp-closed",
   "Unit_Nm": "Burton Park",
   "Loc_Mang": "Cascade Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Hanson Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Jaycee Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Mahan Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Rossman Esplanade Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Allegan Sports Complex",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Cook Street Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Sue Lange Memorial Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-belding-central-riverside-park",
+  "Unit_Nm": "Central Riverside Park",
+  "Loc_Mang": "City of Belding",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-belding-central-riverside-park",
+  "Unit_Nm": "East Riverside Park",
+  "Loc_Mang": "City of Belding",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-belding-central-riverside-park",
+  "Unit_Nm": "Water Street Park",
+  "Loc_Mang": "City of Belding",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-belding-central-riverside-park",
+  "Unit_Nm": "Demorest Field",
+  "Loc_Mang": "City of Belding",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-belding-central-riverside-park",
+  "Unit_Nm": "Lightning Bend Park",
+  "Loc_Mang": "City of Belding",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-cedar-springs-riggle-park",
+  "Unit_Nm": "Riggle Park",
+  "Loc_Mang": "City of Cedar Springs",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-cedar-springs-riggle-park",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "City of Cedar Springs",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-coopersville-coopersville-sports-complex",
+  "Unit_Nm": "Coopersville Sports Complex",
+  "Loc_Mang": "City of Coopersville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-coopersville-coopersville-sports-complex",
+  "Unit_Nm": "Dda Pavillion",
+  "Loc_Mang": "City of Coopersville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-coopersville-coopersville-sports-complex",
+  "Unit_Nm": "Grove St Park/ Main St Park",
+  "Loc_Mang": "City of Coopersville",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -1692,6 +2204,94 @@
   "Loc_Mang": "City of East Grand Rapids",
   "Mang_Name": "CITY",
   "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-ferrysburg-ferrysburg-nature-preserve",
+  "Unit_Nm": "Ferrysburg Nature Preserve",
+  "Loc_Mang": "City of Ferrysburg",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-ferrysburg-ferrysburg-nature-preserve",
+  "Unit_Nm": "Ferry Park",
+  "Loc_Mang": "City of Ferrysburg",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-ferrysburg-ferrysburg-nature-preserve",
+  "Unit_Nm": "Fire Barn Park",
+  "Loc_Mang": "City of Ferrysburg",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-ferrysburg-ferrysburg-nature-preserve",
+  "Unit_Nm": "Mike Herman Memorial Field",
+  "Loc_Mang": "City of Ferrysburg",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-fremont-arboretum-park",
+  "Unit_Nm": "Arboretum Park",
+  "Loc_Mang": "City of Fremont",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-fremont-arboretum-park",
+  "Unit_Nm": "Branstrom Park",
+  "Loc_Mang": "City of Fremont",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-fremont-arboretum-park",
+  "Unit_Nm": "Fremont Lake Park",
+  "Loc_Mang": "City of Fremont",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-fremont-arboretum-park",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "City of Fremont",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-fremont-arboretum-park",
+  "Unit_Nm": "Unknown Parl",
+  "Loc_Mang": "City of Fremont",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-city-of-fremont-arboretum-park",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "City of Fremont",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-grand-haven-adams-street-park",
+  "Unit_Nm": "Grand Haven City Beach",
+  "Loc_Mang": "City of Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
  },
  {
   "layer": "padus-local",
@@ -2751,6 +3351,278 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-grandville-calvin-crest-park",
+  "Unit_Nm": "Calvin Crest Park",
+  "Loc_Mang": "City of Grandville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-grandville-calvin-crest-park",
+  "Unit_Nm": "Heritage Park",
+  "Loc_Mang": "City of Grandville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-grandville-calvin-crest-park",
+  "Unit_Nm": "Lee St Park",
+  "Loc_Mang": "City of Grandville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-grandville-calvin-crest-park",
+  "Unit_Nm": "Mill Race Park",
+  "Loc_Mang": "City of Grandville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-grandville-calvin-crest-park",
+  "Unit_Nm": "Peck St Park",
+  "Loc_Mang": "City of Grandville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-grandville-calvin-crest-park",
+  "Unit_Nm": "Grandville Little League Complex",
+  "Loc_Mang": "City of Grandville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Alan G Davis Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Franklin Street Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Hawthorne Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Jacksons Landing Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Pearl Street Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Tower Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-montcalm-city-of-greenville-greenville-city-land",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "City of Greenville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-hastings-bob-king",
+  "Unit_Nm": "Bob King",
+  "Loc_Mang": "CITY OF HASTINGS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-hastings-bob-king",
+  "Unit_Nm": "Dog Park",
+  "Loc_Mang": "CITY OF HASTINGS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-hastings-bob-king",
+  "Unit_Nm": "First Ward Park",
+  "Loc_Mang": "CITY OF HASTINGS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-hastings-bob-king",
+  "Unit_Nm": "Fish Hatchery Park",
+  "Loc_Mang": "CITY OF HASTINGS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-hastings-bob-king",
+  "Unit_Nm": "Second Ward Park",
+  "Loc_Mang": "CITY OF HASTINGS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-hastings-bob-king",
+  "Unit_Nm": "Tyden Park",
+  "Loc_Mang": "CITY OF HASTINGS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-hoilland-college-avenue-park",
+  "Unit_Nm": "College Avenue Park",
+  "Loc_Mang": "City of Hoilland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Albert C. Keppel Forest Preserve",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Degraaf Nature Center",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Centennial Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Holland Heights Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Kollen Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Lakeview Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Moran Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Prospect Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Riverview Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Van Bragt Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Van Raalte Farm Park",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-holland-maplewood-recreation-area",
+  "Unit_Nm": "Maplewood Recreation Area",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-morton-park",
+  "Unit_Nm": "Matt Urban Sports Complex",
+  "Loc_Mang": "City of Holland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-holland-smallenburg-park",
+  "Unit_Nm": "Smallenburg Park",
+  "Loc_Mang": "City of HOlland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "hudsonville-closed",
   "Unit_Nm": "Fountain Of Honor",
   "Loc_Mang": "City of Hudsonville",
@@ -2999,6 +3871,62 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Creekside Park",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Recreation Park",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Richards Park",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Stoney Lakeside Park",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Mcmahon Park",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Rogers Field",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-city-of-middleville-rivercide-park",
+  "Unit_Nm": "Rivercide Park",
+  "Loc_Mang": "City of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "montague-city-parks",
   "Unit_Nm": "Cullen Memorial Fields",
   "Loc_Mang": "City of Montague",
@@ -3028,6 +3956,158 @@
   "Loc_Mang": "City of Montague",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Aamodt Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Beachwood Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Campbell Playground",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Green Acres Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Hackley Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Heritage Landing Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Margaret Drake Elliot Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Mccrea Playground",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Mcgraft Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Reese Playground",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Seyferth Playground",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Sheldon Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Smith Playground",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Marsh Field",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-heights-johnny-harris-park",
+  "Unit_Nm": "Johnny Harris Park",
+  "Loc_Mang": "City of Muskegon Heights",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-heights-johnny-harris-park",
+  "Unit_Nm": "Mona Lake Park",
+  "Loc_Mang": "City of Muskegon Heights",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-heights-johnny-harris-park",
+  "Unit_Nm": "Rowan City Park",
+  "Loc_Mang": "City of Muskegon Heights",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-heights-johnny-harris-park",
+  "Unit_Nm": "West Heights Park",
+  "Loc_Mang": "City of Muskegon Heights",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-heights-johnny-harris-park",
+  "Unit_Nm": "Harris Nature Park",
+  "Loc_Mang": "City of Muskegon Heights",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
  },
  {
   "layer": "padus-local",
@@ -3087,6 +4167,70 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Veterans' Memorial Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "Bear Lake Beach Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "Custer Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "East End Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "Walker Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "West End Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-north-muskegon-bear-lake-beach-park",
+  "Unit_Nm": "Waterfront Sports Park",
+  "Loc_Mang": "City of North Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
   "rule": "norton-shores-archery",
   "Unit_Nm": "Black Lake Park",
   "Loc_Mang": "City of Norton Shores",
@@ -3106,6 +4250,222 @@
   "rule": "norton-shores-archery",
   "Unit_Nm": "Ross Park",
   "Loc_Mang": "City of Norton Shores",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-otsego-brookside-park",
+  "Unit_Nm": "Brookside Park",
+  "Loc_Mang": "City of Otsego",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-otsego-brookside-park",
+  "Unit_Nm": "Memorial Park",
+  "Loc_Mang": "City of Otsego",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-otsego-brookside-park",
+  "Unit_Nm": "North Side Park",
+  "Loc_Mang": "City of Otsego",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-otsego-brookside-park",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "City of Otsego",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Darrow Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Fannie Pell Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Hicks Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Kenyon Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Sherwood Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-plainwell-bandshell-park",
+  "Unit_Nm": "Thurl Cook Park",
+  "Loc_Mang": "City of Plainwell",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Alton Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Bogue Flats Recreation Area",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Brush Street School Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Community Lake",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Joe Tichvon Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Powers Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Riverfront Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Scout Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ionia-city-of-portland-alton-park",
+  "Unit_Nm": "Thompson Park",
+  "Loc_Mang": "City of Portland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-rockford-glen-park",
+  "Unit_Nm": "Glen Park",
+  "Loc_Mang": "City of Rockford",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-rockford-glen-park",
+  "Unit_Nm": "Heritage Parkland",
+  "Loc_Mang": "City of Rockford",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-rockford-glen-park",
+  "Unit_Nm": "Heritage Parkland And Nature Trail",
+  "Loc_Mang": "City of Rockford",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-rockford-glen-park",
+  "Unit_Nm": "Rotary Park",
+  "Loc_Mang": "City of Rockford",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-roosevelt-park-city-park",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "City of Roosevelt Park",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-roosevelt-park-city-park",
+  "Unit_Nm": "Wells Park",
+  "Loc_Mang": "City of Roosevelt Park",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-roosevelt-park-city-park",
+  "Unit_Nm": "Davies Park",
+  "Loc_Mang": "City of Roosevelt Park",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-roosevelt-park-city-park",
+  "Unit_Nm": "Lambert Park",
+  "Loc_Mang": "City of Roosevelt Park",
   "Mang_Name": "CITY",
   "Des_Tp": "LREC"
  },
@@ -3154,6 +4514,30 @@
   "rule": "saugatuck-city-parks",
   "Unit_Nm": "Willow Park",
   "Loc_Mang": "City of Saugatuck",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-walker-city-central-park",
+  "Unit_Nm": "City Central Park",
+  "Loc_Mang": "City of Walker",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-walker-city-central-park",
+  "Unit_Nm": "Harmon Field",
+  "Loc_Mang": "City of Walker",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-walker-city-central-park",
+  "Unit_Nm": "Walker Community Park",
+  "Loc_Mang": "City of Walker",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -3303,6 +4687,62 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-zeeland-hoogland-park",
+  "Unit_Nm": "Hoogland Park",
+  "Loc_Mang": "City of Zeeland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-zeeland-hoogland-park",
+  "Unit_Nm": "Huizenga Park",
+  "Loc_Mang": "City of Zeeland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-zeeland-hoogland-park",
+  "Unit_Nm": "Lawrence Street Park",
+  "Loc_Mang": "City of Zeeland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-zeeland-hoogland-park",
+  "Unit_Nm": "Michigan Street Tot Lot",
+  "Loc_Mang": "City of Zeeland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-zeeland-hoogland-park",
+  "Unit_Nm": "Paw Paw Drive Park",
+  "Loc_Mang": "City of Zeeland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-city-of-zeeland-hoogland-park",
+  "Unit_Nm": "Three Corner Park",
+  "Loc_Mang": "City of Zeeland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-fillmore-township-cottonwood-park",
+  "Unit_Nm": "Cottonwood Park",
+  "Loc_Mang": "Fillmore Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "georgetown-twp-parks",
   "Unit_Nm": "28Th Avenue Soccer Fields",
   "Loc_Mang": "GEORGETOWN CHARTER TOWNSHIP",
@@ -3322,6 +4762,158 @@
   "rule": "georgetown-twp-parks",
   "Unit_Nm": "Rush Creek Park",
   "Loc_Mang": "GEORGETOWN CHARTER TOWNSHIP",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Bicentennial Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Bolt Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Central Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Chinook Pier Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Duncan Woods",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "East Grand River Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Escanaba Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Harbor Island",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Harbor Island Linear Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Hatton Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Johnston Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Klaver Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Klempel Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Lighthouse Connector Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Mulligan'S Hollow",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Rix Robinson Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Sluka Field",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Veteran'S Memorial Park",
+  "Loc_Mang": "Grand Haven",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-grand-haven-bicentennial-park",
+  "Unit_Nm": "Willow Park",
+  "Loc_Mang": "Grand Haven",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -3407,6 +4999,94 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-kent-lowell-charter-township-park-grand-river-riverfront-park",
+  "Unit_Nm": "Grand River Riverfront Park",
+  "Loc_Mang": "LOWELL CHARTER TOWNSHIP PARK",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-muskegon-charter-township-buel-avenue-park",
+  "Unit_Nm": "Buel Avenue Park",
+  "Loc_Mang": "Muskegon Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Chief Waukazoo Park",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Cooper-Vanwieren Park",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Fair Grounds/Park Township Community Center",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Ransom Street Park",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Stu Visser Trails",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Virginia Park/Maatman Center",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Wendt Park",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-park-township-chief-waukazoo-park",
+  "Unit_Nm": "Winstrom Park/Preserve",
+  "Loc_Mang": "Park Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-polkton-township-sheridan-park",
+  "Unit_Nm": "Sheridan Park",
+  "Loc_Mang": "Polkton Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "port-sheldon-kouw-closed",
   "Unit_Nm": "Kouw Park",
   "Loc_Mang": "Port Sheldon Township",
@@ -3415,9 +5095,65 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-allegan-saugatuck-township-river-bluff-park",
+  "Unit_Nm": "River Bluff Park",
+  "Loc_Mang": "SAUGATUCK TOWNSHIP",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-sparta-township-bettes-memorial-park",
+  "Unit_Nm": "Bettes Memorial Park",
+  "Loc_Mang": "Sparta Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-spring-lake-township-river-run-park",
+  "Unit_Nm": "River Run Park",
+  "Loc_Mang": "Spring Lake Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-tallmadge-twp-tallmadge-township-park",
+  "Unit_Nm": "Tallmadge Township Park",
+  "Loc_Mang": "TALLMADGE TWP",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "allendale-twp-parks",
   "Unit_Nm": "Allendale Community Park",
   "Loc_Mang": "Township of Allendale",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-township-of-byron-center-whistlestop-park",
+  "Unit_Nm": "Whistlestop Park",
+  "Loc_Mang": "Township of Byron Center",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-dalton-browns-field-park",
+  "Unit_Nm": "Browns Field Park",
+  "Loc_Mang": "Township of Dalton",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-dalton-browns-field-park",
+  "Unit_Nm": "Padley Park",
+  "Loc_Mang": "Township of Dalton",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -3434,6 +5170,22 @@
   "rule": "egelston-twp-closed",
   "Unit_Nm": "Wolf Lake County Park",
   "Loc_Mang": "Township of Egelston",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-fruitport-south-fruitport-township-park",
+  "Unit_Nm": "Farr Park",
+  "Loc_Mang": "Township of Fruitport",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-fruitport-south-fruitport-township-park",
+  "Unit_Nm": "Prine Park",
+  "Loc_Mang": "Township of Fruitport",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -3471,6 +5223,22 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-muskegon-parslow-park",
+  "Unit_Nm": "Parslow Park",
+  "Loc_Mang": "Township of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-township-of-muskegon-parslow-park",
+  "Unit_Nm": "Riverside Park",
+  "Loc_Mang": "Township of Muskegon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "plainfield-twp-closed",
   "Unit_Nm": "Airway Township Park",
   "Loc_Mang": "Township of Plainfield",
@@ -3484,6 +5252,134 @@
   "Loc_Mang": "Township of Plainfield",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-newaygo-township-of-sheridan-sheridan-park",
+  "Unit_Nm": "Sheridan Park",
+  "Loc_Mang": "Township of Sheridan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-township-of-spring-lake-rycenga-park",
+  "Unit_Nm": "Rycenga Park",
+  "Loc_Mang": "Township of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-village-of-fruitport-pomona-park",
+  "Unit_Nm": "Pomona Park",
+  "Loc_Mang": "Village of Fruitport",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-middleville-calvin-hill-park",
+  "Unit_Nm": "Calvin Hill Park",
+  "Loc_Mang": "Village of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-middleville-calvin-hill-park",
+  "Unit_Nm": "Lions Sesquicentennial Park",
+  "Loc_Mang": "Village of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-middleville-calvin-hill-park",
+  "Unit_Nm": "Spring Park",
+  "Loc_Mang": "Village of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-middleville-calvin-hill-park",
+  "Unit_Nm": "Stage Coach Park",
+  "Loc_Mang": "Village of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-middleville-calvin-hill-park",
+  "Unit_Nm": "The Crane Road Ball Fields",
+  "Loc_Mang": "Village of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-barry-village-of-middleville-calvin-hill-park",
+  "Unit_Nm": "Wildwood Trails Park",
+  "Loc_Mang": "Village of Middleville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Balyeat Field",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Lamoreaux Park",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Library Memorial Park",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Nash Park",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Rogers Park",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Spartan Park",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-village-of-sparta-balyeat-field",
+  "Unit_Nm": "Buth Field",
+  "Loc_Mang": "Village of Sparta",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
  },
  {
   "layer": "padus-local",
@@ -3530,6 +5426,14 @@
   "rule": "spring-lake-village-parks",
   "Unit_Nm": "Tanglefoot Park",
   "Loc_Mang": "Village of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-whitehall-township-durham-road-playground",
+  "Unit_Nm": "Durham Road Playground",
+  "Loc_Mang": "WHITEHALL TOWNSHIP",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -3659,6 +5563,14 @@
   "Unit_Nm": "Vienna Park",
   "Loc_Mang": "County of Monroe",
   "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-muskegon-city-of-muskegon-beukema-playfield",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "City of Muskegon",
+  "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
  {
@@ -4119,6 +6031,14 @@
  },
  {
   "layer": "padus-local",
+  "rule": "presumed-closed-ottawa-township-port-sheldon-sports-complex",
+  "Unit_Nm": "Port Sheldon Sports Complex",
+  "Loc_Mang": "Township",
+  "Mang_Name": "UNKL",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "ottawa-hunting-open-county",
   "Unit_Nm": "Bend Area Open Space",
   "Loc_Mang": "County",
@@ -4179,6 +6099,22 @@
   "Unit_Nm": "Hines Parkway",
   "Loc_Mang": "Wayne County",
   "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-allegan-city-of-allegan-hanson-park",
+  "Unit_Nm": "Water Street Riverfront Park",
+  "Loc_Mang": "City of Allegan",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "presumed-closed-kent-city-of-lowell-richards-park",
+  "Unit_Nm": "Upper Bridge Property",
+  "Loc_Mang": "City of Lowell",
+  "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
  {

@@ -185,10 +185,14 @@ describe('park rules – county and regional land', () => {
       local('Willow Park', 'City of Lincoln Park', { Mang_Name: 'CITY' }),
       local('Land', 'Huron Clinton Metropark Authority', { Mang_Name: 'CITY' }),
       local('Township Park', 'Township of Oakland', { Mang_Name: 'CITY' }),
-      local('Lamoreaux Park', 'Village of Sparta', { Mang_Name: 'CITY' }),
       local('Pentoga Park', 'County of Iron'), // unresearched county
     ];
     for (const p of traps) expect(gl(p).researched, `${p.Unit_Nm} / ${p.Loc_Mang}`).toBeUndefined();
+    // Village of Sparta's parks were a trap until the owner chose (2026-11-13) to presume every open
+    // West Michigan township, village and city park closed; now they carry that low-confidence rule.
+    const sparta = gl(local('Lamoreaux Park', 'Village of Sparta', { Mang_Name: 'CITY' }));
+    expect(sparta.grade).toBe('red');
+    expect(sparta.researched?.confidence).toBe('low');
     expect(gl(local('Pentoga Park', 'County of Iron')).grade).toBe('yellow');
     // Third research round: county ordinances that ban hunting in county parks.
     expect(gl(local('Crittenden County Park', 'County of Osceola')).grade).toBe('red');

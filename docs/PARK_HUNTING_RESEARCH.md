@@ -427,3 +427,7 @@ Applied:
 Read but not applied: Cannon Township Ch. 313 (Bostwick Lake Park only, not mapped); Park Township (no park rule, only the zone south of Ottawa Beach Road); Sparta Township (American Legal code silent on parks); Lux Arbor Reserve (only an invitation-only deer-management hunt found).
 
 Most West Michigan townships and villages still open on the checklist publish their codes on Municode, so they need a person to open the page.
+
+### Presumed closed (owner's decision, 2026-11-13)
+
+Every township, village and city park still open on the West Michigan checklist is now red, category "… park – presumed closed", **low confidence**. The details text says plainly that the body's rule has not been read and to ask before hunting. That is 68 rules covering 256 PAD-US features. Each matches on the exact manager and park names, so generic manager strings such as "Township" cannot reach parks elsewhere. Bodies that already had a researched rule keep it, because the first matching rule wins: Nashville stays yellow (no firearms), and Wyoming, Grand Rapids, Ionia, Douglas, Montague and Howard City keep their cited rules. The Eureka Township gravel pit and anything caught by the fairground / not-a-park filter are excluded. State, conservancy, county, road-commission and mixed "Municipal" land is unchanged, and school land stays red under its own rule.

@@ -65,6 +65,57 @@ const GOGEBIC = ['County of Gogebic', 'Gogebic County']; // not the road commiss
 /** County land that is not a park: a "parks are closed" finding does not cover it. */
 const NOT_A_PARK: Record<string, FieldTest> = { Des_Tp: ['LRMA', 'LOTH'], Unit_Nm: /fairground|^local forest$|^land$|gravel pit|soil cons|conservation district/i };
 
+/**
+ * PAD-US placeholder names ("<Body> Park") on parcels over 80 acres: usually unnamed township,
+ * city or county land (often forest), not a developed park, so the statewide presumption skips them.
+ */
+const GENERIC_LARGE_PARK_NAMES: readonly string[] = [
+'Charter Township of Ironwood Park',
+  'City of Bad Axe Park',
+  'City of Cass Park',
+  'City of Clare Park',
+  'City of Durand Park',
+  'City of Evart Park',
+  'City of Flint Park',
+  'City of Grand Blanc Park',
+  'City of Hancock Park',
+  'City of Houghton Park',
+  'City of Ironwood Park',
+  'City of Lapeer Park',
+  'City of Midland Park',
+  'City of Saginaw Park',
+  'City of Tawas Park',
+  'County of Baraga Park',
+  'County of Houghton Park',
+  'County of Iron Park',
+  'County of Keweenaw Park',
+  'County of Midland Park',
+  'Township of Adams Park',
+  'Township of Brighton Park',
+  'Township of Clayton Park',
+  'Township of Grant Park',
+  'Township of Greenland Park',
+  'Township of Ingersoll Park',
+  'Township of Iron River Park',
+  'Township of Lee Park',
+  'Township of Lincoln Park',
+  'Township of Middle Branch Park',
+  'Township of Mt. Haley Park',
+  'Township of Mundy Park',
+  'Township of Oceola Park',
+  'Township of Portage Park',
+  'Township of Richland Park',
+  'Township of Sherman Park',
+  'Township of Tittabawassee Park',
+  'Township of Watertown Park',
+  'Township of Whitney Park',
+  'Village of Caro Park',
+  'Village of Lake Linden Park',
+  'Village of Mayville Park',
+  'Village of Mecosta Park',
+  'Village of South Range Park',
+];
+
 const WCO7: Source = {
   label: 'Wildlife Conservation Order, Chapter VII – State Parks and Recreation Areas (amended through Sept. 9, 2026)',
   url: 'https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/Orders/Wildlife-Conservation-Order/ChapterVII.pdf',
@@ -1106,6 +1157,27 @@ export const PARK_RULES: readonly ParkRule[] = [
       sources: [{ label: 'West Michigan checklist of bodies not yet checked', url: 'https://github.com/headclanker/mi-land-access/blob/main/docs/research/west-michigan/CHECKLIST.md' }],
     }),
   ),
+  // Owner's decision (2026-11-13), statewide: any local park still graded yellow is presumed closed.
+  // Last in the table, so every researched rule above wins. Local layer only: state park polygons
+  // follow the DNR park hunting layer and conservancy land keeps its own grade.
+  r({
+    id: 'local-parks-presumed-closed',
+    name: 'Local parks (presumed closed)',
+    layers: PADUS_LOCAL,
+    where: { Unit_Nm: /\bparks?\b|playground|ball ?fields?\b|sports? complex|athletic/i },
+    not: {
+      Des_Tp: NOT_A_PARK.Des_Tp,
+      Unit_Nm: new RegExp(
+        `${(NOT_A_PARK.Unit_Nm as RegExp).source}|^(?:${GENERIC_LARGE_PARK_NAMES.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})$`,
+        'i',
+      ),
+    },
+    grade: 'red',
+    category: 'Local park – presumed closed',
+    text: 'Presumed closed to hunting. Almost every city, township, village and county park in Michigan bans hunting, but this park’s own rule has not been read. Ask the park’s owner before hunting here.',
+    confidence: 'low',
+    sources: [{ label: 'Michigan hunting-access map – park research notes', url: 'https://github.com/headclanker/mi-land-access/blob/main/docs/PARK_HUNTING_RESEARCH.md' }],
+  }),
 ];
 
 /** Layers that carry at least one researched rule. */

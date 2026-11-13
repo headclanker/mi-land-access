@@ -187,13 +187,22 @@ describe('park rules – county and regional land', () => {
       local('Township Park', 'Township of Oakland', { Mang_Name: 'CITY' }),
       local('Pentoga Park', 'County of Iron'), // unresearched county
     ];
-    for (const p of traps) expect(gl(p).researched, `${p.Unit_Nm} / ${p.Loc_Mang}`).toBeUndefined();
+    // No specific rule may reach these. Since 2026-11-13 the statewide presumption (last in the
+    // table) covers anything named "park" that no researched rule claims, so that one is allowed.
+    const PRESUMED = 'local-parks-presumed-closed';
+    for (const p of traps) expect([undefined, PRESUMED], `${p.Unit_Nm} / ${p.Loc_Mang}`).toContain(gl(p).researched?.rule);
     // Village of Sparta's parks were a trap until the owner chose (2026-11-13) to presume every open
     // West Michigan township, village and city park closed; now they carry that low-confidence rule.
     const sparta = gl(local('Lamoreaux Park', 'Village of Sparta', { Mang_Name: 'CITY' }));
     expect(sparta.grade).toBe('red');
     expect(sparta.researched?.confidence).toBe('low');
-    expect(gl(local('Pentoga Park', 'County of Iron')).grade).toBe('yellow');
+    const pentoga = gl(local('Pentoga Park', 'County of Iron'));
+    expect(pentoga.grade).toBe('red');
+    expect(pentoga.researched).toMatchObject({ rule: PRESUMED, confidence: 'low' });
+    // Large PAD-US placeholder names and non-park names keep the layer's own grade.
+    expect(gl(local('County of Houghton Park', 'County of Houghton')).researched).toBeUndefined();
+    expect(gl(local('County of Houghton Park', 'County of Houghton')).grade).toBe('yellow');
+    expect(gl(local('Township Forest', 'Township of Sheridan', { Mang_Name: 'CITY' })).researched).toBeUndefined();
     // Third research round: county ordinances that ban hunting in county parks.
     expect(gl(local('Crittenden County Park', 'County of Osceola')).grade).toBe('red');
     expect(gl(local('Wagner Park', 'County of Huron')).grade).toBe('red');
@@ -203,7 +212,8 @@ describe('park rules – county and regional land', () => {
     const newaygo = gl(local('Ed Henning County Park', 'County of Newaygo'));
     expect(newaygo.grade).toBe('yellow');
     expect(newaygo.reason).toContain('unless authorized by the Commission');
-    expect(gl(local('Veterans Park', 'City of Jackson', { Mang_Name: 'CITY' })).researched).toBeUndefined();
+    // Jackson County's rule must not reach the City of Jackson; only the statewide presumption may.
+    expect(gl(local('Veterans Park', 'City of Jackson', { Mang_Name: 'CITY' })).researched?.rule).toBe('local-parks-presumed-closed');
     // Alpena's Long Lake Park shares a name with a Kent bow-permit park: it gets Alpena's own rule.
     const alpena = gl(local('Long Lake Park', 'Alpena County Parks'));
     expect(alpena.grade).toBe('red');
@@ -222,14 +232,14 @@ describe('park rules – county and regional land', () => {
     expect(gl(local('Burton Park', 'Cascade Township', { Mang_Name: 'CITY' })).reason).toContain('Cascade Peace Park');
     expect(gl(local('Helder Park', 'Holland Charter Township', { Mang_Name: 'CITY' })).grade).toBe('red');
     expect(gl(local('Kouw Park', 'Port Sheldon Township', { Mang_Name: 'CITY' })).grade).toBe('red');
-    expect(gl(local('Zwemer Park', 'Port Sheldon Township', { Mang_Name: 'CITY' })).researched).toBeUndefined();
+    expect(gl(local('Zwemer Park', 'Port Sheldon Township', { Mang_Name: 'CITY' })).researched?.rule).toBe('local-parks-presumed-closed');
     expect(gl(local('Pioneer Park', 'Muskegon County Parks')).grade).toBe('red');
     expect(gl(local('Muskegon Fairgrounds', 'County of Muskegon', { Des_Tp: 'LREC' })).researched).toBeUndefined();
     expect(gl(local('Laketon Township Park', 'Township of Laketown', { Mang_Name: 'CITY' })).grade).toBe('red');
-    expect(gl(local('Laketown Township Park', 'Township of Laketown', { Mang_Name: 'CITY' })).researched).toBeUndefined(); // Allegan's Laketown, not Laketon
+    expect(gl(local('Laketown Township Park', 'Township of Laketown', { Mang_Name: 'CITY' })).researched?.rule).toBe('local-parks-presumed-closed'); // Allegan's Laketown, not Laketon
     const funnell = gl(local('Funnell Field', 'City of Whitehall', { Mang_Name: 'CITY' }));
     expect(funnell.grade).toBe('yellow');
-    expect(gl(local('Covell Park', 'City of Whitehall', { Mang_Name: 'CITY' })).researched).toBeUndefined();
+    expect(gl(local('Covell Park', 'City of Whitehall', { Mang_Name: 'CITY' })).researched?.rule).toBe('local-parks-presumed-closed');
     expect(gl(local('Historic Bridge Park', 'County of Calhoun')).grade).toBe('red');
     expect(gl(local('Gratiot County Farm', 'County of Gratiot')).grade).toBe('red');
     expect(gl(local('Local Forest', 'County of Gratiot', { Des_Tp: 'LRMA' })).researched).toBeUndefined();
@@ -287,7 +297,7 @@ describe('park rules – reconciliation', () => {
   it('partial cover, unresearched PAD-US and authoritative layers behave as before', () => {
     const partial = parcel('KENT COUNTY', [cooper(0.3)]);
     expect(partial.result.category).toBe('County-owned');
-    const plain = parcel('KENT COUNTY', [hit('padus-local', local('Some Park', 'Osceola County Parks'), 0.9)]);
+    const plain = parcel('KENT COUNTY', [hit('padus-local', local('Some Nature Area', 'Osceola County Parks'), 0.9)]);
     expect(plain.result.category).toBe('County-owned');
     expect(plain.adoptedFrom).toBeUndefined();
     const dnr = parcel('STATE OF MICHIGAN', [hit('dnr-managed-lands', { ProjectUseType: 'Forests', ProjectName: 'X' }, 0.9), cooper(0.9)]);
@@ -307,7 +317,7 @@ describe('park rules – reconciliation', () => {
     expect(closed.result.grade).toBe('red');
     expect(closed.result.category).toBe('County park – closed to hunting');
     // Unresearched county park inside a city: the city rule still closes it.
-    expect(cityOverrideFeature(src('padus-local'), gl(local('Some Park', 'Osceola County Parks')), 'Reed City').result.grade).toBe('red');
+    expect(cityOverrideFeature(src('padus-local'), gl(local('Some Nature Area', 'Osceola County Parks')), 'Reed City').result.grade).toBe('red');
   });
 
   it('a researched park zone is not overridden by a generic yellow DNR land record, only by a closed one', () => {

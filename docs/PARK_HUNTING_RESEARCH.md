@@ -431,3 +431,13 @@ Most West Michigan townships and villages still open on the checklist publish th
 ### Presumed closed (owner's decision, 2026-11-13)
 
 Every township, village and city park still open on the West Michigan checklist is now red, category "… park – presumed closed", **low confidence**. The details text says plainly that the body's rule has not been read and to ask before hunting. That is 68 rules covering 256 PAD-US features. Each matches on the exact manager and park names, so generic manager strings such as "Township" cannot reach parks elsewhere. Bodies that already had a researched rule keep it, because the first matching rule wins: Nashville stays yellow (no firearms), and Wyoming, Grand Rapids, Ionia, Douglas, Montague and Howard City keep their cited rules. The Eureka Township gravel pit and anything caught by the fairground / not-a-park filter are excluded. State, conservancy, county, road-commission and mixed "Municipal" land is unchanged, and school land stays red under its own rule.
+
+### Statewide: local parks presumed closed (owner's decision, 2026-11-13)
+
+Many features named "park" were still yellow across the state. The last rule in `src/data/parkRules.ts` (`local-parks-presumed-closed`) now turns any PAD-US local feature whose name says park, playground, ball field, sports complex or athletic red, low confidence, worded "presumed closed — this park's own rule has not been read". That covers 3,000 features. Because it is last, every researched rule (green, yellow or red) still wins. The rule skips:
+
+- the not-a-park filter (fairgrounds, local forests, LRMA / LOTH land);
+- 44 PAD-US placeholder names ("City of Flint Park", "County of Houghton Park", "Charter Township of Ironwood Park"…) on parcels over 80 acres, which are usually unnamed public land and often forest;
+- state park polygons (the DNR park hunting layer decides those) and conservancy land.
+
+Before the change, no park-named local feature without a researched rule was green, so the rule only turns yellow to red.

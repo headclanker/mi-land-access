@@ -34,7 +34,7 @@ const parkBoundary = (fraction: number): Overlap => hit('dnr-state-parks', { Par
 const padusStateOther = (fraction: number): Overlap =>
   hit('padus-state-other', { Mang_Type: 'STAT', Mang_Name: 'OTHS', Unit_Nm: 'Shiawassee River State Game Area' }, fraction);
 const padusLocal = (fraction: number): Overlap =>
-  hit('padus-local', { Mang_Type: 'LOC', Mang_Name: 'CNTY', Unit_Nm: 'County Park' }, fraction);
+  hit('padus-local', { Mang_Type: 'LOC', Mang_Name: 'CNTY', Unit_Nm: 'County Land Parcel' }, fraction);
 
 function parcel(owner: string, overlaps: Overlap[]) {
   return reconcileParcel(gradeOwnerName(owner), overlaps, owner);

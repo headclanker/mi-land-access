@@ -359,6 +359,30 @@
  },
  {
   "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Athletic Field",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Cullen Field",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Medbury Park",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "hcma-closed",
   "Unit_Nm": "Kensington Metropark",
   "Loc_Mang": "Huron Clinton Metropark Authority",
@@ -1498,6 +1522,54 @@
   "rule": "hcma-closed",
   "Unit_Nm": "Willow Metropark",
   "Loc_Mang": "CITY OF DETROIT-RECREATION DEPT",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "douglas-city-parks",
+  "Unit_Nm": "Alice Mcclay Park",
+  "Loc_Mang": "City of Douglas",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "douglas-city-parks",
+  "Unit_Nm": "Douglas Beach",
+  "Loc_Mang": "City of Douglas",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "douglas-city-parks",
+  "Unit_Nm": "Harold Berry Field",
+  "Loc_Mang": "City of Douglas",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "douglas-city-parks",
+  "Unit_Nm": "Howard C. Schultz Park",
+  "Loc_Mang": "City of Douglas",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "douglas-city-parks",
+  "Unit_Nm": "Veterans Walk Park",
+  "Loc_Mang": "City of Douglas",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "douglas-city-parks",
+  "Unit_Nm": "Wade\u2019S Bayou Memorial Park",
+  "Loc_Mang": "City of Douglas",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -2711,6 +2783,78 @@
  },
  {
   "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Fred W Green Park",
+  "Loc_Mang": "City of Ionia",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Balice Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Hale Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Harper Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Mcann Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Mcconnell Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Perry Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Robinson Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ionia-city-parks",
+  "Unit_Nm": "Shattuck Park",
+  "Loc_Mang": "City of Ionia, MI",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "kentwood-closed",
   "Unit_Nm": "East Paris Nature Park",
   "Loc_Mang": "City of Kentwood",
@@ -2831,6 +2975,38 @@
  },
  {
   "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Cullen Memorial Fields",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Koon Creek Park",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Maple Grove Park",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "montague-city-parks",
+  "Unit_Nm": "Montague Township Park",
+  "Loc_Mang": "City of Montague",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "newaygo-city-closed",
   "Unit_Nm": "Brooks Park",
   "Loc_Mang": "City of Newaygo",
@@ -2887,9 +3063,129 @@
  },
  {
   "layer": "padus-local",
+  "rule": "norton-shores-archery",
+  "Unit_Nm": "Black Lake Park",
+  "Loc_Mang": "City of Norton Shores",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "norton-shores-archery",
+  "Unit_Nm": "Lake Harbor Park",
+  "Loc_Mang": "City of Norton Shores",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "norton-shores-archery",
+  "Unit_Nm": "Ross Park",
+  "Loc_Mang": "City of Norton Shores",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
   "rule": "whitehall-funnell-field",
   "Unit_Nm": "Funnell Field",
   "Loc_Mang": "City of Whitehall",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "40Th Street Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Battjes Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Ferrand Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Frog Hollow",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Gezon Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Hillcroft Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Ideal Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Kellogsville Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Lemery Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Lions Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Oriole Park",
+  "Loc_Mang": "City of Wyoming",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "wyoming-city-parks",
+  "Unit_Nm": "Southlawn Park",
+  "Loc_Mang": "City of Wyoming",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },

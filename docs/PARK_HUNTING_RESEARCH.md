@@ -388,4 +388,9 @@ Applied to the map (the first two ordinances were re-checked against the full do
 - **Village of Nashville** parks: yellow, no firearms. Firearm discharge is banned within 450 ft of a public park; bows are not addressed.
 - **Village of Spring Lake** parks: yellow, no firearms (low confidence, search summary only).
 
-Found but not applied: City of Wyoming and City of Montague bow-only deer-management hunts, City of Douglas archery-only rule, and City of Ionia's citywide discharge ban — city parks already show closed under the city-limits rule and none of these names a city park as open. Norton Shores' archery program reportedly includes Lake Harbor, Ross and Black Lake parks, from one undated news summary; not applied. Cannon Township bans hunting in Bostwick Lake Park, which is not a mapped park.
+Also applied, on the owner's instruction (2026-11-13):
+
+- **Wyoming, Ionia, Douglas and Montague city parks:** red, now with each city's actual rule in the details (Wyoming and Montague: city-run bow hunts only, no park named; Douglas: archery permits mainly on private land; Ionia: citywide discharge ban). These parks were already red under the city-limits rule.
+- **Norton Shores — Lake Harbor, Ross and Black Lake parks:** yellow, managed archery deer program with city-selected volunteers only (low confidence: the program is confirmed to run in city parks, but which parks comes from one news summary).
+
+Not mapped: Cannon Township bans hunting in Bostwick Lake Park, which has no shape in the data.

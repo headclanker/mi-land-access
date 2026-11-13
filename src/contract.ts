@@ -13,8 +13,9 @@ export const GRADE_COLORS: Record<Grade, string> = {
 };
 
 /**
- * Map colour for national wildlife refuge land (U.S. Fish & Wildlife Service). A display colour
- * only: the refuge still carries a grade (open / check first / closed), shown in its details.
+ * Map colour for national wildlife refuges (U.S. Fish & Wildlife Service) and for nature
+ * preserves, sanctuaries and nature centers. A display colour only: each still carries a grade
+ * (open / check first / closed), shown in its details.
  */
 export const REFUGE_COLOR = '#8e44ad';
 

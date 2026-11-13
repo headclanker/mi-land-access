@@ -120,7 +120,7 @@ export class LayerPanel {
         'ul',
         {},
         LEGEND.map((l) => h('li', {}, h('span.legend-chip', { style: `--c:${GRADE_COLORS[l.grade]}` }), h('span', {}, h('strong', {}, l.title), h('span.muted.small', {}, GRADE_LABEL[l.grade])))),
-        h('li', {}, h('span.legend-chip', { style: `--c:${REFUGE_COLOR}` }), h('span', {}, h('strong', {}, 'National wildlife refuge'), h('span.muted.small', {}, 'Hunting only where the refuge’s own rules open it — tap for this refuge’s status'))),
+        h('li', {}, h('span.legend-chip', { style: `--c:${REFUGE_COLOR}` }), h('span', {}, h('strong', {}, 'Refuge, nature preserve or nature center'), h('span.muted.small', {}, 'Usually closed or tightly restricted — tap one for its status'))),
         h('li', {}, h('span.legend-chip.hatch', { style: `--c:${GRADE_COLORS.yellow}` }), h('span', {}, h('strong', {}, 'Hatched: records disagree'), h('span.muted.small', {}, 'County owner and state/federal land records conflict — verify before entering'))),
         h('li', {}, h('span.legend-chip.boundary'), h('span', {}, h('strong', {}, 'Dashed outline: area boundary'), h('span.muted.small', {}, 'Game-area or park boundary — can include private land; not a grade'))),
         h('li', {}, h('span.legend-chip', { style: `--c:${GRADE_COLORS.red}` }), h('span', {}, h('strong', {}, 'Inside city limits'), h('span.muted.small', {}, 'Treated as closed unless a state or federal program (state land, open park zone, HAP, Commercial Forest) opens it — city ordinances generally ban hunting and firearm discharge'))),

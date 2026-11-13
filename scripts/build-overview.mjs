@@ -31,7 +31,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 import { LAYER_SOURCES } from '../src/data/sources.ts';
-import { gradeFeature, isWildlifeRefuge } from '../src/grading/grade.ts';
+import { gradeFeature, drawsPurple } from '../src/grading/grade.ts';
 
 const OUT = new URL('../public/overview/public-land.json', import.meta.url);
 const CITY_LIMITS = new URL('../public/cities/city-limits.json', import.meta.url);
@@ -42,7 +42,7 @@ const SIMPLIFY_CELLS = 0.75; // Douglas–Peucker tolerance in cells
 const SERVER_OFFSET = 0.0006; // degrees, ~50 m: generalisation done by the ArcGIS server
 const GRADE_CODE = { green: 1, yellow: 2, red: 3 };
 const CODE_GRADE = ['', 'green', 'yellow', 'red', 'refuge'];
-/** National wildlife refuges get their own colour whatever their grade. */
+/** Refuges, nature preserves and nature centers get their own colour whatever their grade. */
 const REFUGE_CODE = 4;
 
 const LAT0 = (S_LAT + N_LAT) / 2;
@@ -359,9 +359,9 @@ async function main() {
     const graded = features
       .map((f) => {
         const r = gradeFeature(src, f.properties ?? {});
-        return { f, grade: r.grade, researched: Boolean(r.researched), refuge: isWildlifeRefuge(l.id, f.properties) };
+        return { f, grade: r.grade, researched: Boolean(r.researched), refuge: drawsPurple(l.id, f.properties) };
       })
-      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow') || (l.yellowToo && x.grade === 'yellow'))
+      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow') || (l.yellowToo && x.grade === 'yellow') || x.refuge)
       .sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
     // The county mask only exists to clip federal data from other states; Michigan DNR layers
     // are in-state by definition, and the generalised mask would clip shoreline parks.

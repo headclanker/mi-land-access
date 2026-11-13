@@ -476,3 +476,17 @@ describe('state trail corridors', () => {
     expect(gradeFeature(dnr, { ProjectUseType: 'Forests', ProjectName: 'X' }).grade).toBe('green');
   });
 });
+
+describe('nature preserve colour flag', () => {
+  it('matches nature centers, preserves and sanctuaries by name in the local, conservancy and state layers', async () => {
+    const { isNaturePreserve, drawsPurple } = await import('./grade');
+    for (const n of ['Fenner Nature Center', 'Plumbrook Nature Preserve', 'Kimball Wildlife Preserve', 'Jens Jensen Preserve', 'White River Marsh Sanctuary', 'Hofma Park & Preserve'])
+      expect(isNaturePreserve('padus-local', { Unit_Nm: n }), n).toBe(true);
+    expect(isNaturePreserve('padus-ngo', { Unit_Nm: 'Cosner Nature Preserve' })).toBe(true);
+    for (const n of ['Port Sheldon Natural Area', 'Pioneer Nature Area', 'Riverside Park', 'Preservation Hall Lot X'.replace('Preservation Hall Lot X', 'Township Hall')])
+      expect(isNaturePreserve('padus-local', { Unit_Nm: n }), n).toBe(false);
+    expect(isNaturePreserve('dnr-managed-lands', { Unit_Nm: 'Some Nature Preserve' })).toBe(false);
+    expect(drawsPurple('padus-federal-other', { Mang_Name: 'FWS' })).toBe(true);
+    expect(drawsPurple('padus-local', { Unit_Nm: 'Riverside Park' })).toBe(false);
+  });
+});

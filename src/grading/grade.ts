@@ -440,7 +440,7 @@ function gradeDnrManagedLands(p: Record<string, unknown>): GradeResult {
     case 'RAIL TRAILS':
     case 'TRAIL':
       // Owner's decision (2026-11-13): trail corridors show as closed.
-      return result('red', 'State trail corridor – treated as closed', `State-owned trail corridor${name}. A narrow strip used by trail traffic; treated as closed to hunting on this map.`);
+      return result('red', TRAIL_CATEGORY, `State-owned trail corridor${name}. A narrow strip used by trail traffic; treated as closed to hunting on this map.`);
     case 'PUBLIC WATER ACCESS SITE':
     case 'BOATING ACCESS SITE':
       return result('yellow', 'Boating / water access site', `State water access site${name}. Small developed site; usually not a hunting area. Verify with DNR.`);
@@ -634,12 +634,32 @@ function gradeNonLand(source: LayerSource): GradeResult {
 // Entry point
 // ---------------------------------------------------------------------------
 
+/** Category of DNR trail corridors, which are shown closed by the owner's choice, not by a rule. */
+export const TRAIL_CATEGORY = 'State trail corridor – treated as closed';
+
 /**
  * True for national wildlife refuge system land: U.S. Fish & Wildlife Service units in the PAD-US
  * federal layer. Drawn in their own colour (REFUGE_COLOR); the grade is unaffected.
  */
 export function isWildlifeRefuge(sourceId: string, properties: Record<string, unknown> | null | undefined): boolean {
   return sourceId === 'padus-federal-other' && str((properties ?? {}).Mang_Name).toUpperCase() === 'FWS';
+}
+
+const PRESERVE_LAYERS: ReadonlySet<string> = new Set(['padus-local', 'padus-ngo', 'padus-state-other']);
+const RE_PRESERVE = /\bnature cent(?:er|re)s?\b|\bpreserv(?:e|es|ation)\b|\bsanctuar(?:y|ies)\b/i;
+
+/**
+ * True for nature centers, nature / wildlife preserves and sanctuaries, by name, in the PAD-US
+ * local, conservancy and other-state layers. Drawn in REFUGE_COLOR like the federal refuges; the
+ * grade is unaffected. "Nature area" / "natural area" is left out: some are open hunting land.
+ */
+export function isNaturePreserve(sourceId: string, properties: Record<string, unknown> | null | undefined): boolean {
+  return PRESERVE_LAYERS.has(sourceId) && RE_PRESERVE.test(str((properties ?? {}).Unit_Nm));
+}
+
+/** Refuges and preserves: everything the map draws in REFUGE_COLOR. */
+export function drawsPurple(sourceId: string, properties: Record<string, unknown> | null | undefined): boolean {
+  return isWildlifeRefuge(sourceId, properties) || isNaturePreserve(sourceId, properties);
 }
 
 export function gradeFeature(source: LayerSource, properties: Record<string, unknown>): GradeResult {

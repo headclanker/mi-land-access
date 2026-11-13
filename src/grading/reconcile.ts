@@ -26,7 +26,7 @@
 // Pure module: no DOM, no map. Tested in reconcile.test.ts.
 
 import type { Grade, GradeResult, LayerSource, OwnerKind } from '../contract.ts';
-import { CITY_OWNED_CATEGORY, CITY_RULE_CAVEAT } from './grade.ts';
+import { CITY_OWNED_CATEGORY, CITY_RULE_CAVEAT, TRAIL_CATEGORY } from './grade.ts';
 
 export const COVER_FRACTION = 0.5;
 export const PARTIAL_FRACTION = 0.1;
@@ -325,8 +325,21 @@ function resolve(owner: GradeResult, overlaps: Overlap[], ownerName?: string): R
  */
 function crossCheck(r: Reconciled, overlaps: Overlap[]): Reconciled {
   if (!r.adoptedFrom) return r;
-  const covering = aggregate(overlaps).filter((a) => a.fraction >= COVER_FRACTION && a.tier <= 4 && a.source.id !== r.adoptedFrom);
-  if (!covering.length) return r;
+  let covering = aggregate(overlaps).filter((a) => a.fraction >= COVER_FRACTION && a.tier <= 4 && a.source.id !== r.adoptedFrom);
+  // Trail corridors are red by the owner's choice, not because a rule closes them, so they never
+  // overrule a researched verdict (Gete Mino Mshkiigan is LOTS-coded as a trail corridor).
+  let trail: LayerAgg | undefined;
+  if (r.result.researched) {
+    covering = covering
+      .map((a) => {
+        const rest = a.features.filter((f) => f.grade.category !== TRAIL_CATEGORY);
+        if (rest.length !== a.features.length) trail = a;
+        return { ...a, features: rest };
+      })
+      .filter((a) => a.features.length);
+  }
+  const trailNote = trail ? [`${(trail as LayerAgg).source.title} lists this as a state trail corridor; the researched rule for this unit is more specific and is shown.`] : [];
+  if (!covering.length) return trailNote.length ? { ...r, notes: [...r.notes, ...trailNote] } : r;
   const { layer, feature } = strictest(covering);
   if (RESTRICTIVENESS[feature.grade.grade] <= RESTRICTIVENESS[r.result.grade]) return r;
   // A researched rule for this unit is more specific than a generic "check first" land record

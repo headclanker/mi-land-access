@@ -90,12 +90,13 @@ const EMPTY: FeatureCollection = { type: 'FeatureCollection', features: [] };
 /** Global cap on simultaneous ArcGIS requests across all layers (phones on weak signal). */
 class Limiter {
   private active = 0;
-  private queue: (() => void)[] = [];
+  private queue: { go: () => void; priority: number }[] = [];
   private readonly max: number;
   constructor(max: number) {
     this.max = max;
   }
-  async run<T>(fn: () => Promise<T>, signal: AbortSignal): Promise<T> {
+  /** Lower `priority` runs first when requests have to wait; equal priorities keep their order. */
+  async run<T>(fn: () => Promise<T>, signal: AbortSignal, priority = 1): Promise<T> {
     if (this.active >= this.max) {
       await new Promise<void>((resolve, reject) => {
         const go = (): void => {
@@ -103,11 +104,12 @@ class Limiter {
           resolve();
         };
         const onAbort = (): void => {
-          this.queue = this.queue.filter((q) => q !== go);
+          this.queue = this.queue.filter((q) => q.go !== go);
           reject(new DOMException('Aborted', 'AbortError'));
         };
         signal.addEventListener('abort', onAbort, { once: true });
-        this.queue.push(go);
+        const at = this.queue.findIndex((q) => q.priority > priority);
+        this.queue.splice(at < 0 ? this.queue.length : at, 0, { go, priority });
       });
     }
     this.active++;
@@ -115,10 +117,26 @@ class Limiter {
       return await fn();
     } finally {
       this.active--;
-      this.queue.shift()?.();
+      this.queue.shift()?.go();
     }
   }
 }
+
+/**
+ * Queue order when requests have to wait: the layers that carry "check first" (yellow) land go
+ * first — PAD-US local, state and conservancy land, then county parcels (yellow by owner name) —
+ * and everything else after.
+ */
+export function loadPriority(s: LayerSource): number {
+  if (s.group === 'public-land' && s.lowConfidence) return 0;
+  if (s.group === 'parcels') return 1;
+  return 2;
+}
+
+/** A "check first" feature that is not drawn in the refuge colour. */
+const IS_YELLOW: ExpressionSpecification = ['all', ['==', ['get', P.grade], 'yellow'], ['!=', ['get', P.refuge], true]];
+/** Brighter than the yellow fill so thin outlines read on both topo and imagery. */
+const YELLOW_LINE = '#ffd21f';
 
 export class LayerManager {
   readonly sources: LayerSource[];
@@ -232,7 +250,7 @@ export class LayerManager {
   // ---------- styling ----------
 
   private layerIds(s: LayerSource): string[] {
-    return ['fill', 'hatch', 'casing', 'line', 'dash', 'circle', 'label'].map((k) => `ds-${s.id}-${k}`).filter((id) => this.map.getLayer(id));
+    return ['fill', 'hatch', 'casing', 'line', 'yellow', 'dash', 'circle', 'label'].map((k) => `ds-${s.id}-${k}`).filter((id) => this.map.getLayer(id));
   }
 
   private addStyleLayers(s: LayerSource): void {
@@ -287,7 +305,7 @@ export class LayerManager {
               // drawn public layer that layer's fill shows instead, and conflicts are hatched.
               // Low-confidence public fills are hidden (feature-state) where parcels cover them.
               'fill-opacity': isParcel
-                ? ['interpolate', ['linear'], ['zoom'], 14, ['case', ['==', ['get', P.tint], 'fill'], 0.24, 0], 17, ['case', ['==', ['get', P.tint], 'fill'], 0.16, 0]]
+                ? ['interpolate', ['linear'], ['zoom'], 14, ['case', ['==', ['get', P.tint], 'fill'], ['case', IS_YELLOW, 0.5, 0.24], 0], 17, ['case', ['==', ['get', P.tint], 'fill'], ['case', IS_YELLOW, 0.36, 0.16], 0]]
                 : ['interpolate', ['linear'], ['zoom'], 7, ['case', ['boolean', ['feature-state', 'masked'], false], 0, 0.5], 13, ['case', ['boolean', ['feature-state', 'masked'], false], 0, 0.32], 16, ['case', ['boolean', ['feature-state', 'masked'], false], 0, 0.22]],
             },
           },
@@ -299,9 +317,14 @@ export class LayerManager {
           // Property lines: dark casing + bright line reads on both topo and imagery.
           map.addLayer({ id: id('casing'), type: 'line', source: src, paint: { 'line-color': '#000', 'line-opacity': 0.55, 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 2.2, 18, 4] } }, 'anchor-lines');
           map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': ['case', ['==', ['get', P.grade], 'red'], '#ffd9d4', '#fffbe6'], 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 0.9, 18, 2] } }, 'anchor-lines');
+          // Small "check first" parcels get lost among private ones: a bold yellow outline on top.
+          map.addLayer({ id: id('yellow'), type: 'line', source: src, filter: ['all', IS_YELLOW, ['!=', ['get', P.tint], 'conflict']], paint: { 'line-color': YELLOW_LINE, 'line-width': ['interpolate', ['linear'], ['zoom'], 13, 2, 18, 3.5] } }, 'anchor-lines');
           map.addLayer({ id: id('dash'), type: 'line', source: src, filter: ['==', ['get', P.tint], 'conflict'], paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 1.8, 18, 3], 'line-dasharray': [2, 1.5] } }, 'anchor-lines');
         } else {
           map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 0.8, 14, 2.4] } }, 'anchor-lines');
+          // "Check first" land is often a few acres: a bold outline keeps it visible as a dot when
+          // zoomed out. Hidden with the fill where county parcels cover it (they draw their own).
+          map.addLayer({ id: id('yellow'), type: 'line', source: src, filter: IS_YELLOW, paint: { 'line-color': YELLOW_LINE, 'line-opacity': ['case', ['boolean', ['feature-state', 'masked'], false], 0, 1], 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 2.2, 14, 3.4] } }, 'anchor-lines');
         }
       }
     } else if (s.geometry === 'line') {
@@ -450,6 +473,7 @@ export class LayerManager {
       signal: ctrl.signal,
           }),
         ctrl.signal,
+        loadPriority(s),
       )
       .then((r) => {
         const entry: TileEntry = { features: r.features.map((f) => enrichFeature(s, f)), truncated: r.truncated };

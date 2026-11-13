@@ -430,7 +430,9 @@ async function main() {
 
   const labels = new Int32Array(W * H);
   const features = [];
-  for (const code of [1, 2, 3, REFUGE_CODE]) {
+  // Closed (red) land is left out of the overview: from far out it is clutter, and the live map
+  // shows it from parcel zoom. Its cells stay red in the grid, so they are never drawn as open.
+  for (const code of [1, 2, REFUGE_CODE]) {
     // Closed (red) regions are kept however small; dropping one would let the surrounding open
     // land read as huntable. Restricted (yellow) and refuge regions are kept however small too.
     const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'green' ? MIN_CELLS : 1);

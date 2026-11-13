@@ -4,6 +4,7 @@
 import type { Map as MLMap, GeoJSONSource, ExpressionSpecification, FilterSpecification } from 'maplibre-gl';
 import type { Feature, FeatureCollection } from 'geojson';
 import { GRADE_COLORS, REFUGE_COLOR, type LayerSource } from '../../contract';
+import { PARCEL_MIN_ZOOM } from '../../data/sources';
 import { LOADER } from '../config';
 import { debounce } from '../util/dom';
 import { prefGet, prefSet } from '../util/store';
@@ -135,6 +136,13 @@ export function loadPriority(s: LayerSource): number {
 
 /** A "check first" feature that is not drawn in the refuge colour. */
 const IS_YELLOW: ExpressionSpecification = ['all', ['==', ['get', P.grade], 'yellow'], ['!=', ['get', P.refuge], true]];
+/**
+ * Closed (red) public land is drawn only from parcel zoom: from farther out it is clutter (thousands
+ * of closed local parks), and red only matters next to the parcels around it. Refuge / preserve
+ * purple is kept at every zoom.
+ */
+const RED_ONLY_NEAR: ExpressionSpecification = ['any', ['!=', ['get', P.grade], 'red'], ['==', ['get', P.refuge], true], ['>=', ['zoom'], PARCEL_MIN_ZOOM]];
+
 /** Brighter than the yellow fill so thin outlines read on both topo and imagery. */
 const YELLOW_LINE = '#ffd21f';
 
@@ -264,6 +272,9 @@ export class LayerManager {
     const isBoundary = s.role === 'boundary';
     const id = (k: string): string => `ds-${s.id}-${k}`;
     const polyFilter: FilterSpecification = ['==', ['geometry-type'], 'Polygon'];
+    // Park hunting zones keep their red at every zoom: a closed zone sits inside an open one, and
+    // hiding it would make the closed part look open.
+    const hideFarRed = s.group === 'public-land' && s.id !== 'dnr-park-hunting';
     const lineFilter: FilterSpecification = ['==', ['geometry-type'], 'LineString'];
     const pointFilter: FilterSpecification = ['==', ['geometry-type'], 'Point'];
 
@@ -295,7 +306,7 @@ export class LayerManager {
             id: id('fill'),
             type: 'fill',
             source: src,
-            filter: polyFilter,
+            filter: hideFarRed ? (['all', ['==', ['geometry-type'], 'Polygon'], RED_ONLY_NEAR] as ExpressionSpecification as FilterSpecification) : polyFilter,
             // Where features of one layer overlap (a closed park zone inside an open one), the
             // stricter grade draws on top.
             layout: { 'fill-sort-key': ['match', ['get', P.grade], 'red', 3, 'yellow', 2, 'unknown', 1, 0] },
@@ -321,7 +332,7 @@ export class LayerManager {
           map.addLayer({ id: id('yellow'), type: 'line', source: src, filter: ['all', IS_YELLOW, ['!=', ['get', P.tint], 'conflict']], paint: { 'line-color': YELLOW_LINE, 'line-width': ['interpolate', ['linear'], ['zoom'], 13, 2, 18, 3.5] } }, 'anchor-lines');
           map.addLayer({ id: id('dash'), type: 'line', source: src, filter: ['==', ['get', P.tint], 'conflict'], paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 14, 1.8, 18, 3], 'line-dasharray': [2, 1.5] } }, 'anchor-lines');
         } else {
-          map.addLayer({ id: id('line'), type: 'line', source: src, paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 0.8, 14, 2.4] } }, 'anchor-lines');
+          map.addLayer({ id: id('line'), type: 'line', source: src, ...(hideFarRed ? { filter: RED_ONLY_NEAR as FilterSpecification } : {}), paint: { 'line-color': gradeColor, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 0.8, 14, 2.4] } }, 'anchor-lines');
           // "Check first" land is often a few acres: a bold outline keeps it visible as a dot when
           // zoomed out. Hidden with the fill where county parcels cover it (they draw their own).
           map.addLayer({ id: id('yellow'), type: 'line', source: src, filter: IS_YELLOW, paint: { 'line-color': YELLOW_LINE, 'line-opacity': ['case', ['boolean', ['feature-state', 'masked'], false], 0, 1], 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 2.2, 14, 3.4] } }, 'anchor-lines');
@@ -357,6 +368,8 @@ export class LayerManager {
           id: id('label'),
           type: 'symbol',
           source: src,
+          // Names of hidden closed land would be clutter too.
+          ...(s.group === 'public-land' && s.id !== 'dnr-park-hunting' ? { filter: RED_ONLY_NEAR as FilterSpecification } : {}),
           minzoom: isParcel ? Math.max(15.5, s.minZoom + 1) : isUnit || isRef ? Math.max(6, s.minZoom) : Math.max(10, s.minZoom),
           layout: {
             'text-field': ['get', labelField],

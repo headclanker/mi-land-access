@@ -322,7 +322,7 @@ describe('park rules – reconciliation', () => {
 
   it('a researched park zone is not overridden by a generic yellow DNR land record, only by a closed one', () => {
     const gete = hit('dnr-park-hunting', { Facility: 'Gete Mino Mshkiigan State Park', HuntTrap: 'Closed' }, 1);
-    const trail = hit('dnr-managed-lands', { ProjectUseType: 'RAIL TRAILS', ProjectName: 'North Central State Trail' }, 1);
+    const trail = hit('dnr-managed-lands', { ProjectUseType: 'RECREATIONAL AREAS', ProjectName: 'North Central Recreation Area' }, 1);
     const r = parcel('MICHIGAN DEPT OF NATURAL RESOURCES', [gete, trail]);
     expect(r.result.grade).toBe('green');
     expect(r.conflict).toBe(false);

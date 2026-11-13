@@ -439,7 +439,8 @@ function gradeDnrManagedLands(p: Record<string, unknown>): GradeResult {
       return result('yellow', 'State recreation area', `State recreation area land${name}. Many recreation areas allow hunting outside developed/safety zones; check the park hunting layer for this unit.`, [REFS.landUseOrders]);
     case 'RAIL TRAILS':
     case 'TRAIL':
-      return result('yellow', 'State trail corridor', `State-owned trail corridor${name}. A narrow corridor used by trail traffic; hunting on or across it is risky and may be restricted — verify with DNR.`);
+      // Owner's decision (2026-11-13): trail corridors show as closed.
+      return result('red', 'State trail corridor – treated as closed', `State-owned trail corridor${name}. A narrow strip used by trail traffic; treated as closed to hunting on this map.`);
     case 'PUBLIC WATER ACCESS SITE':
     case 'BOATING ACCESS SITE':
       return result('yellow', 'Boating / water access site', `State water access site${name}. Small developed site; usually not a hunting area. Verify with DNR.`);

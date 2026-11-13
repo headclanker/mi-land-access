@@ -462,3 +462,17 @@ describe('wildlife refuge colour flag', () => {
     expect(isWildlifeRefuge('padus-federal-other', null)).toBe(false);
   });
 });
+
+describe('state trail corridors', () => {
+  it('are treated as closed', async () => {
+    const { gradeFeature } = await import('./grade');
+    const { LAYER_SOURCES } = await import('../data/sources');
+    const dnr = LAYER_SOURCES.find((s) => s.id === 'dnr-managed-lands')!;
+    for (const use of ['Rail Trails', 'Trail']) {
+      const r = gradeFeature(dnr, { ProjectUseType: use, ProjectName: 'North Central State Trail' });
+      expect(r.grade, use).toBe('red');
+      expect(r.category).toContain('State trail corridor');
+    }
+    expect(gradeFeature(dnr, { ProjectUseType: 'Forests', ProjectName: 'X' }).grade).toBe('green');
+  });
+});

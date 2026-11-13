@@ -221,7 +221,7 @@ describe('high-confidence ownership layers', () => {
   });
 
   it('a township parcel on DNR land that agrees is not a conflict', () => {
-    const r = parcel('TOWNSHIP OF ALLEGAN', [dnrLand('Rail Trails', 0.8)]);
+    const r = parcel('TOWNSHIP OF ALLEGAN', [dnrLand('Recreational Areas', 0.8)]);
     expect(r.result.grade).toBe('yellow');
     expect(r.conflict).toBe(false);
   });
@@ -318,8 +318,8 @@ describe('two public layers that disagree', () => {
   const owner = gradeOwnerName('LYME GREAT LAKES TIMBERLANDS LLC');
 
   it('shows the stricter authoritative record and flags the parcel', () => {
-    // Audit case: Commercial Forest (green) and a DNR trail corridor (yellow) cover the same parcel.
-    const r = reconcileParcel(owner, [cfa(0.95), dnrLand('RAIL TRAILS', 0.9, 'TRAIL')], 'LYME GREAT LAKES TIMBERLANDS LLC');
+    // Audit case: Commercial Forest (green) and a DNR recreation area (yellow) cover the same parcel.
+    const r = reconcileParcel(owner, [cfa(0.95), dnrLand('RECREATIONAL AREAS', 0.9, 'REC AREA')], 'LYME GREAT LAKES TIMBERLANDS LLC');
     expect(r.result.grade).toBe('yellow');
     expect(r.result.category).toBe('Records disagree');
     expect(r.conflict).toBe(true);

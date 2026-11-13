@@ -15,6 +15,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
 - [ ] **Ada Township** (township; 4 parks, 423 acres)
   - Parks: Roselle Park (251 ac), Grand River Nature Area (120 ac), Ada Park (49 ac), Leonard Field (3 ac)
   - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Browser pass 2026-11-13: code is on Municode, which blocks this browser too (Cloudflare block page). Needs a person to open it.
   - Search: https://www.google.com/search?q=Ada+Township+Michigan+parks+ordinance+hunting+firearms
 - [ ] **LOWELL CHARTER TOWNSHIP PARK** (township; 1 parks, 68 acres)
   - Parks: Grand River Riverfront Park (68 ac)
@@ -27,6 +28,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
 - [ ] **Township of Cannon** (township; 1 parks, 37 acres)
   - Parks: Cannon Township Center Property (37 ac)
   - What was tried: Cannon Township has Chapter 313 'Parks and Recreational Areas' on ecode360 (https://ecode360.com/34321547), which returned 403 (Cloudflare); text unread.
+  - Browser pass 2026-11-13: Ch. 313 read; it covers Bostwick Lake Park only (not mapped). Nothing found for the Center Property.
   - Search: https://www.google.com/search?q=Township+of+Cannon+Michigan+parks+ordinance+hunting+firearms
 - [ ] **Byron Township** (township; 1 parks, 8 acres)
   - Parks: Cutler Park (8 ac)
@@ -39,6 +41,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
 - [ ] **Sparta Township** (township; 1 parks, 4 acres)
   - Parks: Bettes Memorial Park (4 ac)
   - What was tried: Code is on American Legal (codelibrary.amlegal.com/codes/spartatwpmi), 403 to curl; search found no firearm clause.
+  - Browser pass 2026-11-13: American Legal code searched for hunt / firearm / weapon; nothing on parks. The code is silent.
   - Search: https://www.google.com/search?q=Sparta+Township+Michigan+parks+ordinance+hunting+firearms
 - [ ] **Township of Grattan** (township; 1 parks, 2 acres)
   - Parks: Grattan Township Roadside Park (2 ac)
@@ -96,7 +99,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
 
 ## Ottawa County (27)
 
-- [ ] **Grand Haven Charter Township** (township; 5 parks, 597 acres)
+- [x] **Grand Haven Charter Township** — Done: red (Ord. 59 park rules) (township; 5 parks, 597 acres)
   - Parks: Hofma Park & Preserve (567 ac), Pottawattomie Park (20 ac), Mercury Park (7 ac), Odawa/Battle Point Launch (2 ac), Millhouse Park (1 ac)
   - What was tried: Called out in task. Contact township 616-842-5988. Nearby Hiawatha Forest is county, not township.
   - Search: https://www.google.com/search?q=Grand+Haven+Charter+Township+Michigan+parks+ordinance+hunting+firearms
@@ -104,6 +107,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - Parks: Winstrom Park/Preserve (75 ac), Cooper-Vanwieren Park (61 ac), Fair Grounds/Park Township Community Center (51 ac), Stu Visser Trails (41 ac), Wendt Park (24 ac), Ransom Street Park (21 ac), and 2 more
   - What was tried: Winstrom Preserve (42.795) and Cooper-VanWieren/Stu Visser/Wendt/Ransom are north of the line; no township park rule found.
   - Known address: https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ottawa/hunting
+  - Browser pass 2026-11-13: code read (ecode360 PA3519). No park rule; only the no-hunting zone south of Ottawa Beach Road and part of Section 22.
   - Search: https://www.google.com/search?q=Park+Township+Michigan+parks+ordinance+hunting+firearms
 - [x] **GEORGETOWN CHARTER TOWNSHIP** — Done: red (gtwp.com park rules) (township; 3 parks, 109 acres)
   - Parks: 8Th Ave Community Park (59 ac), Rush Creek Park (41 ac), 28Th Avenue Soccer Fields (9 ac)
@@ -117,7 +121,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - Parks: Rycenga Park (40 ac)
   - What was tried: Rycenga Park straddles Spring Lake/Fruitport townships; no township rule found (Village of Spring Lake bans hunting in village parks, but that does not govern the township).
   - Search: https://www.google.com/search?q=Township+of+Spring+Lake+Michigan+parks+ordinance+hunting+firearms
-- [ ] **Township of Allendale** (township; 1 parks, 37 acres)
+- [x] **Township of Allendale** — Done: red (Code § 300-3, ecode360) (township; 1 parks, 37 acres)
   - Parks: Allendale Community Park (37 ac)
   - What was tried: Search returned no Allendale parks/hunting ordinance.
   - Search: https://www.google.com/search?q=Township+of+Allendale+Michigan+parks+ordinance+hunting+firearms
@@ -137,7 +141,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
   - Parks: Rycenga Recreation Park (17 ac)
   - What was tried: Rycenga Recreation Park: no rule found.
   - Search: https://www.google.com/search?q=Township+of+Spring+Lake+Parks+Michigan+parks+ordinance+hunting+firearms
-- [ ] **Township of Port Sheldon** (township; 1 parks, 12 acres)
+- [x] **Township of Port Sheldon** — Done: yellow, archery only (township hunting policy) (township; 1 parks, 12 acres)
   - Parks: Port Sheldon Park (12 ac)
   - What was tried: Same township policy applies in general.
   - Known address: https://www.portsheldontwp.org/wp-content/uploads/2025/11/Hunting-and-Target-Practice-Policy-and-Map-PST-updated.pdf
@@ -226,6 +230,7 @@ Until checked, these parks keep the default colour: red inside city limits, yell
 - [ ] **Michigan State University** (state; 1 parks, 444 acres)
   - Parks: MSU Clarksville Horticultural Experiment Station (444 ac)
   - What was tried: MSU Clarksville Horticultural Experiment Station (444 ac, research orchards/farm): no hunting policy found.
+  - Browser pass 2026-11-13: only an invitation-only veterans / disabled-hunter deer-management hunt at Lux Arbor was found; no public rule.
   - Search: https://www.google.com/search?q=Michigan+State+University+Michigan+parks+ordinance+hunting+firearms
 - [ ] **City of Belding** (city; 5 parks, 151 acres)
   - Parks: Lightning Bend Park (97 ac), Demorest Field (31 ac), Central Riverside Park (16 ac), Water Street Park (4 ac), East Riverside Park (3 ac)

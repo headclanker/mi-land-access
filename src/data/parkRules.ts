@@ -980,6 +980,42 @@ export const PARK_RULES: readonly ParkRule[] = [
       { label: 'City of Saugatuck – Saugatuck Wilds Nature Preserve', url: 'https://www.saugatuckcity.com/saugatuck-wilds-nature-preserve.html' },
     ],
   }),
+  // Seventh round (2026-11-13): ordinance text read in a browser (ecode360) and the bodies' own PDFs.
+  r({
+    id: 'grand-haven-twp-parks',
+    name: 'Grand Haven Charter Township parks',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: 'Grand Haven Charter Township' },
+    not: NOT_A_PARK,
+    grade: 'red',
+    category: 'Township park – closed to hunting',
+    text: "Grand Haven Township Park Rules and Regulations Ordinance (No. 59, amended 2015): no person shall 'Hunt or trap any animals or birds within any portion of a Township Park or recreation area', and firearms and weapons, bows included, are banned there.",
+    confidence: 'high',
+    sources: [{ label: 'Grand Haven Charter Township – Park Rules and Regulations Ordinance (Ord. 59)', url: 'https://ghtmi.gov/wp-content/uploads/2026/10/20.0300-Ordinance-59-Park-Rules-Regulations-Ordinance.pdf' }],
+  }),
+  r({
+    id: 'allendale-twp-parks',
+    name: 'Allendale Charter Township parks',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: 'Township of Allendale' },
+    not: NOT_A_PARK,
+    grade: 'red',
+    category: 'Township park – closed to hunting',
+    text: "Allendale Township Code § 300-3(D), conduct in Township parks: 'No person shall hunt, trap, catch, wound, kill … or attempt to … any bird or animal.'",
+    confidence: 'high',
+    sources: [{ label: 'Charter Township of Allendale Code, Ch. 300 Parks and Recreation Areas', url: 'https://ecode360.com/38007559' }],
+  }),
+  r({
+    id: 'port-sheldon-twp-hall',
+    name: 'Port Sheldon Township Hall grounds',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: 'Township of Port Sheldon', Unit_Nm: 'Port Sheldon Park' },
+    grade: 'yellow',
+    category: 'Township land – archery only',
+    text: 'Port Sheldon Township’s hunting policy (November 2025) allows archery hunting but not firearm hunting on the Port Sheldon Street parcel (Township Hall, fire station and recreation centre); no target practice. The mapped “Port Sheldon Park” sits on that parcel.',
+    confidence: 'medium',
+    sources: [{ label: 'Port Sheldon Township – Hunting and Target Practice Policy and Map', url: 'https://www.portsheldontwp.org/wp-content/uploads/2025/11/Hunting-and-Target-Practice-Policy-and-Map-PST-updated.pdf' }],
+  }),
 ];
 
 /** Layers that carry at least one researched rule. */

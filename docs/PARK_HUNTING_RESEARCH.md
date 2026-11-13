@@ -411,3 +411,19 @@ Applied (all red):
 Seen but not applied: Muskegon and Newaygo county park ordinances (already covered), Fruitport Township and Freeport cemetery rules (cemeteries only), Middleville's Paul Henry Trail notice (a trail over private land, not village parks), an Ensley Township plan mentioning an unnamed preserve.
 
 Most township and village sites publish no park hunting rule at all; their text sits only on the blocked code hosts. Those parks stay yellow ("check first"), as chosen, and remain on the checklist.
+
+## Seventh round (2026-11-13): ordinance pages read in a browser
+
+The code hosts that refuse scripts were opened page by page in an ordinary browser. ecode360 and American Legal load normally that way; Municode answers even a browser with a Cloudflare block page, so Municode-hosted codes were left alone. Notes in `docs/research/west-michigan/browser-pass-2026-11-13.md`.
+
+Applied:
+
+| Body | Parks | Evidence | Grade | Confidence |
+|---|---|---|---|---|
+| Grand Haven Charter Township | Hofma Park & Preserve and 4 others | Ord. 59: no person shall "Hunt or trap any animals or birds within any portion of a Township Park"; firearms and bows banned | red | high |
+| Allendale Charter Township | Allendale Community Park | Code § 300-3(D): "No person shall hunt, trap, catch, wound, kill…" in Township parks | red | high |
+| Port Sheldon Township | "Port Sheldon Park" (Township Hall parcel) | Township hunting policy (Nov 2025): archery allowed, firearm hunting not allowed on the Port Sheldon Street parcel | yellow, archery only | medium |
+
+Read but not applied: Cannon Township Ch. 313 (Bostwick Lake Park only, not mapped); Park Township (no park rule, only the zone south of Ottawa Beach Road); Sparta Township (American Legal code silent on parks); Lux Arbor Reserve (only an invitation-only deer-management hunt found).
+
+Most West Michigan townships and villages still open on the checklist publish their codes on Municode, so they need a person to open the page.

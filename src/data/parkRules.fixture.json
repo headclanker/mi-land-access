@@ -551,6 +551,14 @@
  },
  {
   "layer": "padus-local",
+  "rule": "port-sheldon-twp-hall",
+  "Unit_Nm": "Port Sheldon Park",
+  "Loc_Mang": "Township of Port Sheldon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "nashville-parks",
   "Unit_Nm": "Old Town Field",
   "Loc_Mang": "Village of Nashville",
@@ -3319,6 +3327,46 @@
  },
  {
   "layer": "padus-local",
+  "rule": "grand-haven-twp-parks",
+  "Unit_Nm": "Hofma Park & Preserve",
+  "Loc_Mang": "Grand Haven Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-haven-twp-parks",
+  "Unit_Nm": "Mercury Park",
+  "Loc_Mang": "Grand Haven Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-haven-twp-parks",
+  "Unit_Nm": "Millhouse Park",
+  "Loc_Mang": "Grand Haven Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-haven-twp-parks",
+  "Unit_Nm": "Odawa/Battle Point Launch",
+  "Loc_Mang": "Grand Haven Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-haven-twp-parks",
+  "Unit_Nm": "Pottawattomie Park",
+  "Loc_Mang": "Grand Haven Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "holland-charter-twp-closed",
   "Unit_Nm": "Beechwood Park",
   "Loc_Mang": "Holland Charter Township",
@@ -3362,6 +3410,14 @@
   "rule": "port-sheldon-kouw-closed",
   "Unit_Nm": "Kouw Park",
   "Loc_Mang": "Port Sheldon Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allendale-twp-parks",
+  "Unit_Nm": "Allendale Community Park",
+  "Loc_Mang": "Township of Allendale",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },

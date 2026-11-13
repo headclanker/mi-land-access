@@ -347,3 +347,31 @@ Unknown: 31, Closed: 22, No county park system: 8, Permit or lottery hunts only:
 **Still unknown (31):** Alcona, Baraga, Barry, Benzie, Berrien, Branch, Charlevoix, Cheboygan, Chippewa, Gladwin, Hillsdale, Houghton, Iron, Kalkaska, Keweenaw, Lapeer, Lenawee, Livingston, Luce, Mackinac, Macomb, Manistee, Mason, Menominee, Missaukee, Montmorency, Ogemaw, Presque Isle, Sanilac, Tuscola, Van Buren.
 
 The unknowns are counties whose rules are silent on hunting, whose documents could not be opened (sites refusing automated requests, dead links), or that publish nothing. A call to the county parks office is the way to settle those.
+
+## Fourth round (2026-11-12/13): West Michigan, park by park
+
+Kent, Ionia, Montcalm, Barry, Ottawa, Allegan, Muskegon and Newaygo counties: 807 parks under about 180 managing bodies. Raw data, with quotes and sources for every managing body, is in docs/research/west-michigan/.
+
+About 67 managing bodies have a finding and about 113 are unknown. Almost every city and township publishes its code through Municode, eCode360 or American Legal, all of which refuse automated requests; those were recorded as blocked, not worked around.
+
+### Applied to the map
+
+- **Kent County bow-permit parks (yellow, lottery archery for deer and turkey):** Cooper Creek Park / Spencer Forest, Long Lake Park, Donald Lamoreaux Park, and now Lowell Regional Park and Thornapple Riverbend Park (both previously shown closed). The park list comes from a search summary of the county's bow-hunting page, which refused a direct request; that the last two were the 2026 additions is inferred.
+- **Closed, from the body's own ordinance or rules:** Cascade Township parks (hunting only in Cascade Peace Park, archery by permit; not mapped), Plainfield Township, East Grand Rapids, Grand Rapids, Kentwood, Holland Charter Township, Kouw Park (Port Sheldon Township), Hudsonville, Muskegon County parks, Laketon Township, Egelston Township, Fruitland Township, City of Newaygo, Allegan County parks, and five more Ottawa County parks (Grand River Ravines North and South, Hager Park, Spring Grove Park, Eastmanville Farm).
+- **Lottery bow hunt (yellow):** Funnell Field, City of Whitehall.
+- **Conservancies:** Michigan Nature Association sanctuaries (closed, statewide), Land Conservancy of West Michigan preserves (closed unless posted), Southwest Michigan Land Conservancy preserves (yellow: by staff permission only; slots currently full).
+
+### Found but not mapped (no shape in the data)
+
+Cascade Peace Park (archery by permit), Kent County's Two Rivers Greenspace (bow permit), Laketown Township's Huyser Farm Park (archery deer lottery), Port Sheldon Township's Stanton, Hiawatha and Van Buren Street parcels (open), Allegan County's Dumont complex (resident lottery permits), Muskegon County's wastewater site (managed waterfowl hunts).
+
+### Not applied
+
+- Norton Shores and Montague have bow-hunting programs but no confirmed list of city parks.
+- Village of Spring Lake and Michigan Audubon: closed per search summaries only, no document read.
+- Pigeon Creek Forest, Hawthorn Pond and Rosewood Park are on none of Ottawa County's lists; left as they were.
+- Grand Haven State Game Area and the Ionia Recreation Area duplicate shapes are in a layer that is off by default.
+
+### School property
+
+All school-district property is graded closed (red), on the owner's instruction: Michigan law makes school property a weapon-free school zone (MCL 750.237a) and districts do not open land to public hunting. This applies to parcels whose owner name is a school district and to park features managed by a school. Universities and colleges are not included; they keep their own grading.

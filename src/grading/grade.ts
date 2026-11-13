@@ -179,6 +179,11 @@ function gradeDnrOwner(): GradeResult {
  * Classify a parcel by its assessor owner string. Exposed for testing and for
  * any layer that carries an owner name.
  */
+/** School property is treated as closed: weapons are generally prohibited there. */
+export const SCHOOL_CATEGORY = 'School property – closed to hunting';
+const SCHOOL_REASON =
+  'School-district property. Treated as closed: Michigan law makes school property a weapon-free school zone (MCL 750.237a), and districts do not open their land to public hunting. Do not hunt here.';
+
 export function gradeOwnerName(rawOwner: unknown): GradeResult {
   const raw = str(rawOwner);
   const o = normalizeOwner(raw);
@@ -344,7 +349,7 @@ export function gradeOwnerName(rawOwner: unknown): GradeResult {
   }
 
   if (RE_SCHOOL.test(o)) {
-    return owned('other', result('yellow', 'School district', `School-district land. ${LOCAL_VERIFY} Weapons are prohibited on school property in many cases.`));
+    return owned('other', result('red', SCHOOL_CATEGORY, SCHOOL_REASON, [REFS.trespass]));
   }
   if (RE_ROAD_COMMISSION.test(o)) {
     return owned('other', result('yellow', 'County road commission', `Road commission land (often right-of-way or gravel pits). ${LOCAL_VERIFY}`));
@@ -598,6 +603,10 @@ function gradePadus(p: Record<string, unknown>): GradeResult {
     return result('yellow', 'State land (non-DNR)', `${unit}: state land not managed by the DNR.${mgr} Not open to hunting by default; contact the managing agency.`);
   }
   if (mangType === 'LOC' || mangType === 'DIST' || mangType === 'JNT') {
+    // School-run land (district nature areas, athletic fields) is closed like any school property.
+    if (/\bschools?\b|\bschool dist|\bI\.?S\.?D\b/i.test(`${localMgr} ${str(p.Loc_Own)}`)) {
+      return result('red', SCHOOL_CATEGORY, `${unit}: ${SCHOOL_REASON}`);
+    }
     const what = mang === 'CNTY' ? 'County' : mang === 'CITY' ? 'Municipal / township' : 'Regional / local';
     return result('yellow', `${what} land`, `${unit}: ${what.toLowerCase()} park or open space.${mgr} ${LOCAL_VERIFY}`);
   }

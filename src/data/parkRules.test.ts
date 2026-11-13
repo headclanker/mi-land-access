@@ -123,9 +123,9 @@ describe('park rules – county and regional land', () => {
 
   it('specific rules → yellow with the rule text, not the generic local-government text', () => {
     const cases: [Record<string, unknown>, string][] = [
-      [local('Cooper Creek Park', 'Kent County Parks'), 'Kent County permit'],
-      [local('Spencer Forest', 'Kent County Parks'), 'Kent County permit'],
-      [local('Donald Lamoreaux Park', 'Kent County'), 'Kent County permit'],
+      [local('Cooper Creek Park', 'Kent County Parks'), 'Kent County lottery permit'],
+      [local('Spencer Forest', 'Kent County Parks'), 'Kent County lottery permit'],
+      [local('Donald Lamoreaux Park', 'Kent County'), 'Kent County lottery permit'],
       [local('Addison Oaks County Park', 'Oakland County Parks Commission'), 'East section of Addison Oaks'],
       [local('Orion Oaks County Park', 'Unknown County'), 'archery deer hunting only'],
       [local('Upper Macatawa Natural Area - East', 'County of Ottawa', { Des_Tp: 'LCA' }), 'lottery'],
@@ -149,7 +149,7 @@ describe('park rules – county and regional land', () => {
     const cases: Record<string, unknown>[] = [
       local('Fallasberg Park', 'Kent County Parks'),
       local('Millennium Park', 'Kent County'),
-      local('Lowell Regional Park', 'County of Kent'),
+      local('Fallasburg Park', 'Kent County Parks'),
       local('Groveland Oaks County Park', 'Oakland County Parks Commission'),
       local('Red Oaks', 'County of Oakland'),
       local('Lyon Oaks Golf Course', 'Oakland County Parks Commission', { Des_Tp: 'LREC' }),
@@ -173,9 +173,7 @@ describe('park rules – county and regional land', () => {
 
   it('over-matching traps stay unresearched', () => {
     const traps: Record<string, unknown>[] = [
-      local('Donald J Lamoreaux Park', 'City of Grand Rapids', { Mang_Name: 'CITY' }),
       local('Kent City Park', 'Village of Kent City', { Mang_Name: 'CITY' }),
-      local('Kentwood Park', 'City of Kentwood', { Mang_Name: 'CITY' }),
       local('Wayne Park', 'City of Wayne', { Mang_Name: 'CITY' }),
       local('Veterans Park', 'City of Bay City', { Mang_Name: 'CITY' }),
       local('Local Forest', 'County of Bay', { Des_Tp: 'LRMA' }), // county land, not a park
@@ -209,7 +207,25 @@ describe('park rules – county and regional land', () => {
     // Second research round (verified from the counties' own pages).
     expect(gl(local('Kirk Park', 'County of Ottowa')).grade).toBe('red');
     expect(gl(local('Marne Bog', 'County')).grade).toBe('green');
-    expect(gl(local('Spring Grove Park', 'County')).researched).toBeUndefined();
+    expect(gl(local('Spring Grove Park', 'County')).grade).toBe('red');
+    // Fourth research round (West Michigan, park by park).
+    for (const n of ['Lowell Regional Park', 'Thornapple Riverbend Park']) {
+      const k = gl(local(n, n.startsWith('Lowell') ? 'County of Kent' : 'Kent County'));
+      expect(k.grade, n).toBe('yellow');
+      expect(k.reason, n).toContain('lottery permit');
+    }
+    expect(gl(local('Donald J Lamoreaux Park', 'City of Grand Rapids', { Mang_Name: 'CITY' })).grade).toBe('red');
+    expect(gl(local('Burton Park', 'Cascade Township', { Mang_Name: 'CITY' })).reason).toContain('Cascade Peace Park');
+    expect(gl(local('Helder Park', 'Holland Charter Township', { Mang_Name: 'CITY' })).grade).toBe('red');
+    expect(gl(local('Kouw Park', 'Port Sheldon Township', { Mang_Name: 'CITY' })).grade).toBe('red');
+    expect(gl(local('Zwemer Park', 'Port Sheldon Township', { Mang_Name: 'CITY' })).researched).toBeUndefined();
+    expect(gl(local('Pioneer Park', 'Muskegon County Parks')).grade).toBe('red');
+    expect(gl(local('Muskegon Fairgrounds', 'County of Muskegon', { Des_Tp: 'LREC' })).researched).toBeUndefined();
+    expect(gl(local('Laketon Township Park', 'Township of Laketown', { Mang_Name: 'CITY' })).grade).toBe('red');
+    expect(gl(local('Laketown Township Park', 'Township of Laketown', { Mang_Name: 'CITY' })).researched).toBeUndefined(); // Allegan's Laketown, not Laketon
+    const funnell = gl(local('Funnell Field', 'City of Whitehall', { Mang_Name: 'CITY' }));
+    expect(funnell.grade).toBe('yellow');
+    expect(gl(local('Covell Park', 'City of Whitehall', { Mang_Name: 'CITY' })).researched).toBeUndefined();
     expect(gl(local('Historic Bridge Park', 'County of Calhoun')).grade).toBe('red');
     expect(gl(local('Gratiot County Farm', 'County of Gratiot')).grade).toBe('red');
     expect(gl(local('Local Forest', 'County of Gratiot', { Des_Tp: 'LRMA' })).researched).toBeUndefined();
@@ -235,7 +251,7 @@ describe('park rules – reconciliation', () => {
   it('a researched PAD-US unit decides for a public or blank owner record', () => {
     const k = parcel('KENT COUNTY', [cooper(0.9)]);
     expect(k.result.grade).toBe('yellow');
-    expect(k.result.reason).toContain('Kent County permit');
+    expect(k.result.reason).toContain('Kent County lottery permit');
     expect(k.result.researched?.rule).toBe('kent-bow-permit');
     expect(k.adoptedFrom).toBe('padus-local');
     expect(k.conflict).toBe(false);

@@ -405,7 +405,9 @@ describe('city limits rule', () => {
   });
 
   it('school, road commission, utility, generic State of Michigan land inside a city → red', () => {
-    for (const owner of ['GRAND RAPIDS PUBLIC SCHOOLS', 'KENT COUNTY ROAD COMMISSION', 'CONSUMERS ENERGY CO', 'STATE OF MICHIGAN', 'KENT COUNTY LAND BANK AUTHORITY']) {
+    // School property is closed everywhere, in or out of a city.
+    expect(inCity('GRAND RAPIDS PUBLIC SCHOOLS', []).result.category).toBe('School property – closed to hunting');
+    for (const owner of ['KENT COUNTY ROAD COMMISSION', 'CONSUMERS ENERGY CO', 'STATE OF MICHIGAN', 'KENT COUNTY LAND BANK AUTHORITY']) {
       const r = inCity(owner, []);
       expect(r.result.grade, owner).toBe('red');
       expect(r.result.category, owner).toMatch(/inside Grand Rapids city limits$/);

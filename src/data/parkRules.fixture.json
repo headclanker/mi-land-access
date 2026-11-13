@@ -327,6 +327,30 @@
  },
  {
   "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Lamberts Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Jamestown Park (Proposed)",
+  "Loc_Mang": "City of Kentwood Parks",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Stanaback Park",
+  "Loc_Mang": "City of Kentwood Parks",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "hcma-closed",
   "Unit_Nm": "Kensington Metropark",
   "Loc_Mang": "Huron Clinton Metropark Authority",
@@ -399,9 +423,89 @@
  },
  {
   "layer": "padus-local",
+  "rule": "ottawa-eastmanville-farm-closed",
+  "Unit_Nm": "Eastmanville Farm",
+  "Loc_Mang": "Municipal",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "antrim-natural-areas",
   "Unit_Nm": "Mohrmann Park",
   "Loc_Mang": "Municipal",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "cascade-twp-closed",
+  "Unit_Nm": "Museums Garden Park",
+  "Loc_Mang": "Township of Cascade",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "fruitland-twp-closed",
+  "Unit_Nm": "Fruitland Township Park",
+  "Loc_Mang": "Township of Fruitland",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "laketon-twp-park-closed",
+  "Unit_Nm": "Laketon Township Park",
+  "Loc_Mang": "Township of Laketown",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Dean Lake Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Gold Dust Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Holtman Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Northgate Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Packer Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Plainfield Park",
+  "Loc_Mang": "Township of Plainfield",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -418,6 +522,54 @@
   "rule": "cass-russ-forest",
   "Unit_Nm": "Russ Forest Park",
   "Loc_Mang": "Cass County Parks Department",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allegan-county-closed",
+  "Unit_Nm": "Dumont Lake Park",
+  "Loc_Mang": "County of Allegan",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allegan-county-closed",
+  "Unit_Nm": "Gun Lake Park",
+  "Loc_Mang": "County of Allegan",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allegan-county-closed",
+  "Unit_Nm": "John and Josie Bysterveld Park",
+  "Loc_Mang": "County of Allegan",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allegan-county-closed",
+  "Unit_Nm": "Littlejohn Lake Park",
+  "Loc_Mang": "County of Allegan",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allegan-county-closed",
+  "Unit_Nm": "Silver Creek Park",
+  "Loc_Mang": "County of Allegan",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "allegan-county-closed",
+  "Unit_Nm": "West Side Park",
+  "Loc_Mang": "County of Allegan",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -551,7 +703,7 @@
  },
  {
   "layer": "padus-local",
-  "rule": "kent-parks-closed",
+  "rule": "kent-bow-permit",
   "Unit_Nm": "Lowell Regional Park",
   "Loc_Mang": "County of Kent",
   "Mang_Name": "CNTY",
@@ -967,6 +1119,38 @@
  },
  {
   "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Meinert Park",
+  "Loc_Mang": "Muskegon County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Moore Park",
+  "Loc_Mang": "Muskegon County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Patterson Park",
+  "Loc_Mang": "Muskegon County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Pioneer Park",
+  "Loc_Mang": "Muskegon County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "oakland-archery-part",
   "Unit_Nm": "Addison Oaks County Park",
   "Loc_Mang": "Oakland County Parks Commission",
@@ -1135,6 +1319,22 @@
  },
  {
   "layer": "padus-local",
+  "rule": "cascade-twp-closed",
+  "Unit_Nm": "Michael McGraw Park",
+  "Loc_Mang": "Township of Cascade",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Blue Lake Park",
+  "Loc_Mang": "County of Muskegon",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "newaygo-parks-authorisation",
   "Unit_Nm": "Pettibone Lake Park",
   "Loc_Mang": "County of Newaygo Parks and Recreation D",
@@ -1162,6 +1362,14 @@
   "rule": "kent-parks-closed",
   "Unit_Nm": "Townsend Park",
   "Loc_Mang": "Kent County Parks",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Deremo Park",
+  "Loc_Mang": "Muskegon County Parks",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -1207,6 +1415,38 @@
  },
  {
   "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Pinewood Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Aman Park",
+  "Loc_Mang": "CITY OF GRAND RAPIDS",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "cascade-twp-closed",
+  "Unit_Nm": "Michael Mcgraw Park",
+  "Loc_Mang": "Cascade Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "cascade-twp-closed",
+  "Unit_Nm": "Burton Park",
+  "Loc_Mang": "Cascade Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "lake-erie-metropark",
   "Unit_Nm": "Lake Erie Metropark",
   "Loc_Mang": "CITY OF DETROIT-RECREATION DEPT",
@@ -1239,10 +1479,1482 @@
  },
  {
   "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Hodenpyl Woods",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Schroeder Property",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Steketee Woods",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Griffiths Lake Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "John Collins Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Manhattan Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Mary Triangle Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Remington Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "San Lu Rae Triangle Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Waterfront Park",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Wege Plaza",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "east-grand-rapids-closed",
+  "Unit_Nm": "Canepa Tennis Center",
+  "Loc_Mang": "City of East Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
   "rule": "eaton-parks-closed",
   "Unit_Nm": "Fitzgerald Park",
   "Loc_Mang": "Eaton County Parks",
   "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Blanford Nature Center",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Fourth St Woods",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Frederik Meijer Gardens",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "George Tilma Nature Preserve",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Nature Preserve",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Tremont Green space",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "6Th Street Bridge Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Aberdeen Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Ah-Nab-Awen Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Airway Twp Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Alexander Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Alger Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Alpine Estates Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Aman Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Baja Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Baldwin Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Ball Perkins",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Ball Perkins",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Belknap Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Blythefield Memorial Gardens",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Briggs Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Buck Creek",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Burton Woods Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Calder",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Calder Plaza Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Cambridge Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Camelot Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Campau Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Canal Street Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Cascade Township Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Caulfield Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Chapel Hill Memorial Gardens",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Charles Lemery Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Cherry Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Cheseboro Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Clemente Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Coit Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Congress Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Covell Dog Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Crescent Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Dickinson Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Donald J Lamoreaux Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Douglas Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Eastern",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Fish Ladder Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Forest Hill Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Foster Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Franklin Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Fuller Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Fulton St Market",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Garfield Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Gezon Park North",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Gezon Park South",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Graceland Memorial Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Hall Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Harrison Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Heartside",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Heritage Hill Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Highland Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Hillcrest Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Hopewell Indian Mounds Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Hosken Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Huff Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Jackson Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Joe Taylor Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "John A Collins Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "John Ball Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Johnson Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Kelloggsville Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Ken-O-Sha Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Kensington Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Kent Hills Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Lamar Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Lexington Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Lincoln Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Lincoln Place Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Little Pine Island",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Look Out Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Louis Campau Promenade",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Luton Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Lyon Square",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Mackay-Jaycee Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Mackay Jaycee Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Madison Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Marquette Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Martin Luther King Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Mary Waters Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Mid Town Green Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Monument Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Mooney Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Mulick Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Myers Lake Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Nagold Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "North Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Northview Senior Citizens",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Oakdale Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Oxford Place",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Paris Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Pekich",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Pinery Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Plaster Creek",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Plaster Creek Family Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Pleasant Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Prairie Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Raspberry Field",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Resevoir Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Richmond Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Ridgemoor Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Riverside Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Riverwalk Trail",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Roosevelt Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Rosa Park Circle",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Seymour Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Shawmut Hills Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Sigsbee Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Sullivan Field",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Sweet Street Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Tassell Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Versluis Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Veterans Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Westown Commons Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Wilcox Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Grand Rapids Bike Park",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Grand River Edges Trail",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Houseman Field",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Manhattan Rec Area",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Oxford Trail",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Paul I Phillips Recreation Center",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "grand-rapids-closed",
+  "Unit_Nm": "Plaster Creek Trail",
+  "Loc_Mang": "City of Grand Rapids",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Fountain Of Honor",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Hillside Park",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Hudsonville Nature Center",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Hughes Park",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Sunrise Park",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Veteran'S Park",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "hudsonville-closed",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "City of Hudsonville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "East Paris Nature Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Bowen Station Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Burgis Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Home Acres Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Jaycee Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Kellogg Woods Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Kelloggwoods Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Northeast Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Old Farm Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Paris  Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Rondo Station",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Stanaback Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Summerwood Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "kentwood-closed",
+  "Unit_Nm": "Veterans Memorial Park",
+  "Loc_Mang": "City of Kentwood",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "Brooks Park",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "River Front Park",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "Shaw Park",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "Evergreen Baseball Fields",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "Nawaygo Soccer Fields",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "newaygo-city-closed",
+  "Unit_Nm": "Newaygo Skate Park",
+  "Loc_Mang": "City of Newaygo",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LREC"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "whitehall-funnell-field",
+  "Unit_Nm": "Funnell Field",
+  "Loc_Mang": "City of Whitehall",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "holland-charter-twp-closed",
+  "Unit_Nm": "Beechwood Park",
+  "Loc_Mang": "Holland Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "holland-charter-twp-closed",
+  "Unit_Nm": "Brookwood Park",
+  "Loc_Mang": "Holland Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "holland-charter-twp-closed",
+  "Unit_Nm": "Helder Park",
+  "Loc_Mang": "Holland Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "holland-charter-twp-closed",
+  "Unit_Nm": "Howard B. Dunton Park",
+  "Loc_Mang": "Holland Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "holland-charter-twp-closed",
+  "Unit_Nm": "Quincy Park",
+  "Loc_Mang": "Holland Charter Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "port-sheldon-kouw-closed",
+  "Unit_Nm": "Kouw Park",
+  "Loc_Mang": "Port Sheldon Township",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "egelston-twp-closed",
+  "Unit_Nm": "Unknown Park",
+  "Loc_Mang": "Township of Egelston",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "egelston-twp-closed",
+  "Unit_Nm": "Wolf Lake County Park",
+  "Loc_Mang": "Township of Egelston",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "laketon-twp-closed",
+  "Unit_Nm": "Mullally Park",
+  "Loc_Mang": "Township of Laketon",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Airway Township Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "plainfield-twp-closed",
+  "Unit_Nm": "Ambrose Park",
+  "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
  {
@@ -1370,6 +3082,22 @@
   "rule": "monroe-parks-closed",
   "Unit_Nm": "Vienna Park",
   "Loc_Mang": "County of Monroe",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Castenholtz Park",
+  "Loc_Mang": "County of Muskegon",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "muskegon-county-closed",
+  "Unit_Nm": "Twin Lakes Park",
+  "Loc_Mang": "County of Muskegon",
   "Mang_Name": "CNTY",
   "Des_Tp": "LP"
  },
@@ -1735,7 +3463,7 @@
  },
  {
   "layer": "padus-local",
-  "rule": "kent-parks-closed",
+  "rule": "kent-bow-permit",
   "Unit_Nm": "Thornapple Riverbend Park",
   "Loc_Mang": "Kent County",
   "Mang_Name": "CNTY",
@@ -1807,11 +3535,43 @@
  },
  {
   "layer": "padus-local",
+  "rule": "ottawa-county-more-closed",
+  "Unit_Nm": "Spring Grove Park",
+  "Loc_Mang": "County",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "ottawa-hunting-open-county",
   "Unit_Nm": "Bend Area Open Space",
   "Loc_Mang": "County",
   "Mang_Name": "CNTY",
   "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ottawa-county-more-closed",
+  "Unit_Nm": "Grand River Ravines - North",
+  "Loc_Mang": "County",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ottawa-county-more-closed",
+  "Unit_Nm": "Grand River Ravines - South",
+  "Loc_Mang": "County",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "ottawa-county-more-closed",
+  "Unit_Nm": "Hager Park",
+  "Loc_Mang": "County",
+  "Mang_Name": "CNTY",
+  "Des_Tp": "LP"
  },
  {
   "layer": "padus-local",
@@ -1847,9 +3607,1449 @@
  },
  {
   "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Homer L. and Hattie Hylton Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Huntington Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Carlton Lake Wetlands",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Big Valley",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Cedar Lake",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Munuscong Bay",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Myrtle Justeson Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "River Bend",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Rockafellow",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
   "rule": "antrim-natural-areas",
   "Unit_Nm": "Grass River Natural Area",
   "Loc_Mang": "Grass River Natural Area",
+  "Mang_Name": "NGO",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Brower Lake Nature Preserve",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "DePersia South Highlands Nature Preserve",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Palomita Reserve",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Saugatuck Dunes-Singapore Dunes LLC 1",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Saugatuck Dunes-Singapore Dunes LLC 2",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Saul Lake Nature Preserve",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Wege Natural Area for the Study of Ecology",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SOTH"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Morris Bay",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Alice W. Moore Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Alta Warren Parsons Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Baraga Old Growth",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Beaver Dam",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Black Creek",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Braastad",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Briggs & Cox Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Bullock Creek",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Cedar River",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Columbia",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Cy Clark Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Dauner Martin",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Dowagiac Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Eagle Harbor Red Pine Dunes",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Estivant Pines",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Flowerfield Creek",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Frances Broehl Mem. No.1",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Goose Creek Grasslands",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Gratiot Lake",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Green River",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Grinnell Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Hamilton Twp Coastal Plain Mar",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Handford Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "James Dorian Rooks Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "James H. Klipfel Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Kernan Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Keweenaw Shores",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lakeville Swamp",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lefglen",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lightfoot Bay",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lost Lake",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Manistique Dune and Swale",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Myron & Isabel Zucker Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Osceola Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Peter Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Riley Shurte Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Roach Point",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Robert T. Brown",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Sharon Zahrfeld Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Swamp Lakes Moose  Refuge",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Trillium Trail",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Upson Lake",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "White Cedar Swamp",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "White Pigeon River",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Wilcox Warnes",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Barvicks Sand Dunes",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Bois Blanc Island Sanctuary",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Bois Blanc Island Sanctuary",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Brewer Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Chen Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Colby",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Dolan Nature Sanctuary",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Donald E. Hart",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Edna Newnan",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Flowering Dogwood",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Genevieve Casey",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "John J. Helstrom",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "John J. Helstrom",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Kernan Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lakeville Swamp",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lyle and Mary Rizor",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Mariner's Silver River Falls",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "McCulley-Bastian",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Pepperidge Dunes",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Red Cedar River",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Roach Point",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Spitler Shore",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Theodore Hunt Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Thornapple Lake",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "A Looking Glass Sanctuary",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Alton D. McGaw Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Dean Webster Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Frinks Pond",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Martin Beland Miller",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Sauk Indian Trail",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Stephen M. Polovich Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Thelma Sonnenberg Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Trillium Ravine",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Twin Waterfalls",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Willow Lake Prairie Slough",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Petite Wetland",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Rose Center Wetlands",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Bakertown Fen",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Bow in the Clouds",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Carter Lake Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Christiana Lake",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Consumers Power Prairie",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Cook Lake Fen",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Coon Hollow",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Deer Creek Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Dowagiac Fen",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Eastman Creek",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Emmons Augusta Floodplain",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Fair Lake",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Gertrude McPharlin Bauer Nature Sanctuary",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Glenn Allen Island",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Harbert Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Heath Rd",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Hidden Pond",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Hultmark",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Justin's Marsh",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Keka",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Kesling Nature Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Lacey Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Portman",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Pritschet/Davis Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Spirit Springs",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Swan Creek Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Tamarack Swamp",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Willard",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Winterberry Woods",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Wintergreen Woods",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Wolf Tree Nature Trails",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Woodlawn",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "George and Jessie Krum Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Red Cedar River",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Wilding",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Bertha A. Daubendiek Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Birch Creek",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Clarence F. Hobert Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Dowagiac Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Elmer P. Irene Jasper Woods",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Fred Dye",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Genevieve Casey",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "James and Alice Brennan Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Joan Rodman Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Karner Blue",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Kope Kon",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lake Superior",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lawrence A. And Mary Bell Wade Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Louis G. Senghas Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Lyle and Mary Rizor",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Morgan Porritt",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Mystery Valley",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Newaygo Prairie",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Pat Grogan Shelldrake Orchid Bog",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Redwyn's Dunes",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Robert Powell Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Soo Muskeg",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Timberland Swamp",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Two Hearted River",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Black River",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Chipman Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Coldwater Fen",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Corey Lake North Bay",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Dunes Parkway",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Hidden Marsh Sanctuary",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Jeptha Lake Fen",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Marc's Marsh",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Myers",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Oak Braes",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Pilgrim Haven",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Sand Creek Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Schellenberg Woods",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Sora Meadows",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Topinabee Lake Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Tower Hill Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Wanondoger Creek Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Wau-Ke-Na",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "PCON"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "lcwm-preserves",
+  "Unit_Nm": "Minnie Skwarek Nature Reserve",
+  "Loc_Mang": "Land Conservancy of West Michigan",
+  "Mang_Name": "NGO",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "mna-sanctuaries",
+  "Unit_Nm": "Vernon And Velma Radebaugh Memorial",
+  "Loc_Mang": "Michigan Nature Association",
+  "Mang_Name": "NGO",
+  "Des_Tp": "SCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Hickory Creek Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
+  "Mang_Name": "NGO",
+  "Des_Tp": "LCA"
+ },
+ {
+  "layer": "padus-ngo",
+  "rule": "swmlc-preserves",
+  "Unit_Nm": "Paw Paw River Preserve",
+  "Loc_Mang": "Southwest Michigan Land Conservancy",
   "Mang_Name": "NGO",
   "Des_Tp": "LCA"
  }

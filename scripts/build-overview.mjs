@@ -337,11 +337,12 @@ async function main() {
   const stats = {};
   // Paint order = reconcile precedence, lowest first: PAD-US (low confidence) < USFS / DNR
   // ownership < park hunting zones (an access program decides access regardless of owner).
-  // padus-local and padus-state-researched paint only features with a researched GREEN or RED
-  // rule (src/data/parkRules.ts), e.g. the Gogebic County Forest; unresearched local land stays
-  // off the overview.
+  // padus-local and padus-state-researched paint features with a researched GREEN or RED rule
+  // (src/data/parkRules.ts), e.g. the Gogebic County Forest. padus-local also paints its yellow
+  // ("check first") land, however small, so township and county land shows when zoomed out;
+  // other unresearched local land stays off the overview.
   const layers = [
-    { id: 'padus-local', researchedOnly: true },
+    { id: 'padus-local', researchedOnly: true, yellowToo: true },
     { id: 'padus-state-researched', researchedOnly: true },
     { id: 'padus-federal-other' },
     { id: 'usfs-surface-ownership', envelope: [W_LON, S_LAT, E_LON, N_LAT] },
@@ -360,7 +361,7 @@ async function main() {
         const r = gradeFeature(src, f.properties ?? {});
         return { f, grade: r.grade, researched: Boolean(r.researched), refuge: isWildlifeRefuge(l.id, f.properties) };
       })
-      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow'))
+      .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow') || (l.yellowToo && x.grade === 'yellow'))
       .sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
     // The county mask only exists to clip federal data from other states; Michigan DNR layers
     // are in-state by definition, and the generalised mask would clip shoreline parks.
@@ -373,12 +374,22 @@ async function main() {
       if (!code) continue;
       // A researched unit rule is exempt from the city rule, like a park hunting zone.
       const exempt = isProgram || researched;
-      for (const p of polygonsOf(f.geometry)) rasterize(p, (i) => {
+      let painted = 0;
+      const paint = (i) => {
         if (useMask && !mask[i]) return;
         grid[i] = code;
         program[i] = exempt ? 1 : 0;
+        painted++;
         if (researched && !refuge) researchedAcres[grade] += (CELL_M * CELL_M) / 4046.86;
-      });
+      };
+      const polys = polygonsOf(f.geometry);
+      for (const p of polys) rasterize(p, paint);
+      // A yellow area smaller than a cell covers no cell centre: give it the cell it sits in.
+      if (!painted && grade === 'yellow' && polys[0]?.[0]?.[0]) {
+        const [lon, lat] = polys[0][0][0];
+        const c = Math.floor(colOf(lon)), r = Math.floor(rowOf(lat));
+        if (c >= 0 && c < W && r >= 0 && r < H) paint(r * W + c);
+      }
     }
     stats[l.id] = { features: graded.length, serverCount: count, grades: g };
     if (researchedAcres.green + researchedAcres.yellow + researchedAcres.red) {
@@ -421,8 +432,8 @@ async function main() {
   const features = [];
   for (const code of [1, 2, 3, REFUGE_CODE]) {
     // Closed (red) regions are kept however small; dropping one would let the surrounding open
-    // land read as huntable. Restricted (yellow) keeps anything of two cells or more.
-    const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'red' || code === REFUGE_CODE ? 1 : CODE_GRADE[code] === 'yellow' ? 2 : MIN_CELLS);
+    // land read as huntable. Restricted (yellow) and refuge regions are kept however small too.
+    const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'green' ? MIN_CELLS : 1);
     let cells = 0;
     for (let i = 0; i < grid.length; i++) if (grid[i] === code) cells++;
     console.error(`${CODE_GRADE[code]}: ${polys.length} polygons, ${(cells * CELL_M * CELL_M / 4046.86 / 1e6).toFixed(3)} M acres`);

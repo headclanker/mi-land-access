@@ -12,6 +12,7 @@ import { prefGet, prefSet } from '../util/store';
 
 export const OVERVIEW_FILL = 'overview-fill';
 const OVERVIEW_LINE = 'overview-line';
+const OVERVIEW_YELLOW = 'overview-yellow';
 const SRC = 'overview';
 
 const color: ExpressionSpecification = ['match', ['get', 'g'], 'green', GRADE_COLORS.green, 'yellow', GRADE_COLORS.yellow, 'red', GRADE_COLORS.red, 'refuge', REFUGE_COLOR, GRADE_COLORS.unknown];
@@ -69,6 +70,8 @@ export class Overview {
     map.addSource(SRC, { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, tolerance: 0.5 });
     map.addLayer({ id: OVERVIEW_FILL, type: 'fill', source: SRC, paint: { 'fill-color': color, 'fill-opacity': 0, 'fill-opacity-transition': { duration: 350, delay: 0 } } }, 'anchor-fills');
     map.addLayer({ id: OVERVIEW_LINE, type: 'line', source: SRC, paint: { 'line-color': color, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.4, 9, 1], 'line-opacity': 0, 'line-opacity-transition': { duration: 350, delay: 0 } } }, 'anchor-lines');
+    // "Check first" land is mostly a few acres: a bold outline keeps each area visible as a dot.
+    map.addLayer({ id: OVERVIEW_YELLOW, type: 'line', source: SRC, filter: ['==', ['get', 'g'], 'yellow'], paint: { 'line-color': '#ffd21f', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 1, 7, 1.6, 9, 2.2], 'line-opacity': 0, 'line-opacity-transition': { duration: 350, delay: 0 } } }, 'anchor-lines');
     map.on('zoom', () => this.update());
     layers.onChange(() => this.update());
     void this.load();
@@ -126,6 +129,7 @@ export class Overview {
     this.shown = want;
     this.map.setPaintProperty(OVERVIEW_FILL, 'fill-opacity', want ? FILL_OPACITY : 0);
     this.map.setPaintProperty(OVERVIEW_LINE, 'line-opacity', want ? LINE_OPACITY : 0);
+    this.map.setPaintProperty(OVERVIEW_YELLOW, 'line-opacity', want ? 1 : 0);
     this.emit();
   }
 

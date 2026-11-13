@@ -1,0 +1,504 @@
+# West Michigan: managing bodies still to check
+
+Generated 2026-11-13 from the research files in this folder. Each entry is a city, township, village, county or organisation whose hunting rule for its parks could not be read automatically, usually because its ordinance site refuses automated requests.
+
+**How to use it.** Open the body's ordinance or park-rules page in your own browser, find the section on hunting, trapping, firearms or weapons in parks, and either paste the text into the Claude session or save the page as a PDF into `docs/research/inbox/` named after the body (for example `ada-township.pdf`). One rule usually covers all of that body's parks.
+
+**What to look for.** A sentence such as "No person shall hunt, trap or discharge a firearm in any park", any exception (a named park, a permit, a managed deer hunt), and the date of the ordinance.
+
+Until checked, these parks keep the default colour: red inside city limits, yellow in townships and villages. School-run land is already red.
+
+113 bodies listed. Cities are last in each county because their parks already show closed.
+
+## Kent County (20)
+
+- [ ] **Ada Township** (township; 4 parks, 423 acres)
+  - Parks: Roselle Park (251 ac), Grand River Nature Area (120 ac), Ada Park (49 ac), Leonard Field (3 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Ada+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **LOWELL CHARTER TOWNSHIP PARK** (township; 1 parks, 68 acres)
+  - Parks: Grand River Riverfront Park (68 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=LOWELL+CHARTER+TOWNSHIP+PARK+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Byron Center** (township; 1 parks, 60 acres)
+  - Parks: Whistlestop Park (60 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Byron+Center+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Cannon** (township; 1 parks, 37 acres)
+  - Parks: Cannon Township Center Property (37 ac)
+  - What was tried: Cannon Township has Chapter 313 'Parks and Recreational Areas' on ecode360 (https://ecode360.com/34321547), which returned 403 (Cloudflare); text unread.
+  - Search: https://www.google.com/search?q=Township+of+Cannon+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Byron Township** (township; 1 parks, 8 acres)
+  - Parks: Cutler Park (8 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Byron+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Alpine Township** (township; 1 parks, 6 acres)
+  - Parks: Westgate Neighborhood Park (6 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Alpine+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Sparta Township** (township; 1 parks, 4 acres)
+  - Parks: Bettes Memorial Park (4 ac)
+  - What was tried: Code is on American Legal (codelibrary.amlegal.com/codes/spartatwpmi), 403 to curl; search found no firearm clause.
+  - Search: https://www.google.com/search?q=Sparta+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Grattan** (township; 1 parks, 2 acres)
+  - Parks: Grattan Township Roadside Park (2 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Grattan+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Sparta** (village; 7 parks, 30 acres)
+  - Parks: Nash Park (8 ac), Balyeat Field (7 ac), Buth Field (6 ac), Rogers Park (5 ac), Lamoreaux Park (2 ac), Library Memorial Park (1 ac), and 1 more
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Village+of+Sparta+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Sand Lake** (village; 1 parks, 4 acres)
+  - Parks: Salisbury Park (4 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Village+of+Sand+Lake+Michigan+parks+ordinance+hunting+firearms
+- [ ] **The Nature Conservancy** (conservancy; 1 parks, 79 acres)
+  - Parks: Mainstem Grand River- Leonard Fase Trust 1 (79 ac)
+  - What was tried: TNC allows permit deer hunting only on specific Michigan preserves (e.g. Grand River Fen); 'Mainstem Grand River-Leonard Fase Trust 1' is not on its list read, so presumed closed.
+  - Known address: https://www.nature.org/en-us/about-us/where-we-work/united-states/michigan/stories-in-michigan/deer-hunting-in-michigan/
+  - Search: https://www.google.com/search?q=The+Nature+Conservancy+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Grand Rapids Public Schools** (school; 3 parks, 27 acres)
+  - Parks: Ottawa Hills Park (23 ac), Stocking Elementary School (3 ac), Buchanan Elementary School (1 ac)
+  - What was tried: Not researched to a rule (budget); no hunting ordinance or posted allowance found. Small local park(s).
+  - Search: https://www.google.com/search?q=Grand+Rapids+Public+Schools+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 16 parks, 588 acres)
+  - Parks: Village Park (104 ac), Camp Roger (102 ac), Fellowship Greens (90 ac), Christiansen Nature Center (77 ac), Camp Concordia (50 ac), Bicentennial Park (41 ac), and 10 more
+  - What was tried: Mis-geocoded records likely.
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **MI Dept of Agriculture and Rural Development** (state; 2 parks, 290 acres)
+  - Parks: Bull (178 ac), Keech (112 ac)
+  - What was tried: Nothing searched; easement land would be private.
+  - Search: https://www.google.com/search?q=MI+Dept+of+Agriculture+and+Rural+Development+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Wyoming** (city; 12 parks, 315 acres)
+  - Parks: Battjes Park (69 ac), Lemery Park (66 ac), Gezon Park (62 ac), Ideal Park (46 ac), Hillcroft Park (25 ac), Oriole Park (12 ac), and 6 more
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Wyoming+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Lowell** (city; 8 parks, 103 acres)
+  - Parks: Stoney Lakeside Park (38 ac), Creekside Park (22 ac), Upper Bridge Property (21 ac), Recreation Park (11 ac), Richards Park (5 ac), Richards Park (2 ac), and 2 more
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Lowell+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Walker** (city; 3 parks, 78 acres)
+  - Parks: City Central Park (46 ac), Walker Community Park (27 ac), Harmon Field (5 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Walker+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Grandville** (city; 6 parks, 68 acres)
+  - Parks: Mill Race Park (25 ac), Heritage Park (19 ac), Grandville Little League Complex (12 ac), Calvin Crest Park (9 ac), Lee St Park (2 ac), Peck St Park (1 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Grandville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Rockford** (city; 4 parks, 25 acres)
+  - Parks: Glen Park (8 ac), Heritage Parkland (8 ac), Heritage Parkland And Nature Trail (7 ac), Rotary Park (2 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Rockford+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Cedar Springs** (city; 2 parks, 2 acres)
+  - Parks: Riggle Park (2 ac), Veterans Memorial Park (0 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Cedar+Springs+Michigan+parks+ordinance+hunting+firearms
+
+## Ottawa County (27)
+
+- [ ] **Grand Haven Charter Township** (township; 5 parks, 597 acres)
+  - Parks: Hofma Park & Preserve (567 ac), Pottawattomie Park (20 ac), Mercury Park (7 ac), Odawa/Battle Point Launch (2 ac), Millhouse Park (1 ac)
+  - What was tried: Called out in task. Contact township 616-842-5988. Nearby Hiawatha Forest is county, not township.
+  - Search: https://www.google.com/search?q=Grand+Haven+Charter+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Park Township** (township; 8 parks, 278 acres)
+  - Parks: Winstrom Park/Preserve (75 ac), Cooper-Vanwieren Park (61 ac), Fair Grounds/Park Township Community Center (51 ac), Stu Visser Trails (41 ac), Wendt Park (24 ac), Ransom Street Park (21 ac), and 2 more
+  - What was tried: Winstrom Preserve (42.795) and Cooper-VanWieren/Stu Visser/Wendt/Ransom are north of the line; no township park rule found.
+  - Known address: https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ottawa/hunting
+  - Search: https://www.google.com/search?q=Park+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **GEORGETOWN CHARTER TOWNSHIP** (township; 3 parks, 109 acres)
+  - Parks: 8Th Ave Community Park (59 ac), Rush Creek Park (41 ac), 28Th Avenue Soccer Fields (9 ac)
+  - What was tried: No parks/hunting rule found for Rush Creek Park, 8th Ave Community Park or 28th Ave soccer fields; a 2009 proposal to expand firearm-discharge setbacks was reported but outcome not confirmed.
+  - Search: https://www.google.com/search?q=GEORGETOWN+CHARTER+TOWNSHIP+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Polkton Township** (township; 1 parks, 56 acres)
+  - Parks: Sheridan Park (56 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Polkton+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Spring Lake** (township; 1 parks, 40 acres)
+  - Parks: Rycenga Park (40 ac)
+  - What was tried: Rycenga Park straddles Spring Lake/Fruitport townships; no township rule found (Village of Spring Lake bans hunting in village parks, but that does not govern the township).
+  - Search: https://www.google.com/search?q=Township+of+Spring+Lake+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Allendale** (township; 1 parks, 37 acres)
+  - Parks: Allendale Community Park (37 ac)
+  - What was tried: Search returned no Allendale parks/hunting ordinance.
+  - Search: https://www.google.com/search?q=Township+of+Allendale+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Georgetown** (township; 3 parks, 32 acres)
+  - Parks: Woodcrest Park (16 ac), Maplewood Park (10 ac), Pioneer Park (6 ac)
+  - What was tried: Same as Georgetown Charter Township: no rule found.
+  - Search: https://www.google.com/search?q=Township+of+Georgetown+Michigan+parks+ordinance+hunting+firearms
+- [ ] **TALLMADGE TWP** (township; 1 parks, 31 acres)
+  - Parks: Tallmadge Township Park (31 ac)
+  - What was tried: Tallmadge township office 616-677-1248; recreation plan 2023 found but no hunting statement read.
+  - Search: https://www.google.com/search?q=TALLMADGE+TWP+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township** (township; 1 parks, 29 acres)
+  - Parks: Port Sheldon Sports Complex (29 ac)
+  - What was tried: "Port Sheldon Sports Complex" at 42.8838,-85.8587 is in Jenison (Georgetown Township), not Port Sheldon Township; owner presumably Georgetown Charter Township. No rule found.
+  - Search: https://www.google.com/search?q=Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Spring Lake Parks** (township; 1 parks, 17 acres)
+  - Parks: Rycenga Recreation Park (17 ac)
+  - What was tried: Rycenga Recreation Park: no rule found.
+  - Search: https://www.google.com/search?q=Township+of+Spring+Lake+Parks+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Port Sheldon** (township; 1 parks, 12 acres)
+  - Parks: Port Sheldon Park (12 ac)
+  - What was tried: Same township policy applies in general.
+  - Known address: https://www.portsheldontwp.org/wp-content/uploads/2025/11/Hunting-and-Target-Practice-Policy-and-Map-PST-updated.pdf
+  - Search: https://www.google.com/search?q=Township+of+Port+Sheldon+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Holland** (township; 1 parks, 11 acres)
+  - Parks: Roadside Park (11 ac)
+  - What was tried: Roadside Park is probably Holland Charter Township; that township bans hunting in its parks, but Roadside Park was not confirmed as a township park.
+  - Known address: https://hct.holland.mi.us/departments/parks
+  - Search: https://www.google.com/search?q=Township+of+Holland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Spring Lake Township** (township; 1 parks, 3 acres)
+  - Parks: River Run Park (3 ac)
+  - What was tried: River Run Park: no rule found.
+  - Search: https://www.google.com/search?q=Spring+Lake+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 13 parks, 670 acres)
+  - Parks: Eastmanville Farm (225 ac), The Meadows (217 ac), Kimball Wildlife Preserve (51 ac), Berlin Fairgrounds (38 ac), Windmill Island (36 ac), Hudsonville Community Fairgrounds (35 ac), and 7 more
+  - What was tried: The Meadows (217 ac), Wagner Park, Macatawa Park, Holland Heights School Park, Legion Field, Lincoln Park, Columbia Park, Kimball Wildlife Preserve: owners not identified; no rule found.
+  - Known address: https://miottawa.org/Parks/hunting.htm
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Unknown** (other; 1 parks, 0 acres)
+  - Parks: Water Tower Park (0 ac)
+  - What was tried: Water Tower Park (0 ac, Holland area): owner unknown; no rule.
+  - Search: https://www.google.com/search?q=Unknown+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Michigan** (state; 1 parks, 45 acres)
+  - Parks: Grand Haven State Park (45 ac)
+  - What was tried: Second Grand Haven State Park polygon (DNR status Closed in the DNR list).
+  - Known address: file:parks_B.txt
+  - Search: https://www.google.com/search?q=Michigan+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Michigan Dept of Transportation** (state; 1 parks, 1 acres)
+  - Parks: Heritage Park (1 ac)
+  - What was tried: MDOT-owned Heritage Park (Jenison, 1 ac roadside park): no rule found; developed site.
+  - Search: https://www.google.com/search?q=Michigan+Dept+of+Transportation+Michigan+parks+ordinance+hunting+firearms
+- [ ] **CITY OF GRAND RAPIDS** (city; 1 parks, 339 acres)
+  - Parks: Aman Park (339 ac)
+  - What was tried: Aman Park (Ottawa Co., city-owned): no hunting rule found. City deer-management page says city is using DMAP/bow hunters in limited places; a 2025 pilot did not proceed at Bristol Ave and Aman Park is not named.
+  - Known address: https://www.grandrapidsmi.gov/Deer-Management
+  - Search: https://www.google.com/search?q=CITY+OF+GRAND+RAPIDS+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Grand Haven** (city; 19 parks, 291 acres)
+  - Parks: Harbor Island (111 ac), Mulligan'S Hollow (93 ac), Duncan Woods (42 ac), Bicentennial Park (8 ac), Chinook Pier Park (6 ac), East Grand River Park (6 ac), and 13 more
+  - What was tried: Map treats city land as closed. Municode check not done.
+  - Search: https://www.google.com/search?q=Grand+Haven+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Holland** (city; 13 parks, 290 acres)
+  - Parks: Van Raalte Farm Park (150 ac), Albert C. Keppel Forest Preserve (41 ac), Riverview Park (24 ac), Matt Urban Sports Complex (22 ac), Kollen Park (15 ac), Degraaf Nature Center (14 ac), and 7 more
+  - What was tried: Albert C. Keppel Forest Preserve, DeGraaf Nature Center, Van Raalte Farm are the large city parcels.
+  - Known address: https://www.ecode360.com/12714016
+  - Search: https://www.google.com/search?q=City+of+Holland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of HOlland** (city; 1 parks, 60 acres)
+  - Parks: Smallenburg Park (60 ac)
+  - What was tried: Smallenburg Park: city of Holland; see City of Holland.
+  - Search: https://www.google.com/search?q=City+of+HOlland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Ferrysburg** (city; 4 parks, 49 acres)
+  - Parks: Ferrysburg Nature Preserve (40 ac), Fire Barn Park (4 ac), Ferry Park (3 ac), Mike Herman Memorial Field (2 ac)
+  - What was tried: Ferrysburg Nature Preserve (40 ac) is the only sizable parcel.
+  - Search: https://www.google.com/search?q=City+of+Ferrysburg+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Zeeland** (city; 6 parks, 34 acres)
+  - Parks: Huizenga Park (24 ac), Lawrence Street Park (4 ac), Hoogland Park (3 ac), Paw Paw Drive Park (2 ac), Three Corner Park (1 ac), Michigan Street Tot Lot (0 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Zeeland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Grand Haven** (city; 6 parks, 30 acres)
+  - Parks: Grand Haven City Beach (14 ac), Adams Street Park (7 ac), Bi-Centennial Park (3 ac), Hatton Park (3 ac), East Grand River Park (2 ac), Rix Robinson Park (1 ac)
+  - What was tried: Same as Grand Haven city.
+  - Search: https://www.google.com/search?q=City+of+Grand+Haven+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Coopersville** (city; 3 parks, 21 acres)
+  - Parks: Coopersville Sports Complex (12 ac), Grove St Park/ Main St Park (9 ac), Dda Pavillion (0 ac)
+  - What was tried: Coopersville parks page covers reservations only; no hunting rule found.
+  - Search: https://www.google.com/search?q=City+of+Coopersville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Grand Rapids** (city; 1 parks, 11 acres)
+  - Parks: Aman Park (11 ac)
+  - What was tried: Second Aman Park polygon; same as above.
+  - Known address: https://www.grandrapidsmi.gov/Deer-Management
+  - Search: https://www.google.com/search?q=City+of+Grand+Rapids+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Hoilland** (city; 1 parks, 3 acres)
+  - Parks: College Avenue Park (3 ac)
+  - What was tried: College Avenue Park: city of Holland; see City of Holland.
+  - Search: https://www.google.com/search?q=City+of+Hoilland+Michigan+parks+ordinance+hunting+firearms
+
+## Ionia County (7)
+
+- [ ] **County of Ionia** (county; 1 parks, 144 acres)
+  - Parks: Ionia Free Fairgrounds (144 ac)
+  - What was tried: Not searched specifically.
+  - Search: https://www.google.com/search?q=County+of+Ionia+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 15 parks, 372 acres)
+  - Parks: Ionia Schools Nature Study Area (118 ac), Village Park (104 ac), Harwood Softball Complex (44 ac), Lake Odessa Fairgrounds (30 ac), Veterans Park (14 ac), Playground (13 ac), and 9 more
+  - What was tried: Mis-geocoded records likely.
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Michigan State University** (state; 1 parks, 444 acres)
+  - Parks: MSU Clarksville Horticultural Experiment Station (444 ac)
+  - What was tried: MSU Clarksville Horticultural Experiment Station (444 ac, research orchards/farm): no hunting policy found.
+  - Search: https://www.google.com/search?q=Michigan+State+University+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Belding** (city; 5 parks, 151 acres)
+  - Parks: Lightning Bend Park (97 ac), Demorest Field (31 ac), Central Riverside Park (16 ac), Water Street Park (4 ac), East Riverside Park (3 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Belding+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Portland** (city; 9 parks, 139 acres)
+  - Parks: Bogue Flats Recreation Area (99 ac), Community Lake (22 ac), Thompson Park (6 ac), Powers Park (4 ac), Alton Park (3 ac), Riverfront Park (3 ac), and 3 more
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Portland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Ionia, MI** (city; 8 parks, 16 acres)
+  - Parks: Harper Park (4 ac), Perry Park (3 ac), Balice Park (2 ac), Hale Park (2 ac), Mcconnell Park (2 ac), Robinson Park (2 ac), and 2 more
+  - What was tried: City code Parks and City Cemeteries chapter 1062 is on amlegal (403 to curl); search snippet showed no hunting section.
+  - Search: https://www.google.com/search?q=City+of+Ionia,+MI+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Ionia** (city; 1 parks, 2 acres)
+  - Parks: Fred W Green Park (2 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Ionia+Michigan+parks+ordinance+hunting+firearms
+
+## Barry County (16)
+
+- [ ] **County of Barry** (county; 1 parks, 288 acres)
+  - Parks: Charlton Park (288 ac)
+  - What was tried: Barry County Parks has no published rules page found.
+  - Known address: https://www.charltonpark.org/parks/bailey-nature-preserve
+  - Known address: https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/barry/hunting
+  - Search: https://www.google.com/search?q=County+of+Barry+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Orangeville** (township; 1 parks, 48 acres)
+  - Parks: Orangeville Township Park (48 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Orangeville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Prairieville** (township; 4 parks, 27 acres)
+  - Parks: Pine Lake Park (18 ac), Gull Lake Park (4 ac), Prairieville Recreation Area (3 ac), Lower Crooked Lake Park (2 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Prairieville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Middleville** (village; 6 parks, 60 acres)
+  - Parks: Spring Park (23 ac), Wildwood Trails Park (20 ac), The Crane Road Ball Fields (11 ac), Lions Sesquicentennial Park (3 ac), Calvin Hill Park (2 ac), Stage Coach Park (1 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Village+of+Middleville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Nashville** (village; 2 parks, 35 acres)
+  - Parks: Old Town Field (29 ac), Putnam Park (6 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Village+of+Nashville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Freeport** (village; 1 parks, 10 acres)
+  - Parks: Moore Park (10 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Village+of+Freeport+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Woodland** (village; 1 parks, 7 acres)
+  - Parks: Classic Memorial Park (7 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Village+of+Woodland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Grand Rapids Audubon Society** (conservancy; 1 parks, 77 acres)
+  - Parks: Nature Preserve (77 ac)
+  - What was tried: Searched only briefly (grand rapids audubon search found nothing).
+  - Search: https://www.google.com/search?q=Grand+Rapids+Audubon+Society+Michigan+parks+ordinance+hunting+firearms
+- [ ] **JOHNSON PAT TAFFEE TRUST** (conservancy; 1 parks, 66 acres)
+  - Parks: Sweezy'S Pond Park (66 ac)
+  - What was tried: Searched only briefly (grand rapids audubon search found nothing).
+  - Search: https://www.google.com/search?q=JOHNSON+PAT+TAFFEE+TRUST+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Barry Agricultural Society** (other; 1 parks, 159 acres)
+  - Parks: Barry Fairgrounds (159 ac)
+  - What was tried: Searched only briefly (grand rapids audubon search found nothing).
+  - Search: https://www.google.com/search?q=Barry+Agricultural+Society+Michigan+parks+ordinance+hunting+firearms
+- [ ] **YMCA of Barry County** (other; 1 parks, 45 acres)
+  - Parks: Camp Algonquin (45 ac)
+  - What was tried: Searched only briefly (grand rapids audubon search found nothing).
+  - Search: https://www.google.com/search?q=YMCA+of+Barry+County+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 1 parks, 5 acres)
+  - Parks: Cadwalader Park (5 ac)
+  - What was tried: Mis-geocoded records likely.
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Michigan State University** (state; 1 parks, 1236 acres)
+  - Parks: Lux Arbor Reserve (1236 ac)
+  - What was tried: Lux Arbor Reserve (1,236 ac, MSU): no Lux Arbor hunting policy found. Other MSU research forests (Fred Russ, Kellogg) allow permit-only archery; firearms prohibited on MSU land (those pages, snippet only). Not confirmed for Lux Arbor.
+  - Known address: https://www.canr.msu.edu/fredruss/uploads/MSU Fred Russ Forest Hunting Policy and Permit Application081723.pdf
+  - Search: https://www.google.com/search?q=Michigan+State+University+Michigan+parks+ordinance+hunting+firearms
+- [ ] **MI Dept of Agriculture and Rural Development** (state; 2 parks, 244 acres)
+  - Parks: Spring Valley (216 ac), Spring Valley (28 ac)
+  - What was tried: Nothing searched; easement land would be private.
+  - Search: https://www.google.com/search?q=MI+Dept+of+Agriculture+and+Rural+Development+Michigan+parks+ordinance+hunting+firearms
+- [ ] **CITY OF HASTINGS** (city; 6 parks, 64 acres)
+  - Parks: Fish Hatchery Park (43 ac), Tyden Park (12 ac), Bob King (5 ac), First Ward Park (2 ac), Dog Park (1 ac), Second Ward Park (1 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=CITY+OF+HASTINGS+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Middleville** (city; 1 parks, 1 acres)
+  - Parks: Rivercide Park (1 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Middleville+Michigan+parks+ordinance+hunting+firearms
+
+## Allegan County (10)
+
+- [ ] **Fillmore Township** (township; 1 parks, 20 acres)
+  - Parks: Cottonwood Park (20 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Fillmore+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **SAUGATUCK TOWNSHIP** (township; 1 parks, 10 acres)
+  - Parks: River Bluff Park (10 ac)
+  - What was tried: River Bluff Park (10 ac).
+  - Search: https://www.google.com/search?q=SAUGATUCK+TOWNSHIP+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 11 parks, 481 acres)
+  - Parks: Lansing Environmental Education Center (211 ac), Village Park (104 ac), Camp Beachpoint (74 ac), Pine Trails Camp (42 ac), Community Ball Fields (20 ac), Dorr Township Park (10 ac), and 5 more
+  - What was tried: Dorr Township parks page lists parks but rules text not retrievable.
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Saugatuck** (city; 6 parks, 116 acres)
+  - Parks: Mt. Baldhead Park (111 ac), Coghlin Park (2 ac), Village Square Park (2 ac), Wicks Park (1 ac), Mason Park (0 ac), Willow Park (0 ac)
+  - What was tried: Mt. Baldhead Park (111 ac) is the large parcel.
+  - Search: https://www.google.com/search?q=City+of+Saugatuck+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Allegan** (city; 8 parks, 81 acres)
+  - Parks: Allegan Sports Complex (62 ac), Jaycee Park (11 ac), Rossman Esplanade Park (3 ac), Water Street Riverfront Park (2 ac), Hanson Park (1 ac), Mahan Park (1 ac), and 2 more
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Allegan+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Plainwell** (city; 7 parks, 44 acres)
+  - Parks: Kenyon Park (31 ac), Thurl Cook Park (6 ac), Bandshell Park (2 ac), Fannie Pell Park (2 ac), Sherwood Park (2 ac), Hicks Park (1 ac), and 1 more
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Plainwell+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Otsego** (city; 4 parks, 39 acres)
+  - Parks: Memorial Park (20 ac), Brookside Park (10 ac), Unknown Park (5 ac), North Side Park (4 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Otsego+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Holland** (city; 2 parks, 32 acres)
+  - Parks: Matt Urban Sports Complex (22 ac), Maplewood Recreation Area (10 ac)
+  - What was tried: Matt Urban Sports Complex, Maplewood Recreation Area: city of Holland recreation fields; see Ottawa City of Holland.
+  - Search: https://www.google.com/search?q=City+of+Holland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Wayland** (city; 6 parks, 30 acres)
+  - Parks: Rabbit River Nature Trail (23 ac), Wayland City Park (4 ac), North Park (2 ac), Wayland Skate Park (1 ac), Wayland Mini Park (0 ac), Wayland Mini Park (0 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Wayland+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Douglas** (city; 6 parks, 27 acres)
+  - Parks: Howard C. Schultz Park (22 ac), Wade’S Bayou Memorial Park (2 ac), Alice Mcclay Park (1 ac), Douglas Beach (1 ac), Harold Berry Field (1 ac), Veterans Walk Park (0 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Douglas+Michigan+parks+ordinance+hunting+firearms
+
+## Muskegon County (15)
+
+- [ ] **Township of Fruitport** (township; 3 parks, 87 acres)
+  - Parks: South Fruitport Township Park (41 ac), Prine Park (24 ac), Farr Park (22 ac)
+  - What was tried: No Fruitport Charter Township hunting rule found for South Fruitport, Prine, Farr parks.
+  - Search: https://www.google.com/search?q=Township+of+Fruitport+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Spring Lake** (township; 1 parks, 40 acres)
+  - Parks: Rycenga Park (40 ac)
+  - What was tried: Rycenga Park: no rule found (see Ottawa Spring Lake Twp).
+  - Search: https://www.google.com/search?q=Township+of+Spring+Lake+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Muskegon** (township; 2 parks, 38 acres)
+  - Parks: Riverside Park (29 ac), Parslow Park (9 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Township+of+Muskegon+Michigan+parks+ordinance+hunting+firearms
+- [ ] **WHITEHALL TOWNSHIP** (township; 1 parks, 20 acres)
+  - Parks: Durham Road Playground (20 ac)
+  - What was tried: Durham Road Playground: Whitehall Township; no hunting rule found. Township page notes Muskegon Conservation District hunting leases elsewhere.
+  - Known address: https://whitehalltwp.org/?p=2331
+  - Search: https://www.google.com/search?q=WHITEHALL+TOWNSHIP+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Dalton** (township; 2 parks, 10 acres)
+  - Parks: Browns Field Park (10 ac), Padley Park (0 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Township+of+Dalton+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Muskegon Charter Township** (township; 1 parks, 8 acres)
+  - Parks: Buel Avenue Park (8 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Muskegon+Charter+Township+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Village of Fruitport** (village; 1 parks, 11 acres)
+  - Parks: Pomona Park (11 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Village+of+Fruitport+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 9 parks, 507 acres)
+  - Parks: White River Marsh Sanctuary (226 ac), Village Park (104 ac), Five Lakes Muskegon Nature Sanctuary (99 ac), Conklin Park (28 ac), Beegle Field (20 ac), Thatcher Park (12 ac), and 3 more
+  - What was tried: Mixed owners under blank/"Municipal": White River Marsh Sanctuary (226 ac), Five Lakes Muskegon Nature Sanctuary (99 ac), Ravenna School Forest, Conklin Park and Village Park (coordinates outside county/misplaced), village/township fields. Owners not identified; no rules found. Muskegon Conservation
+  - Known address: https://whitehalltwp.org/?p=2331
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **MERES** (other; 1 parks, 29 acres)
+  - Parks: Muskegon Nature Preserve (29 ac)
+  - What was tried: Muskegon Nature Preserve (29 ac, Muskegon Lake) owned by MERES (Muskegon Environmental Research and Education Society); no rules found online.
+  - Search: https://www.google.com/search?q=MERES+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Michigan Department of Transportation** (state; 1 parks, 16 acres)
+  - Parks: Hidden Cove Park (16 ac)
+  - What was tried: Hidden Cove Park (MDOT, 16 ac): no rule found.
+  - Search: https://www.google.com/search?q=Michigan+Department+of+Transportation+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Muskegon** (city; 21 parks, 366 acres)
+  - Parks: Beachwood Park (55 ac), Green Acres Park (33 ac), Mcgraft Park (29 ac), Mccrea Playground (26 ac), Veterans Memorial Park (25 ac), Richards Park (24 ac), and 15 more
+  - What was tried: City of Muskegon park rules page lists hours, alcohol, leash etc.; it does not mention hunting. City code not read.
+  - Known address: https://muskegon-mi.gov/explore-muskegon/parks-and-recreation/city-of-muskegon-park-rules/
+  - Search: https://www.google.com/search?q=City+of+Muskegon+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Muskegon Heights** (city; 5 parks, 69 acres)
+  - Parks: Mona Lake Park (37 ac), Harris Nature Park (13 ac), Johnny Harris Park (11 ac), West Heights Park (5 ac), Rowan City Park (3 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Muskegon+Heights+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Montague** (city; 7 parks, 63 acres)
+  - Parks: Montague Township Park (31 ac), Medbury Park (10 ac), Cullen Field (6 ac), Cullen Memorial Fields (6 ac), Athletic Field (4 ac), Maple Grove Park (4 ac), and 1 more
+  - What was tried: Ordinance text not read.
+  - Known address: https://catchmarkcommunity.com/hunters-and-anglers-urban-deer-hunting-in-whitehall-and-montague/
+  - Search: https://www.google.com/search?q=City+of+Montague+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of North Muskegon** (city; 7 parks, 39 acres)
+  - Parks: Park (12 ac), Waterfront Sports Park (8 ac), Bear Lake Beach Park (6 ac), West End Park (6 ac), Walker Park (4 ac), Custer Park (2 ac), and 1 more
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+North+Muskegon+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Roosevelt Park** (city; 5 parks, 11 acres)
+  - Parks: City Park (4 ac), Unknown Park (4 ac), Wells Park (1 ac), Davies Park (1 ac), Lambert Park (1 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Roosevelt+Park+Michigan+parks+ordinance+hunting+firearms
+
+## Montcalm County (11)
+
+- [ ] **County Road Commission** (county; 1 parks, 797 acres)
+  - Parks: Local Forest (797 ac)
+  - What was tried: Coordinates do not match Montcalm; check data.
+  - Search: https://www.google.com/search?q=County+Road+Commission+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Reynolds** (township; 2 parks, 95 acres)
+  - Parks: Township of Reynolds Park (83 ac), Park (12 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Reynolds+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Eureka** (township; 1 parks, 37 acres)
+  - Parks: Gravel Pit (37 ac)
+  - What was tried: Gravel Pit (37 ac, map red): no township rule on hunting found; Eureka's regulatory-ordinance page did not yield text.
+  - Search: https://www.google.com/search?q=Township+of+Eureka+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Montcalm** (township; 1 parks, 32 acres)
+  - Parks: Township Land (32 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Montcalm+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Crystal** (township; 1 parks, 22 acres)
+  - Parks: Park (22 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Small local park(s).
+  - Search: https://www.google.com/search?q=Township+of+Crystal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Michigan Department of Transportation (MDOT)** (state; 1 parks, 4230 acres)
+  - Parks: Forest Reserve (4230 ac)
+  - What was tried: Coordinates do not match Montcalm; check data.
+  - Search: https://www.google.com/search?q=Michigan+Department+of+Transportation+(MDOT)+Michigan+parks+ordinance+hunting+firearms
+- [ ] **State of Michigan** (state; 1 parks, 1930 acres)
+  - Parks: State Forest (1930 ac)
+  - What was tried: Coordinates do not match Montcalm; check data.
+  - Search: https://www.google.com/search?q=State+of+Michigan+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Greenville** (city; 11 parks, 174 acres)
+  - Parks: City of Greenville Park (64 ac), Alan G Davis Park (46 ac), Tower Park (35 ac), Greenville City Land (12 ac), Baldwin Lake Beach (4 ac), Pearl Street Park (3 ac), and 5 more
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Greenville+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Stanton** (city; 1 parks, 78 acres)
+  - Parks: City of Stanton Park (78 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Stanton+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Carson City** (city; 1 parks, 22 acres)
+  - Parks: City of Carson City Park (22 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Carson+City+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Howard City** (city; 1 parks, 6 acres)
+  - Parks: Park (6 ac)
+  - What was tried: Rule not found: ordinance text is on ecode360/Municode/American Legal (403 Cloudflare to curl) or not indexed by search; no hunting clause surfaced in snippets or on the body's own site. Inside city limits; map treats as closed.
+  - Search: https://www.google.com/search?q=City+of+Howard+City+Michigan+parks+ordinance+hunting+firearms
+
+## Newaygo County (7)
+
+- [ ] **Township of Croton** (township; 1 parks, 26 acres)
+  - Parks: Croton Township Park (26 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Township+of+Croton+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Sheridan** (township; 1 parks, 8 acres)
+  - Parks: Sheridan Park (8 ac)
+  - What was tried: Sheridan Park (8 ac).
+  - Search: https://www.google.com/search?q=Township+of+Sheridan+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Township of Ensley** (township; 1 parks, 3 acres)
+  - Parks: Baptist Lake Township Park (3 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=Township+of+Ensley+Michigan+parks+ordinance+hunting+firearms
+- [ ] **Municipal** (other; 16 parks, 1206 acres)
+  - Parks: Camp Echo (416 ac), Camp Calvary (214 ac), Camp Henry (171 ac), Sheridan Township Forest (166 ac), Big Bend Park (104 ac), Sailors Virgin Pine Forest (35 ac), and 10 more
+  - What was tried: Sheridan Township Forest could allow hunting but no source found.
+  - Known address: https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/newaygo/hunting
+  - Search: https://www.google.com/search?q=Municipal+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Fremont** (city; 6 parks, 69 acres)
+  - Parks: Branstrom Park (49 ac), Arboretum Park (9 ac), Fremont Lake Park (4 ac), Unknown Parl (3 ac), Veterans Memorial Park (3 ac), Unknown Park (1 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Fremont+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of White Cloud** (city; 1 parks, 60 acres)
+  - Parks: City Park (60 ac)
+  - What was tried: City Park 60 ac.
+  - Search: https://www.google.com/search?q=City+of+White+Cloud+Michigan+parks+ordinance+hunting+firearms
+- [ ] **City of Grant** (city; 1 parks, 20 acres)
+  - Parks: Blanch Lake City Park (20 ac)
+  - What was tried: No hunting rule found for this body (site/ordinance not retrievable or silent). Treat as unknown; map keeps its default.
+  - Search: https://www.google.com/search?q=City+of+Grant+Michigan+parks+ordinance+hunting+firearms

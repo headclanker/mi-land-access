@@ -103,7 +103,9 @@ export async function startApp(): Promise<void> {
   window.addEventListener('resize', syncInsets);
   desktopQuery.addEventListener('change', syncInsets);
 
-  await new Promise<void>((resolve) => (map.loaded() ? resolve() : map.once('load', () => resolve())));
+  // Wait for the style only, not the map's 'load' event: that fires after every basemap tile has
+  // arrived and painted, and the land data should load alongside the basemap, not after it.
+  await new Promise<void>((resolve) => (map.isStyleLoaded() ? resolve() : map.once('style.load', () => resolve())));
   document.documentElement.dataset.basemap = currentBasemap().dark ? 'dark' : 'light';
 
   // ----- data layers -----

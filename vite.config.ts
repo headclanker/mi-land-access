@@ -82,13 +82,13 @@ export default defineConfig({
             },
           },
           {
-            // Land data queries: network first, fall back to the last answer when offline.
+            // Land data queries: answer from the cache at once and refresh it in the background,
+            // so an area seen before redraws immediately (and still works offline).
             urlPattern: ({ url }) => url.pathname.endsWith('/query') && url.pathname.includes('/rest/services/'),
-            handler: 'NetworkFirst',
+            handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'land-data',
-              networkTimeoutSeconds: 8,
-              expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 14, purgeOnQuotaError: true },
+              expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 14, purgeOnQuotaError: true },
               cacheableResponse: { statuses: [200] },
             },
           },

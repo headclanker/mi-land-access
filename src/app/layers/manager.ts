@@ -128,7 +128,7 @@ export class LayerManager {
   private unitColor = new Map<string, string>();
   readonly clickableLayers: string[] = [];
   readonly counties = new CountyIndex();
-  private readonly limiter = new Limiter(8);
+  private readonly limiter = new Limiter(LOADER.maxRequests);
   /** Low-confidence features whose fill is hidden under parcels, by source id. */
   private readonly masked = new Map<string, Set<string>>();
   private readonly scheduleReconcile: () => void;
@@ -480,6 +480,10 @@ export class LayerManager {
       if (hit) entries.set(tileCacheKey(s.id, t), hit);
       else missing.push(t);
     }
+    // While tiles for this view are still on their way, keep what was drawn before (the previous
+    // zoom level or the neighbouring area) underneath, so zooming or panning never blanks the layer.
+    const stale = missing.length ? this.drawn.get(s.id) : undefined;
+    let settled = !missing.length;
     const publish = (): void => {
       if (this.generation.get(s.id) !== gen) return;
       const merged = new Map<string, Feature>();
@@ -496,6 +500,12 @@ export class LayerManager {
         }
       }
       st.truncated = truncated;
+      if (!settled && stale) {
+        for (const [fid, f] of stale) {
+          if (merged.size >= LOADER.layerCap) break;
+          if (!merged.has(fid)) merged.set(fid, f);
+        }
+      }
       this.setData(s, [...merged.values()], merged);
     };
     publish();
@@ -528,6 +538,8 @@ export class LayerManager {
     };
     await Promise.all(Array.from({ length: Math.min(LOADER.concurrency, missing.length) }, worker));
     if (this.generation.get(s.id) !== gen) return;
+    settled = true;
+    if (stale?.size) publish(); // drop whatever the new tiles did not confirm
     st.loading = false;
     st.error = errors ? (navigator.onLine ? `Couldn't load ${errors === missing.length ? 'data' : 'some areas'} (${lastError})` : 'Offline: showing cached areas only') : undefined;
     this.emit();

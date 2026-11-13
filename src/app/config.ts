@@ -69,12 +69,15 @@ export const BASEMAPS: Basemap[] = [
 
 /** Hard limits for the ArcGIS loader. */
 export const LOADER = {
-  debounceMs: 350,
+  debounceMs: 150,
   /** Features kept per layer per query tile. */
   tileCap: 2000,
   /** Features drawn per layer at once. */
   layerCap: 6000,
   pageSize: 1000,
   cacheTiles: 240,
-  concurrency: 4,
+  /** Tiles fetched at once per layer. */
+  concurrency: 6,
+  /** Requests in flight at once across all layers (HTTP/2 hosts; several different servers). */
+  maxRequests: 16,
 } as const;

@@ -5,7 +5,7 @@
 
 import type { Map as MLMap, GeoJSONSource, ExpressionSpecification } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
-import { GRADE_COLORS } from '../../contract';
+import { GRADE_COLORS, REFUGE_COLOR } from '../../contract';
 import { OVERVIEW_HANDOFF_ZOOM, OVERVIEW_LAYER_IDS, PARCEL_MIN_ZOOM } from '../../data/sources';
 import type { LayerManager } from './manager';
 import { prefGet, prefSet } from '../util/store';
@@ -14,7 +14,7 @@ export const OVERVIEW_FILL = 'overview-fill';
 const OVERVIEW_LINE = 'overview-line';
 const SRC = 'overview';
 
-const color: ExpressionSpecification = ['match', ['get', 'g'], 'green', GRADE_COLORS.green, 'yellow', GRADE_COLORS.yellow, 'red', GRADE_COLORS.red, GRADE_COLORS.unknown];
+const color: ExpressionSpecification = ['match', ['get', 'g'], 'green', GRADE_COLORS.green, 'yellow', GRADE_COLORS.yellow, 'red', GRADE_COLORS.red, 'refuge', REFUGE_COLOR, GRADE_COLORS.unknown];
 // Matches the live public-land fills around the hand-off zoom (manager.ts), so the swap is smooth.
 const FILL_OPACITY: ExpressionSpecification = ['interpolate', ['linear'], ['zoom'], 5, 0.55, 8, 0.48, 9, 0.47];
 const LINE_OPACITY: ExpressionSpecification = ['interpolate', ['linear'], ['zoom'], 5, 0.5, 9, 0.8];

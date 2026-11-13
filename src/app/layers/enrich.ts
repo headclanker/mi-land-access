@@ -4,7 +4,7 @@
 import { area } from '@turf/turf';
 import type { Feature, Polygon, MultiPolygon } from 'geojson';
 import type { Grade, GradeResult, LayerSource, OwnerKind, Researched } from '../../contract';
-import { gradeFeature } from '../../grading/grade';
+import { gradeFeature, isWildlifeRefuge } from '../../grading/grade';
 import { tierOf } from '../../grading/reconcile';
 import { SQM_PER_ACRE } from '../util/geo';
 
@@ -34,6 +34,8 @@ export const P = {
   baseResearched: '_baseResearched',
   /** City whose limits hold the feature (parcels and public land; set by reconciliation). */
   city: '_city',
+  /** true on national wildlife refuge land (and parcels mostly inside it): drawn in REFUGE_COLOR. */
+  refuge: '_refuge',
   // Parcels only, set by reconciliation (see layers/reconcileLayers.ts).
   /** 'fill' (own tint) | 'none' (colour comes from the adopted public layer) | 'conflict' (hatched). */
   tint: '_tint',
@@ -112,6 +114,7 @@ export function enrichFeature(source: LayerSource, f: Feature): Feature {
   props[P.reason] = g.reason;
   props[P.refs] = JSON.stringify(g.references ?? []);
   props[P.researched] = researchedProp(g);
+  if (isWildlifeRefuge(source.id, props)) props[P.refuge] = true;
   const name = source.nameField ? str(props[source.nameField]) : '';
   props[P.name] = name;
   const owner = source.parcel?.ownerField ? str(props[source.parcel.ownerField]) : '';

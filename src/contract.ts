@@ -13,6 +13,12 @@ export const GRADE_COLORS: Record<Grade, string> = {
 };
 
 /**
+ * Map colour for national wildlife refuge land (U.S. Fish & Wildlife Service). A display colour
+ * only: the refuge still carries a grade (open / check first / closed), shown in its details.
+ */
+export const REFUGE_COLOR = '#8e44ad';
+
+/**
  * Who a county parcel's owner string says owns the land, as far as reconciliation needs to know
  * (set by the owner-name grader only; public-land layer grades leave it undefined):
  *   dnr     – Michigan DNR (incl. "state park" owners)

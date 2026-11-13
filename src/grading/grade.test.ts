@@ -452,3 +452,13 @@ describe('catalog sanity', () => {
     expect(covered.sort()).toEqual([...parcelCounties].sort());
   });
 });
+
+describe('wildlife refuge colour flag', () => {
+  it('flags only Fish & Wildlife Service units in the PAD-US federal layer', async () => {
+    const { isWildlifeRefuge } = await import('./grade');
+    expect(isWildlifeRefuge('padus-federal-other', { Mang_Name: 'FWS', Unit_Nm: 'Seney National Wildlife Refuge' })).toBe(true);
+    expect(isWildlifeRefuge('padus-federal-other', { Mang_Name: 'NPS', Unit_Nm: 'Sleeping Bear Dunes National Lakeshore' })).toBe(false);
+    expect(isWildlifeRefuge('padus-state-other', { Mang_Name: 'FWS' })).toBe(false);
+    expect(isWildlifeRefuge('padus-federal-other', null)).toBe(false);
+  });
+});

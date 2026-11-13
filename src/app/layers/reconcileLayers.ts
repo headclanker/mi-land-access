@@ -7,7 +7,7 @@
 
 import type { Feature } from 'geojson';
 import type { LayerSource } from '../../contract';
-import { cityOverride, cityOverrideFeature, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
+import { COVER_FRACTION, cityOverride, cityOverrideFeature, reconcileParcel, tierOf, type Overlap } from '../../grading/reconcile';
 import type { CityIndex } from './cities';
 import { coverage, prepared, type BBox, type Shape } from './coverage';
 import { P, gradeFromProps, researchedProp } from './enrich';
@@ -148,6 +148,8 @@ export function reconcileLoaded(parcels: LoadedLayer[], publics: LoadedLayer[], 
       [P.tint]: tint,
       [P.conflict]: r.conflict,
       [P.adopted]: r.adoptedFrom ?? '',
+      // A parcel mostly inside a national wildlife refuge takes the refuge colour.
+      [P.refuge]: hits.reduce((sum, { key, fraction }) => sum + ((key.properties as Record<string, unknown>)[P.refuge] === true ? fraction : 0), 0) >= COVER_FRACTION,
       [P.split]: r.split,
       [P.city]: city ?? '',
       [P.notes]: JSON.stringify(r.notes),

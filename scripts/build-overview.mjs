@@ -31,7 +31,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 import { LAYER_SOURCES } from '../src/data/sources.ts';
-import { gradeFeature } from '../src/grading/grade.ts';
+import { gradeFeature, isWildlifeRefuge } from '../src/grading/grade.ts';
 
 const OUT = new URL('../public/overview/public-land.json', import.meta.url);
 const CITY_LIMITS = new URL('../public/cities/city-limits.json', import.meta.url);
@@ -41,7 +41,9 @@ const MIN_CELLS = 4; // regions (and holes) smaller than this are dropped (~9 ha
 const SIMPLIFY_CELLS = 0.75; // Douglas–Peucker tolerance in cells
 const SERVER_OFFSET = 0.0006; // degrees, ~50 m: generalisation done by the ArcGIS server
 const GRADE_CODE = { green: 1, yellow: 2, red: 3 };
-const CODE_GRADE = ['', 'green', 'yellow', 'red'];
+const CODE_GRADE = ['', 'green', 'yellow', 'red', 'refuge'];
+/** National wildlife refuges get their own colour whatever their grade. */
+const REFUGE_CODE = 4;
 
 const LAT0 = (S_LAT + N_LAT) / 2;
 const DY = CELL_M / 111320;
@@ -356,7 +358,7 @@ async function main() {
     const graded = features
       .map((f) => {
         const r = gradeFeature(src, f.properties ?? {});
-        return { f, grade: r.grade, researched: Boolean(r.researched) };
+        return { f, grade: r.grade, researched: Boolean(r.researched), refuge: isWildlifeRefuge(l.id, f.properties) };
       })
       .filter((x) => !l.researchedOnly || (x.researched && x.grade !== 'yellow'))
       .sort((a, b) => STRICT[a.grade] - STRICT[b.grade]);
@@ -365,9 +367,9 @@ async function main() {
     const useMask = !l.id.startsWith('dnr-');
     const isProgram = l.id === 'dnr-park-hunting';
     const researchedAcres = { green: 0, yellow: 0, red: 0 };
-    for (const { f, grade, researched } of graded) {
+    for (const { f, grade, researched, refuge } of graded) {
       g[grade]++;
-      const code = GRADE_CODE[grade];
+      const code = refuge ? REFUGE_CODE : GRADE_CODE[grade];
       if (!code) continue;
       // A researched unit rule is exempt from the city rule, like a park hunting zone.
       const exempt = isProgram || researched;
@@ -375,7 +377,7 @@ async function main() {
         if (useMask && !mask[i]) return;
         grid[i] = code;
         program[i] = exempt ? 1 : 0;
-        if (researched) researchedAcres[grade] += (CELL_M * CELL_M) / 4046.86;
+        if (researched && !refuge) researchedAcres[grade] += (CELL_M * CELL_M) / 4046.86;
       });
     }
     stats[l.id] = { features: graded.length, serverCount: count, grades: g };
@@ -417,10 +419,10 @@ async function main() {
 
   const labels = new Int32Array(W * H);
   const features = [];
-  for (const code of [1, 2, 3]) {
+  for (const code of [1, 2, 3, REFUGE_CODE]) {
     // Closed (red) regions are kept however small; dropping one would let the surrounding open
     // land read as huntable. Restricted (yellow) keeps anything of two cells or more.
-    const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'red' ? 1 : CODE_GRADE[code] === 'yellow' ? 2 : MIN_CELLS);
+    const polys = vectorise(grid, code, labels, CODE_GRADE[code] === 'red' || code === REFUGE_CODE ? 1 : CODE_GRADE[code] === 'yellow' ? 2 : MIN_CELLS);
     let cells = 0;
     for (let i = 0; i < grid.length; i++) if (grid[i] === code) cells++;
     console.error(`${CODE_GRADE[code]}: ${polys.length} polygons, ${(cells * CELL_M * CELL_M / 4046.86 / 1e6).toFixed(3)} M acres`);

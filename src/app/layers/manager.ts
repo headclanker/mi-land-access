@@ -3,7 +3,7 @@
 
 import type { Map as MLMap, GeoJSONSource, ExpressionSpecification, FilterSpecification } from 'maplibre-gl';
 import type { Feature, FeatureCollection } from 'geojson';
-import { GRADE_COLORS, type LayerSource } from '../../contract';
+import { GRADE_COLORS, REFUGE_COLOR, type LayerSource } from '../../contract';
 import { LOADER } from '../config';
 import { debounce } from '../util/dom';
 import { prefGet, prefSet } from '../util/store';
@@ -48,12 +48,17 @@ interface Inflight {
 }
 
 const gradeColor: ExpressionSpecification = [
-  'match',
-  ['get', P.grade],
-  'green', GRADE_COLORS.green,
-  'yellow', GRADE_COLORS.yellow,
-  'red', GRADE_COLORS.red,
-  GRADE_COLORS.unknown,
+  'case',
+  // National wildlife refuges draw purple whatever their grade (the details still give the grade).
+  ['==', ['get', P.refuge], true], REFUGE_COLOR,
+  [
+    'match',
+    ['get', P.grade],
+    'green', GRADE_COLORS.green,
+    'yellow', GRADE_COLORS.yellow,
+    'red', GRADE_COLORS.red,
+    GRADE_COLORS.unknown,
+  ],
 ];
 
 const UNIT_COLORS = ['#b15cff', '#00b8d9', '#ff7a1a', '#e2389b', '#5bd16a'];

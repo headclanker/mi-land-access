@@ -633,6 +633,14 @@ function gradeNonLand(source: LayerSource): GradeResult {
 // Entry point
 // ---------------------------------------------------------------------------
 
+/**
+ * True for national wildlife refuge system land: U.S. Fish & Wildlife Service units in the PAD-US
+ * federal layer. Drawn in their own colour (REFUGE_COLOR); the grade is unaffected.
+ */
+export function isWildlifeRefuge(sourceId: string, properties: Record<string, unknown> | null | undefined): boolean {
+  return sourceId === 'padus-federal-other' && str((properties ?? {}).Mang_Name).toUpperCase() === 'FWS';
+}
+
 export function gradeFeature(source: LayerSource, properties: Record<string, unknown>): GradeResult {
   const base = gradeByLayer(source, properties ?? {});
   // A researched rule for this specific unit (src/data/parkRules.ts) replaces the layer's grade.

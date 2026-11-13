@@ -837,6 +837,40 @@ export const PARK_RULES: readonly ParkRule[] = [
     confidence: 'high',
     sources: [{ label: 'Southwest Michigan Land Conservancy – FAQs', url: 'https://swmlc.org/swmlc-faqs/' }],
   }),
+  // Fifth research round (cheap pass over the West Michigan checklist).
+  r({
+    id: 'howard-city-parks',
+    name: 'Village of Howard City parks',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: 'City of Howard City' },
+    grade: 'red',
+    category: 'Village park – no weapon discharge',
+    text: "Howard City's village rules: 'The discharge of Bows, Firearms & Pneumatic / Air Guns is a prohibited activity within the Village Limits unless a permit is issued to a landowner.' No hunting is possible in a village park without that permit.",
+    confidence: 'medium',
+    sources: [{ label: 'Village of Howard City – Bows, Firearms & Air Guns permit (Chapter 134)', url: 'https://www.howardcity.org/_files/ugd/8717e5_036ce88f87c04b69abee9bd3a78d9c4b.pdf' }],
+  }),
+  r({
+    id: 'nashville-parks',
+    name: 'Village of Nashville parks',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: 'Village of Nashville' },
+    grade: 'yellow',
+    category: 'Village park – no firearms',
+    text: "Nashville's firearms ordinance (No. 11-8-2012) makes it unlawful 'to discharge a firearm … within four hundred fifty (450) feet of a … public park or recreation area', so no firearm hunting here. The ordinance does not mention bows, and no park hunting rule was found — check with the village.",
+    confidence: 'high',
+    sources: [{ label: 'Village of Nashville – Firearms Ordinance (11-8-2012)', url: 'https://nashvillemi.us/wp-content/uploads/2023/04/8-Firearms-Ordinance-11-8-2012.pdf' }],
+  }),
+  r({
+    id: 'spring-lake-village-parks',
+    name: 'Village of Spring Lake parks',
+    layers: PADUS_LOCAL,
+    where: { Loc_Mang: 'Village of Spring Lake' },
+    grade: 'yellow',
+    category: 'Village park – no firearms',
+    text: 'Spring Lake’s village parks ordinance prohibits possessing a firearm of any kind in village parks without written permission, so no firearm hunting. Bow hunting is not addressed in what could be read (search summaries only) — check with the village.',
+    confidence: 'low',
+    sources: [{ label: 'Village of Spring Lake Code – Parks (via search summary)', url: 'https://ecode360.com/45277249' }],
+  }),
 ];
 
 /** Layers that carry at least one researched rule. */

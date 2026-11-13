@@ -1,0 +1,495 @@
+[
+ {
+  "county": "Kent",
+  "manager": "Ada Township",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for Ada Township. Its ordinance text was not reachable and no Ada clause surfaced in search.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch x2 (standard; open and ecode360-restricted queries). Body website adatownship.org via curl: proxy gateway 502. No Ada Township hunting clause in any snippet."
+ },
+ {
+  "county": "Kent",
+  "manager": "LOWELL CHARTER TOWNSHIP PARK",
+  "real_body": "Lowell Charter Township",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for Lowell Charter Township. Search returned only other municipalities' rules.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Lowell Charter Township parks ordinance hunting firearms). Body website lowelltownship.org via curl: proxy gateway 502. Only Lowell, Indiana result found, which is not this body."
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Byron Center",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for Byron Center Township or Whistlestop Park.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Byron Center Township park rules hunting firearms Whistlestop Park). Body website byroncentertownship.org via curl: no response (000). No Byron Center result returned."
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Cannon",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "Cannon Township's Chapter 313 (Parks and Recreational Areas) has a hunting ban inside Bostwick Lake Park, which is not on the checklist. No rule found for the listed Cannon Township Center Property.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Cannon Township Center Property",
+    "hunting": "unknown",
+    "what": "No rule found for this park. The Chapter 313 wildlife ban found in search covers only Bostwick Lake Park."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://ecode360.com/34321547",
+    "title": "Chapter 313: Parks and Recreational Areas - Township of Cannon, MI",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, ecode360-restricted): Cannon Chapter 313 found. Search summary (not the page text) says a person may not hunt, chase with dogs, or trap inside Bostwick Lake Park. Page itself returns 403 to curl. Quote is a paraphrase from the summary, so left blank."
+ },
+ {
+  "county": "Kent",
+  "manager": "Byron Township",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for Byron Township or Cutler Park.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Byron Township Cutler Park ordinance hunting firearms). Only other townships' rules returned. Body website not checked (gateway unreachable for similar hosts)."
+ },
+ {
+  "county": "Kent",
+  "manager": "Alpine Township",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for Alpine Township.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Alpine Township Kent County parks ordinance hunting firearms bows). Only neighboring townships' rules returned, none for Alpine."
+ },
+ {
+  "county": "Kent",
+  "manager": "Sparta Township",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No Michigan Sparta Township parks hunting rule found. A park-rules code for a 'Township of Sparta' lists firearms, bows and weapons as prohibited, but its state is not confirmed, so it was not attributed.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Sparta Township Michigan parks ordinance hunting firearms). Results were ecode360 pages for an unconfirmed 'Township of Sparta' and other townships. Body website not checked."
+ },
+ {
+  "county": "Kent",
+  "manager": "Village of Sparta",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for the Village of Sparta.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Village of Sparta Michigan parks ordinance hunting firearms bows). No Sparta village result returned."
+ },
+ {
+  "county": "Kent",
+  "manager": "Township of Grattan",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks or roadside-park hunting rule found for Grattan Township. Its compiled ordinances excerpt shows only a table of contents.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://www.grattantownship.org/Grattan Township Compiled General Ordinances 2016 11 14 (02080977x9ED46) - Copy (2).pdf",
+    "title": "Grattan Township Compiled General Ordinances 2016",
+    "date": "2016-11-14",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Grattan Township roadside park ordinance hunting firearms). Compiled ordinances PDF seen only as a search excerpt (table of contents). No firearm or park section visible."
+ },
+ {
+  "county": "Kent",
+  "manager": "Village of Sand Lake",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No parks hunting rule found for the Village of Sand Lake. Only its zoning ordinance table of contents was seen.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://villageofsandlake.org/wp-content/uploads/2022/11/Zoning-Ordinance.pdf",
+    "title": "Village of Sand Lake Zoning Ordinance",
+    "date": "1998-05-18",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Village of Sand Lake parks ordinance hunting firearms). No village parks rule returned. Zoning PDF showed only a table of contents."
+ },
+ {
+  "county": "Kent",
+  "manager": "The Nature Conservancy",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "TNC lets hunters on some Michigan preserves by permit only (deer, permit-limited), but no rule was found for the listed Mainstem Grand River preserve, and no link to a Leonard Fase Trust was confirmed.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Mainstem Grand River- Leonard Fase Trust 1",
+    "hunting": "unknown",
+    "what": "Not confirmed as a TNC hunting preserve. Only the Grand River Fen Preserve (a different site) was found to allow permit deer hunting."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.nature.org/content/dam/tnc/nature/en/documents/Michigan_Hunting_Overview.pdf",
+    "title": "Michigan Hunting Overview (TNC)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, TNC Mainstem Grand River Leonard Fase Trust hunting rules). TNC Michigan hunting overview seen only as a search summary, which says Grand River Fen allows permit deer hunting. Listed park not matched."
+ },
+ {
+  "county": "Kent",
+  "manager": "Grand Rapids Public Schools",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No GRPS rule on hunting or firearms in its parks or school grounds was found. Search showed only 2023 firearm and backpack-policy news.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, GRPS parks hunting firearms rules school grounds). Results were GRPS news and City of Grand Rapids park rules, which are not GRPS rules. Board Policy 9250 text not seen."
+ },
+ {
+  "county": "Kent",
+  "manager": "Municipal",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "The 'Municipal' owner of 16 Kent parks (Village Park, Camp Roger, Fellowship Greens, Christiansen Nature Center, Camp Concordia, Bicentennial Park and others) could not be identified, so no rule was found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, 'Camp Roger' 'Fellowship Greens' Michigan park hunting rules). No result named either park. Owner name is generic, so the real body is unknown."
+ },
+ {
+  "county": "Kent",
+  "manager": "MI Dept of Agriculture and Rural Development",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No MDARD rule for its 2 Kent parks (Bull, Keech) was found. Search results covered DNR rules only, which do not establish MDARD policy.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Bull",
+    "hunting": "unknown",
+    "what": "Not found."
+   },
+   {
+    "park": "Keech",
+    "hunting": "unknown",
+    "what": "Not found."
+   }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, MDARD Bull Keech park hunting rules). Only general DNR and state-law results returned."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Wyoming",
+  "real_body": "",
+  "kind": "managed-hunts-only",
+  "hunting": "managed-hunts-only",
+  "what": "Search summary of Wyoming's code says hunting in the city is prohibited unless permitted, with an exception for city deer-management hunts using bows or crossbows and a city-issued pass. No firearm exception was seen. The summary does not name the three parks checked.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://ecode360.com/14594225",
+    "title": "City of Wyoming hunting ordinance (Ord. No. 2008-001), as found in search",
+    "date": "2008-11-11",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "tried": "WebSearch (standard, City of Wyoming parks hunting firearms ordinance with named parks). Hunting ordinance seen as search summary only (ecode360 blocked). City park pages and rules page have no hunting or firearm rule for Battjes, Gezon or Lemery parks. Quote left blank because it is a summary."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Lowell",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No City of Lowell (Michigan) parks hunting rule found. Lowell results were Lowell, Indiana code, which is not this body.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Lowell MI parks ordinance hunting firearms with Stoney Lakeside/Creekside). Only Lowell, Indiana code returned. City website not reached (gateway unreachable for this host type)."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Walker",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No City of Walker parks hunting rule found. A 2026 park-rules document seen is for Walker Township, not the city.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Walker parks ordinance hunting firearms with Walker Community Park/Harmon Field). Walker Township rules not attributed to the city. No city result returned."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Grandville",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No City of Grandville parks hunting rule found. Only state-law results (MCL 317.121 title) returned, which do not establish a city rule.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Grandville parks ordinance hunting firearms with Mill Race/Heritage Park). No Grandville result returned."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Rockford",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No Rockford parks hunting rule found. A 2019 draft recreation plan has a 'Park Policies and Rules' section, but its text was not seen.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Glen Park",
+    "hunting": "unknown",
+    "what": "Glen Park listed in the 2019 draft recreation plan; rules text not seen."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://cms7files1.revize.com/rockford/Document%20Center/News/2019%20Rockford%20Recreation%20Plan%20DRAFT%2012-3-18%20For%20Public%20Review%20RFS.pdf",
+    "title": "Rockford 2019 Recreation Plan (draft)",
+    "date": "2018-12-03",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Rockford parks ordinance hunting firearms Glen Park). Only the draft plan's table of contents was visible. Ordinance text not reachable."
+ },
+ {
+  "county": "Kent",
+  "manager": "City of Cedar Springs",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No Cedar Springs rule on hunting or firearms in its parks was found. A newer ordinance seen covers camping only.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Cedar Springs parks ordinance hunting firearms with Riggle/Veterans Memorial parks). Only a Fox 17 camping-ban article for the city came up."
+ },
+ {
+  "county": "Ionia",
+  "manager": "County of Ionia",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No County of Ionia parks hunting rule found. The Michigan DNR local-controls page for Ionia County was seen only as a search summary, which says it lists no local hunting ordinances for the county.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Ionia Free Fairgrounds",
+    "hunting": "unknown",
+    "what": "Not found. The county's fairgrounds rules were not located."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/ionia/hunting",
+    "title": "Michigan DNR local hunting controls - Ionia County",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, County of Ionia parks ordinance hunting firearms Ionia Free Fairgrounds). DNR local-controls page seen as summary only; no county parks ordinance returned."
+ },
+ {
+  "county": "Ionia",
+  "manager": "Belding",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No City of Belding rule on hunting or firearms in its parks was found. Its 2026 park pavilion form covers hours and permits only.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Lightning Bend Park",
+    "hunting": "unknown",
+    "what": "Park page gives no weapons or hunting rule."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.belding.gov/documents/Final_2026-_Park_Pavillion_Reservation__NON-Special_Event__sYq60.pdf",
+    "title": "Belding 2026 Park Pavilion Reservation form",
+    "date": "2026",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Belding parks ordinance hunting firearms Lightning Bend Park). City code not found. Belding city site not reached."
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Portland",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "No City of Portland rule on hunting or firearms at Bogue Flats or its other parks was found. Portland documents seen cover fireworks and pavilion rental only.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Bogue Flats Recreation Area",
+    "hunting": "unknown",
+    "what": "Only fireworks permit and rental documents seen; no hunting or firearms rule."
+   }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, City of Portland parks ordinance hunting firearms Bogue Flats). Portland city documents returned, none on hunting or firearms."
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Ionia, MI",
+  "real_body": "City of Ionia",
+  "kind": "restricted",
+  "hunting": "restricted",
+  "what": "Ionia's Disorderly Conduct chapter (664.01) bans discharging any firearm, air rifle, air pistol or bow and arrow in the city, with listed exceptions. Hunting is allowed only on private parcels of 20+ acres with a permit. No parks-specific hunting rule was seen in Chapter 1062, so parks are covered by the city-wide ban as summarized.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://codelibrary.amlegal.com/codes/ionia/latest/ionia_mi/0-0-0-28603",
+    "title": "Ionia Code Chapter 1062 Parks and City Cemeteries (search summary)",
+    "date": "",
+    "read": "snippet"
+   },
+   {
+    "url": "https://codelibrary.amlegal.com/codes/ionia/latest/ionia_mi/0-0-0-24415",
+    "title": "Ionia Code 664.01 Disorderly Conduct (search summary)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "tried": "WebSearch (standard, restricted to amlegal) for Chapter 1062 parks rules. Chapter 1062 text not seen (amlegal page blocked). Ban is from the search summary of 664.01, not verbatim. Archery not allowed under the discharge ban in the summary."
+ },
+ {
+  "county": "Ionia",
+  "manager": "City of Ionia",
+  "real_body": "City of Ionia",
+  "kind": "restricted",
+  "hunting": "restricted",
+  "what": "Same city code as 'City of Ionia, MI': Ionia Chapter 664.01 bans discharge of firearms, air rifles and bows in the city, with exceptions. Hunting only on private 20+ acre parcels with a permit. Park Fred W Green falls under the city-wide ban as summarized.",
+  "quote": "",
+  "exceptions": [
+   {
+    "park": "Fred W Green Park",
+    "hunting": "restricted",
+    "what": "City-wide discharge ban covers it as summarized; no park-specific rule seen."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://codelibrary.amlegal.com/codes/ionia/latest/ionia_mi/0-0-0-28603",
+    "title": "Ionia Code Chapter 1062 Parks and City Cemeteries (search summary)",
+    "date": "",
+    "read": "snippet"
+   },
+   {
+    "url": "https://codelibrary.amlegal.com/codes/ionia/latest/ionia_mi/0-0-0-24415",
+    "title": "Ionia Code 664.01 Disorderly Conduct (search summary)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "tried": "Same search as City of Ionia, MI. The two bodies share one city code, so the same snippet applies."
+ },
+ {
+  "county": "Ionia",
+  "manager": "Municipal",
+  "real_body": "",
+  "kind": "unknown",
+  "hunting": "unknown",
+  "what": "The 'Municipal' owner of 15 Ionia County parks (Ionia Schools Nature Study Area, Village Park, Harwood Softball Complex, Lake Odessa Fairgrounds, Veterans Park and others) could not be identified, so no rule was found.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [],
+  "confidence": "low",
+  "tried": "WebSearch (standard, Lake Odessa Fairgrounds / Harwood Softball / Ionia Schools Nature Study Area hunting firearms). Only DNR local-controls page and other counties returned. Owner is generic and not identified."
+ },
+ {
+  "county": "Ionia",
+  "manager": "Michigan State University",
+  "real_body": "",
+  "kind": "closed",
+  "hunting": "closed",
+  "what": "MSU's firearms and weapons ordinance (Trustees Ordinance 18.00, as summarized in search) bars possessing firearms or weapons on university property except as state law allows. No Clarksville-specific hunting policy was found. MSU's forest hunting permits are archery-only.",
+  "quote": "",
+  "exceptions": [],
+  "sources": [
+   {
+    "url": "https://trustees.msu.edu/governance/ordinances/ordinance-18",
+    "title": "MSU Trustees Ordinance 18.00 Firearms or Weapons (search summary)",
+    "date": "",
+    "read": "snippet"
+   }
+  ],
+  "confidence": "medium",
+  "tried": "WebSearch (standard, MSU Clarksville Horticultural Experiment Station hunting policy firearms). Ordinance 18.00 seen as summary only, not verbatim, so quote left blank. Clarksville-specific page not found. Classified closed on the university-wide ban; treat as medium confidence."
+ }
+]

@@ -1,0 +1,555 @@
+[
+  {
+    "county": "Allegan",
+    "manager": "Fillmore Township",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The township homepage has no hunting or firearm text.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.fillmoretownship.org/",
+        "title": "Fillmore Township homepage",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched township homepage (no hunting or firearm text). Web search for parks ordinance hunting/firearms; no rule text returned for this body."
+  },
+  {
+    "county": "Allegan",
+    "manager": "SAUGATUCK TOWNSHIP",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Township website returned only a sign ordinance; no park hunting rule found. Search returned other townships' codes only.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://saugatucktownshipmi.gov/",
+        "title": "Saugatuck Township homepage",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched township site (sign ordinance only). Web search for parks ordinance hunting/firearms; no rule text returned for this body."
+  },
+  {
+    "county": "Allegan",
+    "manager": "Municipal",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Owners of these parks are not identified, so no governing rule was found. Dorr Township park list was seen but its rules text was not retrievable.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Checklist note only (Dorr Township parks page not retrievable). No owner-specific search could be completed because the body is unnamed."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Saugatuck",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "The city parks rules page says hunting is 'currently established in the City Code of Ordinances' (not retrievable). It bans hunting or trapping in Saugatuck Wilds Nature Preserve, which is not in the checklist list for this city. No hunting rule was found for Mt. Baldhead, Coghlin, Village Square, Wicks, Mason or Willow parks.",
+    "quote": "other regulations such as possession or consumption of alcohol, skateboarding, injury to park property, noise, fireworks, trash deposits in waste containers, ball game restrictions, hawking/peddling, hunting, Oval Beach parking passes, and motorized vehicle location and operation are currently established in the City Code of Ordinances.",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.saugatuckcity.com/parks--recreation.html",
+        "title": "City of Saugatuck - Parks & Recreation rules",
+        "date": "",
+        "read": "full"
+      },
+      {
+        "url": "https://www.saugatuckcity.com/mt-baldhead-park.html",
+        "title": "City of Saugatuck - Mt. Baldhead Park",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "medium",
+    "tried": "Fetched city parks rules and Mt. Baldhead pages. City Code is on codelibrary.amlegal.com (blocked, not requested). Search returned the park pages only."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Allegan",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No city parks or code text found. Search returned only Allegan County park and hunting policies, which apply to county property, not city parks.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Web search (City of Allegan parks code hunting firearms discharge). City website not retrieved."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Plainwell",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The city Parks and Recreation page has no hunting or firearm text; the code of ordinances page was not read.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.plainwell.org/Services-Departments/Visiting-and-Recreation/Parks-and-Recreation.aspx",
+        "title": "City of Plainwell - Parks and Recreation",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched city Parks and Recreation page (no hunting text). Web search for parks ordinance hunting/firearms; no rule text returned for this body."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Otsego",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The city ordinance index showed only a fireworks ordinance in the snippets.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.cityofotsego.org/selected-city-ordinances/",
+        "title": "City of Otsego - Selected City Ordinances",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched city ordinance index (no parks hunting text). Search returned Otsego, Minnesota code and Michigan DNR township rules, not this city."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Holland",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Not researched. Holland is in Ottawa County, so this body appears under the wrong county section of the checklist.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Not searched (county assignment looks wrong; the Ottawa County section should be checked instead)."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Wayland",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The city website could not be reached.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Fetch of wayland.mi.us failed (connection error). Not searched further."
+  },
+  {
+    "county": "Allegan",
+    "manager": "City of Douglas",
+    "real_body": "",
+    "kind": "restricted",
+    "hunting": "restricted",
+    "what": "Douglas permits only archery equipment for all hunts in the city and bans firearms within city limits at all times. Its archery deer hunts are permit-based and mainly on HOA or private land. No park-specific hunting rule was found.",
+    "quote": "ONLY ARCHERY EQUIPMENT is permitted for all hunts in the City of the Village of Douglas. The use of firearms is strictly prohibited in the City limits at all times",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.douglasmi.gov/1325/Hunting-Guidelines",
+        "title": "City of Douglas - Hunting Guidelines",
+        "date": "",
+        "read": "full"
+      },
+      {
+        "url": "https://www.douglasmi.gov/DocumentCenter/View/595/City-of-the-Village-of-Douglas-HOA-Private-Property-Owner-Archery-Hunting-Guidelines",
+        "title": "Qualified Hunter Guidelines for Regulated Archery Hunts",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "medium",
+    "tried": ""
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Township of Fruitport",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. Search returned no Fruitport Township parks text.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Web search for parks ordinance hunting/firearms; no rule text returned for this body. Fruitport Township website not retrieved."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Township of Spring Lake",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Township parks page has no hunting or firearm rule (only a DNR hunting link). Search returned the Village of Spring Lake parks ordinance, a separate municipality, so it was not used.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.springlaketwp.org/177/Parks-Recreation",
+        "title": "Township of Spring Lake - Parks & Recreation",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched township parks page (no hunting text). Searched Rycenga Park hunting firearms."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Township of Muskegon",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The township site returned no page content.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Fetch of muskegontownship.org returned no page content. Web search for parks ordinance hunting/firearms; no rule text returned for this body."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "WHITEHALL TOWNSHIP",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Township parks page has no hunting or firearm text. The City of Whitehall runs a separate archery deer program (not this township).",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://whitehalltwp.org/parks-recreation/",
+        "title": "Whitehall Township - Parks & Recreation",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched township parks page (no hunting text)."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Township of Dalton",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Checklist note only. Not searched further."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Muskegon Charter Township",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Checklist note only. Not searched further."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Village of Fruitport",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Checklist note only. Not searched further."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Municipal",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Owners of these parks are not identified. The Michigan DNR Muskegon County local controls page says 'No Special Local Hunting Controls in This County'.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/muskegon/hunting",
+        "title": "Michigan DNR - Muskegon County local hunting controls",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched DNR Muskegon County local controls page (no local controls listed). Owners not identified."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "MERES",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No rule found for Muskegon Nature Preserve (owned by MERES). The checklist notes say no rules were found online.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Checklist note only. Not searched further."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "Michigan Department of Transportation",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No rule found for Hidden Cove Park. This is a state agency; the checklist notes say no rule was found.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Checklist note only. Not searched further."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "City of Muskegon",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "The city park rules page covers hours, alcohol and leashes and does not mention hunting. The city code was not retrieved.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://muskegon-mi.gov/explore-muskegon/parks-and-recreation/city-of-muskegon-park-rules/",
+        "title": "City of Muskegon - Park Rules",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched city park rules page (no hunting text). City code on library.municode.com (blocked, not requested)."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "City of Muskegon Heights",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Web search for parks ordinance hunting/firearms; no rule text returned for this body."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "City of Montague",
+    "real_body": "",
+    "kind": "managed-hunts-only",
+    "hunting": "managed",
+    "what": "Montague's code (Sec. 14-202) allows limited, controlled bow hunting inside city limits only in areas of at least 6 contiguous acres, public or private, that the City Council designates each year, under city permit. The code names no park, and no current designation was found.",
+    "quote": "The City may allow limited and controlled bow (bow / archery / cross-bow) hunting within the boundaries of the City for the purposes of limiting the urban deer population",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://catchmarkcommunity.com/wp-content/uploads/2025/06/Chapter_14_ANIMALS_20241118.pdf",
+        "title": "City of Montague Code Chapter 14 Animals (amended 11-18-2024)",
+        "date": "2024-11-18",
+        "read": "full"
+      },
+      {
+        "url": "https://catchmarkcommunity.com/hunters-and-anglers-urban-deer-hunting-in-whitehall-and-montague/",
+        "title": "Hunters and Anglers: Urban Deer Hunting in Whitehall and Montague",
+        "date": "2025-06-21",
+        "read": "full"
+      }
+    ],
+    "confidence": "high",
+    "tried": ""
+  },
+  {
+    "county": "Muskegon",
+    "manager": "City of North Muskegon",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "The city parks page has no hunting text. The city code is on library.municode.com (blocked, not requested).",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.northmuskegon.org/departments/parks-recreation/",
+        "title": "City of North Muskegon - Parks & Recreation",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched city parks page (no hunting text)."
+  },
+  {
+    "county": "Muskegon",
+    "manager": "City of Roosevelt Park",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found on the city website.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.rooseveltpark.org/",
+        "title": "City of Roosevelt Park homepage",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched city homepage (no hunting text)."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "Township of Croton",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found on the township website.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.crotontownship.org/",
+        "title": "Township of Croton homepage",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched township homepage (no hunting text)."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "Township of Sheridan",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The township website returned no page content.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Fetch of sheridantwp.org returned no page content. Web search for parks ordinance hunting/firearms; no rule text returned for this body."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "Township of Ensley",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found on the township website.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.ensleytownship.org/",
+        "title": "Township of Ensley homepage",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched township homepage (no hunting text)."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "Municipal",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "Owners are not identified. The Michigan DNR Newaygo County local controls page says 'No Special Local Hunting Controls in This County'. The Sheridan Township Forest hunting status is unconfirmed.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://www.michigan.gov/dnr/managing-resources/laws/controls/localcontrols/newaygo/hunting",
+        "title": "Michigan DNR - Newaygo County local hunting controls",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Fetched DNR Newaygo County local controls page. Owners not identified."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "City of Fremont",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The Fremont Lake Park campground rules (Exhibit B) have no hunting text; the parks chapter (Ch. 14) was not retrieved from the city code.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [
+      {
+        "url": "https://cityoffremont.net/DocumentCenter/View/2701/Rules---Seasonal---EXHIBIT-B",
+        "title": "City of Fremont - Fremont Lake Park Campground rules (Exhibit B)",
+        "date": "",
+        "read": "full"
+      }
+    ],
+    "confidence": "low",
+    "tried": "Web search; fetched campground rules PDF. Code on codelibrary.amlegal.com (blocked, not requested)."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "City of White Cloud",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The city website returned no page content.",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Fetch of whitecloud.org returned no page content. Not searched further."
+  },
+  {
+    "county": "Newaygo",
+    "manager": "City of Grant",
+    "real_body": "",
+    "kind": "unknown",
+    "hunting": "unknown",
+    "what": "No parks hunting rule found. The city website refused the request (HTTP 403).",
+    "quote": "",
+    "exceptions": [],
+    "sources": [],
+    "confidence": "low",
+    "tried": "Fetch of grantcity.org returned HTTP 403. Not searched further."
+  }
+]

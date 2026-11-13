@@ -375,3 +375,17 @@ Cascade Peace Park (archery by permit), Kent County's Two Rivers Greenspace (bow
 ### School property
 
 All school-district property is graded closed (red), on the owner's instruction: Michigan law makes school property a weapon-free school zone (MCL 750.237a) and districts do not open land to public hunting. This applies to parcels whose owner name is a school district and to park features managed by a school. Universities and colleges are not included; they keep their own grading.
+
+## Fifth round (2026-11-13): cheap pass over the West Michigan checklist
+
+Four low-cost agents worked through the 113 managing bodies in `docs/research/west-michigan/CHECKLIST.md`, using only search-engine summaries and the bodies' own websites. Raw results: `docs/research/west-michigan/cheap-pass/`.
+
+About 12 bodies came back with a finding; most of the rest stay unknown because their codes are only on sites that refuse automated requests, and search summaries rarely quote the hunting clause.
+
+Applied to the map (the first two ordinances were re-checked against the full documents):
+
+- **Village of Howard City** parks: red. Discharge of bows, firearms and air guns is prohibited in the village without a landowner permit.
+- **Village of Nashville** parks: yellow, no firearms. Firearm discharge is banned within 450 ft of a public park; bows are not addressed.
+- **Village of Spring Lake** parks: yellow, no firearms (low confidence, search summary only).
+
+Found but not applied: City of Wyoming and City of Montague bow-only deer-management hunts, City of Douglas archery-only rule, and City of Ionia's citywide discharge ban — city parks already show closed under the city-limits rule and none of these names a city park as open. Norton Shores' archery program reportedly includes Lake Harbor, Ross and Black Lake parks, from one undated news summary; not applied. Cannon Township bans hunting in Bostwick Lake Park, which is not a mapped park.

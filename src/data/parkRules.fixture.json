@@ -327,6 +327,14 @@
  },
  {
   "layer": "padus-local",
+  "rule": "howard-city-parks",
+  "Unit_Nm": "Park",
+  "Loc_Mang": "City of Howard City",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
   "rule": "kentwood-closed",
   "Unit_Nm": "Lamberts Park",
   "Loc_Mang": "City of Kentwood",
@@ -506,6 +514,22 @@
   "rule": "plainfield-twp-closed",
   "Unit_Nm": "Plainfield Park",
   "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "nashville-parks",
+  "Unit_Nm": "Old Town Field",
+  "Loc_Mang": "Village of Nashville",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "nashville-parks",
+  "Unit_Nm": "Putnam Park",
+  "Loc_Mang": "Village of Nashville",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },
@@ -2954,6 +2978,54 @@
   "rule": "plainfield-twp-closed",
   "Unit_Nm": "Ambrose Park",
   "Loc_Mang": "Township of Plainfield",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "spring-lake-village-parks",
+  "Unit_Nm": "Central Park",
+  "Loc_Mang": "Village of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "spring-lake-village-parks",
+  "Unit_Nm": "Jackson Street End Park",
+  "Loc_Mang": "Village of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "spring-lake-village-parks",
+  "Unit_Nm": "Lakeside Beach",
+  "Loc_Mang": "Village of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "spring-lake-village-parks",
+  "Unit_Nm": "Lakeside Trail",
+  "Loc_Mang": "Village of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "spring-lake-village-parks",
+  "Unit_Nm": "Mill Point Park",
+  "Loc_Mang": "Village of Spring Lake",
+  "Mang_Name": "CITY",
+  "Des_Tp": "LP"
+ },
+ {
+  "layer": "padus-local",
+  "rule": "spring-lake-village-parks",
+  "Unit_Nm": "Tanglefoot Park",
+  "Loc_Mang": "Village of Spring Lake",
   "Mang_Name": "CITY",
   "Des_Tp": "LP"
  },

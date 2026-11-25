@@ -4,7 +4,7 @@ import { Map as MapLibreMap, AttributionControl, ScaleControl, setWorkerUrl, typ
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 
 setWorkerUrl(workerUrl);
-import { BASEMAPS, MAX_BOUNDS, MICHIGAN_BOUNDS, type Basemap } from '../config';
+import { BASEMAPS, MAX_BOUNDS, MICHIGAN_BOUNDS, findBasemap, type Basemap } from '../config';
 import { prefGet, prefSet } from '../util/store';
 
 /**
@@ -22,17 +22,27 @@ export const RELIEF_ANCHOR = 'anchor-relief';
 
 const BASEMAP_SOURCE = 'basemap';
 const BASEMAP_LAYER = 'basemap';
+/** Up to this many overlay tile sets (labels, roads) per basemap. */
+const MAX_OVERLAYS = 4;
+const overlayId = (i: number): string => `basemap-overlay-${i}`;
+const RASTER_PAINT = { 'raster-fade-duration': 100 } as const;
+
+function rasterSource(tiles: string[], b: Basemap) {
+  return { type: 'raster' as const, tiles, tileSize: 256, maxzoom: b.maxzoom, attribution: b.attribution };
+}
 
 function initialStyle(b: Basemap): StyleSpecification {
   return {
     version: 8,
     sources: {
-      [BASEMAP_SOURCE]: { type: 'raster', tiles: b.tiles, tileSize: 256, maxzoom: b.maxzoom, attribution: b.attribution },
+      [BASEMAP_SOURCE]: rasterSource(b.tiles, b),
+      ...Object.fromEntries((b.overlays ?? []).map((t, i) => [overlayId(i), { ...rasterSource(t, b), attribution: undefined }])),
       empty: { type: 'geojson', data: { type: 'FeatureCollection', features: [] } },
     },
     layers: [
       { id: 'bg', type: 'background', paint: { 'background-color': '#dfe3da' } },
-      { id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: { 'raster-fade-duration': 150 } },
+      { id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: RASTER_PAINT },
+      ...(b.overlays ?? []).map((_, i) => ({ id: overlayId(i), type: 'raster' as const, source: overlayId(i), paint: RASTER_PAINT })),
       { id: RELIEF_ANCHOR, type: 'symbol', source: 'empty', layout: { visibility: 'none' } },
       ...ANCHORS.map((id) => ({ id, type: 'symbol' as const, source: 'empty', layout: { visibility: 'none' as const } })),
     ],
@@ -40,8 +50,7 @@ function initialStyle(b: Basemap): StyleSpecification {
 }
 
 export function currentBasemap(): Basemap {
-  const id = prefGet('basemap', BASEMAPS[0].id);
-  return BASEMAPS.find((b) => b.id === id) ?? BASEMAPS[0];
+  return findBasemap(prefGet('basemap', BASEMAPS[0].id)) ?? BASEMAPS[0];
 }
 
 export function createMap(container: HTMLElement): MLMap {
@@ -82,10 +91,18 @@ export function createMap(container: HTMLElement): MLMap {
 
 export function setBasemap(map: MLMap, b: Basemap): void {
   prefSet('basemap', b.id);
+  for (let i = 0; i < MAX_OVERLAYS; i++) {
+    if (map.getLayer(overlayId(i))) map.removeLayer(overlayId(i));
+    if (map.getSource(overlayId(i))) map.removeSource(overlayId(i));
+  }
   if (map.getLayer(BASEMAP_LAYER)) map.removeLayer(BASEMAP_LAYER);
   if (map.getSource(BASEMAP_SOURCE)) map.removeSource(BASEMAP_SOURCE);
-  map.addSource(BASEMAP_SOURCE, { type: 'raster', tiles: b.tiles, tileSize: 256, maxzoom: b.maxzoom, attribution: b.attribution });
-  map.addLayer({ id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: { 'raster-fade-duration': 150 } }, RELIEF_ANCHOR);
+  map.addSource(BASEMAP_SOURCE, rasterSource(b.tiles, b));
+  map.addLayer({ id: BASEMAP_LAYER, type: 'raster', source: BASEMAP_SOURCE, paint: RASTER_PAINT }, RELIEF_ANCHOR);
+  (b.overlays ?? []).slice(0, MAX_OVERLAYS).forEach((t, i) => {
+    map.addSource(overlayId(i), { ...rasterSource(t, b), attribution: undefined });
+    map.addLayer({ id: overlayId(i), type: 'raster', source: overlayId(i), paint: RASTER_PAINT }, RELIEF_ANCHOR);
+  });
   document.documentElement.dataset.basemap = b.dark ? 'dark' : 'light';
   window.dispatchEvent(new CustomEvent('basemapchange', { detail: b.id }));
 }

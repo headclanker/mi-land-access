@@ -42,11 +42,12 @@ export default defineConfig({
             // Recently viewed basemap tiles: cache-first with a hard size cap.
             urlPattern: ({ url }) =>
               (url.hostname === 'basemap.nationalmap.gov' && url.pathname.includes('/tile/')) ||
+              (url.hostname.endsWith('.arcgisonline.com') && url.pathname.includes('/tile/')) ||
               url.hostname === 'tile.openstreetmap.org',
             handler: 'CacheFirst',
             options: {
               cacheName: 'basemap-tiles',
-              expiration: { maxEntries: 2500, maxAgeSeconds: 60 * 60 * 24 * 30, purgeOnQuotaError: true },
+              expiration: { maxEntries: 4000, maxAgeSeconds: 60 * 60 * 24 * 30, purgeOnQuotaError: true },
               cacheableResponse: { statuses: [0, 200] },
             },
           },

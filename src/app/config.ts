@@ -72,16 +72,6 @@ export const BASEMAPS: Basemap[] = [
     satellite: true,
   },
   {
-    id: 'usgs-imagery',
-    title: 'USGS satellite (slower)',
-    short: 'USGS sat',
-    tiles: [`${USGS}/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}`],
-    maxzoom: 16,
-    attribution: `${USGS_ATTR} imagery`,
-    dark: true,
-    satellite: true,
-  },
-  {
     id: 'osm',
     title: 'OpenStreetMap',
     short: 'Streets',
@@ -108,7 +98,7 @@ export const LOADER = {
 } as const;
 
 /** Basemap ids from earlier versions, mapped to their replacement. */
-export const RENAMED_BASEMAPS: Record<string, string> = { 'usgs-imagery-topo': 'sat-labels' };
+export const RENAMED_BASEMAPS: Record<string, string> = { 'usgs-imagery-topo': 'sat-labels', 'usgs-imagery': 'sat' };
 
 export function findBasemap(id: string | null | undefined): Basemap | undefined {
   if (!id) return undefined;
